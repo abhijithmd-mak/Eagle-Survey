@@ -1,0 +1,9 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/Homepage.dc.html", "destination": "/", "permanent": false },
+    { "source": "/Aerial%20LiDAR%20Mapping.dc.html", "destination": "/aerial-lidar-mapping", "permanent": false },
+    { "source": "/Aerial LiDAR Mapping.dc.html", "destination": "/aerial-lidar-mapping", "permanent": false }
+  ]
+}
