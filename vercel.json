@@ -4,6 +4,9 @@
   "redirects": [
     { "source": "/Homepage.dc.html", "destination": "/", "permanent": false },
     { "source": "/Aerial%20LiDAR%20Mapping.dc.html", "destination": "/aerial-lidar-mapping", "permanent": false },
-    { "source": "/Aerial LiDAR Mapping.dc.html", "destination": "/aerial-lidar-mapping", "permanent": false }
+    { "source": "/Aerial LiDAR Mapping.dc.html", "destination": "/aerial-lidar-mapping", "permanent": false },
+    { "source": "/Aerial%20Photogrammetry.dc.html", "destination": "/aerial-photogrammetry", "permanent": false },
+    { "source": "/Aerial Photogrammetry.dc.html", "destination": "/aerial-photogrammetry", "permanent": false },
+    { "source": "/About.dc.html", "destination": "/about", "permanent": false }
   ]
 }
