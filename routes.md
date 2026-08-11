@@ -4,14 +4,19 @@ Deploy `site/` as the project root on Vercel. No build step, no framework.
 Largest file is ~153 KB, so this pushes to GitHub through the web UI without
 hitting the file-size limit.
 
-## Structure
+## Structure — deliberately flat
 
-- `*.html` — one file per page, links written as clean slugs
+Every file sits in this one folder, no subdirectories, so a folder upload cannot
+silently drop nested files:
+
+- `*.html` — 21 pages, links written as clean slugs
 - `support.js` — the runtime every page loads (68 KB, shared)
-- `assets/` — images, referenced with relative paths
+- `*.jpg` / `*.png` / `*.svg` — 41 images, referenced by bare filename
 - `vercel.json` — `cleanUrls` so `/about` serves `about.html`
 
-Because links are already slugs, no redirect table is needed.
+64 files total, largest 153 KB. Because links are already slugs, no redirect table
+is needed. If images are ever re-grouped into folders, the `src` attributes must be
+updated to match.
 
 | Source design file | Deployed file | URL |
 |---|---|---|
