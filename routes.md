@@ -1,37 +1,66 @@
-# Deploy routes — Eagle Surveying
+# Eagle Surveying — static site
 
-Bundled, self-contained pages. Repo root is what Vercel serves (no build step).
+Deploy `site/` as the project root on Vercel. No build step, no framework.
+Largest file is ~153 KB, so this pushes to GitHub through the web UI without
+hitting the file-size limit.
+
+## Structure
+
+- `*.html` — one file per page, links written as clean slugs
+- `support.js` — the runtime every page loads (68 KB, shared)
+- `assets/` — images, referenced with relative paths
+- `vercel.json` — `cleanUrls` so `/about` serves `about.html`
+
+Because links are already slugs, no redirect table is needed.
 
 | Source design file | Deployed file | URL |
 |---|---|---|
 | Homepage.dc.html | index.html | / |
+| About.dc.html | about.html | /about |
+| FAQs.dc.html | faqs.html | /faqs |
 | Aerial LiDAR Mapping.dc.html | aerial-lidar-mapping.html | /aerial-lidar-mapping |
 | Aerial Photogrammetry.dc.html | aerial-photogrammetry.html | /aerial-photogrammetry |
-| About.dc.html | about.html | /about |
+| Terrestrial Laser Scanning.dc.html | terrestrial-laser-scanning.html | /terrestrial-laser-scanning |
+| 360 Site Documentation.dc.html | 360-site-documentation.html | /360-site-documentation |
+| Aerial Thermal Imagery.dc.html | aerial-thermal-imagery.html | /aerial-thermal-imagery |
+| Construction Progress Monitoring.dc.html | construction-progress-monitoring.html | /construction-progress-monitoring |
+| Volumetric and Stockpile Analysis.dc.html | volumetric-stockpile-analysis.html | /volumetric-stockpile-analysis |
+| ALTA-NSPS Land Title Survey.dc.html | alta-nsps-land-title-survey.html | /alta-nsps-land-title-survey |
+| Category 1A Land Title Survey.dc.html | category-1a-land-title-survey.html | /category-1a-land-title-survey |
+| Category 1B Standard Land Survey.dc.html | boundary-survey-category-1b.html | /boundary-survey-category-1b |
+| Topographic Survey.dc.html | topographic-survey.html | /topographic-survey |
+| Tree Survey.dc.html | tree-survey.html | /tree-survey |
+| Platting Services.dc.html | platting-services.html | /platting-services |
+| Construction Staking.dc.html | construction-staking.html | /construction-staking |
+| Form Board Survey.dc.html | form-board-survey.html | /form-board-survey |
+| As-Built Survey.dc.html | as-built-survey.html | /as-built-survey |
+| Easement Exhibits and Legal Descriptions.dc.html | easement-exhibits-legal-descriptions.html | /easement-exhibits-legal-descriptions |
+| Elevation Certificate.dc.html | elevation-certificate.html | /elevation-certificate |
 
-`vercel.json` maps the design filenames onto these clean URLs, so in-page links resolve
-without rewriting the bundles.
+## Video
 
-## Adding a page
+All video streams from Vimeo as background players
+(`background=1&autoplay=1&loop=1&muted=1`), sized in JS to cover its panel rather
+than letterbox. No video files are committed.
 
-1. Build `<Page Name>.dc.html`, linking to siblings by their source filename
-   (e.g. `href="Homepage.dc.html#projects"`, `href="About.dc.html"`).
-2. Add a row to the table above and a redirect pair to `vercel.json`.
-3. Bundle it into `deploy/` under its slug filename.
-4. Re-bundle any existing page whose links changed, and upload only those.
+| Section | Vimeo id |
+|---|---|
+| Homepage — hero flythrough | 1214538057 |
+| Homepage — Blue UAS | 1217318028 |
+| Aerial LiDAR Mapping — hero | 1217314191 |
+| Aerial Photogrammetry — hero | 1217314194 |
+| Terrestrial Laser Scanning — hero | 1217314193 |
+| 360 Site Documentation — hero | 1217314192 |
 
-## Slugs reserved for the remaining Reality Capture pages
+The 360 hero also loads the Vimeo Player API and resets playback at 8.2s
+(`heroClipEnd` prop) so the burned-in title near the end of that clip never shows.
 
-/terrestrial-laser-scanning
-/360-site-documentation
-/aerial-thermal-imagery
-/construction-progress-monitoring
-/volumetric-stockpile-analysis
+Vimeo videos must be public, or unlisted with the deploy domain whitelisted under
+privacy settings. Background mode requires a Vimeo Plus/Pro plan; on a free plan the
+player shows its controls.
 
-Surveying service slugs follow the same pattern, with one constraint from the keyword
-document: Category 1B uses /boundary-survey-category-1b/.
+## Regenerating
 
-## Note on the About map
-
-The interactive Texas county map loads d3, topojson, and county geometry from CDNs at
-runtime. It works on the deployed site; offline it falls back to a static PNG.
+Pages are the `.dc.html` design files with three mechanical rewrites: sibling
+`href="<Name>.dc.html"` → `/slug`, `./support.js` → `support.js`, and nothing else.
+Edit the design file, then re-export.

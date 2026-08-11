@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#052A44"></rect><g fill="none" stroke="#E0A83E" stroke-width="4" stroke-linecap="round"><path d="M38 40a12 12 0 1 1 12 12v6"></path><circle cx="50" cy="70" r="2.6" fill="#E0A83E" stroke="none"></circle></g></svg></template>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frequently Asked Questions | Eagle Surveying</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#F6F8FA;font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4,p{margin:0}
+  a{color:#0A4B77;text-decoration:none}
+  a:hover{color:#063553}
+  img{display:block}
+  summary{list-style:none}
+  summary::-webkit-details-marker{display:none}
+  input{font-family:inherit}
+  ::selection{background:#0A4B77;color:#fff}
+</style>
+</helmet>
+
+<div style="width:100%;background:#F6F8FA;color:#0F2E45;overflow-x:clip">
+
+  <div data-screen-label="Utility bar" style="background:#052A44">
+    <div style="max-width:1420px;margin:0 auto;padding:10px clamp(20px,4.4vw,56px);display:flex;align-items:center;justify-content:space-between;gap:12px 36px;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:26px;flex-wrap:wrap">
+        <a href="tel:9402223009" style="display:flex;align-items:center;gap:10px;white-space:nowrap" style-hover="opacity:.75">
+          <span style="font-size:9.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#A6C3D5">Denton HQ</span>
+          <span style="font-family:'Sora',sans-serif;font-size:15px;font-weight:600;color:#fff;letter-spacing:-.01em">940-222-3009</span>
+        </a>
+        <span style="width:1px;height:20px;background:rgba(255,255,255,.16)"></span>
+        <a href="tel:2544810306" style="display:flex;align-items:center;gap:10px;white-space:nowrap" style-hover="opacity:.75">
+          <span style="font-size:9.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#A6C3D5">Waco</span>
+          <span style="font-family:'Sora',sans-serif;font-size:15px;font-weight:600;color:#fff;letter-spacing:-.01em">254-481-0306</span>
+        </a>
+      </div>
+      <span style="font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#A6C3D5">Texas Registered Surveying Firm · TBPELS #10194177</span>
+    </div>
+  </div>
+
+  <header data-screen-label="Header" style="position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);backdrop-filter:blur(16px) saturate(140%);border-bottom:1px solid #DCE4EC">
+    <div style="max-width:1420px;margin:0 auto;padding:0 clamp(20px,4.4vw,56px);display:flex;align-items:center;gap:16px;height:clamp(64px,8vw,86px)">
+      <a href="/" style="flex-shrink:0"><img src="assets/eagle-logo-h.png" alt="Eagle Surveying" style="height:clamp(30px,6.4vw,40px);width:auto"></a>
+
+      <nav style="{{ navStyle }}">
+        <span data-nav="" onMouseEnter="{{ openRC }}" onMouseLeave="{{ closeNav }}" style="display:inline-flex;position:relative">
+          <a href="/#reality-capture" style="display:inline-flex;align-items:center;gap:6px;font-size:14.5px;color:#0F2E45;font-weight:500;padding:11px 15px;border-radius:999px;white-space:nowrap" style-hover="background:#E7EDF4;color:#0A4B77">Reality Capture<span style="font-size:11px;opacity:.55">⌄</span></a>
+          <div style="{{ ddRC }}">
+            <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Reality Capture</span>
+            <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:11px">
+              <a href="/aerial-lidar-mapping" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Aerial LiDAR Mapping</a>
+              <a href="/aerial-photogrammetry" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Aerial Photogrammetry</a>
+              <a href="/terrestrial-laser-scanning" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Terrestrial Laser Scanning (TLS)</a>
+              <a href="/360-site-documentation" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">360° Site Documentation &amp; Virtual Walkthroughs</a>
+              <a href="/aerial-thermal-imagery" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Aerial Thermal Imagery</a>
+              <a href="/construction-progress-monitoring" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Construction Progress Monitoring and Documentation</a>
+              <a href="/volumetric-stockpile-analysis" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Volumetric &amp; Stockpile Analysis</a>
+            </div>
+          </div>
+        </span>
+        <span data-nav="" onMouseEnter="{{ openSV }}" onMouseLeave="{{ closeNav }}" style="display:inline-flex;position:relative">
+          <a href="/#surveying" style="display:inline-flex;align-items:center;gap:6px;font-size:14.5px;color:#0F2E45;font-weight:500;padding:11px 15px;border-radius:999px;white-space:nowrap" style-hover="background:#E7EDF4;color:#0A4B77">Surveying Services<span style="font-size:11px;opacity:.55">⌄</span></a>
+          <div style="{{ ddSV }}">
+            <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Surveying Services</span>
+            <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:11px">
+              <a href="/alta-nsps-land-title-survey" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">ALTA/NSPS Land Title Survey</a>
+              <a href="/construction-staking" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Construction Staking</a>
+              <a href="/category-1a-land-title-survey" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Category 1A Land Title Survey</a>
+              <a href="/form-board-survey" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Form Board Survey</a>
+              <a href="/boundary-survey-category-1b" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Category 1B Standard Land Survey</a>
+              <a href="/as-built-survey" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">As-Built Survey</a>
+              <a href="/topographic-survey" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Topographic Survey</a>
+              <a href="/easement-exhibits-legal-descriptions" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Easement Exhibits &amp; Legal Descriptions</a>
+              <a href="/tree-survey" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Tree Survey</a>
+              <a href="/elevation-certificate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Elevation Certificate</a>
+              <a href="/platting-services" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Platting Services</a>
+            </div>
+          </div>
+        </span>
+        <span data-nav="" onMouseEnter="{{ openIN }}" onMouseLeave="{{ closeNav }}" style="display:inline-flex;position:relative">
+          <a href="/#industries" style="display:inline-flex;align-items:center;gap:6px;font-size:14.5px;color:#0F2E45;font-weight:500;padding:11px 15px;border-radius:999px;white-space:nowrap" style-hover="background:#E7EDF4;color:#0A4B77">Industries<span style="font-size:11px;opacity:.55">⌄</span></a>
+          <div style="{{ ddIN }}">
+            <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Industries</span>
+            <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:11px">
+              <a href="/#industries" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Data Centers</a>
+              <a href="/#industries" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Industrial, Manufacturing &amp; Logistics</a>
+              <a href="/#industries" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Commercial &amp; Retail</a>
+              <a href="/#industries" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Municipal &amp; Public</a>
+              <a href="/#industries" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Education</a>
+              <a href="/#industries" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Multi-Family &amp; Master-Planned</a>
+              <a href="/#industries" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Energy &amp; Solar</a>
+              <a href="/#industries" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Specialized High-Visibility Venues</a>
+            </div>
+          </div>
+        </span>
+        <a href="/#projects" style="font-size:14.5px;color:#0F2E45;font-weight:500;padding:11px 15px;border-radius:999px;white-space:nowrap" style-hover="background:#E7EDF4;color:#0A4B77">Projects</a>
+        <a href="/#insights" style="font-size:14.5px;color:#0F2E45;font-weight:500;padding:11px 15px;border-radius:999px;white-space:nowrap" style-hover="background:#E7EDF4;color:#0A4B77">Blog</a>
+        <span data-nav="" onMouseEnter="{{ openAB }}" onMouseLeave="{{ closeNav }}" style="display:inline-flex;position:relative">
+          <a href="/#firm" style="display:inline-flex;align-items:center;gap:6px;font-size:14.5px;color:#0A4B77;font-weight:600;padding:11px 15px;border-radius:999px;white-space:nowrap;background:#E7EDF4">About<span style="font-size:11px;opacity:.55">⌄</span></a>
+          <div style="{{ ddAB }}">
+            <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Company</span>
+            <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:11px">
+              <a href="/about" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">About Us</a>
+              <a href="/#cares" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Eagle Cares</a>
+              <a href="/#firm" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Technology &amp; Equipment</a>
+              <a href="#top" style="font-size:14.5px;color:#0A4B77;font-weight:700;line-height:1.35">FAQs</a>
+            </div>
+          </div>
+        </span>
+        <a href="/#contact" style="font-size:14.5px;color:#0F2E45;font-weight:500;padding:11px 15px;border-radius:999px;white-space:nowrap" style-hover="background:#E7EDF4;color:#0A4B77">Careers</a>
+        <span data-nav="" onMouseEnter="{{ openCT }}" onMouseLeave="{{ closeNav }}" style="display:inline-flex;position:relative">
+          <a href="#estimate" style="display:inline-flex;align-items:center;gap:6px;font-size:14.5px;color:#0F2E45;font-weight:500;padding:11px 15px;border-radius:999px;white-space:nowrap" style-hover="background:#E7EDF4;color:#0A4B77">Contact<span style="font-size:11px;opacity:.55">⌄</span></a>
+          <div style="{{ ddCT }}">
+            <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Contact</span>
+            <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:11px">
+              <a href="#estimate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Have a Question</a>
+              <a href="#estimate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Request an Estimate</a>
+              <a href="#estimate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Schedule a Meeting</a>
+            </div>
+          </div>
+        </span>
+      </nav>
+
+      <button type="button" onClick="{{ toggleDrawer }}" aria-label="Open menu" aria-expanded="{{ drawerOpen }}" style="{{ burgerStyle }}">
+        <span style="display:block;width:20px;height:2px;background:#0F2E45;border-radius:2px"></span>
+        <span style="display:block;width:20px;height:2px;background:#0F2E45;border-radius:2px"></span>
+        <span style="display:block;width:20px;height:2px;background:#0F2E45;border-radius:2px"></span>
+      </button>
+    </div>
+  </header>
+
+  <div style="{{ drawerStyle }}">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px clamp(20px,4.4vw,56px);border-bottom:1px solid #DCE4EC">
+      <img src="assets/eagle-logo-h.png" alt="Eagle Surveying" style="height:clamp(28px,6vw,34px);width:auto">
+      <button type="button" onClick="{{ closeDrawer }}" aria-label="Close menu" style="width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:1px solid #DCE4EC;border-radius:999px;background:#fff;color:#0F2E45;font-size:20px;line-height:1;cursor:pointer">✕</button>
+    </div>
+    <div style="flex:1;overflow-y:auto;padding:8px clamp(20px,4.4vw,56px) 32px">
+      <button type="button" onClick="{{ toggleAccRC }}" style="{{ accBtnStyle }}">Reality Capture<span style="opacity:.5;font-size:13px">⌄</span></button>
+      <div style="{{ accRC }}">
+        <a href="/aerial-lidar-mapping" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Aerial LiDAR Mapping</a>
+        <a href="/aerial-photogrammetry" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Aerial Photogrammetry</a>
+        <a href="/terrestrial-laser-scanning" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Terrestrial Laser Scanning (TLS)</a>
+        <a href="/360-site-documentation" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">360° Site Documentation</a>
+        <a href="/aerial-thermal-imagery" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Aerial Thermal Imagery</a>
+        <a href="/construction-progress-monitoring" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Construction Progress Monitoring</a>
+        <a href="/volumetric-stockpile-analysis" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Volumetric &amp; Stockpile Analysis</a>
+      </div>
+      <button type="button" onClick="{{ toggleAccSV }}" style="{{ accBtnStyle }}">Surveying Services<span style="opacity:.5;font-size:13px">⌄</span></button>
+      <div style="{{ accSV }}">
+        <a href="/alta-nsps-land-title-survey" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">ALTA/NSPS Land Title Survey</a>
+        <a href="/category-1a-land-title-survey" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Category 1A Land Title Survey</a>
+        <a href="/boundary-survey-category-1b" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Category 1B Standard Land Survey</a>
+        <a href="/topographic-survey" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Topographic Survey</a>
+        <a href="/tree-survey" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Tree Survey</a>
+        <a href="/platting-services" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Platting Services</a>
+        <a href="/construction-staking" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Construction Staking</a>
+        <a href="/form-board-survey" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Form Board Survey</a>
+        <a href="/as-built-survey" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">As-Built Survey</a>
+        <a href="/easement-exhibits-legal-descriptions" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Easement Exhibits &amp; Legal Descriptions</a>
+        <a href="/elevation-certificate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Elevation Certificate</a>
+      </div>
+      <button type="button" onClick="{{ toggleAccIN }}" style="{{ accBtnStyle }}">Industries<span style="opacity:.5;font-size:13px">⌄</span></button>
+      <div style="{{ accIN }}">
+        <a href="/#industries" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Data Centers</a>
+        <a href="/#industries" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Industrial, Manufacturing &amp; Logistics</a>
+        <a href="/#industries" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Commercial &amp; Retail</a>
+        <a href="/#industries" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Municipal &amp; Public</a>
+        <a href="/#industries" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Education</a>
+        <a href="/#industries" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Multi-Family &amp; Master-Planned</a>
+        <a href="/#industries" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Energy &amp; Solar</a>
+      </div>
+      <a href="/#projects" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">Projects</a>
+      <a href="/#insights" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">Blog</a>
+      <a href="/about" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">About Us</a>
+      <a href="/#cares" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">Eagle Cares</a>
+      <a href="#top" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">FAQs</a>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:26px">
+        <a href="#estimate" onClick="{{ closeDrawer }}" style="display:flex;align-items:center;justify-content:center;min-height:52px;background:#E0A83E;color:#052A44;font-weight:700;font-size:16px;border-radius:999px">Request an Estimate</a>
+        <a href="tel:9402223009" style="display:flex;align-items:center;justify-content:center;min-height:52px;border:1px solid #C9D6E2;color:#0F2E45;font-weight:600;font-size:16px;border-radius:999px">Call (940) 222-3009</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="top" data-screen-label="FAQ hero" style="position:relative;min-height:min(52vh,520px);display:flex;align-items:flex-end;background:#052A44;overflow:hidden">
+    <img data-hero="0" src="assets/photos/p11.jpg" alt="Eagle Surveying crew working in the field" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+    <div style="position:absolute;inset:0;background:linear-gradient(102deg,rgba(5,42,68,.95) 0%,rgba(5,42,68,.74) 50%,rgba(5,42,68,.34) 90%)"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,42,68,.82) 0%,rgba(5,42,68,0) 48%)"></div>
+    <div style="position:relative;width:100%;max-width:1420px;margin:0 auto;padding:clamp(64px,9vw,104px) clamp(20px,4.4vw,56px) clamp(72px,10vw,104px)">
+      <div style="max-width:940px">
+        <span data-hero="1" style="display:block;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#E0A83E;margin-bottom:18px">Answers before the proposal</span>
+        <h1 data-hero="2" style="font-family:'Sora',sans-serif;color:#fff;font-size:clamp(32px,4.8vw,68px);line-height:1.05;letter-spacing:-.03em;font-weight:600;text-wrap:balance">Frequently Asked Questions</h1>
+        <p data-hero="3" style="color:#DCE8F0;font-size:clamp(16px,1.35vw,20px);line-height:1.65;max-width:640px;margin-top:26px;text-wrap:pretty">The questions developers, engineers, contractors and owners ask us most — about scope, timing, drone work and licensure. Service-specific questions live on each service page.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="questions" data-screen-label="Questions" style="scroll-margin-top:96px;background:#F6F8FA;padding:clamp(56px,8vw,96px) clamp(20px,4.4vw,56px)">
+    <div style="{{ qWrapStyle }}">
+      <div style="{{ qHeadStyle }}">
+        <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Frequently asked questions</span>
+        <h2 style="font-family:'Sora',sans-serif;font-size:clamp(26px,2.7vw,40px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;text-wrap:balance">Start here. We'll point you to the right scope.</h2>
+      </div>
+
+      <div style="{{ searchWrapStyle }}">
+        <span aria-hidden="true" style="{{ searchIconStyle }}">⌕</span>
+        <input type="search" value="{{ query }}" onInput="{{ onQuery }}" placeholder="Search the questions — try &quot;drone&quot;, &quot;plat&quot; or &quot;proposal&quot;" aria-label="Search the questions" style="{{ searchStyle }}">
+      </div>
+
+      <div style="{{ chipRowStyle }}">
+        <button type="button" onClick="{{ setCatAll }}" style="{{ chipAll }}">All questions</button>
+        <button type="button" onClick="{{ setCatScope }}" style="{{ chipScope }}">Scope &amp; survey type</button>
+        <button type="button" onClick="{{ setCatRC }}" style="{{ chipRC }}">Reality Capture</button>
+        <button type="button" onClick="{{ setCatLic }}" style="{{ chipLic }}">Licensure</button>
+        <button type="button" onClick="{{ setCatCov }}" style="{{ chipCov }}">Coverage &amp; proposals</button>
+        <span style="{{ resultLabelStyle }}">{{ resultLabel }}</span>
+      </div>
+
+      <div style="display:flex;flex-direction:column;border-bottom:1px solid #D8E2EB">
+        <details data-faq="0" open="{{ faq1Open }}" style="{{ faqStyle0 }}">
+          <summary style="{{ summaryStyle }}">When should a developer hire a land surveyor?<span style="{{ markStyle }}">+</span></summary>
+          <p style="{{ answerStyle }}">A developer should involve a land surveyor early enough to support acquisition and due diligence before major design decisions are made. Surveying is commonly needed before closing, during site evaluation, before civil design, during platting and entitlement, before and throughout construction, and at closeout. Early coordination helps identify the correct survey product, title information, control, deliverables, and schedule before they become critical-path issues.</p>
+        </details>
+        <details data-faq="1" style="{{ faqStyle1 }}">
+          <summary style="{{ summaryStyle }}">What is a commercial site survey?<span style="{{ markStyle }}">+</span></summary>
+          <p style="{{ answerStyle }}">Commercial site survey is a broad search term rather than one standardized survey category. Depending on the project, the required scope may be an ALTA/NSPS Land Title Survey, Category 1A survey, boundary survey, topographic survey, tree survey, plat, construction staking, easement exhibit, as-built survey, or a combination. Eagle Surveying reviews the transaction, design, permitting, and construction requirements to identify the appropriate commercial land surveying services.</p>
+        </details>
+        <details data-faq="2" style="{{ faqStyle2 }}">
+          <summary style="{{ summaryStyle }}">What is a commercial due diligence survey?<span style="{{ markStyle }}">+</span></summary>
+          <p style="{{ answerStyle }}">Commercial due diligence survey is a general term for survey information used to evaluate a property before acquisition, financing, or development. It is not one universal survey type. The required scope may include an ALTA/NSPS Land Title Survey, Category 1A Land Title Survey, boundary survey, topographic survey, floodplain information, aerial mapping, or other project-specific work. Eagle Surveying helps identify the correct deliverables from the title, lender, design, and transaction requirements.</p>
+        </details>
+        <details data-faq="3" style="{{ faqStyle3 }}">
+          <summary style="{{ summaryStyle }}">What surveying services are commonly needed for commercial development?<span style="{{ markStyle }}">+</span></summary>
+          <p style="{{ answerStyle }}">Commercial development in the Dallas-Fort Worth metroplex, Central Texas, and across the state may require ALTA/NSPS Land Title Surveys, Category 1A Land Title Surveys, boundary work, topographic surveys, tree surveys, platting, easement exhibits and legal descriptions, construction staking, form board surveys, as-built surveys, elevation certificates, and Reality Capture. The exact combination depends on the acquisition, entitlement, design, construction, and closeout requirements of the property and reviewing jurisdiction.</p>
+        </details>
+        <details data-faq="4" style="{{ faqStyle4 }}">
+          <summary style="{{ summaryStyle }}">What industries use Reality Capture?<span style="{{ markStyle }}">+</span></summary>
+          <p style="{{ answerStyle }}">Reality Capture is used across commercial development, industrial facilities, data centers, construction, civil engineering, architecture, transportation, utilities, energy, solar, municipal infrastructure, higher education, and public works. It is especially useful when a project requires detailed existing-condition data, broad site coverage, remote visibility, repeat documentation, dense measurements, or coordination among multiple design and construction teams.</p>
+        </details>
+        <details data-faq="5" style="{{ faqStyle5 }}">
+          <summary style="{{ summaryStyle }}">Can drone surveys replace traditional surveying?<span style="{{ markStyle }}">+</span></summary>
+          <p style="{{ answerStyle }}">Drone surveys can improve efficiency and provide dense coverage over large or difficult sites, but they generally complement rather than replace traditional land surveying. Ground control, boundary determinations, legal surveys, construction staking, monument recovery, and other licensed surveying activities still require professional survey methods and oversight. Eagle Surveying combines aerial data collection with Trimble GNSS, robotic instrumentation, field verification, and Registered Professional Land Surveyor oversight when the project requires a survey deliverable.</p>
+        </details>
+        <details data-faq="6" style="{{ faqStyle6 }}">
+          <summary style="{{ summaryStyle }}">How do I choose between LiDAR, photogrammetry, terrestrial laser scanning, and 360° documentation?<span style="{{ markStyle }}">+</span></summary>
+          <p style="{{ answerStyle }}">Aerial LiDAR is generally best for terrain, vegetation, large tracts, and corridor-style projects. Photogrammetry is well suited for visible surfaces, high-resolution imagery, orthomosaics, and open construction sites. Terrestrial laser scanning provides dense close-range measurements of buildings, structures, industrial facilities, and congested spaces. 360° documentation is intended for visual records and virtual walkthroughs rather than survey-grade measurement. Some projects benefit from combining multiple methods.</p>
+        </details>
+        <details data-faq="7" style="{{ faqStyle7 }}">
+          <summary style="{{ summaryStyle }}">Do I need a licensed land surveyor for drone mapping in Texas?<span style="{{ markStyle }}">+</span></summary>
+          <p style="{{ answerStyle }}">If drone data will be used as an authoritative representation of property boundaries, easements, rights-of-way, elevations tied to project control, or other matters regulated as professional land surveying in Texas, the work must be performed under the responsible charge of a Registered Professional Land Surveyor. A drone operator alone cannot certify survey deliverables. Eagle Surveying pairs its Reality Capture capabilities with licensed survey control, field verification, and RPLS oversight whenever the project requires a survey deliverable, which protects the engineer's design basis and the owner's approvals downstream.</p>
+        </details>
+        <details data-faq="8" style="{{ faqStyle8 }}">
+          <summary style="{{ summaryStyle }}">Where does Eagle Surveying provide commercial, industrial, and Reality Capture services?<span style="{{ markStyle }}">+</span></summary>
+          <p style="{{ answerStyle }}">Eagle Surveying provides licensed land surveying services throughout Texas, with offices in Denton and Waco supporting the Dallas-Fort Worth metroplex, North Texas, Central Texas, and statewide projects. Reality Capture services are available throughout Texas and for select assignments nationwide. Project location, scope, mobilization, airspace, access, and deliverable requirements are reviewed before confirming service availability and schedule.</p>
+        </details>
+        <details data-faq="9" style="{{ faqStyle9 }}">
+          <summary style="{{ summaryStyle }}">How do I request a proposal from Eagle Surveying?<span style="{{ markStyle }}">+</span></summary>
+          <p style="{{ answerStyle }}">Send the property location, a title commitment or legal description if available, the intended use of the survey or Reality Capture data, any available plans or due diligence materials, and your required schedule. Eagle Surveying reviews the records and site conditions, confirms the correct scope, and returns a written proposal covering scope, deliverables, and schedule. Contact our Denton or Waco office by phone or through the form on this website to get started.</p>
+        </details>
+        <span style="{{ emptyStyle }}">No questions match that search. Try a shorter term, clear the filter, or ask us directly.</span>
+      </div>
+
+      <div style="{{ askCardStyle }}">
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <span style="font-family:'Sora',sans-serif;font-size:clamp(19px,1.8vw,24px);font-weight:600;color:#0F2E45;letter-spacing:-.02em">Not answered here?</span>
+          <span style="font-size:16px;line-height:1.65;color:#3C5468;max-width:52ch;text-wrap:pretty">Send the location, the intended use and your schedule — we'll confirm the right scope in writing.</span>
+        </div>
+        <a href="#estimate" style="display:inline-flex;align-items:center;min-height:52px;padding:0 28px;background:#E0A83E;color:#052A44;font-weight:700;font-size:15.5px;border-radius:999px;white-space:nowrap" style-hover="background:#F0BC57">Request a proposal</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="service-faqs" data-screen-label="Service FAQs" style="scroll-margin-top:96px;background:#E7EDF4;padding:clamp(60px,9vw,100px) clamp(20px,4.4vw,56px)">
+    <div style="max-width:1420px;margin:0 auto">
+      <div style="{{ svcHeadStyle }}">
+        <div>
+          <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Service-specific answers</span>
+          <h2 style="font-family:'Sora',sans-serif;font-size:clamp(26px,2.7vw,40px);line-height:1.16;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:22ch;text-wrap:pretty">Detailed questions live on the service pages.</h2>
+        </div>
+        <p style="font-size:16.5px;line-height:1.7;color:#3C5468;max-width:52ch;text-wrap:pretty">Accuracy, file formats, control, deliverables and workflow questions are answered in context, next to the service they belong to.</p>
+      </div>
+      <div style="{{ svcGridStyle }}">
+        <a href="/aerial-lidar-mapping#faq" data-reveal="" data-rc-card="" style="{{ svcCardStyle }}">
+          <span data-rc-frame="" style="{{ svcThumbStyle }}"><img src="assets/photos/p01.jpg" alt="Aerial LiDAR mapping" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)"></span>
+          <span style="{{ svcTitleStyle }}">Aerial LiDAR Mapping</span>
+          <span style="{{ svcMetaStyle }}">Bare earth, canopy, corridors</span>
+        </a>
+        <a href="/aerial-photogrammetry#faq" data-reveal="" data-rc-card="" style="{{ svcCardStyle }}">
+          <span data-rc-frame="" style="{{ svcThumbStyle }}"><img src="assets/photos/p09.jpg" alt="Aerial photogrammetry" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)"></span>
+          <span style="{{ svcTitleStyle }}">Aerial Photogrammetry</span>
+          <span style="{{ svcMetaStyle }}">Orthophotos, accuracy, airspace</span>
+        </a>
+        <a href="/terrestrial-laser-scanning#faq" data-reveal="" data-rc-card="" style="{{ svcCardStyle }}">
+          <span data-rc-frame="" style="{{ svcThumbStyle }}"><img src="assets/photos/p06.jpg" alt="Terrestrial laser scanning" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)"></span>
+          <span style="{{ svcTitleStyle }}">Terrestrial Laser Scanning</span>
+          <span style="{{ svcMetaStyle }}">Scan-to-CAD, scan-to-BIM, as-builts</span>
+        </a>
+        <a href="/360-site-documentation#faq" data-reveal="" data-rc-card="" style="{{ svcCardStyle }}">
+          <span data-rc-frame="" style="{{ svcThumbStyle }}"><img src="assets/photos/s08.jpg" alt="360 site documentation" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)"></span>
+          <span style="{{ svcTitleStyle }}">360° Site Documentation</span>
+          <span style="{{ svcMetaStyle }}">Visual record vs measurement</span>
+        </a>
+        <a href="/aerial-thermal-imagery#faq" data-reveal="" data-rc-card="" style="{{ svcCardStyle }}">
+          <span data-rc-frame="" style="{{ svcThumbStyle }}"><img src="assets/photos/p02.jpg" alt="Aerial thermal imagery" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)"></span>
+          <span style="{{ svcTitleStyle }}">Aerial Thermal Imagery</span>
+          <span style="{{ svcMetaStyle }}">Radiometric data and scope</span>
+        </a>
+        <a href="/volumetric-stockpile-analysis#assumptions" data-reveal="" data-rc-card="" style="{{ svcCardStyle }}">
+          <span data-rc-frame="" style="{{ svcThumbStyle }}"><img src="assets/photos/p08.jpg" alt="Volumetric and stockpile analysis" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)"></span>
+          <span style="{{ svcTitleStyle }}">Volumetric &amp; Stockpile Analysis</span>
+          <span style="{{ svcMetaStyle }}">Quantities and assumptions</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="estimate" data-screen-label="CTA" style="scroll-margin-top:96px;position:relative;background:#052A44;overflow:hidden;padding:clamp(60px,9vw,100px) clamp(20px,4.4vw,56px)">
+    <img src="assets/photos/p11.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22">
+    <div style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(5,42,68,.96) 0%,rgba(5,42,68,.78) 60%,rgba(5,42,68,.6) 100%)"></div>
+    <div style="{{ ctaGridStyle }}">
+      <div>
+        <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,3vw,44px);line-height:1.12;letter-spacing:-.028em;font-weight:600;color:#fff;max-width:24ch;text-wrap:balance">Still deciding what you need? That's the call to make first.</h2>
+        <p style="font-size:clamp(15.5px,1.2vw,18px);line-height:1.7;color:#C3D8E6;max-width:52ch;margin-top:22px;text-wrap:pretty">Send the location, the intended use, and your schedule. We'll confirm the correct scope and return a written proposal.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+        <a href="#estimate" style="display:inline-flex;align-items:center;min-height:54px;padding:0 32px;background:#E0A83E;color:#052A44;font-weight:700;font-size:16.5px;border-radius:999px" style-hover="background:#F0BC57">Request an Estimate</a>
+        <a href="tel:9402223009" style="display:inline-flex;align-items:center;min-height:54px;padding:0 32px;border:1px solid rgba(255,255,255,.4);color:#fff;font-weight:600;font-size:16.5px;border-radius:999px" style-hover="background:rgba(255,255,255,.12)">Call 940-222-3009</a>
+      </div>
+    </div>
+  </section>
+
+  <footer data-screen-label="Footer" style="background:#052A44;padding:clamp(56px,8vw,80px) clamp(20px,4.4vw,56px) 36px;border-top:1px solid rgba(255,255,255,.12)">
+    <div style="{{ footGridStyle }}">
+      <div style="display:flex;flex-direction:column;gap:22px">
+        <img src="assets/eagle-logo-h-white.png" alt="Eagle Surveying" style="height:34px;width:auto;align-self:flex-start">
+        <div style="display:flex;flex-direction:column;gap:6px;font-size:12.5px;color:#7E8F9A;line-height:1.7">
+          <span>Texas Registered Surveying Firm</span>
+          <span>TBPELS #10194177</span>
+          <span>FAA Part 107 certified pilots</span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <span style="font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#6D9DBD">Reality Capture</span>
+        <a href="/aerial-lidar-mapping" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Aerial LiDAR Mapping</a>
+        <a href="/aerial-photogrammetry" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Aerial Photogrammetry</a>
+        <a href="/terrestrial-laser-scanning" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Terrestrial Laser Scanning (TLS)</a>
+        <a href="/360-site-documentation" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">360° Site Documentation &amp; Virtual Walkthroughs</a>
+        <a href="/aerial-thermal-imagery" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Aerial Thermal Imagery</a>
+        <a href="/construction-progress-monitoring" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Construction Progress Monitoring and Documentation</a>
+        <a href="/volumetric-stockpile-analysis" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Volumetric &amp; Stockpile Analysis</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <span style="font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#6D9DBD">Surveying Services</span>
+        <div style="{{ footSvcGridStyle }}">
+          <a href="/alta-nsps-land-title-survey" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">ALTA/NSPS Land Title Survey</a>
+          <a href="/construction-staking" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Construction Staking</a>
+          <a href="/category-1a-land-title-survey" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Category 1A Land Title Survey</a>
+          <a href="/form-board-survey" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Form Board Survey</a>
+          <a href="/boundary-survey-category-1b" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Category 1B Standard Land Survey</a>
+          <a href="/as-built-survey" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">As-Built Survey</a>
+          <a href="/topographic-survey" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Topographic Survey</a>
+          <a href="/easement-exhibits-legal-descriptions" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Easement Exhibits &amp; Legal Descriptions</a>
+          <a href="/tree-survey" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Tree Survey</a>
+          <a href="/elevation-certificate" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Elevation Certificate</a>
+          <a href="/platting-services" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Platting Services</a>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <span style="font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#6D9DBD">Company</span>
+        <a href="/about" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">About Us</a>
+        <a href="/#cares" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Eagle Cares</a>
+        <a href="/#firm" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Technology &amp; Equipment</a>
+        <a href="/#projects" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Projects</a>
+        <a href="/#insights" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Blog</a>
+        <a href="/#contact" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Careers</a>
+        <a href="#top" style="color:#fff;font-size:14px;font-weight:600">FAQs</a>
+        <a href="#estimate" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Contact</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <div style="display:flex;flex-direction:column;gap:5px">
+          <span style="font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#6D9DBD">Denton HQ</span>
+          <a href="tel:9402223009" style="font-family:'Sora',sans-serif;font-size:19px;font-weight:600;color:#fff;letter-spacing:-.015em">940-222-3009</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:5px">
+          <span style="font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#6D9DBD">Waco Office</span>
+          <a href="tel:2544810306" style="font-family:'Sora',sans-serif;font-size:19px;font-weight:600;color:#fff;letter-spacing:-.015em">254-481-0306</a>
+        </div>
+        <a href="#estimate" style="align-self:flex-start;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:#C3D8E6;border-bottom:1px solid rgba(191,214,234,.4);padding-bottom:5px" style-hover="color:#fff;border-color:#fff">Request an estimate →</a>
+      </div>
+    </div>
+    <div style="max-width:1560px;margin:52px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;color:#7E8F9A;font-size:12.5px">
+      <span>© 2026 Eagle Surveying. All rights reserved.</span>
+      <span>FAQ content per the Master Sourcebook FAQ hub — verbatim.</span>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;revealOnScroll&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;faqFirstOpen&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;FAQs&quot;}}">
+class Component extends DCLogic {
+  state = { open: null, drawer: false, acc: null, narrow: false, vpw: 1440, q: '' };
+
+  componentDidMount() {
+    this.reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.mq = matchMedia('(max-width: 1240px)');
+    this.onMq = () => this.setState({ narrow: this.mq.matches });
+    this.mq.addEventListener('change', this.onMq);
+    this.onRz = () => this.setState({ vpw: innerWidth });
+    addEventListener('resize', this.onRz);
+    this.onMq();
+    this.setState({ vpw: innerWidth });
+    setTimeout(() => this.bindCardHover(), 60);
+    setTimeout(() => {
+      this.qText = Array.from(document.querySelectorAll('[data-faq]'))
+        .map((n) => (n.textContent || '').toLowerCase());
+    }, 80);
+    this.initReveal();
+  }
+
+  componentDidUpdate() { this.bindCardHover(); }
+
+  componentWillUnmount() {
+    this.lockScroll(false);
+    if (this.mq) this.mq.removeEventListener('change', this.onMq);
+    removeEventListener('resize', this.onRz);
+  }
+
+  lockScroll(on) {
+    try {
+      document.body.style.overflow = on ? 'hidden' : '';
+      document.documentElement.style.overflow = on ? 'hidden' : '';
+    } catch (e) {}
+  }
+
+  bindCardHover() {
+    document.querySelectorAll('[data-rc-card]').forEach((card) => {
+      if (card.__hv) return;
+      card.__hv = 1;
+      const img = card.querySelector('img');
+      const frame = card.querySelector('[data-rc-frame]') || card;
+      const glow = '0 0 0 1px rgba(120,190,235,.5), 0 0 30px 5px rgba(56,142,205,.28), 0 16px 40px rgba(4,26,44,.22)';
+      card.addEventListener('mouseenter', () => {
+        if (img) img.style.transform = 'scale(1.06)';
+        frame.style.transition = 'box-shadow .45s ease';
+        frame.style.boxShadow = glow;
+      });
+      card.addEventListener('mouseleave', () => {
+        if (img) img.style.transform = 'scale(1)';
+        frame.style.boxShadow = '0 0 0 0 rgba(56,142,205,0)';
+      });
+    });
+  }
+
+  matches() {
+    const q = (this.state.q || '').trim().toLowerCase();
+    const nodes = Array.from(document.querySelectorAll('[data-faq]'));
+    if (!q) return nodes.map((_, i) => i);
+    const hits = [];
+    nodes.forEach((n) => {
+      if ((n.textContent || '').toLowerCase().includes(q)) hits.push(+n.dataset.faq);
+    });
+    return hits;
+  }
+
+  initHero() {
+    const els = Array.from(document.querySelectorAll('[data-hero]'))
+      .sort((a, b) => +a.dataset.hero - +b.dataset.hero);
+    if (!els.length) return;
+    const show = (el) => { el.style.opacity = '1'; el.style.transform = 'none'; };
+    if (this.reduced) { els.forEach(show); return; }
+    els.forEach((el) => {
+      const isMedia = el.dataset.hero === '0';
+      el.style.opacity = '0';
+      el.style.transform = isMedia ? 'scale(.98)' : 'translateY(24px)';
+      el.style.transition = 'opacity ' + (isMedia ? 1.2 : 0.9) + 's ease, transform '
+        + (isMedia ? 1.6 : 1) + 's cubic-bezier(.16,.84,.3,1)';
+    });
+    requestAnimationFrame(() => els.forEach((el, i) => setTimeout(() => show(el), 60 + i * 150)));
+    setTimeout(() => els.forEach(show), 2600);
+  }
+
+  initReveal() {
+    this.initHero();
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    const show = (el) => { el.style.opacity = '1'; el.style.transform = 'none'; };
+    if (this.reduced || this.props.revealOnScroll === false || !('IntersectionObserver' in window)) {
+      els.forEach(show);
+      return;
+    }
+    els.forEach((el) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity .8s ease, transform .9s cubic-bezier(.16,.84,.3,1)';
+    });
+    const io = new IntersectionObserver((ens) => ens.forEach((e) => {
+      if (e.isIntersecting) { show(e.target); io.unobserve(e.target); }
+    }), { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+    requestAnimationFrame(() => els.forEach((el) => io.observe(el)));
+    setTimeout(() => els.forEach(show), 6000);
+  }
+
+  renderVals() {
+    const st = this.state;
+    const card = (open, side) => ({
+      position: 'absolute', top: '100%',
+      left: side === 'right' ? 'auto' : 0, right: side === 'right' ? 0 : 'auto',
+      width: 286, background: '#fff', border: '1px solid #DFE6EE', borderRadius: 18,
+      boxShadow: '0 18px 40px rgba(10,28,48,.16)', padding: '26px 22px 22px', marginTop: 0,
+      display: open ? 'block' : 'none', zIndex: 40
+    });
+    const mob = st.vpw < 1100;
+    const acc = (k) => ({ display: st.acc === k ? 'grid' : 'none', gap: 2, padding: '4px 0 10px 2px' });
+    const accLink = { display: 'flex', alignItems: 'center', minHeight: 46, fontSize: 15, color: '#616E77' };
+
+    const q = (st.q || '').trim().toLowerCase();
+    const text = this.qText || [];
+    const cats = ['scope', 'scope', 'scope', 'scope', 'rc', 'rc', 'rc', 'lic', 'cov', 'cov'];
+    const cat = st.cat || 'all';
+    const hit = (i) => (cat === 'all' || cats[i] === cat)
+      && (!q || !text[i] || text[i].includes(q));
+    let shown = 0;
+    for (let i = 0; i < 10; i++) if (hit(i)) shown++;
+    const faq = (i) => ({
+      display: hit(i) ? 'block' : 'none',
+      borderTop: '1px solid #D8E2EB',
+      padding: '6px 0'
+    });
+    const chip = (k) => ({
+      appearance: 'none', cursor: 'pointer', whiteSpace: 'nowrap',
+      fontFamily: "'Manrope',sans-serif", fontSize: 13.5, fontWeight: 700,
+      padding: '11px 18px', borderRadius: 999,
+      background: cat === k ? '#052A44' : '#fff',
+      color: cat === k ? '#fff' : '#0F2E45',
+      border: '1px solid ' + (cat === k ? '#052A44' : '#C9D6E2'),
+      transition: 'background .25s ease, color .25s ease, border-color .25s ease'
+    });
+
+    return {
+      navStyle: { display: mob ? 'none' : 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'flex-end', gap: 2, marginLeft: 'auto' },
+      drawerOpen: st.drawer ? 'true' : 'false',
+      burgerStyle: {
+        display: mob ? 'flex' : 'none', flexDirection: 'column', gap: 5, marginLeft: 'auto',
+        width: 46, height: 46, alignItems: 'center', justifyContent: 'center',
+        border: '1px solid #DCE4EC', borderRadius: 14, background: '#fff', cursor: 'pointer'
+      },
+      drawerStyle: {
+        display: mob && st.drawer ? 'flex' : 'none', flexDirection: 'column',
+        position: 'fixed', inset: 0, zIndex: 90, background: '#fff'
+      },
+      accBtnStyle: {
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%',
+        minHeight: 56, padding: '0 2px', background: 'none', border: 'none',
+        borderBottom: '1px solid #EDF1F6', fontFamily: "'Sora',sans-serif", fontSize: 17,
+        fontWeight: 600, color: '#0F2E45', letterSpacing: '-.01em', cursor: 'pointer', textAlign: 'left'
+      },
+      drawerTopLinkStyle: {
+        display: 'flex', alignItems: 'center', minHeight: 56, padding: '0 2px',
+        borderBottom: '1px solid #EDF1F6', fontFamily: "'Sora',sans-serif", fontSize: 17,
+        fontWeight: 600, color: '#0F2E45', letterSpacing: '-.01em'
+      },
+      accLinkStyle: accLink,
+      accLinkActiveStyle: { ...accLink, color: '#0A4B77', fontWeight: 700 },
+      ddRC: card(st.open === 'rc'), ddSV: card(st.open === 'sv'), ddIN: card(st.open === 'in'),
+      ddAB: card(st.open === 'ab'), ddCT: card(st.open === 'ct', 'right'),
+      accRC: acc('rc'), accSV: acc('sv'), accIN: acc('in'),
+      openRC: () => this.setState({ open: 'rc' }),
+      openSV: () => this.setState({ open: 'sv' }),
+      openIN: () => this.setState({ open: 'in' }),
+      openAB: () => this.setState({ open: 'ab' }),
+      openCT: () => this.setState({ open: 'ct' }),
+      closeNav: () => this.setState({ open: null }),
+      toggleDrawer: () => this.setState((s) => {
+        const on = !s.drawer;
+        this.lockScroll(on);
+        return { drawer: on };
+      }),
+      closeDrawer: () => { this.lockScroll(false); this.setState({ drawer: false, acc: null }); },
+      toggleAccRC: () => this.setState((s) => ({ acc: s.acc === 'rc' ? null : 'rc' })),
+      toggleAccSV: () => this.setState((s) => ({ acc: s.acc === 'sv' ? null : 'sv' })),
+      toggleAccIN: () => this.setState((s) => ({ acc: s.acc === 'in' ? null : 'in' })),
+
+      faq1Open: this.props.faqFirstOpen === false ? undefined : true,
+      query: st.q,
+      onQuery: (e) => {
+        if (!this.qText) {
+          this.qText = Array.from(document.querySelectorAll('[data-faq]'))
+            .map((n) => (n.textContent || '').toLowerCase());
+        }
+        this.setState({ q: e.target.value });
+      },
+      resultLabel: (q || cat !== 'all') ? shown + ' of 10 shown' : 'All 10 questions',
+      resultLabelStyle: {
+        fontSize: 13.5, color: '#616E77', marginLeft: st.vpw < 760 ? 0 : 'auto',
+        alignSelf: 'center', whiteSpace: 'nowrap'
+      },
+      setCatAll: () => this.setState({ cat: 'all' }),
+      setCatScope: () => this.setState({ cat: 'scope' }),
+      setCatRC: () => this.setState({ cat: 'rc' }),
+      setCatLic: () => this.setState({ cat: 'lic' }),
+      setCatCov: () => this.setState({ cat: 'cov' }),
+      chipAll: chip('all'), chipScope: chip('scope'), chipRC: chip('rc'),
+      chipLic: chip('lic'), chipCov: chip('cov'),
+      chipRowStyle: {
+        display: 'flex', flexWrap: 'wrap', gap: 10, alignItems: 'center',
+        marginTop: 18, paddingBottom: 30
+      },
+      searchWrapStyle: { position: 'relative', marginTop: st.narrow ? 26 : 34 },
+      searchIconStyle: {
+        position: 'absolute', left: 20, top: '50%', transform: 'translateY(-50%)',
+        fontSize: 20, color: '#7E9AB0', pointerEvents: 'none', lineHeight: 1
+      },
+      searchStyle: {
+        width: '100%', minHeight: st.narrow ? 54 : 62, padding: '0 20px 0 48px',
+        fontSize: st.narrow ? 15.5 : 16.5, color: '#0F2E45',
+        background: '#fff', border: '1px solid #C9D6E2', borderRadius: 16, outline: 'none'
+      },
+      emptyStyle: {
+        display: shown === 0 ? 'block' : 'none',
+        fontSize: 16, lineHeight: 1.7, color: '#616E77', padding: '26px 0',
+        borderTop: '1px solid #D8E2EB'
+      },
+      askCardStyle: {
+        display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'center',
+        justifyContent: 'space-between', marginTop: 40,
+        padding: st.narrow ? '28px 26px' : '34px 38px',
+        background: '#E7EDF4', border: '1px solid #C9D6E2', borderRadius: 28
+      },
+      faqStyle0: faq(0), faqStyle1: faq(1), faqStyle2: faq(2), faqStyle3: faq(3),
+      faqStyle4: faq(4), faqStyle5: faq(5), faqStyle6: faq(6), faqStyle7: faq(7),
+      faqStyle8: faq(8), faqStyle9: faq(9),
+      summaryStyle: {
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 20,
+        minHeight: 64, cursor: 'pointer', fontFamily: "'Sora',sans-serif",
+        fontSize: st.vpw < 700 ? 16.5 : 19, fontWeight: 600, color: '#0F2E45', letterSpacing: '-.015em'
+      },
+      markStyle: { color: '#0A4B77', fontSize: 20, lineHeight: 1, flexShrink: 0 },
+      answerStyle: {
+        fontSize: 16, lineHeight: 1.72, color: '#3C5468', padding: '4px 0 24px',
+        maxWidth: '74ch', textWrap: 'pretty'
+      },
+
+      stripStyle: {
+        maxWidth: 1420, margin: '0 auto', padding: '16px clamp(20px,4.4vw,56px)',
+        display: 'flex', flexWrap: 'wrap', gap: st.vpw < 700 ? '10px 22px' : '12px 42px', alignItems: 'center'
+      },
+      qWrapStyle: { maxWidth: 980, margin: '0 auto' },
+      qHeadStyle: { textAlign: 'center' },
+      svcHeadStyle: {
+        display: 'grid', gap: st.narrow ? 22 : 64, alignItems: 'end',
+        gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,1fr) minmax(0,1fr)'
+      },
+      svcGridStyle: {
+        display: 'grid', gap: st.vpw < 700 ? 20 : 26, marginTop: 44,
+        gridTemplateColumns: st.vpw < 640 ? 'minmax(0,1fr)' : st.vpw < 1080 ? 'repeat(2,minmax(0,1fr))' : 'repeat(3,minmax(0,1fr))'
+      },
+      svcCardStyle: { display: 'flex', flexDirection: 'column', gap: 12 },
+      svcThumbStyle: {
+        position: 'relative', display: 'block', aspectRatio: '16 / 10',
+        borderRadius: 20, overflow: 'hidden', background: '#0D4066'
+      },
+      svcTitleStyle: {
+        fontFamily: "'Sora',sans-serif", fontSize: 17.5, fontWeight: 600,
+        color: '#0F2E45', letterSpacing: '-.015em'
+      },
+      svcMetaStyle: { fontSize: 14.5, lineHeight: 1.55, color: '#616E77' },
+      ctaGridStyle: {
+        position: 'relative', maxWidth: 1420, margin: '0 auto', display: 'grid',
+        gap: st.narrow ? 30 : 64, alignItems: 'center',
+        gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,1.3fr) minmax(0,.7fr)'
+      },
+      footGridStyle: {
+        display: 'grid', gap: st.narrow ? '40px 32px' : 48, maxWidth: 1560, margin: '0 auto',
+        gridTemplateColumns: st.narrow
+          ? 'repeat(auto-fit,minmax(min(100%,240px),1fr))'
+          : 'minmax(0,1fr) minmax(0,1.05fr) minmax(0,1.5fr) minmax(0,.8fr) minmax(0,.8fr)'
+      },
+      footSvcGridStyle: {
+        display: 'grid', gap: '12px 28px',
+        gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,1fr) minmax(0,1fr)'
+      }
+    };
+  }
+}
+
+</script>
+</body>
+</html>

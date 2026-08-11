@@ -8,9 +8,9 @@
 <body>
 <x-dc>
 <helmet>
-<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#052A44"></rect><g fill="none" stroke="#E0A83E" stroke-width="3.4" stroke-linecap="round"><path d="M34 66l16-32 16 32"></path><path d="M41 58h18"></path></g></svg></template>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#052A44"></rect><g fill="none" stroke="#E0A83E" stroke-width="3.4" stroke-linecap="round"><path d="M50 24v46"></path><path d="M34 74h32"></path><circle cx="50" cy="36" r="8"></circle></g></svg></template>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aerial Photogrammetry in Texas | Eagle Surveying</title>
+<title>Terrestrial Laser Scanning (TLS) in Texas | Eagle Surveying</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
@@ -57,8 +57,8 @@
             <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Reality Capture</span>
             <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:11px">
               <a href="/aerial-lidar-mapping" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Aerial LiDAR Mapping</a>
-              <a href="#top" style="font-size:14.5px;color:#0A4B77;font-weight:700;line-height:1.35">Aerial Photogrammetry</a>
-              <a href="/terrestrial-laser-scanning" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Terrestrial Laser Scanning (TLS)</a>
+              <a href="/aerial-photogrammetry" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Aerial Photogrammetry</a>
+              <a href="#top" style="font-size:14.5px;color:#0A4B77;font-weight:700;line-height:1.35">Terrestrial Laser Scanning (TLS)</a>
               <a href="/360-site-documentation" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">360° Site Documentation &amp; Virtual Walkthroughs</a>
               <a href="/aerial-thermal-imagery" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Aerial Thermal Imagery</a>
               <a href="/construction-progress-monitoring" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Construction Progress Monitoring and Documentation</a>
@@ -110,7 +110,7 @@
             <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:11px">
               <a href="/about" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">About Us</a>
               <a href="/#cares" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Eagle Cares</a>
-              <a href="#platform" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Technology &amp; Equipment</a>
+              <a href="#workflows" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Technology &amp; Equipment</a>
               <a href="/faqs" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">FAQs</a>
             </div>
           </div>
@@ -146,8 +146,8 @@
       <button type="button" onClick="{{ toggleAccRC }}" style="{{ accBtnStyle }}">Reality Capture<span style="opacity:.5;font-size:13px">⌄</span></button>
       <div style="{{ accRC }}">
         <a href="/aerial-lidar-mapping" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Aerial LiDAR Mapping</a>
-        <a href="#top" onClick="{{ closeDrawer }}" style="{{ accLinkActiveStyle }}">Aerial Photogrammetry</a>
-        <a href="/terrestrial-laser-scanning" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Terrestrial Laser Scanning (TLS)</a>
+        <a href="/aerial-photogrammetry" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Aerial Photogrammetry</a>
+        <a href="#top" onClick="{{ closeDrawer }}" style="{{ accLinkActiveStyle }}">Terrestrial Laser Scanning (TLS)</a>
         <a href="/360-site-documentation" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">360° Site Documentation</a>
         <a href="/aerial-thermal-imagery" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Aerial Thermal Imagery</a>
         <a href="/construction-progress-monitoring" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Construction Progress Monitoring</a>
@@ -191,195 +191,244 @@
 
   <section id="top" data-screen-label="Service hero" style="position:relative;background:#052A44;overflow:hidden">
     <div data-hero="0" style="{{ heroVideoStyle }}">
-      <iframe ref="{{ vimeoRef }}" src="https://player.vimeo.com/video/1217314194?background=1&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerPolicy="strict-origin-when-cross-origin" title="Aerial map of a city zooming out" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border:0;pointer-events:none"></iframe>
+      <iframe ref="{{ vimeoRef }}" src="https://player.vimeo.com/video/1217314193?background=1&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerPolicy="strict-origin-when-cross-origin" title="Topographic scan data rendered as a live map" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border:0;pointer-events:none"></iframe>
     </div>
     <div style="{{ heroScrimStyle }}"></div>
     <div style="{{ heroInnerStyle }}">
       <div style="max-width:660px">
-        <span data-hero="1" style="display:block;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#E0A83E;margin-bottom:12px">Survey-accurate, measurable site imagery</span>
-        <h1 data-hero="2" style="font-family:'Sora',sans-serif;color:#fff;font-size:clamp(32px,4.8vw,68px);line-height:1.05;letter-spacing:-.03em;font-weight:600;text-wrap:balance">Aerial Photogrammetry</h1>
-        <p data-hero="3" style="color:#DCE8F0;font-size:clamp(15.5px,1.15vw,17px);line-height:1.6;max-width:620px;margin-top:16px;text-wrap:pretty">Drone photogrammetry uses overlapping high-resolution aerial photographs to reconstruct measurable site geometry. The processed outputs may include georeferenced orthomosaics, digital surface models, digital terrain models where conditions allow, RGB point clouds, contours, and 3D photogrammetric models.</p>
+        <span data-hero="1" style="display:block;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#E0A83E;margin-bottom:12px">Millimeter-level detail on the built environment</span>
+        <h1 data-hero="2" style="font-family:'Sora',sans-serif;color:#fff;font-size:clamp(30px,3.9vw,56px);line-height:1.05;letter-spacing:-.03em;font-weight:600;text-wrap:balance">Terrestrial Laser Scanning</h1>
+        <p data-hero="3" style="color:#DCE8F0;font-size:clamp(15.5px,1.15vw,17px);line-height:1.6;max-width:620px;margin-top:16px;text-wrap:pretty">Ground-based 3D laser scanning captures the exact geometry of buildings, facilities, and structures to millimeter-level detail at close range. Delivered as georeferenced point clouds and scan-to-CAD/BIM data tied to project control, ready for design, coordination, and verification.</p>
         <div data-hero="4" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:26px">
           <a href="#estimate" style="display:inline-flex;align-items:center;min-height:52px;padding:0 30px;background:#E0A83E;color:#052A44;font-weight:700;font-size:16px;border-radius:999px" style-hover="background:#F0BC57">Request an Estimate</a>
-          <a href="#platform" style="display:inline-flex;align-items:center;min-height:52px;padding:0 30px;border:1px solid rgba(255,255,255,.4);color:#fff;font-weight:600;font-size:16px;border-radius:999px" style-hover="background:rgba(255,255,255,.12)">See DroneDeploy access</a>
+          <a href="#workflows" style="display:inline-flex;align-items:center;min-height:52px;padding:0 30px;border:1px solid rgba(255,255,255,.4);color:#fff;font-weight:600;font-size:16px;border-radius:999px" style-hover="background:rgba(255,255,255,.12)">See scan-to-CAD &amp; BIM</a>
         </div>
       </div>
     </div>
     <div data-hero="5" style="position:absolute;left:0;right:0;bottom:0;background:rgba(5,42,68,.78);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,.18)">
       <div style="{{ stripStyle }}">
-        <span style="font-size:13px;color:#C3D8E6;font-weight:500">Processed in DroneDeploy</span>
-        <span style="font-size:13px;color:#C3D8E6;font-weight:500">Direct client platform access</span>
-        <span style="font-size:13px;color:#C3D8E6;font-weight:500">Trimble GNSS ground control</span>
-        <span style="font-size:13px;color:#C3D8E6;font-weight:500">VTOL &amp; quad UAS platforms</span>
+        <span style="font-size:13px;color:#C3D8E6;font-weight:500">Registered &amp; georeferenced</span>
+        <span style="font-size:13px;color:#C3D8E6;font-weight:500">Tied to project control</span>
+        <span style="font-size:13px;color:#C3D8E6;font-weight:500">E57 · RCP/RCS · LAS · PTS</span>
+        <span style="font-size:13px;color:#C3D8E6;font-weight:500">RPLS oversight</span>
       </div>
     </div>
   </section>
 
-  <section id="overview" data-screen-label="Overview" style="scroll-margin-top:96px;background:#F6F8FA;padding:clamp(56px,8vw,96px) clamp(20px,4.4vw,56px)">
-    <div style="max-width:1420px;margin:0 auto">
-      <div style="{{ overviewGridStyle }}">
-        <div>
-          <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:18px">The method</span>
-          <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.16;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:22ch;text-wrap:pretty">See it and measure it, from the same flight.</h2>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:22px">
-          <p style="font-size:clamp(16px,1.15vw,18px);line-height:1.72;color:#3C5468;text-wrap:pretty">Aerial photogrammetry reconstructs 3D geometry from hundreds or thousands of overlapping high-resolution photographs captured from a UAS. The output is a survey-accurate, measurable record of the site: georeferenced orthomosaics, digital terrain models (DTM), digital surface models (DSM), RGB point clouds, 3D photogrammetric models, and contours. Where LiDAR excels at penetrating vegetation, photogrammetry excels at visual detail and color, making it the ideal tool for open ground, stockpiles, surface features, and projects where clients need to both see and measure existing conditions.</p>
-          <p style="font-size:clamp(16px,1.15vw,18px);line-height:1.72;color:#3C5468;text-wrap:pretty">Eagle Surveying operates VTOL and quad UAS platforms with survey-grade Trimble GNSS receivers and ground control points, then processes imagery in DroneDeploy. Every product is tied to survey control established by our field crew and reviewed by our office staff, so the accuracy is documented, not assumed.</p>
-        </div>
+  <section id="method" data-screen-label="How TLS works" style="scroll-margin-top:96px;background:#F6F8FA;padding:clamp(56px,8vw,96px) clamp(20px,4.4vw,56px)">
+    <div style="{{ methodGridStyle }}">
+      <div style="{{ methodStickyStyle }}">
+      <div data-reveal="" data-rc-card="" style="{{ methodImageStyle }}">
+        <img src="assets/photos/p03.jpg" alt="Close-range documentation of structural elements on an active build" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
+        <span style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,42,68,.66) 0%,rgba(5,42,68,0) 52%)"></span>
+        <span style="position:absolute;left:24px;right:24px;bottom:24px;font-size:14.5px;font-weight:600;color:#fff;line-height:1.45;text-wrap:pretty">Millions of laser pulses per second, every one recorded with X, Y, Z and intensity.</span>
       </div>
-      <div data-reveal="" data-rc-card="" style="{{ bandImageStyle }}">
-        <img src="assets/photos/p02.jpg" alt="Orthomosaic capture of a commercial campus under construction" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-        <span style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,42,68,.72) 0%,rgba(5,42,68,0) 55%)"></span>
-        <span style="position:absolute;left:clamp(20px,3vw,40px);right:clamp(20px,3vw,40px);bottom:clamp(20px,3vw,34px);font-size:clamp(14px,1.1vw,16px);font-weight:600;color:#fff;text-wrap:pretty">One flight produces the base map, the surface model and the visual record — all in the same coordinate system.</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="compare" data-screen-label="LiDAR vs photogrammetry" style="scroll-margin-top:96px;background:#E7EDF4;padding:clamp(60px,9vw,100px) clamp(20px,4.4vw,56px)">
-    <div style="max-width:1420px;margin:0 auto">
-      <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">LiDAR or photogrammetry</span>
-      <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:26ch;text-wrap:pretty">Two methods, one question: can the camera see the ground?</h2>
-      <p style="font-size:16.5px;line-height:1.7;color:#3C5468;max-width:72ch;margin-top:20px;text-wrap:pretty">LiDAR measures distance with laser pulses and is particularly effective for terrain mapping, vertical detail, and ground capture through openings in vegetation. Photogrammetry reconstructs surfaces from overlapping imagery and provides detailed color and visual information. Eagle Surveying may combine both methods when the project benefits from each.</p>
-      <div style="{{ compareGridStyle }}">
-        <div data-reveal="" data-rc-card="" style="display:flex;flex-direction:column;background:#F6F8FA;border-radius:26px;overflow:hidden;border:1px solid #D8E2EB">
-          <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:16/9;overflow:hidden;background:#0D4066">
-            <img src="assets/photos/s10.jpg" alt="Commercial building and site captured from the air" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-            <span style="position:absolute;left:20px;top:20px;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#052A44;background:#E0A83E;border-radius:999px;padding:7px 15px">This page</span>
-          </span>
-          <span style="display:flex;flex-direction:column;gap:14px;padding:clamp(24px,2.4vw,34px)">
-            <span style="font-family:'Sora',sans-serif;font-size:21px;font-weight:600;color:#0F2E45;letter-spacing:-.02em">Photogrammetry</span>
-            <span style="font-size:15.5px;line-height:1.65;color:#3C5468">Favoured when surfaces are visible and imagery matters: open ground, stockpiles, surface features, construction progress, and stakeholder visuals that also have to be measurable.</span>
-          </span>
-        </div>
-        <div data-reveal="" data-rc-card="" style="display:flex;flex-direction:column;background:#F6F8FA;border-radius:26px;overflow:hidden;border:1px solid #D8E2EB">
-          <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:16/9;overflow:hidden;background:#0D4066">
-            <img src="assets/photos/p01.jpg" alt="LiDAR mapping aircraft over vegetated terrain" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          </span>
-          <span style="display:flex;flex-direction:column;gap:14px;padding:clamp(24px,2.4vw,34px)">
-            <span style="font-family:'Sora',sans-serif;font-size:21px;font-weight:600;color:#0F2E45;letter-spacing:-.02em">Aerial LiDAR</span>
-            <span style="font-size:15.5px;line-height:1.65;color:#3C5468">Favoured when bare-earth terrain is critical: wooded tracts, corridors, drainage and floodplain work where the ground has to be found beneath the canopy.</span>
-            <a href="/aerial-lidar-mapping" style="align-self:flex-start;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#0A4B77;border-bottom:1px solid rgba(10,75,119,.35);padding-bottom:4px;margin-top:4px" style-hover="color:#063553;border-color:#063553">Aerial LiDAR Mapping →</a>
-          </span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="platform" data-screen-label="DroneDeploy access" style="scroll-margin-top:96px;background:#F7EEDD;padding:clamp(60px,9vw,100px) clamp(20px,4.4vw,56px)">
-    <div style="{{ platformGridStyle }}">
-      <div data-reveal="" data-rc-card="" style="position:relative;border-radius:28px;overflow:hidden;background:#0D4066;min-height:clamp(280px,34vw,460px);box-shadow:0 0 0 0 rgba(56,142,205,0);transition:box-shadow .45s ease">
-        <img src="assets/photos/p06.jpg" alt="Eagle staff reviewing capture data in the office" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
       </div>
       <div style="display:flex;flex-direction:column;gap:26px">
         <div>
-          <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#8A6A2C;margin-bottom:16px">Client access</span>
-          <h2 style="font-family:'Sora',sans-serif;font-size:clamp(26px,2.7vw,40px);line-height:1.16;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:22ch;text-wrap:pretty">Your team measures the site without waiting on a static PDF.</h2>
+          <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:18px">The method</span>
+          <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.16;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:20ch;text-wrap:pretty">Where photography stops being accurate enough.</h2>
         </div>
-        <p style="font-size:16.5px;line-height:1.7;color:#4A5A63;max-width:56ch;text-wrap:pretty">We provide clients with direct access to the DroneDeploy platform, allowing your project team to view orthomosaics, take measurements, review 3D models, and integrate project data with CAD platforms.</p>
-        <div style="display:flex;flex-direction:column;gap:2px">
-          <span style="font-size:16px;line-height:1.6;color:#4A3A17;font-weight:600;padding:16px 0;border-top:1px solid #E4D3AF">View georeferenced orthomosaics in the browser</span>
-          <span style="font-size:16px;line-height:1.6;color:#4A3A17;font-weight:600;padding:16px 0;border-top:1px solid #E4D3AF">Take distance, area and volume measurements</span>
-          <span style="font-size:16px;line-height:1.6;color:#4A3A17;font-weight:600;padding:16px 0;border-top:1px solid #E4D3AF">Review 3D photogrammetric models</span>
-          <span style="font-size:16px;line-height:1.6;color:#4A3A17;font-weight:600;padding:16px 0;border-top:1px solid #E4D3AF;border-bottom:1px solid #E4D3AF">Integrate project data with CAD platforms</span>
+        <p style="font-size:clamp(16px,1.15vw,18px);line-height:1.72;color:#3C5468;text-wrap:pretty">Terrestrial laser scanning uses a tripod-mounted scanner that rotates and fires millions of laser pulses per second, measuring the precise distance to every visible surface and recording each as a point with X, Y, Z coordinates and intensity, with color imagery for visualization. The result is a high-density 3D point cloud that captures the exact geometry of a structure or site to millimeter-level detail at close range. TLS is the reality capture method of choice when you need dimensional precision on the built environment: existing buildings, industrial facilities, data centers, bridges, tanks, structural steel, and congested MEP spaces.</p>
+        <p style="font-size:clamp(16px,1.15vw,18px);line-height:1.72;color:#3C5468;text-wrap:pretty">Eagle Surveying registers each scan and ties the dataset to survey-grade control, then delivers registered point clouds in the formats your team needs (E57, RCP/RCS, LAS, PTS) along with scan-to-CAD and existing-conditions deliverables. Because we are a surveying firm, the point cloud is georeferenced and tied to project control, making it suitable for design, coordination, clash detection workflows, and as-built verification rather than just visualization. Eagle Surveying provides terrestrial laser scanning throughout Texas, including the Dallas-Fort Worth metroplex and Central Texas.</p>
+        <div style="{{ stepsStyle }}">
+          <span style="display:flex;flex-direction:column;gap:8px;padding:20px 22px;background:#E7EDF4;border-radius:20px">
+            <span style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:#0A4B77;letter-spacing:.08em">01</span>
+            <span style="font-size:15px;font-weight:600;color:#0F2E45;line-height:1.45">Scan positions planned for full coverage</span>
+          </span>
+          <span style="display:flex;flex-direction:column;gap:8px;padding:20px 22px;background:#E7EDF4;border-radius:20px">
+            <span style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:#0A4B77;letter-spacing:.08em">02</span>
+            <span style="font-size:15px;font-weight:600;color:#0F2E45;line-height:1.45">Registered together and tied to project control</span>
+          </span>
+          <span style="display:flex;flex-direction:column;gap:8px;padding:20px 22px;background:#E7EDF4;border-radius:20px">
+            <span style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:#0A4B77;letter-spacing:.08em">03</span>
+            <span style="font-size:15px;font-weight:600;color:#0F2E45;line-height:1.45">Delivered in the formats your design team works in</span>
+          </span>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="uses" data-screen-label="Commonly used for" style="scroll-margin-top:96px;background:#F6F8FA;padding:clamp(60px,9vw,100px) clamp(20px,4.4vw,56px)">
+  <section id="workflows" data-screen-label="Downstream workflows" style="scroll-margin-top:96px;background:#052A44;padding:clamp(60px,9vw,100px) clamp(20px,4.4vw,56px);position:relative;overflow:hidden">
+    <div style="position:absolute;top:-220px;left:-160px;width:640px;height:640px;border-radius:999px;background:radial-gradient(circle,rgba(74,159,216,.22),rgba(74,159,216,0) 70%);pointer-events:none"></div>
+    <div style="position:relative;max-width:1420px;margin:0 auto">
+      <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#6D9DBD;margin-bottom:16px">What the point cloud becomes</span>
+      <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:600;color:#fff;max-width:24ch;text-wrap:balance">The cloud is the start. The deliverable is what your team models from.</h2>
+      <div style="{{ tabRowStyle }}">
+        <button type="button" onClick="{{ tab0 }}" style="{{ tabStyle0 }}">Scan-to-CAD</button>
+        <button type="button" onClick="{{ tab1 }}" style="{{ tabStyle1 }}">Scan-to-BIM</button>
+        <button type="button" onClick="{{ tab2 }}" style="{{ tabStyle2 }}">As-built laser scan</button>
+        <button type="button" onClick="{{ tab3 }}" style="{{ tabStyle3 }}">Digital twin support</button>
+      </div>
+      <div style="{{ panel0Style }}">
+        <div data-rc-card="" style="{{ panelImgStyle }}">
+          <img src="assets/photos/p05.jpg" alt="Commercial facility documented for existing-conditions drawings" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:18px;justify-content:center">
+          <h3 style="font-family:'Sora',sans-serif;font-size:clamp(21px,2vw,28px);font-weight:600;color:#fff;letter-spacing:-.02em">Scan-to-CAD</h3>
+          <p style="font-size:16.5px;line-height:1.7;color:#C3D8E6;max-width:56ch;text-wrap:pretty">Scan-to-CAD converts measured point-cloud data into two-dimensional or three-dimensional CAD information such as floor plans, elevations, sections, structural geometry, site features, or existing-condition linework. The required views, features, tolerance, coordinate system, and file format are established in the project scope.</p>
+          <p style="font-size:16.5px;line-height:1.7;color:#C3D8E6;max-width:56ch;text-wrap:pretty">Scan-to-CAD is commonly used for renovation design, industrial tie-ins, facility documentation, and as-built records.</p>
+        </div>
+      </div>
+      <div style="{{ panel1Style }}">
+        <div data-rc-card="" style="{{ panelImgStyle }}">
+          <img src="assets/photos/p02.jpg" alt="Large facility captured for coordination and modeling" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:18px;justify-content:center">
+          <h3 style="font-family:'Sora',sans-serif;font-size:clamp(21px,2vw,28px);font-weight:600;color:#fff;letter-spacing:-.02em">Scan-to-BIM</h3>
+          <p style="font-size:16.5px;line-height:1.7;color:#C3D8E6;max-width:56ch;text-wrap:pretty">Scan-to-BIM is a workflow in which a registered point cloud is used as the spatial basis for Building Information Modeling. The point cloud documents existing conditions, and the agreed BIM scope determines what elements are modeled and to what level of detail.</p>
+          <p style="font-size:16.5px;line-height:1.7;color:#C3D8E6;max-width:56ch;text-wrap:pretty">Eagle Surveying can provide georeferenced point clouds and agreed scan-to-BIM support or data products; the required model content, software format, and level of development should be defined before work begins.</p>
+        </div>
+      </div>
+      <div style="{{ panel2Style }}">
+        <div data-rc-card="" style="{{ panelImgStyle }}">
+          <img src="assets/photos/s08.jpg" alt="Interior facility documentation with survey instrumentation" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:18px;justify-content:center">
+          <h3 style="font-family:'Sora',sans-serif;font-size:clamp(21px,2vw,28px);font-weight:600;color:#fff;letter-spacing:-.02em">As-built laser scan</h3>
+          <p style="font-size:16.5px;line-height:1.7;color:#C3D8E6;max-width:56ch;text-wrap:pretty">An as-built laser scan uses terrestrial laser scanning to document the actual visible geometry of completed or existing construction. It can capture walls, floors, ceilings, structural elements, equipment, piping, MEP systems, and other accessible features at high density.</p>
+          <p style="font-size:16.5px;line-height:1.7;color:#C3D8E6;max-width:56ch;text-wrap:pretty">The resulting point cloud or derived CAD information provides a record of existing conditions for closeout, renovation, coordination, maintenance, or comparison with design information.</p>
+        </div>
+      </div>
+      <div style="{{ panel3Style }}">
+        <div data-rc-card="" style="{{ panelImgStyle }}">
+          <img src="assets/photos/s10.jpg" alt="Modern facility exterior documented for owner records" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:18px;justify-content:center">
+          <h3 style="font-family:'Sora',sans-serif;font-size:clamp(21px,2vw,28px);font-weight:600;color:#fff;letter-spacing:-.02em">Digital twin support</h3>
+          <p style="font-size:16.5px;line-height:1.7;color:#C3D8E6;max-width:56ch;text-wrap:pretty">Reality Capture data can provide the measured spatial foundation for digital twin workflows. Depending on the project, Eagle Surveying may provide point clouds, CAD-ready information, 3D models, repeat captures, or other existing-condition data that an owner, design team, VDC group, or facility platform uses within a digital twin.</p>
+          <p style="font-size:16.5px;line-height:1.7;color:#C3D8E6;max-width:56ch;text-wrap:pretty">The creation, maintenance, attributes, integrations, and operational management of a full digital twin must be specifically defined in the agreed scope.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="uses" data-screen-label="Commonly used for" style="scroll-margin-top:96px;background:#E7EDF4;padding:clamp(60px,9vw,100px) clamp(20px,4.4vw,56px)">
     <div style="max-width:1420px;margin:0 auto">
       <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Commonly used for</span>
-      <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:24ch;text-wrap:pretty">Six jobs our clients fly photogrammetry for.</h2>
+      <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:24ch;text-wrap:pretty">Nine jobs a scan crew gets called out for.</h2>
       <div style="{{ usesGridStyle }}">
-        <div data-reveal="" data-rc-card="" style="position:relative;border-radius:24px;overflow:hidden;background:#052A44;aspect-ratio:5/4;box-shadow:0 0 0 0 rgba(56,142,205,0);transition:box-shadow .45s ease">
-          <img src="assets/photos/p04.jpg" alt="Commercial site base map" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          <span style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,42,68,.9) 0%,rgba(5,42,68,.28) 62%)"></span>
-          <span style="position:absolute;left:22px;right:22px;bottom:22px;font-size:16px;font-weight:600;line-height:1.4;color:#fff;text-wrap:pretty">Georeferenced orthomosaics for site planning and design base maps</span>
+        <div style="{{ usesStickyStyle }}">
+          <div style="{{ useFrameStyle }}">
+            <img src="assets/photos/p04.jpg" alt="Existing conditions and as-built documentation of buildings and industrial facilities" style="{{ useImg0 }}">
+            <img src="assets/photos/p05.jpg" alt="Scan-to-CAD and scan-to-BIM base data for architects and engineers" style="{{ useImg1 }}">
+            <img src="assets/photos/p03.jpg" alt="Structural steel, tank, and MEP coordination and clash detection" style="{{ useImg2 }}">
+            <img src="assets/photos/s08.jpg" alt="Renovation, retrofit, and tie-in design where accurate existing geometry matters" style="{{ useImg3 }}">
+            <img src="assets/photos/p09.jpg" alt="Data center facility documentation" style="{{ useImg4 }}">
+            <img src="assets/photos/p02.jpg" alt="Bridge, culvert, and infrastructure documentation" style="{{ useImg5 }}">
+            <img src="assets/photos/s10.jpg" alt="Rail and transit infrastructure documentation" style="{{ useImg6 }}">
+            <img src="assets/photos/p07.jpg" alt="Parking garages, stairwells, and complex facility documentation" style="{{ useImg7 }}">
+            <img src="assets/photos/p06.jpg" alt="Tight-tolerance measurement where photography alone will not provide the required level of accuracy" style="{{ useImg8 }}">
+            <span style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,42,68,.72) 0%,rgba(5,42,68,0) 55%)"></span>
+            <span style="position:absolute;left:24px;right:24px;bottom:24px;font-size:15px;font-weight:600;color:#fff;line-height:1.45;text-wrap:pretty">{{ useAlt }}</span>
+          </div>
         </div>
-        <div data-reveal="" data-rc-card="" style="position:relative;border-radius:24px;overflow:hidden;background:#052A44;aspect-ratio:5/4;box-shadow:0 0 0 0 rgba(56,142,205,0);transition:box-shadow .45s ease">
-          <img src="assets/photos/p05.jpg" alt="Existing conditions of an industrial property" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          <span style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,42,68,.9) 0%,rgba(5,42,68,.28) 62%)"></span>
-          <span style="position:absolute;left:22px;right:22px;bottom:22px;font-size:16px;font-weight:600;line-height:1.4;color:#fff;text-wrap:pretty">Existing-conditions documentation before design begins</span>
-        </div>
-        <div data-reveal="" data-rc-card="" style="position:relative;border-radius:24px;overflow:hidden;background:#052A44;aspect-ratio:5/4;box-shadow:0 0 0 0 rgba(56,142,205,0);transition:box-shadow .45s ease">
-          <img src="assets/photos/p10.jpg" alt="Stockpiles and earthwork on an active grading site" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          <span style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,42,68,.9) 0%,rgba(5,42,68,.28) 62%)"></span>
-          <span style="position:absolute;left:22px;right:22px;bottom:22px;font-size:16px;font-weight:600;line-height:1.4;color:#fff;text-wrap:pretty">Stockpile and earthwork surface modeling on active sites</span>
-        </div>
-        <div data-reveal="" data-rc-card="" style="position:relative;border-radius:24px;overflow:hidden;background:#052A44;aspect-ratio:5/4;box-shadow:0 0 0 0 rgba(56,142,205,0);transition:box-shadow .45s ease">
-          <img src="assets/photos/p08.jpg" alt="Mixed-use development captured from the air" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          <span style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,42,68,.9) 0%,rgba(5,42,68,.28) 62%)"></span>
-          <span style="position:absolute;left:22px;right:22px;bottom:22px;font-size:16px;font-weight:600;line-height:1.4;color:#fff;text-wrap:pretty">Marketing and stakeholder visuals for commercial, mixed-use and data center developments</span>
-        </div>
-        <div data-reveal="" data-rc-card="" style="position:relative;border-radius:24px;overflow:hidden;background:#052A44;aspect-ratio:5/4;box-shadow:0 0 0 0 rgba(56,142,205,0);transition:box-shadow .45s ease">
-          <img src="assets/photos/p03.jpg" alt="Construction progress documented on an active build" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          <span style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,42,68,.9) 0%,rgba(5,42,68,.28) 62%)"></span>
-          <span style="position:absolute;left:22px;right:22px;bottom:22px;font-size:16px;font-weight:600;line-height:1.4;color:#fff;text-wrap:pretty">Progress imagery clients can access directly through DroneDeploy</span>
-        </div>
-        <div data-reveal="" data-rc-card="" style="position:relative;border-radius:24px;overflow:hidden;background:#052A44;aspect-ratio:5/4;box-shadow:0 0 0 0 rgba(56,142,205,0);transition:box-shadow .45s ease">
-          <img src="assets/photos/p07.jpg" alt="Acreage-scale community development" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          <span style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,42,68,.9) 0%,rgba(5,42,68,.28) 62%)"></span>
-          <span style="position:absolute;left:22px;right:22px;bottom:22px;font-size:16px;font-weight:600;line-height:1.4;color:#fff;text-wrap:pretty">Acreage-scale mapping for land developers across the DFW metroplex, Central Texas and all of Texas</span>
+        <div style="display:flex;flex-direction:column">
+          <span onMouseEnter="{{ use0 }}" style="{{ useRow0 }}"><span style="{{ useNum }}">01</span>Existing conditions and as-built documentation of buildings and industrial facilities</span>
+          <span onMouseEnter="{{ use1 }}" style="{{ useRow1 }}"><span style="{{ useNum }}">02</span>Scan-to-CAD and scan-to-BIM base data for architects and engineers</span>
+          <span onMouseEnter="{{ use2 }}" style="{{ useRow2 }}"><span style="{{ useNum }}">03</span>Structural steel, tank, and MEP coordination and clash detection</span>
+          <span onMouseEnter="{{ use3 }}" style="{{ useRow3 }}"><span style="{{ useNum }}">04</span>Renovation, retrofit, and tie-in design where accurate existing geometry matters</span>
+          <span onMouseEnter="{{ use4 }}" style="{{ useRow4 }}"><span style="{{ useNum }}">05</span>Data center facility documentation</span>
+          <span onMouseEnter="{{ use5 }}" style="{{ useRow5 }}"><span style="{{ useNum }}">06</span>Bridge, culvert, and infrastructure documentation</span>
+          <span onMouseEnter="{{ use6 }}" style="{{ useRow6 }}"><span style="{{ useNum }}">07</span>Rail and transit infrastructure documentation</span>
+          <span onMouseEnter="{{ use7 }}" style="{{ useRow7 }}"><span style="{{ useNum }}">08</span>Parking garages, stairwells, and complex facility documentation</span>
+          <span onMouseEnter="{{ use8 }}" style="{{ useRow8 }}"><span style="{{ useNum }}">09</span>Tight-tolerance measurement where photography alone will not provide the required level of accuracy</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="deliverables" data-screen-label="Deliverables" style="scroll-margin-top:96px;background:#052A44;padding:clamp(60px,9vw,100px) clamp(20px,4.4vw,56px);position:relative;overflow:hidden">
-    <div style="position:absolute;top:-200px;right:-180px;width:620px;height:620px;border-radius:999px;background:radial-gradient(circle,rgba(74,159,216,.2),rgba(74,159,216,0) 70%);pointer-events:none"></div>
+  <section id="sectors" data-screen-label="Data centers, industrial and rail" style="scroll-margin-top:96px;background:#F7EEDD;padding:clamp(60px,9vw,100px) clamp(20px,4.4vw,56px)">
+    <div style="max-width:1420px;margin:0 auto">
+      <div style="{{ sectorHeadStyle }}">
+        <div>
+          <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#8A6A2C;margin-bottom:16px">Where TLS earns its keep</span>
+          <h2 style="font-family:'Sora',sans-serif;font-size:clamp(26px,2.7vw,40px);line-height:1.16;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:22ch;text-wrap:pretty">Congested spaces, live facilities, tight tolerances.</h2>
+        </div>
+        <p style="font-size:16.5px;line-height:1.7;color:#4A5A63;max-width:56ch;text-wrap:pretty">On large sites, terrestrial scanning may be combined with aerial LiDAR, photogrammetry, conventional surveying, or 360° documentation — the collection plan, access, safety requirements, control, and deliverables are established for the specific assignment.</p>
+      </div>
+      <div style="{{ sectorGridStyle }}">
+        <div data-reveal="" data-rc-card="" style="display:flex;flex-direction:column;background:#FDF8EF;border-radius:26px;overflow:hidden;border:1px solid #E4D3AF">
+          <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:16/10;overflow:hidden;background:#0D4066">
+            <img src="assets/photos/p09.jpg" alt="Data center and industrial facility documented from above" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
+          </span>
+          <span style="display:flex;flex-direction:column;gap:14px;padding:clamp(24px,2.4vw,34px)">
+            <span style="font-family:'Sora',sans-serif;font-size:21px;font-weight:600;color:#0F2E45;letter-spacing:-.02em">Data centers &amp; industrial facilities</span>
+            <span style="font-size:15.5px;line-height:1.65;color:#4A5A63">Data center laser scanning and industrial laser scanning can document congested MEP spaces, structural steel, equipment areas, tanks, piping, floors, walls, ceilings, and tie-in locations. The point cloud supports design coordination, renovation planning, clash-detection workflows, facility documentation, and dimensional review.</span>
+          </span>
+        </div>
+        <div data-reveal="" data-rc-card="" style="display:flex;flex-direction:column;background:#FDF8EF;border-radius:26px;overflow:hidden;border:1px solid #E4D3AF">
+          <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:16/10;overflow:hidden;background:#0D4066">
+            <img src="assets/photos/p05.jpg" alt="Structure and clearance conditions documented at close range" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
+          </span>
+          <span style="display:flex;flex-direction:column;gap:14px;padding:clamp(24px,2.4vw,34px)">
+            <span style="font-family:'Sora',sans-serif;font-size:21px;font-weight:600;color:#0F2E45;letter-spacing:-.02em">Rail &amp; transit infrastructure</span>
+            <span style="font-size:15.5px;line-height:1.65;color:#4A5A63">Terrestrial laser scanning can document platforms, stations, tunnels, structural elements, track-adjacent features, bridge components, clearance conditions, and other visible rail or transit infrastructure. Eagle Surveying's Reality Capture team includes professionals with prior railroad and transit surveying experience.</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="deliverables" data-screen-label="Deliverables" style="scroll-margin-top:96px;background:#F6F8FA;padding:clamp(60px,9vw,100px) clamp(20px,4.4vw,56px)">
     <div style="{{ delivGridStyle }}">
       <div>
-        <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#6D9DBD;margin-bottom:16px">Deliverables</span>
-        <h2 style="font-family:'Sora',sans-serif;font-size:clamp(26px,2.7vw,40px);line-height:1.14;letter-spacing:-.025em;font-weight:600;color:#fff;max-width:20ch;text-wrap:balance">Documented accuracy, not assumed accuracy.</h2>
-        <p style="font-size:16px;line-height:1.7;color:#C3D8E6;max-width:46ch;margin-top:20px;text-wrap:pretty">Control and quality requirements are documented in the project scope, so the engineer knows exactly what the data supports.</p>
+        <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Deliverables</span>
+        <h2 style="font-family:'Sora',sans-serif;font-size:clamp(26px,2.7vw,40px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:20ch;text-wrap:pretty">Handed over in the format your software already opens.</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:26px">
+          <span style="font-family:'Sora',sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;color:#0A4B77;background:#E7EDF4;border-radius:999px;padding:10px 18px">E57</span>
+          <span style="font-family:'Sora',sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;color:#0A4B77;background:#E7EDF4;border-radius:999px;padding:10px 18px">RCP / RCS</span>
+          <span style="font-family:'Sora',sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;color:#0A4B77;background:#E7EDF4;border-radius:999px;padding:10px 18px">LAS</span>
+          <span style="font-family:'Sora',sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;color:#0A4B77;background:#E7EDF4;border-radius:999px;padding:10px 18px">PTS</span>
+        </div>
       </div>
-      <div style="{{ delivListStyle }}">
-        <span style="font-size:16px;font-weight:600;color:#DCE8F0;border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:20px 24px">Georeferenced orthomosaics</span>
-        <span style="font-size:16px;font-weight:600;color:#DCE8F0;border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:20px 24px">Digital terrain models (DTM)</span>
-        <span style="font-size:16px;font-weight:600;color:#DCE8F0;border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:20px 24px">Digital surface models (DSM)</span>
-        <span style="font-size:16px;font-weight:600;color:#DCE8F0;border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:20px 24px">RGB point clouds</span>
-        <span style="font-size:16px;font-weight:600;color:#DCE8F0;border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:20px 24px">3D photogrammetric models</span>
-        <span style="font-size:16px;font-weight:600;color:#DCE8F0;border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:20px 24px">Contours</span>
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:16.5px;line-height:1.6;color:#0F2E45;font-weight:600;padding:20px 0;border-top:1px solid #D8E2EB">Registered, georeferenced, colorized point cloud</span>
+        <span style="font-size:16.5px;line-height:1.6;color:#0F2E45;font-weight:600;padding:20px 0;border-top:1px solid #D8E2EB">E57, RCP/RCS, LAS, or PTS files as required</span>
+        <span style="font-size:16.5px;line-height:1.6;color:#0F2E45;font-weight:600;padding:20px 0;border-top:1px solid #D8E2EB">Scan registration report</span>
+        <span style="font-size:16.5px;line-height:1.6;color:#0F2E45;font-weight:600;padding:20px 0;border-top:1px solid #D8E2EB">HDR imagery</span>
+        <span style="font-size:16.5px;line-height:1.6;color:#0F2E45;font-weight:600;padding:20px 0;border-top:1px solid #D8E2EB">CAD/BIM-compatible existing-conditions data</span>
+        <span style="font-size:16.5px;line-height:1.6;color:#0F2E45;font-weight:600;padding:20px 0;border-top:1px solid #D8E2EB;border-bottom:1px solid #D8E2EB">Plans, elevations, sections, or dimensional extracts when included</span>
       </div>
     </div>
   </section>
 
-  <section id="faq" data-screen-label="Photogrammetry FAQs" style="scroll-margin-top:96px;background:#F6F8FA;padding:clamp(60px,9vw,100px) clamp(20px,4.4vw,56px)">
+  <section id="faq" data-screen-label="TLS FAQs" style="scroll-margin-top:96px;background:#E7EDF4;padding:clamp(60px,9vw,100px) clamp(20px,4.4vw,56px)">
     <div style="{{ faqGridStyle }}">
       <div>
-        <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Photogrammetry FAQs</span>
-        <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:20ch;text-wrap:pretty">Orthophotos, accuracy, and airspace.</h2>
+        <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Laser scanning FAQs</span>
+        <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:20ch;text-wrap:pretty">Point clouds, control, and what a scan can carry.</h2>
         <a href="/#reality-capture" style="display:inline-flex;margin-top:22px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#0A4B77;border-bottom:1px solid rgba(10,75,119,.35);padding-bottom:5px" style-hover="color:#063553;border-color:#063553">All Reality Capture services →</a>
       </div>
       <div style="display:flex;flex-direction:column">
-        <details open="{{ faq1Open }}" style="border-top:1px solid #D8E2EB;padding:6px 0">
-          <summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:60px;cursor:pointer;font-family:'Sora',sans-serif;font-size:clamp(16.5px,1.3vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em">How accurate is drone photogrammetry?<span style="color:#0A4B77;font-size:20px;line-height:1">+</span></summary>
-          <p style="font-size:16px;line-height:1.72;color:#3C5468;padding:4px 0 22px;max-width:74ch;text-wrap:pretty">Drone photogrammetry can produce highly accurate mapping when the flight is properly planned, imagery is clear, sufficient overlap is maintained, and the dataset is tied to appropriate ground control. Accuracy depends on flight altitude, camera quality, ground conditions, control, surface visibility, processing, and the intended deliverable. Control and quality requirements are documented in the project scope so the engineer knows exactly what the data supports.</p>
+        <details open="{{ faq1Open }}" style="border-top:1px solid #C9D6E2;padding:6px 0">
+          <summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:60px;cursor:pointer;font-family:'Sora',sans-serif;font-size:clamp(16.5px,1.3vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em">What is 3D laser scanning?<span style="color:#0A4B77;font-size:20px;line-height:1">+</span></summary>
+          <p style="font-size:16px;line-height:1.72;color:#3C5468;padding:4px 0 22px;max-width:74ch;text-wrap:pretty">3D laser scanning is a Reality Capture method that measures millions of points on visible surfaces to create a dense three-dimensional point cloud. It is used to document buildings, structures, industrial facilities, data centers, bridges, tanks, structural steel, MEP spaces, and other built environments. The resulting data can support existing-condition drawings, scan-to-CAD or scan-to-BIM workflows, coordination, renovations, and as-built documentation and comparison with design information.</p>
         </details>
-        <details style="border-top:1px solid #D8E2EB;padding:6px 0">
-          <summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:60px;cursor:pointer;font-family:'Sora',sans-serif;font-size:clamp(16.5px,1.3vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em">What is the difference between LiDAR and photogrammetry?<span style="color:#0A4B77;font-size:20px;line-height:1">+</span></summary>
-          <p style="font-size:16px;line-height:1.72;color:#3C5468;padding:4px 0 22px;max-width:74ch;text-wrap:pretty">LiDAR measures distance with laser pulses and is particularly effective for terrain mapping, vertical detail, and ground capture through openings in vegetation. Photogrammetry reconstructs surfaces from overlapping imagery and provides detailed color and visual information. LiDAR is generally favored when bare-earth terrain is critical; photogrammetry is often favored when surfaces are visible and imagery matters. Eagle Surveying may combine both methods when the project benefits from each.</p>
+        <details style="border-top:1px solid #C9D6E2;padding:6px 0">
+          <summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:60px;cursor:pointer;font-family:'Sora',sans-serif;font-size:clamp(16.5px,1.3vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em">How does Terrestrial Laser Scanning work?<span style="color:#0A4B77;font-size:20px;line-height:1">+</span></summary>
+          <p style="font-size:16px;line-height:1.72;color:#3C5468;padding:4px 0 22px;max-width:74ch;text-wrap:pretty">Terrestrial Laser Scanning uses a ground-based scanner that rotates and measures the distance to visible surfaces around the instrument. Multiple scan positions are registered together and tied to project control when required. The combined point cloud creates a detailed three-dimensional record of the site or structure. Project accuracy, scan density, coverage, control, file formats, and downstream deliverables are established from the intended design or documentation use.</p>
         </details>
-        <details style="border-top:1px solid #D8E2EB;padding:6px 0">
-          <summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:60px;cursor:pointer;font-family:'Sora',sans-serif;font-size:clamp(16.5px,1.3vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em">What are orthophotos?<span style="color:#0A4B77;font-size:20px;line-height:1">+</span></summary>
-          <p style="font-size:16px;line-height:1.72;color:#3C5468;padding:4px 0 22px;max-width:74ch;text-wrap:pretty">Orthophotos are aerial images that have been geometrically corrected for camera perspective, lens effects, and terrain displacement so they can be viewed at a consistent scale and tied to geographic coordinates. Unlike ordinary drone photographs, orthophotos can be used as measurable mapping products for existing-condition documentation, site planning, design coordination, construction records, and stakeholder review.</p>
+        <details style="border-top:1px solid #C9D6E2;padding:6px 0">
+          <summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:60px;cursor:pointer;font-family:'Sora',sans-serif;font-size:clamp(16.5px,1.3vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em">Can Terrestrial Laser Scanning document rail and transit infrastructure?<span style="color:#0A4B77;font-size:20px;line-height:1">+</span></summary>
+          <p style="font-size:16px;line-height:1.72;color:#3C5468;padding:4px 0 22px;max-width:74ch;text-wrap:pretty">Yes. Terrestrial laser scanning can document platforms, stations, tunnels, structural elements, track-adjacent features, bridge components, clearance conditions, and other visible rail or transit infrastructure. Eagle Surveying's Reality Capture team includes professionals with prior railroad and transit surveying experience. The collection plan, access, safety requirements, control, and deliverables are established for the specific rail or transit assignment.</p>
         </details>
-        <details style="border-top:1px solid #D8E2EB;padding:6px 0">
-          <summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:60px;cursor:pointer;font-family:'Sora',sans-serif;font-size:clamp(16.5px,1.3vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em">What is orthomosaic mapping?<span style="color:#0A4B77;font-size:20px;line-height:1">+</span></summary>
-          <p style="font-size:16px;line-height:1.72;color:#3C5468;padding:4px 0 22px;max-width:74ch;text-wrap:pretty">Orthomosaic mapping combines many overlapping aerial photographs into one continuous, georeferenced image of a site. The result provides a current overhead view that can be used for measurements, site planning, construction documentation, progress review, and coordination. Eagle Surveying can process orthomosaics in DroneDeploy and provide direct client access when that platform and access are included in the project scope.</p>
+        <details style="border-top:1px solid #C9D6E2;padding:6px 0">
+          <summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:60px;cursor:pointer;font-family:'Sora',sans-serif;font-size:clamp(16.5px,1.3vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em">How is 360° documentation different from 3D laser scanning?<span style="color:#0A4B77;font-size:20px;line-height:1">+</span></summary>
+          <p style="font-size:16px;line-height:1.72;color:#3C5468;padding:4px 0 22px;max-width:74ch;text-wrap:pretty">360° documentation is primarily a visual record. It allows users to navigate a site remotely and compare conditions over time, but it is not intended to replace survey-grade measurement. Terrestrial laser scanning creates a dense measured point cloud for dimensional work, CAD, BIM, and as-built documentation and comparison with design information. Eagle Surveying recommends 360° capture for visual documentation and laser scanning when dimensional accuracy is required.</p>
         </details>
-        <details style="border-top:1px solid #D8E2EB;border-bottom:1px solid #D8E2EB;padding:6px 0">
-          <summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:60px;cursor:pointer;font-family:'Sora',sans-serif;font-size:clamp(16.5px,1.3vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em">Are drone surveying services FAA compliant?<span style="color:#0A4B77;font-size:20px;line-height:1">+</span></summary>
-          <p style="font-size:16px;line-height:1.72;color:#3C5468;padding:4px 0 22px;max-width:74ch;text-wrap:pretty">Professional UAS missions are planned and flown under applicable FAA requirements by qualified remote pilots. Before a flight, Eagle Surveying reviews airspace, operational restrictions, site conditions, weather, safety requirements, and the owner's access rules. When project requirements call for them, Eagle can deploy NDAA-compliant and Blue UAS Cleared platforms suitable for many federal, security-conscious, and critical-infrastructure environments.</p>
+        <details style="border-top:1px solid #C9D6E2;border-bottom:1px solid #C9D6E2;padding:6px 0">
+          <summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:60px;cursor:pointer;font-family:'Sora',sans-serif;font-size:clamp(16.5px,1.3vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em">What is a point cloud?<span style="color:#0A4B77;font-size:20px;line-height:1">+</span></summary>
+          <p style="font-size:16px;line-height:1.72;color:#3C5468;padding:4px 0 22px;max-width:74ch;text-wrap:pretty">A point cloud is a dense set of measured three-dimensional points representing visible surfaces and features within a site, building, structure, or object. Point clouds may also include intensity values and color imagery. They are commonly created with LiDAR, photogrammetry, or terrestrial laser scanning and are used for existing-condition documentation, surface modeling, CAD production, BIM workflows, dimensional review, as-built documentation, and engineering design.</p>
         </details>
       </div>
     </div>
   </section>
 
-  <section id="related" data-screen-label="Related services" style="scroll-margin-top:96px;background:#E7EDF4;padding:clamp(60px,9vw,100px) clamp(20px,4.4vw,56px)">
+  <section id="related" data-screen-label="Related services" style="scroll-margin-top:96px;background:#F6F8FA;padding:clamp(60px,9vw,100px) clamp(20px,4.4vw,56px)">
     <div style="max-width:1420px;margin:0 auto">
       <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Often scoped together</span>
-      <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:24ch;text-wrap:pretty">What the same flight usually feeds next.</h2>
+      <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:24ch;text-wrap:pretty">What a scan assignment usually sits beside.</h2>
       <div style="{{ relGridStyle }}">
         <a href="/aerial-lidar-mapping" data-reveal="" data-rc-card="" style="display:flex;flex-direction:column;gap:14px">
           <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
@@ -387,11 +436,17 @@
           </span>
           <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Aerial LiDAR Mapping</span>
         </a>
-        <a href="/#reality-capture" data-reveal="" data-rc-card="" style="display:flex;flex-direction:column;gap:14px">
+        <a href="/aerial-photogrammetry" data-reveal="" data-rc-card="" style="display:flex;flex-direction:column;gap:14px">
           <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
-            <img src="assets/photos/p08.jpg" alt="Volumetric and stockpile analysis" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
+            <img src="assets/photos/p09.jpg" alt="Aerial photogrammetry" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
           </span>
-          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Volumetric &amp; Stockpile Analysis</span>
+          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Aerial Photogrammetry</span>
+        </a>
+        <a href="/#surveying" data-reveal="" data-rc-card="" style="display:flex;flex-direction:column;gap:14px">
+          <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
+            <img src="assets/photos/p04.jpg" alt="As-built survey" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
+          </span>
+          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">As-Built Survey</span>
         </a>
         <a href="/#reality-capture" data-reveal="" data-rc-card="" style="display:flex;flex-direction:column;gap:14px">
           <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
@@ -399,23 +454,17 @@
           </span>
           <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Construction Progress Monitoring</span>
         </a>
-        <a href="/#surveying" data-reveal="" data-rc-card="" style="display:flex;flex-direction:column;gap:14px">
-          <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
-            <img src="assets/photos/s03.jpg" alt="Topographic survey" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          </span>
-          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Topographic Survey</span>
-        </a>
       </div>
     </div>
   </section>
 
   <section id="estimate" data-screen-label="CTA" style="scroll-margin-top:96px;position:relative;background:#052A44;overflow:hidden;padding:clamp(60px,9vw,100px) clamp(20px,4.4vw,56px)">
-    <img src="assets/photos/p10.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22">
+    <img src="assets/photos/s08.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22">
     <div style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(5,42,68,.96) 0%,rgba(5,42,68,.78) 60%,rgba(5,42,68,.6) 100%)"></div>
     <div style="{{ ctaGridStyle }}">
       <div>
-        <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,3vw,44px);line-height:1.12;letter-spacing:-.028em;font-weight:600;color:#fff;max-width:24ch;text-wrap:balance">Tell us what your team needs to measure. We'll plan the flight around it.</h2>
-        <p style="font-size:clamp(15.5px,1.2vw,18px);line-height:1.7;color:#C3D8E6;max-width:52ch;margin-top:22px;text-wrap:pretty">Aerial photogrammetry throughout Texas, with select Reality Capture assignments nationwide.</p>
+        <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,3vw,44px);line-height:1.12;letter-spacing:-.028em;font-weight:600;color:#fff;max-width:24ch;text-wrap:balance">Send us the building. We'll tell you what the scan can carry.</h2>
+        <p style="font-size:clamp(15.5px,1.2vw,18px);line-height:1.7;color:#C3D8E6;max-width:52ch;margin-top:22px;text-wrap:pretty">Terrestrial laser scanning throughout Texas, including the Dallas-Fort Worth metroplex and Central Texas.</p>
       </div>
       <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
         <a href="#estimate" style="display:inline-flex;align-items:center;min-height:54px;padding:0 32px;background:#E0A83E;color:#052A44;font-weight:700;font-size:16.5px;border-radius:999px" style-hover="background:#F0BC57">Request an Estimate</a>
@@ -437,8 +486,8 @@
       <div style="display:flex;flex-direction:column;gap:12px">
         <span style="font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#6D9DBD">Reality Capture</span>
         <a href="/aerial-lidar-mapping" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Aerial LiDAR Mapping</a>
-        <a href="#top" style="color:#fff;font-size:14px;font-weight:600">Aerial Photogrammetry</a>
-        <a href="/terrestrial-laser-scanning" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Terrestrial Laser Scanning (TLS)</a>
+        <a href="/aerial-photogrammetry" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Aerial Photogrammetry</a>
+        <a href="#top" style="color:#fff;font-size:14px;font-weight:600">Terrestrial Laser Scanning (TLS)</a>
         <a href="/360-site-documentation" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">360° Site Documentation &amp; Virtual Walkthroughs</a>
         <a href="/aerial-thermal-imagery" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Aerial Thermal Imagery</a>
         <a href="/construction-progress-monitoring" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Construction Progress Monitoring and Documentation</a>
@@ -464,7 +513,7 @@
         <span style="font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#6D9DBD">Company</span>
         <a href="/about" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">About Us</a>
         <a href="/#cares" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Eagle Cares</a>
-        <a href="#platform" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Technology &amp; Equipment</a>
+        <a href="#workflows" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Technology &amp; Equipment</a>
         <a href="/#projects" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Projects</a>
         <a href="/#insights" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Blog</a>
         <a href="/#contact" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Careers</a>
@@ -485,7 +534,7 @@
     </div>
     <div style="max-width:1560px;margin:52px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;color:#7E8F9A;font-size:12.5px">
       <span>© 2026 Eagle Surveying. All rights reserved.</span>
-      <span>Service copy per the Master Sourcebook, Section 5.2 — verbatim.</span>
+      <span>Service copy per the Master Sourcebook, Section 5.3 — verbatim.</span>
     </div>
   </footer>
 </div>
@@ -493,7 +542,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;revealOnScroll&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;faqFirstOpen&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;FAQs&quot;}}">
 class Component extends DCLogic {
-  state = { open: null, drawer: false, acc: null, narrow: false, vpw: 1440 };
+  state = { open: null, drawer: false, acc: null, narrow: false, vpw: 1440, tab: 0, use: 0 };
 
   componentDidMount() {
     this.reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -510,12 +559,6 @@ class Component extends DCLogic {
     setTimeout(() => this.sizeHeroFrame(), 120);
   }
 
-  componentWillUnmount() {
-    this.lockScroll(false);
-    if (this.mq) this.mq.removeEventListener('change', this.onMq);
-    removeEventListener('resize', this.onRz);
-  }
-
   // the Vimeo player letterboxes, so size the iframe to cover its panel
   sizeHeroFrame() {
     const el = this.heroFrame;
@@ -529,7 +572,13 @@ class Component extends DCLogic {
     el.style.height = Math.ceil(h) + 'px';
   }
 
-  componentDidUpdate() { this.sizeHeroFrame(); }
+  componentDidUpdate() { this.bindCardHover(); this.sizeHeroFrame(); }
+
+  componentWillUnmount() {
+    this.lockScroll(false);
+    if (this.mq) this.mq.removeEventListener('change', this.onMq);
+    removeEventListener('resize', this.onRz);
+  }
 
   lockScroll(on) {
     try {
@@ -625,6 +674,46 @@ class Component extends DCLogic {
     const acc = (k) => ({ display: st.acc === k ? 'grid' : 'none', gap: 2, padding: '4px 0 10px 2px' });
     const accLink = { display: 'flex', alignItems: 'center', minHeight: 46, fontSize: 15, color: '#616E77' };
 
+    const uses = [
+      ['assets/photos/p04.jpg', 'Existing conditions and as-built documentation of buildings and industrial facilities'],
+      ['assets/photos/p05.jpg', 'Scan-to-CAD and scan-to-BIM base data for architects and engineers'],
+      ['assets/photos/p03.jpg', 'Structural steel, tank, and MEP coordination and clash detection'],
+      ['assets/photos/s08.jpg', 'Renovation, retrofit, and tie-in design where accurate existing geometry matters'],
+      ['assets/photos/p09.jpg', 'Data center facility documentation'],
+      ['assets/photos/p02.jpg', 'Bridge, culvert, and infrastructure documentation'],
+      ['assets/photos/s10.jpg', 'Rail and transit infrastructure documentation'],
+      ['assets/photos/p07.jpg', 'Parking garages, stairwells, and complex facility documentation'],
+      ['assets/photos/p06.jpg', 'Tight-tolerance measurement where photography alone will not provide the required level of accuracy']
+    ];
+    const stack = st.vpw < 900;
+    const useLayer = (i) => ({
+      position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover',
+      opacity: st.use === i ? 1 : 0, transition: 'opacity .45s ease'
+    });
+    const useRow = (i) => ({
+      display: 'flex', gap: 18, alignItems: 'baseline', cursor: 'default',
+      padding: stack ? '18px 0' : '22px 4px', borderTop: '1px solid #C9D6E2',
+      borderBottom: i === 8 ? '1px solid #C9D6E2' : 'none',
+      fontSize: stack ? 16 : 17.5, lineHeight: 1.5, fontWeight: 600,
+      color: st.use === i ? '#0A4B77' : '#0F2E45',
+      background: st.use === i && !stack ? 'rgba(255,255,255,.5)' : 'transparent',
+      transition: 'color .25s ease, background .25s ease'
+    });
+
+    const tabBtn = (i) => ({
+      appearance: 'none', border: '1px solid ' + (st.tab === i ? '#E0A83E' : 'rgba(255,255,255,.28)'),
+      background: st.tab === i ? '#E0A83E' : 'transparent',
+      color: st.tab === i ? '#052A44' : '#C3D8E6',
+      fontFamily: "'Manrope',sans-serif", fontSize: 14.5, fontWeight: 700,
+      padding: '13px 22px', borderRadius: 999, cursor: 'pointer', whiteSpace: 'nowrap',
+      transition: 'background .25s ease, color .25s ease, border-color .25s ease'
+    });
+    const panel = (i) => ({
+      display: st.tab === i ? 'grid' : 'none',
+      gap: st.narrow ? 26 : 56, alignItems: 'stretch', marginTop: 34,
+      gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,1.05fr) minmax(0,1fr)'
+    });
+
     return {
       navStyle: { display: mob ? 'none' : 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'flex-end', gap: 2, marginLeft: 'auto' },
       drawerOpen: st.drawer ? 'true' : 'false',
@@ -671,6 +760,44 @@ class Component extends DCLogic {
 
       faq1Open: this.props.faqFirstOpen === false ? undefined : true,
 
+      tab0: () => this.setState({ tab: 0 }),
+      tab1: () => this.setState({ tab: 1 }),
+      tab2: () => this.setState({ tab: 2 }),
+      tab3: () => this.setState({ tab: 3 }),
+      tabStyle0: tabBtn(0), tabStyle1: tabBtn(1), tabStyle2: tabBtn(2), tabStyle3: tabBtn(3),
+      panel0Style: panel(0), panel1Style: panel(1), panel2Style: panel(2), panel3Style: panel(3),
+      tabRowStyle: { display: 'flex', flexWrap: 'wrap', gap: 10, marginTop: 34 },
+      panelImgStyle: {
+        position: 'relative', borderRadius: 28, overflow: 'hidden', background: '#0D4066',
+        minHeight: st.narrow ? 240 : 380, boxShadow: '0 0 0 0 rgba(56,142,205,0)', transition: 'box-shadow .45s ease'
+      },
+
+      useAlt: uses[st.use][1],
+      useImg0: useLayer(0), useImg1: useLayer(1), useImg2: useLayer(2),
+      useImg3: useLayer(3), useImg4: useLayer(4), useImg5: useLayer(5),
+      useImg6: useLayer(6), useImg7: useLayer(7), useImg8: useLayer(8),
+      useNum: {
+        fontFamily: "'Sora',sans-serif", fontSize: 12.5, fontWeight: 700,
+        color: '#7E9AB0', letterSpacing: '.1em', flexShrink: 0
+      },
+      use0: () => this.setState({ use: 0 }), use1: () => this.setState({ use: 1 }),
+      use2: () => this.setState({ use: 2 }), use3: () => this.setState({ use: 3 }),
+      use4: () => this.setState({ use: 4 }), use5: () => this.setState({ use: 5 }),
+      use6: () => this.setState({ use: 6 }), use7: () => this.setState({ use: 7 }),
+      use8: () => this.setState({ use: 8 }),
+      useRow0: useRow(0), useRow1: useRow(1), useRow2: useRow(2), useRow3: useRow(3),
+      useRow4: useRow(4), useRow5: useRow(5), useRow6: useRow(6), useRow7: useRow(7),
+      useRow8: useRow(8),
+      usesGridStyle: {
+        display: 'grid', gap: stack ? 28 : 64, marginTop: 44, alignItems: 'stretch',
+        gridTemplateColumns: stack ? 'minmax(0,1fr)' : 'minmax(0,.72fr) minmax(0,1.28fr)'
+      },
+      usesStickyStyle: { position: 'relative', height: '100%' },
+      useFrameStyle: {
+        position: stack ? 'relative' : 'sticky', top: stack ? 'auto' : 116,
+        width: '100%', aspectRatio: '4 / 5', borderRadius: 26, overflow: 'hidden', background: '#0D4066'
+      },
+
       vimeoRef: (el) => {
         if (!el) return;
         this.heroFrame = el;
@@ -702,35 +829,33 @@ class Component extends DCLogic {
         maxWidth: 1420, margin: '0 auto', padding: '16px clamp(20px,4.4vw,56px)',
         display: 'flex', flexWrap: 'wrap', gap: st.vpw < 700 ? '10px 22px' : '12px 42px', alignItems: 'center'
       },
-      overviewGridStyle: {
-        display: 'grid', gap: st.narrow ? 26 : 72, alignItems: 'start',
-        gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,.8fr) minmax(0,1.2fr)'
+      methodGridStyle: {
+        maxWidth: 1420, margin: '0 auto', display: 'grid', gap: st.narrow ? 30 : 64, alignItems: 'stretch',
+        gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,.78fr) minmax(0,1.22fr)'
       },
-      bandImageStyle: {
-        position: 'relative', marginTop: st.narrow ? 36 : 56, borderRadius: 28, overflow: 'hidden',
-        background: '#0D4066', aspectRatio: st.vpw < 900 ? '4 / 3' : '21 / 9',
+      methodStickyStyle: { position: 'relative', height: '100%' },
+      methodImageStyle: {
+        position: st.narrow ? 'relative' : 'sticky', top: st.narrow ? 'auto' : 116,
+        borderRadius: 28, overflow: 'hidden', background: '#0D4066',
+        aspectRatio: st.narrow ? '16 / 10' : '3 / 4',
         boxShadow: '0 0 0 0 rgba(56,142,205,0)', transition: 'box-shadow .45s ease'
       },
-      compareGridStyle: {
-        display: 'grid', gap: st.vpw < 700 ? 18 : 24, marginTop: 44, alignItems: 'stretch',
-        gridTemplateColumns: st.vpw < 800 ? 'minmax(0,1fr)' : 'repeat(2,minmax(0,1fr))'
+      stepsStyle: {
+        display: 'grid', gap: 12, marginTop: 6,
+        gridTemplateColumns: st.vpw < 760 ? 'minmax(0,1fr)' : 'repeat(3,minmax(0,1fr))'
       },
-      platformGridStyle: {
-        maxWidth: 1420, margin: '0 auto', display: 'grid', gap: st.narrow ? 30 : 64, alignItems: 'center',
+      sectorHeadStyle: {
+        display: 'grid', gap: st.narrow ? 22 : 64, alignItems: 'end',
         gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,1fr) minmax(0,1fr)'
       },
-      usesGridStyle: {
-        display: 'grid', gap: st.vpw < 700 ? 16 : 22, marginTop: 44, alignItems: 'stretch',
-        gridTemplateColumns: st.vpw < 640 ? 'minmax(0,1fr)' : st.vpw < 1080 ? 'repeat(2,minmax(0,1fr))' : 'repeat(3,minmax(0,1fr))'
+      sectorGridStyle: {
+        display: 'grid', gap: st.vpw < 700 ? 18 : 26, marginTop: 44, alignItems: 'stretch',
+        gridTemplateColumns: st.vpw < 800 ? 'minmax(0,1fr)' : 'repeat(2,minmax(0,1fr))'
       },
       delivGridStyle: {
-        position: 'relative', maxWidth: 1420, margin: '0 auto', display: 'grid',
-        gap: st.narrow ? 30 : 64, alignItems: 'start',
-        gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,.85fr) minmax(0,1.15fr)'
-      },
-      delivListStyle: {
-        display: 'grid', gap: 12,
-        gridTemplateColumns: st.vpw < 640 ? 'minmax(0,1fr)' : 'repeat(2,minmax(0,1fr))'
+        maxWidth: 1420, margin: '0 auto', display: 'grid',
+        gap: st.narrow ? 30 : 72, alignItems: 'start',
+        gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,.8fr) minmax(0,1.2fr)'
       },
       faqGridStyle: {
         maxWidth: 1420, margin: '0 auto', display: 'grid', gap: st.narrow ? 30 : 72, alignItems: 'start',
@@ -758,6 +883,7 @@ class Component extends DCLogic {
     };
   }
 }
+
 </script>
 </body>
 </html>
