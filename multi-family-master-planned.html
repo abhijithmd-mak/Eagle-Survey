@@ -8,9 +8,9 @@
 <body>
 <x-dc>
 <helmet>
-<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#052A44"></rect><g fill="none" stroke="#E0A83E" stroke-width="3.4" stroke-linecap="round"><path d="M34 66l16-32 16 32"></path><path d="M41 58h18"></path></g></svg></template>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#052A44"></rect><g fill="none" stroke="#E0A83E" stroke-width="3.4" stroke-linecap="round"><path d="M28 68V40l22-12 22 12v28"></path><path d="M28 68h44"></path></g></svg></template>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aerial LiDAR Mapping in Texas | Eagle Surveying</title>
+<title>Multi-Family Site Survey in Texas | Eagle Surveying</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
@@ -88,7 +88,7 @@
           </div>
         </span>
         <span data-nav="" onMouseEnter="{{ openIN }}" onMouseLeave="{{ closeNav }}" style="display:inline-flex;position:relative">
-          <a href="/#industries" style="display:inline-flex;align-items:center;gap:6px;font-size:14.5px;color:#0F2E45;font-weight:500;padding:11px 15px;border-radius:999px;white-space:nowrap" style-hover="background:#E7EDF4;color:#0A4B77">Industries<span style="font-size:11px;opacity:.55">⌄</span></a>
+          <a href="#top" style="display:inline-flex;align-items:center;gap:6px;font-size:14.5px;color:#0A4B77;font-weight:600;padding:11px 15px;border-radius:999px;white-space:nowrap;background:#E7EDF4">Industries<span style="font-size:11px;opacity:.55">⌄</span></a>
           <div style="{{ ddIN }}">
             <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Industries</span>
             <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:11px">
@@ -97,7 +97,7 @@
               <a href="/commercial-retail-development" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Commercial &amp; Retail</a>
               <a href="/municipal-public-infrastructure" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Municipal &amp; Public</a>
               <a href="/education-campuses" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Education</a>
-              <a href="/multi-family-master-planned" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Multi-Family &amp; Master-Planned</a>
+              <a href="#top" style="font-size:14.5px;color:#0A4B77;font-weight:700;line-height:1.35">Multi-Family &amp; Master-Planned</a>
               <a href="/energy-solar-bess-transmission" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Energy &amp; Solar</a>
               <a href="/specialized-venues" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Specialized High-Visibility Venues</a>
             </div>
@@ -112,7 +112,7 @@
             <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:11px">
               <a href="/about" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">About Us</a>
               <a href="/#cares" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Eagle Cares</a>
-              <a href="#platforms" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Technology &amp; Equipment</a>
+              <a href="/aerial-lidar-mapping#platforms" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Technology &amp; Equipment</a>
               <a href="/faqs" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">FAQs</a>
             </div>
           </div>
@@ -176,7 +176,7 @@
         <a href="/commercial-retail-development" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Commercial &amp; Retail</a>
         <a href="/municipal-public-infrastructure" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Municipal &amp; Public</a>
         <a href="/education-campuses" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Education</a>
-        <a href="/multi-family-master-planned" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Multi-Family &amp; Master-Planned</a>
+        <a href="#top" onClick="{{ closeDrawer }}" style="{{ accLinkActiveStyle }}">Multi-Family &amp; Master-Planned</a>
         <a href="/energy-solar-bess-transmission" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Energy &amp; Solar</a>
       </div>
       <a href="/projects" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">Projects</a>
@@ -199,19 +199,20 @@
     </div>
   </div>
 
-  <section id="top" data-screen-label="Service hero" style="position:relative;background:#052A44;overflow:hidden">
+  <section id="top" data-screen-label="Industry hero" style="position:relative;background:#052A44;overflow:hidden">
     <div data-hero="0" style="{{ heroVideoStyle }}">
-      <iframe ref="{{ vimeoRef }}" src="https://player.vimeo.com/video/1217314191?background=1&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerPolicy="strict-origin-when-cross-origin" title="Drone LiDAR scanning a project site" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border:0;pointer-events:none"></iframe>
+      <img src="p07.jpg" alt="Aerial flythrough of a master-planned community under development" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+      <span style="position:absolute;top:18px;right:18px;display:flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid rgba(255,255,255,.4);border-radius:999px;background:rgba(5,42,68,.55);backdrop-filter:blur(6px);font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#DCE8F0">Video to supply</span>
     </div>
     <div style="{{ heroScrimStyle }}"></div>
     <div style="{{ heroInnerStyle }}">
-      <div style="max-width:660px">
-        <span data-hero="1" style="display:block;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#E0A83E;margin-bottom:12px">Bare-earth accuracy from the air</span>
-        <h1 data-hero="2" style="font-family:'Sora',sans-serif;color:#fff;font-size:clamp(32px,4.8vw,68px);line-height:1.05;letter-spacing:-.03em;font-weight:600;text-wrap:balance">Aerial LiDAR Mapping</h1>
-        <p data-hero="3" style="color:#DCE8F0;font-size:clamp(15.5px,1.15vw,17px);line-height:1.6;max-width:620px;margin-top:16px;text-wrap:pretty">Drone LiDAR surveying uses a LiDAR sensor mounted on an unmanned aerial vehicle to emit laser pulses and measure their return times. The measurements build a dense, georeferenced 3D point cloud — and because some pulses reach the ground through openings in vegetation, LiDAR supports bare-earth terrain modeling on wooded sites where photogrammetry may not capture the ground surface.</p>
-        <div data-hero="4" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:26px">
-          <a href="#estimate" style="display:inline-flex;align-items:center;min-height:52px;padding:0 30px;background:#E0A83E;color:#052A44;font-weight:700;font-size:16px;border-radius:999px" style-hover="background:#F0BC57">Request an Estimate</a>
-          <a href="#deliverables" style="display:inline-flex;align-items:center;min-height:52px;padding:0 30px;border:1px solid rgba(255,255,255,.4);color:#fff;font-weight:600;font-size:16px;border-radius:999px" style-hover="background:rgba(255,255,255,.12)">See the deliverables</a>
+      <div style="max-width:680px">
+        <span data-hero="1" style="display:block;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#E0A83E;margin-bottom:12px">Multi-family site survey</span>
+        <h1 data-hero="2" style="font-family:'Sora',sans-serif;color:#fff;font-size:clamp(30px,4.2vw,60px);line-height:1.06;letter-spacing:-.03em;font-weight:600;text-wrap:balance">Multi-Family &amp; Master-Planned Communities</h1>
+        <p data-hero="3" style="color:#DCE8F0;font-size:clamp(15.5px,1.15vw,17px);line-height:1.65;max-width:640px;margin-top:18px;text-wrap:pretty">Multi-family and master-planned developments depend on consistent control, coordinated data, and disciplined handoffs across years of design and construction.</p>
+        <div data-hero="4" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px">
+          <a href="#estimate" style="display:inline-flex;align-items:center;min-height:52px;padding:0 30px;background:#E0A83E;color:#052A44;font-weight:700;font-size:16px;border-radius:999px" style-hover="background:#F0BC57">Request a Development Proposal</a>
+          <a href="#services" style="display:inline-flex;align-items:center;min-height:52px;padding:0 30px;border:1px solid rgba(255,255,255,.4);color:#fff;font-weight:600;font-size:16px;border-radius:999px" style-hover="background:rgba(255,255,255,.12)">See the services</a>
         </div>
       </div>
     </div>
@@ -219,14 +220,14 @@
       <div style="{{ stripStyle }}">
         <div style="{{ stripViewportStyle }}">
           <div style="{{ stripTrackStyle }}">
-              <span style="font-size:13px;color:#C3D8E6;font-weight:500">VTOL fixed-wing &amp; quad platforms</span>
-              <span style="font-size:13px;color:#C3D8E6;font-weight:500">Blue UAS Cleared &amp; NDAA-compliant</span>
-              <span style="font-size:13px;color:#C3D8E6;font-weight:500">Tied to Trimble GNSS control</span>
-              <span style="font-size:13px;color:#C3D8E6;font-weight:500">Reviewed under Texas RPLS oversight</span>
-              <span aria-hidden="true" style="{{ stripDupStyle }}">VTOL fixed-wing &amp; quad platforms</span>
-              <span aria-hidden="true" style="{{ stripDupStyle }}">Blue UAS Cleared &amp; NDAA-compliant</span>
-              <span aria-hidden="true" style="{{ stripDupStyle }}">Tied to Trimble GNSS control</span>
-              <span aria-hidden="true" style="{{ stripDupStyle }}">Reviewed under Texas RPLS oversight</span>
+              <span style="font-size:13px;color:#C3D8E6;font-weight:500">Phased platting and control</span>
+              <span style="font-size:13px;color:#C3D8E6;font-weight:500">Mass-grading volume reporting</span>
+              <span style="font-size:13px;color:#C3D8E6;font-weight:500">Recurring phase documentation</span>
+              <span style="font-size:13px;color:#C3D8E6;font-weight:500">Thousand-acre tracts</span>
+              <span aria-hidden="true" style="{{ stripDupStyle }}">Phased platting and control</span>
+              <span aria-hidden="true" style="{{ stripDupStyle }}">Mass-grading volume reporting</span>
+              <span aria-hidden="true" style="{{ stripDupStyle }}">Recurring phase documentation</span>
+              <span aria-hidden="true" style="{{ stripDupStyle }}">Thousand-acre tracts</span>
           </div>
         </div>
       </div>
@@ -234,20 +235,143 @@
   </section>
 
   <section id="overview" data-screen-label="Overview" style="scroll-margin-top:96px;background:#F6F8FA;padding:clamp(46px,7.5vw,104px) clamp(18px,3.2vw,96px)">
-    <div style="{{ overviewGridStyle }}">
-      <div>
-        <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:18px">How it works</span>
-        <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.16;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:26ch;text-wrap:pretty">Hundreds of thousands of pulses per second, classified into a survey product.</h2>
-        <div data-reveal="" data-rc-card="" style="position:relative;margin-top:34px;border-radius:24px;overflow:hidden;background:#0D4066;aspect-ratio:4/3;box-shadow:0 0 0 0 rgba(56,142,205,0);transition:box-shadow .45s ease">
-          <img src="p01.jpg" alt="VTOL mapping aircraft in flight over vegetated terrain" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
+    <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto">
+      <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77">Who we work with</span>
+      <div style="display:grid;gap:clamp(26px,4vw,76px);grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));align-items:start;margin-top:20px">
+        <h2 style="font-family:'Sora',sans-serif;font-size:clamp(28px,3.1vw,46px);line-height:1.1;letter-spacing:-.03em;font-weight:500;color:#0F2E45;max-width:19ch;text-wrap:pretty">Phase 6 has to tie to the control we set in phase 1.</h2>
+        <div style="display:flex;flex-direction:column;gap:22px;max-width:66ch">
+          <p style="font-size:clamp(16.5px,1.25vw,19px);line-height:1.66;color:#22394A;font-weight:500;text-wrap:pretty">Master-planned communities outlast their project teams. Control set at the start has to still hold years later, plats have to sequence cleanly through phases, and grading quantities have to be defensible each time dirt moves. Eagle Surveying maintains that continuity — one control network, one coordinate system, one survey firm across the life of the development.</p>
+          <p style="font-size:clamp(16px,1.1vw,17.5px);line-height:1.74;color:#4A5A63;text-wrap:pretty">We work with residential and multi-family developers, civil engineers, general contractors, homebuilders, project managers and phased-development teams. Recurring aerial capture documents each phase as it opens, volume reporting tracks mass grading, and phase-by-phase as-builts close out the record.</p>
         </div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:22px">
-        <p style="font-size:clamp(16px,1.15vw,18px);line-height:1.72;color:#3C5468;text-wrap:pretty">Aerial LiDAR mapping uses a drone-mounted LiDAR sensor that fires hundreds of thousands of pulses per second toward the ground, recording multiple returns per pulse to build a dense, georeferenced 3D point cloud. Because the laser finds gaps in the tree canopy, aerial LiDAR records the bare-earth surface beneath vegetation, something conventional image-based photogrammetry generally cannot accomplish in vegetated areas. Eagle Surveying delivers classified point clouds (ground, vegetation, structures) in LAS/LAZ, digital terrain models (DTM), digital surface models (DSM), contours at your specified interval, and breaklines. We tie every dataset to survey-grade control established with Trimble GNSS receivers, so the deliverable stands up as a survey product, not just a picture.</p>
-        <p style="font-size:clamp(16px,1.15vw,18px);line-height:1.72;color:#3C5468;text-wrap:pretty">Eagle operates VTOL (vertical takeoff and landing) fixed-wing and quad UAS platforms, including NDAA-compliant and Blue UAS Cleared platforms suitable for many federal, security-conscious, and critical infrastructure projects. As a survey-first firm with a dedicated Reality Capture practice led by a Director of Reality Capture, we scope point density and accuracy to the engineering use, then process and deliver the data in the coordinate system and format your design team already works in. Because Eagle Surveying is a professional land surveying firm, each dataset is tied to established survey control and reviewed under the oversight of a Texas Registered Professional Land Surveyor.</p>
-        <div style="display:flex;flex-direction:column;gap:14px;background:#E7EDF4;border-radius:22px;padding:clamp(24px,2.4vw,34px)">
-          <span style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#616E77">Corridor experience</span>
-          <p style="font-size:16px;line-height:1.68;color:#3C5468;text-wrap:pretty">Our Reality Capture team includes professionals with prior experience in railroad corridor surveying and powerline transmission and distribution mapping. Those capabilities are available through Eagle Surveying for projects throughout Texas and for select Reality Capture assignments nationwide.</p>
+    </div>
+  </section>
+
+  <div data-overlap="" data-reveal="" data-rc-card="" style="position:relative;z-index:2;padding:0 clamp(18px,3.2vw,96px);margin-bottom:calc(-1 * clamp(48px,6vw,96px))">
+    <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto">
+      <span data-rc-frame="" style="position:relative;display:block;width:100%;aspect-ratio:21/9;min-height:200px;border-radius:26px;overflow:hidden;background:#0D4066;box-shadow:0 40px 90px rgba(4,26,44,.32)"><img src="s10.jpg" alt="Multi-Family and Master-Planned Communities project site" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)"></span>
+    </div>
+  </div>
+
+  <section id="scale" data-screen-label="Scale" style="scroll-margin-top:96px;background:#052A44;padding:calc(clamp(48px,6vw,96px) + clamp(48px,7.5vw,104px)) clamp(18px,3.2vw,96px) clamp(48px,7.5vw,104px);position:relative">
+    <div style="position:absolute;top:-220px;right:-200px;width:640px;height:640px;border-radius:999px;background:radial-gradient(circle,rgba(74,159,216,.2),rgba(74,159,216,0) 70%);pointer-events:none"></div>
+    <div style="position:relative;max-width:min(2880px,max(1720px,86vw));margin:0 auto">
+      <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#6D9DBD;margin-bottom:16px">Scale we work at</span>
+      <h2 style="font-family:'Sora',sans-serif;font-size:clamp(26px,2.8vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:600;color:#fff;max-width:24ch;text-wrap:balance">Thousand-acre communities, phase by phase.</h2>
+      <div style="{{ usesGridStyle }}">
+        <div data-reveal="" style="display:flex;flex-direction:column;gap:12px">
+          <span style="display:flex;align-items:baseline;gap:8px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.2)"><span style="font-family:'Sora',sans-serif;font-size:clamp(34px,3.6vw,52px);font-weight:600;letter-spacing:-.03em;color:#fff;line-height:1">1,096</span><span style="font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#E0A83E">acres</span></span>
+          <span style="font-size:15px;line-height:1.6;color:#C3D8E6;text-wrap:pretty">Rasor Ranch — the largest master-planned tract in our project experience</span>
+        </div>
+        <div data-reveal="" style="display:flex;flex-direction:column;gap:12px">
+          <span style="display:flex;align-items:baseline;gap:8px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.2)"><span style="font-family:'Sora',sans-serif;font-size:clamp(34px,3.6vw,52px);font-weight:600;letter-spacing:-.03em;color:#fff;line-height:1">695</span><span style="font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#E0A83E">acres</span></span>
+          <span style="font-size:15px;line-height:1.6;color:#C3D8E6;text-wrap:pretty">Rainwater Crossing, a phased master-planned community</span>
+        </div>
+        <div data-reveal="" style="display:flex;flex-direction:column;gap:12px">
+          <span style="display:flex;align-items:baseline;gap:8px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.2)"><span style="font-family:'Sora',sans-serif;font-size:clamp(34px,3.6vw,52px);font-weight:600;letter-spacing:-.03em;color:#fff;line-height:1">296</span><span style="font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#E0A83E">acres</span></span>
+          <span style="font-size:15px;line-height:1.6;color:#C3D8E6;text-wrap:pretty">Parks at Wilson Creek</span>
+        </div>
+        <div data-reveal="" style="display:flex;flex-direction:column;gap:12px">
+          <span style="display:flex;align-items:baseline;gap:8px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.2)"><span style="font-family:'Sora',sans-serif;font-size:clamp(34px,3.6vw,52px);font-weight:600;letter-spacing:-.03em;color:#fff;line-height:1">9</span><span style="font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#E0A83E">services</span></span>
+          <span style="font-size:15px;line-height:1.6;color:#C3D8E6;text-wrap:pretty">Primary services commonly scoped across a phased development</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" data-screen-label="Services" style="scroll-margin-top:96px;background:#E7EDF4;padding:clamp(46px,7.5vw,104px) clamp(18px,3.2vw,96px)">
+    <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto">
+      <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Primary project services</span>
+      <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:24ch;text-wrap:pretty">Title, plats, control, dirt, closeout.</h2>
+      <div style="{{ relGridStyle }}">
+        <a href="/platting-services" data-reveal="" data-rc-card="" style="{{ cardRowStyle }}">
+          <span style="{{ cardImgStyle }}">
+            <img src="s10.jpg" alt="Platting Services" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
+          </span>
+          <span style="{{ cardTxtStyle }}">
+            <span style="{{ cardTitleStyle }}">Platting Services</span>
+            <span style="{{ cardDescStyle }}">Phased preliminary and final plats sequenced through the development.</span>
+          </span>
+        </a>
+        <a href="/construction-staking" data-reveal="" data-rc-card="" style="{{ cardRowStyle }}">
+          <span style="{{ cardImgStyle }}">
+            <img src="s05.jpg" alt="Construction Staking" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
+          </span>
+          <span style="{{ cardTxtStyle }}">
+            <span style="{{ cardTitleStyle }}">Construction Staking</span>
+            <span style="{{ cardDescStyle }}">Layout for streets, utilities, pads and amenities in every phase.</span>
+          </span>
+        </a>
+        <a href="/topographic-survey" data-reveal="" data-rc-card="" style="{{ cardRowStyle }}">
+          <span style="{{ cardImgStyle }}">
+            <img src="s03.jpg" alt="Topographic Survey" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
+          </span>
+          <span style="{{ cardTxtStyle }}">
+            <span style="{{ cardTitleStyle }}">Topographic Survey</span>
+            <span style="{{ cardDescStyle }}">Design-base topography across the tract and each phase boundary.</span>
+          </span>
+        </a>
+        <a href="/alta-nsps-land-title-survey" data-reveal="" data-rc-card="" style="{{ cardRowStyle }}">
+          <span style="{{ cardImgStyle }}">
+            <img src="s01.jpg" alt="ALTA/NSPS Land Title Survey" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
+          </span>
+          <span style="{{ cardTxtStyle }}">
+            <span style="{{ cardTitleStyle }}">ALTA/NSPS Land Title Survey</span>
+            <span style="{{ cardDescStyle }}">Title and boundary documentation at acquisition and financing.</span>
+          </span>
+        </a>
+        <a href="/aerial-photogrammetry" data-reveal="" data-rc-card="" style="{{ cardRowStyle }}">
+          <span style="{{ cardImgStyle }}">
+            <img src="p09.jpg" alt="Aerial Photogrammetry" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
+          </span>
+          <span style="{{ cardTxtStyle }}">
+            <span style="{{ cardTitleStyle }}">Aerial Photogrammetry</span>
+            <span style="{{ cardDescStyle }}">Recurring orthomosaics documenting each phase as it opens.</span>
+          </span>
+        </a>
+        <a href="/aerial-lidar-mapping" data-reveal="" data-rc-card="" style="{{ cardRowStyle }}">
+          <span style="{{ cardImgStyle }}">
+            <img src="p01.jpg" alt="Aerial LiDAR Mapping" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
+          </span>
+          <span style="{{ cardTxtStyle }}">
+            <span style="{{ cardTitleStyle }}">Aerial LiDAR Mapping</span>
+            <span style="{{ cardDescStyle }}">Terrain across large or wooded tracts before design begins.</span>
+          </span>
+        </a>
+        <a href="/volumetric-stockpile-analysis" data-reveal="" data-rc-card="" style="{{ cardRowStyle }}">
+          <span style="{{ cardImgStyle }}">
+            <img src="p08.jpg" alt="Volumetric and Stockpile Analysis" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
+          </span>
+          <span style="{{ cardTxtStyle }}">
+            <span style="{{ cardTitleStyle }}">Volumetric &amp; Stockpile Analysis</span>
+            <span style="{{ cardDescStyle }}">Mass-grading and earthwork quantities from surface comparison.</span>
+          </span>
+        </a>
+        <a href="/construction-progress-monitoring" data-reveal="" data-rc-card="" style="{{ cardRowStyle }}">
+          <span style="{{ cardImgStyle }}">
+            <img src="p03.jpg" alt="Construction Progress Monitoring" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
+          </span>
+          <span style="{{ cardTxtStyle }}">
+            <span style="{{ cardTitleStyle }}">Construction Progress Monitoring</span>
+            <span style="{{ cardDescStyle }}">Phase documentation for owners, lenders and homebuilders.</span>
+          </span>
+        </a>
+        <a href="/as-built-survey" data-reveal="" data-rc-card="" style="{{ cardRowStyle }}">
+          <span style="{{ cardImgStyle }}">
+            <img src="s09.jpg" alt="As-Built Survey" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
+          </span>
+          <span style="{{ cardTxtStyle }}">
+            <span style="{{ cardTitleStyle }}">As-Built Survey</span>
+            <span style="{{ cardDescStyle }}">Phase-by-phase closeout records for the municipality and owner.</span>
+          </span>
+        </a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;margin-top:44px;padding-top:32px;border-top:1px solid #C9D6E2">
+        <span style="font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77">Supporting survey services</span>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <a href="/tree-survey" style="font-size:14px;font-weight:600;color:#0F2E45;background:#F6F8FA;border:1px solid #C9D6E2;border-radius:999px;padding:11px 20px" style-hover="background:#fff;color:#0A4B77">Tree Survey</a>
+          <a href="/form-board-survey" style="font-size:14px;font-weight:600;color:#0F2E45;background:#F6F8FA;border:1px solid #C9D6E2;border-radius:999px;padding:11px 20px" style-hover="background:#fff;color:#0A4B77">Form Board Survey</a>
+          <a href="/easement-exhibits-legal-descriptions" style="font-size:14px;font-weight:600;color:#0F2E45;background:#F6F8FA;border:1px solid #C9D6E2;border-radius:999px;padding:11px 20px" style-hover="background:#fff;color:#0A4B77">Easement Exhibits &amp; Legal Descriptions</a>
         </div>
       </div>
     </div>
@@ -256,234 +380,149 @@
   <section id="deliverables" data-screen-label="Deliverables" style="scroll-margin-top:96px;background:#F7EEDD;padding:clamp(46px,7.5vw,104px) clamp(18px,3.2vw,96px)">
     <div style="{{ delivGridStyle }}">
       <div>
-        <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#8A6A2C;margin-bottom:16px">Deliverables</span>
-        <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:22ch;text-wrap:pretty">Scoped to the engineering use, delivered in your format.</h2>
-        <p style="font-size:16.5px;line-height:1.7;color:#4A5A63;max-width:52ch;margin-top:22px;text-wrap:pretty">We confirm the coordinate system, point density, accuracy, file formats, and final deliverables before the aircraft leaves the ground.</p>
+        <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#8A6A2C;margin-bottom:16px">Typical deliverables</span>
+        <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:22ch;text-wrap:pretty">A record that carries from phase to phase.</h2>
+        <p style="font-size:16.5px;line-height:1.7;color:#4A5A63;max-width:52ch;margin-top:22px;text-wrap:pretty">Deliverables are structured by phase so each one closes out cleanly while the overall control basis stays intact.</p>
       </div>
       <div style="{{ delivListStyle }}">
         <div style="display:flex;flex-direction:column;gap:8px;background:rgba(255,255,255,.66);border:1px solid #E4D3AF;border-radius:20px;padding:clamp(20px,2vw,28px)">
-          <span style="font-family:'Sora',sans-serif;font-size:17px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Classified point clouds</span>
-          <span style="font-size:15px;line-height:1.6;color:#4A5A63">Ground, vegetation and structures separated, in LAS/LAZ.</span>
+          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em;line-height:1.3">Title &amp; boundary documentation</span>
+          <span style="font-size:15px;line-height:1.6;color:#4A5A63">Survey record for acquisition and financing.</span>
         </div>
         <div style="display:flex;flex-direction:column;gap:8px;background:rgba(255,255,255,.66);border:1px solid #E4D3AF;border-radius:20px;padding:clamp(20px,2vw,28px)">
-          <span style="font-family:'Sora',sans-serif;font-size:17px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Digital terrain models</span>
-          <span style="font-size:15px;line-height:1.6;color:#4A5A63">Bare-earth DTM surfaces for civil site design and drainage.</span>
+          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em;line-height:1.3">Phased preliminary and final plats</span>
+          <span style="font-size:15px;line-height:1.6;color:#4A5A63">Plat sequence supporting review and recordation.</span>
         </div>
         <div style="display:flex;flex-direction:column;gap:8px;background:rgba(255,255,255,.66);border:1px solid #E4D3AF;border-radius:20px;padding:clamp(20px,2vw,28px)">
-          <span style="font-family:'Sora',sans-serif;font-size:17px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Digital surface models</span>
-          <span style="font-size:15px;line-height:1.6;color:#4A5A63">DSM including vegetation and above-ground features.</span>
+          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em;line-height:1.3">Construction control &amp; layout records</span>
+          <span style="font-size:15px;line-height:1.6;color:#4A5A63">One control basis carried across phases.</span>
         </div>
         <div style="display:flex;flex-direction:column;gap:8px;background:rgba(255,255,255,.66);border:1px solid #E4D3AF;border-radius:20px;padding:clamp(20px,2vw,28px)">
-          <span style="font-family:'Sora',sans-serif;font-size:17px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Contours &amp; breaklines</span>
-          <span style="font-size:15px;line-height:1.6;color:#4A5A63">Contours at your specified interval, with breaklines.</span>
+          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em;line-height:1.3">Recurring orthomosaics</span>
+          <span style="font-size:15px;line-height:1.6;color:#4A5A63">Phase documentation on a repeating capture schedule.</span>
         </div>
         <div style="display:flex;flex-direction:column;gap:8px;background:rgba(255,255,255,.66);border:1px solid #E4D3AF;border-radius:20px;padding:clamp(20px,2vw,28px)">
-          <span style="font-family:'Sora',sans-serif;font-size:17px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">CAD-ready surfaces</span>
-          <span style="font-size:15px;line-height:1.6;color:#4A5A63">Delivered in the coordinate system your design team works in.</span>
+          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em;line-height:1.3">Grading &amp; earthwork volume reports</span>
+          <span style="font-size:15px;line-height:1.6;color:#4A5A63">Quantities from mass-grading surface comparison.</span>
         </div>
         <div style="display:flex;flex-direction:column;gap:8px;background:rgba(255,255,255,.66);border:1px solid #E4D3AF;border-radius:20px;padding:clamp(20px,2vw,28px)">
-          <span style="font-family:'Sora',sans-serif;font-size:17px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Documented control</span>
-          <span style="font-size:15px;line-height:1.6;color:#4A5A63">Trimble GNSS control and QC, reviewed under RPLS oversight.</span>
+          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em;line-height:1.3">Phase-by-phase closeout as-builts</span>
+          <span style="font-size:15px;line-height:1.6;color:#4A5A63">Record documentation at each phase acceptance.</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="uses" data-screen-label="Commonly used for" style="scroll-margin-top:96px;background:#E7EDF4;padding:clamp(46px,7.5vw,104px) clamp(18px,3.2vw,96px)">
+  <section id="proof" data-screen-label="Project experience" style="scroll-margin-top:96px;background:#F6F8FA;padding:clamp(46px,7.5vw,104px) clamp(18px,3.2vw,96px)">
+    <div style="{{ techGridStyle }}">
+      <div style="display:flex;flex-direction:column;gap:22px">
+        <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77">Project experience</span>
+        <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:22ch;text-wrap:pretty">Communities in the ground.</h2>
+        <p style="font-size:16.5px;line-height:1.7;color:#4A5A63;max-width:60ch;text-wrap:pretty">Project experience includes work on the developments below. A project may be a direct client, an end-user site, or work performed through an engineer, contractor or developer.</p>
+        <div style="display:flex;flex-direction:column;margin-top:6px">
+          <div data-reveal="" style="display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-top:1px solid #D8E2EB">
+            <span style="font-family:'Sora',sans-serif;font-size:12.5px;font-weight:700;color:#B8802A;letter-spacing:.06em;padding-top:3px">01</span>
+            <span style="font-family:'Sora',sans-serif;font-size:clamp(16px,1.4vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em;line-height:1.35">Rasor Ranch — 1,096 acres</span>
+          </div>
+          <div data-reveal="" style="display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-top:1px solid #D8E2EB">
+            <span style="font-family:'Sora',sans-serif;font-size:12.5px;font-weight:700;color:#B8802A;letter-spacing:.06em;padding-top:3px">02</span>
+            <span style="font-family:'Sora',sans-serif;font-size:clamp(16px,1.4vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em;line-height:1.35">Rainwater Crossing — 695 acres</span>
+          </div>
+          <div data-reveal="" style="display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-top:1px solid #D8E2EB">
+            <span style="font-family:'Sora',sans-serif;font-size:12.5px;font-weight:700;color:#B8802A;letter-spacing:.06em;padding-top:3px">03</span>
+            <span style="font-family:'Sora',sans-serif;font-size:clamp(16px,1.4vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em;line-height:1.35">Parks at Wilson Creek — 296 acres</span>
+          </div>
+          <div data-reveal="" style="display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-top:1px solid #D8E2EB">
+            <span style="font-family:'Sora',sans-serif;font-size:12.5px;font-weight:700;color:#B8802A;letter-spacing:.06em;padding-top:3px">04</span>
+            <span style="font-family:'Sora',sans-serif;font-size:clamp(16px,1.4vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em;line-height:1.35">Villages of Melissa</span>
+          </div>
+          <div data-reveal="" style="display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-top:1px solid #D8E2EB">
+            <span style="font-family:'Sora',sans-serif;font-size:12.5px;font-weight:700;color:#B8802A;letter-spacing:.06em;padding-top:3px">05</span>
+            <span style="font-family:'Sora',sans-serif;font-size:clamp(16px,1.4vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em;line-height:1.35">Robson Ranch</span>
+          </div>
+          <div data-reveal="" style="display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-top:1px solid #D8E2EB">
+            <span style="font-family:'Sora',sans-serif;font-size:12.5px;font-weight:700;color:#B8802A;letter-spacing:.06em;padding-top:3px">06</span>
+            <span style="font-family:'Sora',sans-serif;font-size:clamp(16px,1.4vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em;line-height:1.35">The Whitley Apartments</span>
+          </div>
+          <div data-reveal="" style="display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-top:1px solid #D8E2EB">
+            <span style="font-family:'Sora',sans-serif;font-size:12.5px;font-weight:700;color:#B8802A;letter-spacing:.06em;padding-top:3px">07</span>
+            <span style="font-family:'Sora',sans-serif;font-size:clamp(16px,1.4vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em;line-height:1.35">Yardly at Lisso</span>
+          </div>
+          <div data-reveal="" style="display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-top:1px solid #D8E2EB">
+            <span style="font-family:'Sora',sans-serif;font-size:12.5px;font-weight:700;color:#B8802A;letter-spacing:.06em;padding-top:3px">08</span>
+            <span style="font-family:'Sora',sans-serif;font-size:clamp(16px,1.4vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em;line-height:1.35">Audra Heights Townhomes</span>
+          </div>
+        </div>
+        <p style="font-size:14px;line-height:1.65;color:#7E8F9A;max-width:60ch;border-left:2px solid #C9D6E2;padding-left:16px;text-wrap:pretty">Relationships and publication rights for each development are confirmed with Eagle before publication.</p>
+      </div>
+      <div style="display:grid;gap:16px;grid-template-columns:minmax(0,1fr);align-content:start">
+        <span data-reveal="" data-rc-card="" style="display:block;box-shadow:0 0 0 0 rgba(56,142,205,0);transition:box-shadow .45s ease"><span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066"><img src="p07.jpg" alt="Finished multi-family community" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)"></span></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="imagery" data-screen-label="Imagery board" style="scroll-margin-top:96px;background:#E7EDF4;padding:clamp(46px,7.5vw,104px) clamp(18px,3.2vw,96px)">
     <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto">
-      <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Commonly used for</span>
-      <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:26ch;text-wrap:pretty">Where aerial LiDAR earns its place on a project.</h2>
-      <div style="{{ usesGridStyle }}">
-        <div data-reveal="" style="display:flex;flex-direction:column;gap:12px">
-          <span style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:#B8802A;letter-spacing:.06em">01</span>
-          <span style="font-size:16.5px;line-height:1.6;color:#263C4D;padding-top:14px;border-top:1px solid #CFDBE6">Bare-earth terrain models under tree canopy for civil site design across the DFW metroplex, Central Texas, and all of Texas</span>
-        </div>
-        <div data-reveal="" style="display:flex;flex-direction:column;gap:12px">
-          <span style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:#B8802A;letter-spacing:.06em">02</span>
-          <span style="font-size:16.5px;line-height:1.6;color:#263C4D;padding-top:14px;border-top:1px solid #CFDBE6">Large-tract and corridor topographic data where ground survey would be slow or hazardous</span>
-        </div>
-        <div data-reveal="" style="display:flex;flex-direction:column;gap:12px">
-          <span style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:#B8802A;letter-spacing:.06em">03</span>
-          <span style="font-size:16.5px;line-height:1.6;color:#263C4D;padding-top:14px;border-top:1px solid #CFDBE6">Pipeline, power transmission and distribution, roadway, and rail corridor mapping</span>
-        </div>
-        <div data-reveal="" style="display:flex;flex-direction:column;gap:12px">
-          <span style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:#B8802A;letter-spacing:.06em">04</span>
-          <span style="font-size:16.5px;line-height:1.6;color:#263C4D;padding-top:14px;border-top:1px solid #CFDBE6">Floodplain and drainage modeling inputs for civil engineers</span>
-        </div>
-        <div data-reveal="" style="display:flex;flex-direction:column;gap:12px">
-          <span style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:#B8802A;letter-spacing:.06em">05</span>
-          <span style="font-size:16.5px;line-height:1.6;color:#263C4D;padding-top:14px;border-top:1px solid #CFDBE6">Data center, mission-critical, industrial, solar, BESS, and energy site due diligence and design base mapping</span>
-        </div>
-        <div data-reveal="" style="display:flex;flex-direction:column;gap:12px">
-          <span style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:#B8802A;letter-spacing:.06em">06</span>
-          <span style="font-size:16.5px;line-height:1.6;color:#263C4D;padding-top:14px;border-top:1px solid #CFDBE6">Volume and earthwork baselines on large grading sites</span>
-        </div>
-        <div data-reveal="" style="display:flex;flex-direction:column;gap:12px">
-          <span style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:#B8802A;letter-spacing:.06em">07</span>
-          <span style="font-size:16.5px;line-height:1.6;color:#263C4D;padding-top:14px;border-top:1px solid #CFDBE6">Vegetation and encroachment mapping along utility corridors</span>
-        </div>
+      <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Imagery to source</span>
+      <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:26ch;text-wrap:pretty">Real Eagle imagery beats stock on this page.</h2>
+      <p style="font-size:16.5px;line-height:1.7;color:#4A5A63;max-width:64ch;margin-top:18px;text-wrap:pretty">The slots below mark the captures the sourcebook calls for on this industry. Send us the files and they drop straight in.</p>
+      <div style="display:grid;gap:22px;margin-top:48px;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))">
+        <span data-reveal="" style="position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:22px;aspect-ratio:4/3;border:1.5px dashed #9FB6C9;border-radius:20px;background:#EDF2F7"><span style="font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#8598A8">Image to supply</span><span style="font-family:'Sora',sans-serif;font-size:15px;font-weight:600;line-height:1.35;color:#42596B;max-width:24ch">Phased-development orthomosaic</span></span>
+        <span data-reveal="" style="position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:22px;aspect-ratio:4/3;border:1.5px dashed #9FB6C9;border-radius:20px;background:#EDF2F7"><span style="font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#8598A8">Image to supply</span><span style="font-family:'Sora',sans-serif;font-size:15px;font-weight:600;line-height:1.35;color:#42596B;max-width:24ch">Mass-grading surface or volume comparison</span></span>
+        <span data-reveal="" style="position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:22px;aspect-ratio:4/3;border:1.5px dashed #9FB6C9;border-radius:20px;background:#EDF2F7"><span style="font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#8598A8">Image to supply</span><span style="font-family:'Sora',sans-serif;font-size:15px;font-weight:600;line-height:1.35;color:#42596B;max-width:24ch">Subdivision plat or construction layout</span></span>
       </div>
     </div>
   </section>
 
-  <section id="platforms" data-screen-label="Platforms and control" style="scroll-margin-top:96px;background:#052A44;padding:clamp(48px,8vw,110px) 0;position:relative;overflow:hidden">
-    <div style="position:absolute;top:-200px;right:-180px;width:620px;height:620px;border-radius:999px;background:radial-gradient(circle,rgba(74,159,216,.2),rgba(74,159,216,0) 70%);pointer-events:none"></div>
-    <div style="position:relative;max-width:calc(min(2880px,max(1720px,86vw)) + 2 * clamp(18px,3.2vw,96px));margin:0 auto;padding:0 clamp(18px,3.2vw,96px)">
-      <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#6D9DBD;margin-bottom:16px">Platforms &amp; control</span>
-      <div style="{{ techGridStyle }}">
-        <div style="display:flex;flex-direction:column;gap:24px">
-          <h2 style="font-family:'Sora',sans-serif;font-size:clamp(26px,2.8vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:600;color:#fff;text-wrap:balance">Survey control first. The aircraft is the second half of the job.</h2>
-          <p style="font-size:clamp(15.5px,1.15vw,18px);line-height:1.72;color:#C3D8E6;text-wrap:pretty">Field work is controlled with Trimble GNSS receivers and robotic total stations on an RTK network. Missions are planned and flown under applicable FAA requirements by qualified remote pilots, after a review of airspace, operational restrictions, site conditions, weather, safety requirements, and the owner's access rules. When project requirements call for them, we deploy NDAA-compliant and Blue UAS Cleared platforms.</p>
-          <div style="display:flex;flex-wrap:wrap;gap:9px;margin-top:4px">
-            <span style="font-size:13.5px;font-weight:600;color:#DCE8F0;border:1px solid rgba(255,255,255,.24);border-radius:999px;padding:9px 17px">VTOL fixed-wing UAS</span>
-            <span style="font-size:13.5px;font-weight:600;color:#DCE8F0;border:1px solid rgba(255,255,255,.24);border-radius:999px;padding:9px 17px">Multirotor UAS</span>
-            <span style="font-size:13.5px;font-weight:600;color:#DCE8F0;border:1px solid rgba(255,255,255,.24);border-radius:999px;padding:9px 17px">YellowScan LiDAR payloads</span>
-            <span style="font-size:13.5px;font-weight:600;color:#DCE8F0;border:1px solid rgba(255,255,255,.24);border-radius:999px;padding:9px 17px">Trimble GNSS &amp; robotic total stations</span>
-            <span style="font-size:13.5px;font-weight:600;color:#DCE8F0;border:1px solid rgba(255,255,255,.24);border-radius:999px;padding:9px 17px">LP360 classification</span>
-            <span style="font-size:13.5px;font-weight:600;color:#DCE8F0;border:1px solid rgba(255,255,255,.24);border-radius:999px;padding:9px 17px">Trimble Business Center</span>
-            <span style="font-size:13.5px;font-weight:600;color:#DCE8F0;border:1px solid rgba(255,255,255,.24);border-radius:999px;padding:9px 17px">Carlson</span>
-            <span style="font-size:13.5px;font-weight:600;color:#DCE8F0;border:1px solid rgba(255,255,255,.24);border-radius:999px;padding:9px 17px">Blue UAS Cleared / NDAA-compliant</span>
-          </div>
-          <a href="/#reality-capture" style="align-self:flex-start;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#E0A83E;border-bottom:1px solid rgba(224,168,62,.45);padding-bottom:5px;margin-top:8px" style-hover="color:#fff;border-color:#fff">All Reality Capture services →</a>
-        </div>
-        <div style="{{ techStackStyle }}">
-          <div data-rc-card="" style="position:relative;border-radius:22px;overflow:hidden;background:#0D4066;min-height:clamp(200px,26vw,300px);box-shadow:0 0 0 0 rgba(56,142,205,0);transition:box-shadow .45s ease">
-            <img src="p11.jpg" alt="Survey crew setting GNSS control before a LiDAR flight" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          </div>
-          <div data-rc-card="" style="position:relative;border-radius:22px;overflow:hidden;background:#0D4066;min-height:clamp(200px,26vw,300px);box-shadow:0 0 0 0 rgba(56,142,205,0);transition:box-shadow .45s ease">
-            <img src="p10.jpg" alt="Large grading site with survey control in place" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="markets" data-screen-label="Markets" style="scroll-margin-top:96px;background:#F6F8FA;padding:clamp(46px,7.5vw,104px) clamp(18px,3.2vw,96px)">
+  <section id="related" data-screen-label="Related industries" style="scroll-margin-top:96px;background:#F6F8FA;padding:clamp(46px,7.5vw,104px) clamp(18px,3.2vw,96px)">
     <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto">
-      <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Markets we fly for</span>
-      <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:24ch;text-wrap:pretty">Large tracts, long corridors, difficult ground.</h2>
+      <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Other industries</span>
+      <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:24ch;text-wrap:pretty">Markets we work in across Texas.</h2>
       <div style="{{ indGridStyle }}">
         <a href="/data-centers" data-reveal="" data-rc-card="" style="display:flex;flex-direction:column;gap:14px;box-shadow:0 0 0 0 rgba(56,142,205,0);transition:box-shadow .45s ease">
           <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
-            <img src="p02.jpg" alt="Data center site under construction" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
+            <img src="p02.jpg" alt="Data Centers and Mission-Critical Facilities" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
           </span>
-          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Data Centers &amp; Mission-Critical</span>
+          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em;line-height:1.3">Data Centers</span>
         </a>
         <a href="/industrial-manufacturing-logistics" data-reveal="" data-rc-card="" style="display:flex;flex-direction:column;gap:14px;box-shadow:0 0 0 0 rgba(56,142,205,0);transition:box-shadow .45s ease">
           <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
-            <img src="p05.jpg" alt="Industrial facility" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
+            <img src="p05.jpg" alt="Industrial, Manufacturing and Logistics" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
           </span>
-          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Industrial, Manufacturing &amp; Logistics</span>
+          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em;line-height:1.3">Industrial, Manufacturing &amp; Logistics</span>
+        </a>
+        <a href="/commercial-retail-development" data-reveal="" data-rc-card="" style="display:flex;flex-direction:column;gap:14px;box-shadow:0 0 0 0 rgba(56,142,205,0);transition:box-shadow .45s ease">
+          <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
+            <img src="p04.jpg" alt="Commercial and Retail Development" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
+          </span>
+          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em;line-height:1.3">Commercial &amp; Retail</span>
         </a>
         <a href="/municipal-public-infrastructure" data-reveal="" data-rc-card="" style="display:flex;flex-direction:column;gap:14px;box-shadow:0 0 0 0 rgba(56,142,205,0);transition:box-shadow .45s ease">
           <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
-            <img src="p10.jpg" alt="Roadway and drainage earthwork corridor" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
+            <img src="p10.jpg" alt="Municipal and Public Infrastructure" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
           </span>
-          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Municipal &amp; Public Infrastructure</span>
+          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em;line-height:1.3">Municipal &amp; Public</span>
         </a>
-        <a href="/energy-solar-bess-transmission" data-reveal="" data-rc-card="" style="display:flex;flex-direction:column;gap:14px;box-shadow:0 0 0 0 rgba(56,142,205,0);transition:box-shadow .45s ease">
+        <a href="/education-campuses" data-reveal="" data-rc-card="" style="display:flex;flex-direction:column;gap:14px;box-shadow:0 0 0 0 rgba(56,142,205,0);transition:box-shadow .45s ease">
           <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
-            <img src="p09.jpg" alt="Solar array site mapped from the air" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
+            <img src="p03.jpg" alt="Education and Higher-Ed Campuses" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
           </span>
-          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Energy, Solar, BESS &amp; Transmission</span>
+          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em;line-height:1.3">Education</span>
         </a>
-        <a href="/multi-family-master-planned" data-reveal="" data-rc-card="" style="display:flex;flex-direction:column;gap:14px;box-shadow:0 0 0 0 rgba(56,142,205,0);transition:box-shadow .45s ease">
-          <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
-            <img src="p07.jpg" alt="Master-planned community under development" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          </span>
-          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Multi-Family &amp; Master-Planned</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section id="related" data-screen-label="Related services" style="scroll-margin-top:96px;background:#E7EDF4;padding:clamp(46px,7.5vw,104px) clamp(18px,3.2vw,96px)">
-    <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto">
-      <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Often scoped together</span>
-      <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:24ch;text-wrap:pretty">Pair it with the method that covers the rest of the site.</h2>
-      <div style="{{ relGridStyle }}">
-        <a href="/aerial-photogrammetry" data-reveal="" data-rc-card="" style="{{ cardRowStyle }}">
-          <span style="{{ cardImgStyle }}">
-            <img src="p09.jpg" alt="Orthomosaic of a commercial site" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          </span>
-          <span style="{{ cardTxtStyle }}">
-            <span style="font-family:'Sora',sans-serif;font-size:18px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Aerial Photogrammetry</span>
-            <span style="font-size:15px;line-height:1.6;color:#3C5468">Color, visual detail and measurable imagery where the ground is visible.</span>
-          </span>
-        </a>
-        <a href="/#reality-capture" data-reveal="" data-rc-card="" style="{{ cardRowStyle }}">
-          <span style="{{ cardImgStyle }}">
-            <img src="p06.jpg" alt="Terrestrial laser scanning inside a facility" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          </span>
-          <span style="{{ cardTxtStyle }}">
-            <span style="font-family:'Sora',sans-serif;font-size:18px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Terrestrial Laser Scanning (TLS)</span>
-            <span style="font-size:15px;line-height:1.6;color:#3C5468">Millimeter-level geometry on structures and congested MEP space.</span>
-          </span>
-        </a>
-        <a href="/#surveying" data-reveal="" data-rc-card="" style="{{ cardRowStyle }}">
-          <span style="{{ cardImgStyle }}">
-            <img src="s03.jpg" alt="Topographic survey deliverable" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          </span>
-          <span style="{{ cardTxtStyle }}">
-            <span style="font-family:'Sora',sans-serif;font-size:18px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Topographic Survey</span>
-            <span style="font-size:15px;line-height:1.6;color:#3C5468">Grades, contours and surface features tied to control for design.</span>
-          </span>
-        </a>
-        <a href="/#reality-capture" data-reveal="" data-rc-card="" style="{{ cardRowStyle }}">
-          <span style="{{ cardImgStyle }}">
-            <img src="p08.jpg" alt="Earthwork site measured from the air" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          </span>
-          <span style="{{ cardTxtStyle }}">
-            <span style="font-family:'Sora',sans-serif;font-size:18px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Volumetric &amp; Stockpile Analysis</span>
-            <span style="font-size:15px;line-height:1.6;color:#3C5468">Cut, fill and material quantities from repeat surface comparison.</span>
-          </span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section id="faq" data-screen-label="LiDAR FAQs" style="scroll-margin-top:96px;background:#F6F8FA;padding:clamp(46px,7.5vw,104px) clamp(18px,3.2vw,96px)">
-    <div style="{{ faqGridStyle }}">
-      <div>
-        <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Aerial LiDAR FAQs</span>
-        <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:20ch;text-wrap:pretty">What engineers ask before a LiDAR flight.</h2>
-        <a href="/#reality-capture" style="display:inline-flex;margin-top:22px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#0A4B77;border-bottom:1px solid rgba(10,75,119,.35);padding-bottom:5px" style-hover="color:#063553;border-color:#063553">Reality Capture hub →</a>
-      </div>
-      <div style="display:flex;flex-direction:column">
-        <details open="{{ faq1Open }}" style="border-top:1px solid #D8E2EB;padding:6px 0">
-          <summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:60px;cursor:pointer;font-family:'Sora',sans-serif;font-size:clamp(16.5px,1.3vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em">Can LiDAR see through trees?<span style="color:#0A4B77;font-size:20px;line-height:1">+</span></summary>
-          <p style="font-size:16px;line-height:1.72;color:#3C5468;padding:4px 0 22px;max-width:74ch;text-wrap:pretty">LiDAR does not literally pass through solid vegetation. Instead, a portion of the laser pulses can reach the ground through gaps in the tree canopy and return ground measurements to the sensor. During processing, those returns can be classified to separate ground, vegetation, and structures. This makes aerial LiDAR particularly useful for topographic mapping, drainage analysis, and site design in wooded or heavily vegetated areas.</p>
-        </details>
-        <details style="border-top:1px solid #D8E2EB;padding:6px 0">
-          <summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:60px;cursor:pointer;font-family:'Sora',sans-serif;font-size:clamp(16.5px,1.3vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em">How accurate is drone LiDAR?<span style="color:#0A4B77;font-size:20px;line-height:1">+</span></summary>
-          <p style="font-size:16px;line-height:1.72;color:#3C5468;padding:4px 0 22px;max-width:74ch;text-wrap:pretty">Drone LiDAR can achieve survey-grade results when the mission is properly planned, tied to suitable survey control, processed correctly, and scoped to the intended use. Actual accuracy depends on the sensor, flight altitude, control network, calibration, terrain, vegetation, weather, and processing workflow. Eagle Surveying establishes the required accuracy and quality-control approach for each project rather than applying one blanket accuracy claim to every site.</p>
-        </details>
-        <details style="border-top:1px solid #D8E2EB;padding:6px 0">
-          <summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:60px;cursor:pointer;font-family:'Sora',sans-serif;font-size:clamp(16.5px,1.3vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em">What is bare-earth LiDAR mapping?<span style="color:#0A4B77;font-size:20px;line-height:1">+</span></summary>
-          <p style="font-size:16px;line-height:1.72;color:#3C5468;padding:4px 0 22px;max-width:74ch;text-wrap:pretty">Bare-earth mapping uses classified LiDAR ground returns to create a digital terrain model that represents the ground surface with vegetation and above-ground objects removed from the terrain model. It is commonly used for civil site design, drainage and floodplain analysis, roadway and utility planning, large development tracts, and the wooded properties common across North and Central Texas where the underlying ground cannot be reliably mapped from aerial imagery alone.</p>
-        </details>
-        <details style="border-top:1px solid #D8E2EB;padding:6px 0">
-          <summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:60px;cursor:pointer;font-family:'Sora',sans-serif;font-size:clamp(16.5px,1.3vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em">Can aerial LiDAR support roadway, rail, pipeline, and transmission line surveys?<span style="color:#0A4B77;font-size:20px;line-height:1">+</span></summary>
-          <p style="font-size:16px;line-height:1.72;color:#3C5468;padding:4px 0 22px;max-width:74ch;text-wrap:pretty">Yes. Aerial LiDAR can efficiently document long linear project areas for roadway, rail, pipeline, power transmission, and distribution work. Typical uses include terrain mapping, vegetation and encroachment documentation, existing-condition mapping, right-of-way and corridor planning, and design-base data. Eagle Surveying's Reality Capture team includes professionals with prior railroad, transit, power transmission, and distribution experience, and those capabilities are available through Eagle for appropriate projects.</p>
-        </details>
-        <details style="border-top:1px solid #D8E2EB;border-bottom:1px solid #D8E2EB;padding:6px 0">
-          <summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:60px;cursor:pointer;font-family:'Sora',sans-serif;font-size:clamp(16.5px,1.3vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em">Can drone LiDAR support data center and industrial site surveys?<span style="color:#0A4B77;font-size:20px;line-height:1">+</span></summary>
-          <p style="font-size:16px;line-height:1.72;color:#3C5468;padding:4px 0 22px;max-width:74ch;text-wrap:pretty">Yes. Drone LiDAR can support data center site surveys and industrial site surveys across Texas by providing high-density terrain data for due diligence, grading, drainage, access, utility planning, and design-base mapping. On active or developed facilities, LiDAR may be combined with conventional surveying, aerial photogrammetry, or terrestrial laser scanning so the project team receives the appropriate mix of site, structure, and surface information.</p>
-        </details>
       </div>
     </div>
   </section>
 
   <section id="estimate" data-screen-label="CTA" style="scroll-margin-top:96px;position:relative;background:#052A44;overflow:hidden;padding:clamp(48px,8vw,110px) clamp(18px,3.2vw,96px)">
-    <img src="p08.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22">
+    <img src="p07.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22">
     <div style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(5,42,68,.96) 0%,rgba(5,42,68,.78) 60%,rgba(5,42,68,.6) 100%)"></div>
     <div style="{{ ctaGridStyle }}">
       <div>
-        <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,3vw,44px);line-height:1.12;letter-spacing:-.028em;font-weight:600;color:#fff;max-width:24ch;text-wrap:balance">Send us the tract and the deliverable. We'll scope the flight.</h2>
-        <p style="font-size:clamp(15.5px,1.2vw,18px);line-height:1.7;color:#C3D8E6;max-width:52ch;margin-top:22px;text-wrap:pretty">Aerial LiDAR mapping throughout Texas, with select Reality Capture assignments nationwide.</p>
+        <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,3vw,44px);line-height:1.12;letter-spacing:-.028em;font-weight:600;color:#fff;max-width:24ch;text-wrap:balance">Send us the phasing plan. We'll carry the control.</h2>
+        <p style="font-size:clamp(15.5px,1.2vw,18px);line-height:1.7;color:#C3D8E6;max-width:52ch;margin-top:22px;text-wrap:pretty">Multi-family and master-planned community surveying across the DFW metroplex, Central Texas and all of Texas.</p>
       </div>
       <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
-        <a href="#estimate" style="display:inline-flex;align-items:center;min-height:54px;padding:0 32px;background:#E0A83E;color:#052A44;font-weight:700;font-size:16.5px;border-radius:999px" style-hover="background:#F0BC57">Request an Estimate</a>
+        <a href="#estimate" style="display:inline-flex;align-items:center;min-height:54px;padding:0 32px;background:#E0A83E;color:#052A44;font-weight:700;font-size:16.5px;border-radius:999px" style-hover="background:#F0BC57">Request a Development Proposal</a>
         <a href="tel:9402223009" style="display:inline-flex;align-items:center;min-height:54px;padding:0 32px;border:1px solid rgba(255,255,255,.4);color:#fff;font-weight:600;font-size:16.5px;border-radius:999px" style-hover="background:rgba(255,255,255,.12)">Call 940-222-3009</a>
       </div>
     </div>
@@ -558,7 +597,7 @@
 </div>
 
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;revealOnScroll&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;faqFirstOpen&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;FAQs&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;revealOnScroll&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
 const SHELL = 'min(2880px,max(1720px,86vw))';
 const WIDE = 'calc(' + SHELL + ' + 2 * clamp(18px,3.2vw,96px))';
 
