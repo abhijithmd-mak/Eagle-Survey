@@ -16,6 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box}
+  @keyframes eagle-marquee-strip{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 15px))}}
   body{margin:0;background:#F6F8FA;font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
   h1,h2,h3,h4,p{margin:0}
   a{color:#0A4B77;text-decoration:none}
@@ -29,25 +30,26 @@
 
 <div style="width:100%;background:#F6F8FA;color:#0F2E45;overflow-x:clip">
 
-  <div data-screen-label="Utility bar" style="background:#052A44">
-    <div style="max-width:1420px;margin:0 auto;padding:10px clamp(20px,4.4vw,56px);display:flex;align-items:center;justify-content:space-between;gap:12px 36px;flex-wrap:wrap">
-      <div style="display:flex;align-items:center;gap:26px;flex-wrap:wrap">
-        <a href="tel:9402223009" style="display:flex;align-items:center;gap:10px;white-space:nowrap" style-hover="opacity:.75">
+  <div data-screen-label="Utility bar" style="position:relative;z-index:70;background:#052A44;padding:0 clamp(18px,3.2vw,96px)">
+    <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto;padding:10px 0;display:flex;align-items:center;justify-content:space-between;gap:12px 36px;flex-wrap:wrap">
+      <button type="button" onClick="{{ togglePhones }}" aria-expanded="{{ phonesOpen }}" tabIndex="{{ utilTab }}" style="{{ utilTogStyle }}">Our contact<span aria-hidden="true" style="{{ utilCaretStyle }}">⌄</span></button>
+      <div style="{{ utilPhonesStyle }}">
+        <a href="tel:9402223009" style="{{ utilLinkStyle }}" style-hover="opacity:.75">
           <span style="font-size:9.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#A6C3D5">Denton HQ</span>
           <span style="font-family:'Sora',sans-serif;font-size:15px;font-weight:600;color:#fff;letter-spacing:-.01em">940-222-3009</span>
         </a>
-        <span style="width:1px;height:20px;background:rgba(255,255,255,.16)"></span>
-        <a href="tel:2544810306" style="display:flex;align-items:center;gap:10px;white-space:nowrap" style-hover="opacity:.75">
+        <span style="{{ utilDivStyle }}"></span>
+        <a href="tel:2544810306" style="{{ utilLinkStyle }}" style-hover="opacity:.75">
           <span style="font-size:9.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#A6C3D5">Waco</span>
           <span style="font-family:'Sora',sans-serif;font-size:15px;font-weight:600;color:#fff;letter-spacing:-.01em">254-481-0306</span>
         </a>
       </div>
-      <span style="font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#A6C3D5">Texas Registered Surveying Firm · TBPELS #10194177</span>
+      <span style="{{ utilNoteStyle }}">Texas Registered Surveying Firm · TBPELS #10194177</span>
     </div>
   </div>
 
-  <header data-screen-label="Header" style="position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);backdrop-filter:blur(16px) saturate(140%);border-bottom:1px solid #DCE4EC">
-    <div style="max-width:1420px;margin:0 auto;padding:0 clamp(20px,4.4vw,56px);display:flex;align-items:center;gap:16px;height:clamp(64px,8vw,86px)">
+  <header data-screen-label="Header" style="position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);backdrop-filter:blur(16px) saturate(140%);border-bottom:1px solid #DCE4EC;padding:0 clamp(18px,3.2vw,96px)">
+    <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto;padding:0;display:flex;align-items:center;gap:16px;height:clamp(64px,8vw,86px)">
       <a href="/" style="flex-shrink:0"><img src="eagle-logo-h.png" alt="Eagle Surveying" style="height:clamp(30px,6.4vw,40px);width:auto"></a>
 
       <nav style="{{ navStyle }}">
@@ -90,18 +92,18 @@
           <div style="{{ ddIN }}">
             <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Industries</span>
             <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:11px">
-              <a href="/#industries" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Data Centers</a>
-              <a href="/#industries" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Industrial, Manufacturing &amp; Logistics</a>
-              <a href="/#industries" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Commercial &amp; Retail</a>
-              <a href="/#industries" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Municipal &amp; Public</a>
-              <a href="/#industries" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Education</a>
-              <a href="/#industries" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Multi-Family &amp; Master-Planned</a>
-              <a href="/#industries" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Energy &amp; Solar</a>
-              <a href="/#industries" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Specialized High-Visibility Venues</a>
+              <a href="/data-centers" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Data Centers</a>
+              <a href="/industrial-manufacturing-logistics" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Industrial, Manufacturing &amp; Logistics</a>
+              <a href="/commercial-retail-development" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Commercial &amp; Retail</a>
+              <a href="/municipal-public-infrastructure" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Municipal &amp; Public</a>
+              <a href="/education-campuses" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Education</a>
+              <a href="/multi-family-master-planned" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Multi-Family &amp; Master-Planned</a>
+              <a href="/energy-solar-bess-transmission" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Energy &amp; Solar</a>
+              <a href="/specialized-venues" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Specialized High-Visibility Venues</a>
             </div>
           </div>
         </span>
-        <a href="/#projects" style="font-size:14.5px;color:#0F2E45;font-weight:500;padding:11px 15px;border-radius:999px;white-space:nowrap" style-hover="background:#E7EDF4;color:#0A4B77">Projects</a>
+        <a href="/projects" style="font-size:14.5px;color:#0F2E45;font-weight:500;padding:11px 15px;border-radius:999px;white-space:nowrap" style-hover="background:#E7EDF4;color:#0A4B77">Projects</a>
         <a href="/#insights" style="font-size:14.5px;color:#0F2E45;font-weight:500;padding:11px 15px;border-radius:999px;white-space:nowrap" style-hover="background:#E7EDF4;color:#0A4B77">Blog</a>
         <span data-nav="" onMouseEnter="{{ openAB }}" onMouseLeave="{{ closeNav }}" style="display:inline-flex;position:relative">
           <a href="/#firm" style="display:inline-flex;align-items:center;gap:6px;font-size:14.5px;color:#0F2E45;font-weight:500;padding:11px 15px;border-radius:999px;white-space:nowrap" style-hover="background:#E7EDF4;color:#0A4B77">About<span style="font-size:11px;opacity:.55">⌄</span></a>
@@ -138,11 +140,11 @@
   </header>
 
   <div style="{{ drawerStyle }}">
-    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px clamp(20px,4.4vw,56px);border-bottom:1px solid #DCE4EC">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px clamp(18px,3.2vw,96px);border-bottom:1px solid #DCE4EC">
       <img src="eagle-logo-h.png" alt="Eagle Surveying" style="height:clamp(28px,6vw,34px);width:auto">
       <button type="button" onClick="{{ closeDrawer }}" aria-label="Close menu" style="width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:1px solid #DCE4EC;border-radius:999px;background:#fff;color:#0F2E45;font-size:20px;line-height:1;cursor:pointer">✕</button>
     </div>
-    <div style="flex:1;overflow-y:auto;padding:8px clamp(20px,4.4vw,56px) 32px">
+    <div style="flex:1;overflow-y:auto;padding:8px clamp(18px,3.2vw,96px) 32px">
       <button type="button" onClick="{{ toggleAccRC }}" style="{{ accBtnStyle }}">Reality Capture<span style="opacity:.5;font-size:13px">⌄</span></button>
       <div style="{{ accRC }}">
         <a href="/aerial-lidar-mapping" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Aerial LiDAR Mapping</a>
@@ -169,19 +171,27 @@
       </div>
       <button type="button" onClick="{{ toggleAccIN }}" style="{{ accBtnStyle }}">Industries<span style="opacity:.5;font-size:13px">⌄</span></button>
       <div style="{{ accIN }}">
-        <a href="/#industries" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Data Centers</a>
-        <a href="/#industries" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Industrial, Manufacturing &amp; Logistics</a>
-        <a href="/#industries" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Commercial &amp; Retail</a>
-        <a href="/#industries" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Municipal &amp; Public</a>
-        <a href="/#industries" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Education</a>
-        <a href="/#industries" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Multi-Family &amp; Master-Planned</a>
-        <a href="/#industries" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Energy &amp; Solar</a>
+        <a href="/data-centers" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Data Centers</a>
+        <a href="/industrial-manufacturing-logistics" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Industrial, Manufacturing &amp; Logistics</a>
+        <a href="/commercial-retail-development" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Commercial &amp; Retail</a>
+        <a href="/municipal-public-infrastructure" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Municipal &amp; Public</a>
+        <a href="/education-campuses" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Education</a>
+        <a href="/multi-family-master-planned" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Multi-Family &amp; Master-Planned</a>
+        <a href="/energy-solar-bess-transmission" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Energy &amp; Solar</a>
       </div>
-      <a href="/#projects" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">Projects</a>
+      <a href="/projects" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">Projects</a>
       <a href="/#insights" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">Blog</a>
       <a href="/about" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">About Us</a>
       <a href="/#cares" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">Eagle Cares</a>
       <a href="/faqs" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">FAQs</a>
+      <a href="/aerial-lidar-mapping#platforms" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">Technology &amp; Equipment</a>
+      <a href="/#contact" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">Careers</a>
+      <button type="button" onClick="{{ toggleAccCT }}" style="{{ accBtnStyle }}">Contact<span style="opacity:.5;font-size:13px">⌄</span></button>
+      <div style="{{ accCT }}">
+        <a href="#estimate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Have a Question</a>
+        <a href="#estimate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Request an Estimate</a>
+        <a href="#estimate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Schedule a Meeting</a>
+      </div>
       <div style="display:flex;flex-direction:column;gap:10px;margin-top:26px">
         <a href="#estimate" onClick="{{ closeDrawer }}" style="display:flex;align-items:center;justify-content:center;min-height:52px;background:#E0A83E;color:#052A44;font-weight:700;font-size:16px;border-radius:999px">Request an Estimate</a>
         <a href="tel:9402223009" style="display:flex;align-items:center;justify-content:center;min-height:52px;border:1px solid #C9D6E2;color:#0F2E45;font-weight:600;font-size:16px;border-radius:999px">Call (940) 222-3009</a>
@@ -207,16 +217,24 @@
     </div>
     <div data-hero="5" style="position:absolute;left:0;right:0;bottom:0;background:rgba(5,42,68,.78);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,.18)">
       <div style="{{ stripStyle }}">
-        <span style="font-size:13px;color:#C3D8E6;font-weight:500">Processed in DroneDeploy</span>
-        <span style="font-size:13px;color:#C3D8E6;font-weight:500">Direct client platform access</span>
-        <span style="font-size:13px;color:#C3D8E6;font-weight:500">Trimble GNSS ground control</span>
-        <span style="font-size:13px;color:#C3D8E6;font-weight:500">VTOL &amp; quad UAS platforms</span>
+        <div style="{{ stripViewportStyle }}">
+          <div style="{{ stripTrackStyle }}">
+              <span style="font-size:13px;color:#C3D8E6;font-weight:500">Processed in DroneDeploy</span>
+              <span style="font-size:13px;color:#C3D8E6;font-weight:500">Direct client platform access</span>
+              <span style="font-size:13px;color:#C3D8E6;font-weight:500">Trimble GNSS ground control</span>
+              <span style="font-size:13px;color:#C3D8E6;font-weight:500">VTOL &amp; quad UAS platforms</span>
+              <span aria-hidden="true" style="{{ stripDupStyle }}">Processed in DroneDeploy</span>
+              <span aria-hidden="true" style="{{ stripDupStyle }}">Direct client platform access</span>
+              <span aria-hidden="true" style="{{ stripDupStyle }}">Trimble GNSS ground control</span>
+              <span aria-hidden="true" style="{{ stripDupStyle }}">VTOL &amp; quad UAS platforms</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="overview" data-screen-label="Overview" style="scroll-margin-top:96px;background:#F6F8FA;padding:clamp(56px,8vw,96px) clamp(20px,4.4vw,56px)">
-    <div style="max-width:1420px;margin:0 auto">
+  <section id="overview" data-screen-label="Overview" style="scroll-margin-top:96px;background:#F6F8FA;padding:clamp(42px,6.5vw,96px) clamp(18px,3.2vw,96px)">
+    <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto">
       <div style="{{ overviewGridStyle }}">
         <div>
           <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:18px">The method</span>
@@ -235,8 +253,8 @@
     </div>
   </section>
 
-  <section id="compare" data-screen-label="LiDAR vs photogrammetry" style="scroll-margin-top:96px;background:#E7EDF4;padding:clamp(60px,9vw,100px) clamp(20px,4.4vw,56px)">
-    <div style="max-width:1420px;margin:0 auto">
+  <section id="compare" data-screen-label="LiDAR vs photogrammetry" style="scroll-margin-top:96px;background:#E7EDF4;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px)">
+    <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto">
       <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">LiDAR or photogrammetry</span>
       <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:26ch;text-wrap:pretty">Two methods, one question: can the camera see the ground?</h2>
       <p style="font-size:16.5px;line-height:1.7;color:#3C5468;max-width:72ch;margin-top:20px;text-wrap:pretty">LiDAR measures distance with laser pulses and is particularly effective for terrain mapping, vertical detail, and ground capture through openings in vegetation. Photogrammetry reconstructs surfaces from overlapping imagery and provides detailed color and visual information. Eagle Surveying may combine both methods when the project benefits from each.</p>
@@ -265,7 +283,7 @@
     </div>
   </section>
 
-  <section id="platform" data-screen-label="DroneDeploy access" style="scroll-margin-top:96px;background:#F7EEDD;padding:clamp(60px,9vw,100px) clamp(20px,4.4vw,56px)">
+  <section id="platform" data-screen-label="DroneDeploy access" style="scroll-margin-top:96px;background:#F7EEDD;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px)">
     <div style="{{ platformGridStyle }}">
       <div data-reveal="" data-rc-card="" style="position:relative;border-radius:28px;overflow:hidden;background:#0D4066;min-height:clamp(280px,34vw,460px);box-shadow:0 0 0 0 rgba(56,142,205,0);transition:box-shadow .45s ease">
         <img src="p06.jpg" alt="Eagle staff reviewing capture data in the office" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
@@ -286,8 +304,8 @@
     </div>
   </section>
 
-  <section id="uses" data-screen-label="Commonly used for" style="scroll-margin-top:96px;background:#F6F8FA;padding:clamp(60px,9vw,100px) clamp(20px,4.4vw,56px)">
-    <div style="max-width:1420px;margin:0 auto">
+  <section id="uses" data-screen-label="Commonly used for" style="scroll-margin-top:96px;background:#F6F8FA;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px)">
+    <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto">
       <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Commonly used for</span>
       <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:24ch;text-wrap:pretty">Six jobs our clients fly photogrammetry for.</h2>
       <div style="{{ usesGridStyle }}">
@@ -325,7 +343,7 @@
     </div>
   </section>
 
-  <section id="deliverables" data-screen-label="Deliverables" style="scroll-margin-top:96px;background:#052A44;padding:clamp(60px,9vw,100px) clamp(20px,4.4vw,56px);position:relative;overflow:hidden">
+  <section id="deliverables" data-screen-label="Deliverables" style="scroll-margin-top:96px;background:#052A44;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px);position:relative;overflow:hidden">
     <div style="position:absolute;top:-200px;right:-180px;width:620px;height:620px;border-radius:999px;background:radial-gradient(circle,rgba(74,159,216,.2),rgba(74,159,216,0) 70%);pointer-events:none"></div>
     <div style="{{ delivGridStyle }}">
       <div>
@@ -344,7 +362,7 @@
     </div>
   </section>
 
-  <section id="faq" data-screen-label="Photogrammetry FAQs" style="scroll-margin-top:96px;background:#F6F8FA;padding:clamp(60px,9vw,100px) clamp(20px,4.4vw,56px)">
+  <section id="faq" data-screen-label="Photogrammetry FAQs" style="scroll-margin-top:96px;background:#F6F8FA;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px)">
     <div style="{{ faqGridStyle }}">
       <div>
         <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Photogrammetry FAQs</span>
@@ -376,30 +394,30 @@
     </div>
   </section>
 
-  <section id="related" data-screen-label="Related services" style="scroll-margin-top:96px;background:#E7EDF4;padding:clamp(60px,9vw,100px) clamp(20px,4.4vw,56px)">
-    <div style="max-width:1420px;margin:0 auto">
+  <section id="related" data-screen-label="Related services" style="scroll-margin-top:96px;background:#E7EDF4;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px)">
+    <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto">
       <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Often scoped together</span>
       <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:24ch;text-wrap:pretty">What the same flight usually feeds next.</h2>
       <div style="{{ relGridStyle }}">
-        <a href="/aerial-lidar-mapping" data-reveal="" data-rc-card="" style="display:flex;flex-direction:column;gap:14px">
+        <a href="/aerial-lidar-mapping" data-reveal="" data-rc-card="" style="{{ relCardStyle }}">
           <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
             <img src="p01.jpg" alt="Aerial LiDAR mapping" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
           </span>
           <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Aerial LiDAR Mapping</span>
         </a>
-        <a href="/#reality-capture" data-reveal="" data-rc-card="" style="display:flex;flex-direction:column;gap:14px">
+        <a href="/#reality-capture" data-reveal="" data-rc-card="" style="{{ relCardStyle }}">
           <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
             <img src="p08.jpg" alt="Volumetric and stockpile analysis" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
           </span>
           <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Volumetric &amp; Stockpile Analysis</span>
         </a>
-        <a href="/#reality-capture" data-reveal="" data-rc-card="" style="display:flex;flex-direction:column;gap:14px">
+        <a href="/#reality-capture" data-reveal="" data-rc-card="" style="{{ relCardStyle }}">
           <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
             <img src="p02.jpg" alt="Construction progress monitoring" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
           </span>
           <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Construction Progress Monitoring</span>
         </a>
-        <a href="/#surveying" data-reveal="" data-rc-card="" style="display:flex;flex-direction:column;gap:14px">
+        <a href="/#surveying" data-reveal="" data-rc-card="" style="{{ relCardStyle }}">
           <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
             <img src="s03.jpg" alt="Topographic survey" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
           </span>
@@ -409,7 +427,7 @@
     </div>
   </section>
 
-  <section id="estimate" data-screen-label="CTA" style="scroll-margin-top:96px;position:relative;background:#052A44;overflow:hidden;padding:clamp(60px,9vw,100px) clamp(20px,4.4vw,56px)">
+  <section id="estimate" data-screen-label="CTA" style="scroll-margin-top:96px;position:relative;background:#052A44;overflow:hidden;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px)">
     <img src="p10.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22">
     <div style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(5,42,68,.96) 0%,rgba(5,42,68,.78) 60%,rgba(5,42,68,.6) 100%)"></div>
     <div style="{{ ctaGridStyle }}">
@@ -424,7 +442,7 @@
     </div>
   </section>
 
-  <footer data-screen-label="Footer" style="background:#052A44;padding:clamp(56px,8vw,80px) clamp(20px,4.4vw,56px) 36px;border-top:1px solid rgba(255,255,255,.12)">
+  <footer data-screen-label="Footer" style="background:#052A44;padding:clamp(44px,6.5vw,80px) clamp(18px,3.2vw,96px) 36px;border-top:1px solid rgba(255,255,255,.12)">
     <div style="{{ footGridStyle }}">
       <div style="display:flex;flex-direction:column;gap:22px">
         <img src="eagle-logo-h-white.png" alt="Eagle Surveying" style="height:34px;width:auto;align-self:flex-start">
@@ -434,8 +452,9 @@
           <span>FAA Part 107 certified pilots</span>
         </div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:12px">
-        <span style="font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#6D9DBD">Reality Capture</span>
+      <div style="{{ footColRCStyle }}">
+        <button type="button" onClick="{{ footTogRC }}" aria-expanded="{{ footOpenRC }}" tabIndex="{{ footTab }}" style="{{ footBtnStyle }}">Reality Capture<span aria-hidden="true" style="{{ footSignRCStyle }}">{{ footSignRC }}</span></button>
+        <div style="{{ footListRCStyle }}">
         <a href="/aerial-lidar-mapping" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Aerial LiDAR Mapping</a>
         <a href="#top" style="color:#fff;font-size:14px;font-weight:600">Aerial Photogrammetry</a>
         <a href="/terrestrial-laser-scanning" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Terrestrial Laser Scanning (TLS)</a>
@@ -443,10 +462,11 @@
         <a href="/aerial-thermal-imagery" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Aerial Thermal Imagery</a>
         <a href="/construction-progress-monitoring" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Construction Progress Monitoring and Documentation</a>
         <a href="/volumetric-stockpile-analysis" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Volumetric &amp; Stockpile Analysis</a>
+        </div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:12px">
-        <span style="font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#6D9DBD">Surveying Services</span>
-        <div style="{{ footSvcGridStyle }}">
+      <div style="{{ footColSVStyle }}">
+        <button type="button" onClick="{{ footTogSV }}" aria-expanded="{{ footOpenSV }}" tabIndex="{{ footTab }}" style="{{ footBtnStyle }}">Surveying Services<span aria-hidden="true" style="{{ footSignSVStyle }}">{{ footSignSV }}</span></button>
+        <div style="{{ footListSVStyle }}">
           <a href="/alta-nsps-land-title-survey" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">ALTA/NSPS Land Title Survey</a>
           <a href="/construction-staking" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Construction Staking</a>
           <a href="/category-1a-land-title-survey" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Category 1A Land Title Survey</a>
@@ -460,16 +480,18 @@
           <a href="/platting-services" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Platting Services</a>
         </div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:12px">
-        <span style="font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#6D9DBD">Company</span>
+      <div style="{{ footColCOStyle }}">
+        <button type="button" onClick="{{ footTogCO }}" aria-expanded="{{ footOpenCO }}" tabIndex="{{ footTab }}" style="{{ footBtnStyle }}">Company<span aria-hidden="true" style="{{ footSignCOStyle }}">{{ footSignCO }}</span></button>
+        <div style="{{ footListCOStyle }}">
         <a href="/about" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">About Us</a>
         <a href="/#cares" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Eagle Cares</a>
         <a href="#platform" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Technology &amp; Equipment</a>
-        <a href="/#projects" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Projects</a>
+        <a href="/projects" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Projects</a>
         <a href="/#insights" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Blog</a>
         <a href="/#contact" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Careers</a>
         <a href="/faqs" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">FAQs</a>
         <a href="#estimate" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Contact</a>
+        </div>
       </div>
       <div style="display:flex;flex-direction:column;gap:24px">
         <div style="display:flex;flex-direction:column;gap:5px">
@@ -483,7 +505,7 @@
         <a href="#estimate" style="align-self:flex-start;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:#C3D8E6;border-bottom:1px solid rgba(191,214,234,.4);padding-bottom:5px" style-hover="color:#fff;border-color:#fff">Request an estimate →</a>
       </div>
     </div>
-    <div style="max-width:1560px;margin:52px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;color:#7E8F9A;font-size:12.5px">
+    <div style="max-width:min(2880px,max(1720px,86vw));margin:52px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;color:#7E8F9A;font-size:12.5px">
       <span>© 2026 Eagle Surveying. All rights reserved.</span>
       <span>Service copy per the Master Sourcebook, Section 5.2 — verbatim.</span>
     </div>
@@ -492,8 +514,11 @@
 
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;revealOnScroll&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;faqFirstOpen&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;FAQs&quot;}}">
+const SHELL = 'min(2880px,max(1720px,86vw))';
+const WIDE = 'calc(' + SHELL + ' + 2 * clamp(18px,3.2vw,96px))';
+
 class Component extends DCLogic {
-  state = { open: null, drawer: false, acc: null, narrow: false, vpw: 1440 };
+  state = { open: null, drawer: false, acc: null, narrow: false, vpw: 1440 , phones: false, footAcc: null};
 
   componentDidMount() {
     this.reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -652,7 +677,7 @@ class Component extends DCLogic {
       accLinkActiveStyle: { ...accLink, color: '#0A4B77', fontWeight: 700 },
       ddRC: card(st.open === 'rc'), ddSV: card(st.open === 'sv'), ddIN: card(st.open === 'in'),
       ddAB: card(st.open === 'ab'), ddCT: card(st.open === 'ct', 'right'),
-      accRC: acc('rc'), accSV: acc('sv'), accIN: acc('in'),
+      accRC: acc('rc'), accSV: acc('sv'), accIN: acc('in'), accCT: acc('ct'),
       openRC: () => this.setState({ open: 'rc' }),
       openSV: () => this.setState({ open: 'sv' }),
       openIN: () => this.setState({ open: 'in' }),
@@ -668,6 +693,7 @@ class Component extends DCLogic {
       toggleAccRC: () => this.setState((s) => ({ acc: s.acc === 'rc' ? null : 'rc' })),
       toggleAccSV: () => this.setState((s) => ({ acc: s.acc === 'sv' ? null : 'sv' })),
       toggleAccIN: () => this.setState((s) => ({ acc: s.acc === 'in' ? null : 'in' })),
+      toggleAccCT: () => this.setState((s) => ({ acc: s.acc === 'ct' ? null : 'ct' })),
 
       faq1Open: this.props.faqFirstOpen === false ? undefined : true,
 
@@ -690,18 +716,36 @@ class Component extends DCLogic {
           : 'linear-gradient(100deg,#052A44 0%,#052A44 34%,rgba(5,42,68,.92) 48%,rgba(5,42,68,.55) 66%,rgba(5,42,68,.28) 82%,rgba(5,42,68,.2) 100%)'
       },
       heroInnerStyle: {
-        position: 'relative', width: '100%', maxWidth: 1420, margin: '0 auto',
+        position: 'relative', width: '100%', maxWidth: WIDE, margin: '0 auto',
         display: 'grid', alignItems: 'center',
         gridTemplateColumns: st.vpw < 900 ? 'minmax(0,1fr)' : 'minmax(0,1.24fr) minmax(0,.76fr)',
         minHeight: st.vpw < 900 ? 'auto' : 'min(34vh,336px)',
         padding: st.vpw < 900
-          ? 'clamp(34px,5.4vw,53px) clamp(20px,4.4vw,56px) clamp(120px,15vw,130px)'
-          : 'clamp(43px,5.4vw,67px) clamp(20px,4.4vw,56px) clamp(100px,12vw,110px)'
+          ? 'clamp(34px,5.4vw,53px) clamp(18px,3.2vw,96px) clamp(120px,15vw,130px)'
+          : 'clamp(43px,5.4vw,67px) clamp(18px,3.2vw,96px) clamp(100px,12vw,110px)'
       },
       stripStyle: {
-        maxWidth: 1420, margin: '0 auto', padding: '16px clamp(20px,4.4vw,56px)',
-        display: 'flex', flexWrap: 'wrap', gap: st.vpw < 700 ? '10px 22px' : '12px 42px', alignItems: 'center'
+        maxWidth: WIDE, margin: '0 auto', padding: st.vpw < 900 ? '12px clamp(18px,3.2vw,96px)' : '16px clamp(18px,3.2vw,96px)',
+        display: 'flex', flexWrap: st.vpw < 900 ? 'nowrap' : 'wrap',
+        gap: st.vpw < 900 ? 0 : '12px 42px', alignItems: 'center'
       },
+      stripDupStyle: {
+        display: st.vpw < 900 ? 'inline' : 'none',
+        fontSize: 13, color: '#C3D8E6', fontWeight: 500
+      },
+      stripViewportStyle: st.vpw < 900
+        ? {
+            flex: '1 1 auto', minWidth: 0, overflow: 'hidden',
+            maskImage: 'linear-gradient(90deg,#000 0,#000 calc(100% - 34px),transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(90deg,#000 0,#000 calc(100% - 34px),transparent 100%)'
+          }
+        : { flex: '1 1 auto', minWidth: 0 },
+      stripTrackStyle: st.vpw < 900
+        ? {
+            display: 'flex', alignItems: 'center', gap: 30, width: 'max-content',
+            animation: this.reduced ? 'none' : 'eagle-marquee-strip 34s linear infinite'
+          }
+        : { display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '12px 42px' },
       overviewGridStyle: {
         display: 'grid', gap: st.narrow ? 26 : 72, alignItems: 'start',
         gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,.8fr) minmax(0,1.2fr)'
@@ -716,7 +760,7 @@ class Component extends DCLogic {
         gridTemplateColumns: st.vpw < 800 ? 'minmax(0,1fr)' : 'repeat(2,minmax(0,1fr))'
       },
       platformGridStyle: {
-        maxWidth: 1420, margin: '0 auto', display: 'grid', gap: st.narrow ? 30 : 64, alignItems: 'center',
+        maxWidth: SHELL, margin: '0 auto', display: 'grid', gap: st.narrow ? 30 : 64, alignItems: 'center',
         gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,1fr) minmax(0,1fr)'
       },
       usesGridStyle: {
@@ -724,7 +768,7 @@ class Component extends DCLogic {
         gridTemplateColumns: st.vpw < 640 ? 'minmax(0,1fr)' : st.vpw < 1080 ? 'repeat(2,minmax(0,1fr))' : 'repeat(3,minmax(0,1fr))'
       },
       delivGridStyle: {
-        position: 'relative', maxWidth: 1420, margin: '0 auto', display: 'grid',
+        position: 'relative', maxWidth: SHELL, margin: '0 auto', display: 'grid',
         gap: st.narrow ? 30 : 64, alignItems: 'start',
         gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,.85fr) minmax(0,1.15fr)'
       },
@@ -733,20 +777,136 @@ class Component extends DCLogic {
         gridTemplateColumns: st.vpw < 640 ? 'minmax(0,1fr)' : 'repeat(2,minmax(0,1fr))'
       },
       faqGridStyle: {
-        maxWidth: 1420, margin: '0 auto', display: 'grid', gap: st.narrow ? 30 : 72, alignItems: 'start',
+        maxWidth: SHELL, margin: '0 auto', display: 'grid', gap: st.narrow ? 30 : 72, alignItems: 'start',
         gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,.7fr) minmax(0,1.3fr)'
       },
-      relGridStyle: {
-        display: 'grid', gap: st.vpw < 700 ? 20 : 28, marginTop: 44,
-        gridTemplateColumns: st.vpw < 640 ? 'repeat(2,minmax(0,1fr))' : 'repeat(4,minmax(0,1fr))'
+      relGridStyle: st.vpw < 700
+        ? {
+            display: 'grid', gap: 14, marginTop: 30, alignItems: 'start',
+            gridAutoFlow: 'column', gridAutoColumns: '72%',
+            overflowX: 'auto', overflowY: 'hidden',
+            scrollSnapType: 'x mandatory', WebkitOverflowScrolling: 'touch',
+            scrollbarWidth: 'none', paddingBottom: 4,
+            marginRight: 'calc(-1 * max(clamp(18px,3.2vw,96px), (100vw - min(2880px,max(1720px,86vw))) / 2))'
+          }
+        : {
+            display: 'grid', gap: 28, marginTop: 44, alignItems: 'start',
+            gridTemplateColumns: 'repeat(4,minmax(0,1fr))'
+          },
+      relCardStyle: {
+        display: 'flex', flexDirection: 'column', gap: 14,
+        scrollSnapAlign: st.vpw < 700 ? 'start' : 'none'
       },
       ctaGridStyle: {
-        position: 'relative', maxWidth: 1420, margin: '0 auto', display: 'grid',
+        position: 'relative', maxWidth: SHELL, margin: '0 auto', display: 'grid',
         gap: st.narrow ? 30 : 64, alignItems: 'center',
         gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,1.3fr) minmax(0,.7fr)'
       },
+      ...(() => {
+        const mob = st.vpw < 900;
+        const o = {};
+        o.phonesOpen = st.phones ? 'true' : 'false';
+        o.togglePhones = () => this.setState((s) => ({ phones: !s.phones }));
+        o.utilTab = mob ? 0 : -1;
+        o.utilTogStyle = {
+          display: mob ? 'inline-flex' : 'none', alignItems: 'center', gap: 8, minHeight: 44,
+          padding: '0 4px 0 0', background: 'none', border: 'none', cursor: 'pointer',
+          fontFamily: "'Manrope',sans-serif", fontSize: 12, fontWeight: 700,
+          letterSpacing: '.18em', textTransform: 'uppercase', color: '#A6C3D5'
+        };
+        o.utilCaretStyle = {
+          fontSize: 13, lineHeight: 1, color: '#E0A83E',
+          transform: st.phones ? 'rotate(180deg)' : 'none', transition: 'transform .25s ease'
+        };
+        o.utilPhonesStyle = mob
+          ? {
+              display: st.phones ? 'flex' : 'none', flexDirection: 'column', gap: 10,
+              position: 'absolute', top: '100%', left: 0, right: 0, zIndex: 71,
+              background: '#052A44', borderTop: '1px solid rgba(255,255,255,.16)',
+              boxShadow: '0 18px 34px rgba(4,26,44,.4)', padding: '10px clamp(18px,3.2vw,96px) 16px'
+            }
+          : { display: 'flex', alignItems: 'center', gap: 26, flexWrap: 'wrap' };
+        o.utilLinkStyle = mob
+          ? { display: 'flex', alignItems: 'center', gap: 10, whiteSpace: 'nowrap', minHeight: 44, padding: '4px 0', width: '100%' }
+          : { display: 'flex', alignItems: 'center', gap: 10, whiteSpace: 'nowrap' };
+        o.utilDivStyle = mob
+          ? { display: 'block', height: 1, background: 'rgba(255,255,255,.14)', margin: '6px 0' }
+          : { width: 1, height: 20, background: 'rgba(255,255,255,.16)' };
+        o.utilNoteStyle = {
+          display: mob ? 'none' : 'block', fontSize: 11, fontWeight: 700,
+          letterSpacing: '.2em', textTransform: 'uppercase', color: '#A6C3D5'
+        };
+
+        [['RC', 'rc'], ['SV', 'sv'], ['CO', 'co']].forEach(([K, k]) => {
+          const open = !mob || st.footAcc === k;
+          o['footCol' + K + 'Style'] = mob
+            ? { display: 'flex', flexDirection: 'column', gap: 0, borderBottom: '1px solid rgba(255,255,255,.14)' }
+            : { display: 'flex', flexDirection: 'column', gap: 12 };
+          o['footList' + K + 'Style'] = {
+            display: open ? (K === 'SV' ? 'grid' : 'flex') : 'none',
+            flexDirection: 'column', gap: 12, paddingBottom: mob ? 18 : 0,
+            gridTemplateColumns: K === 'SV' && !mob && !st.narrow ? 'minmax(0,1fr) minmax(0,1fr)' : 'minmax(0,1fr)'
+          };
+          o['footOpen' + K] = mob ? (open ? 'true' : 'false') : undefined;
+          o['footTog' + K] = () => this.setState((s) => ({ footAcc: s.footAcc === k ? null : k }));
+          o['footSign' + K] = open ? '\u2212' : '+';
+          o['footSign' + K + 'Style'] = {
+            display: mob ? 'inline' : 'none', flex: '0 0 auto',
+            fontSize: 19, lineHeight: 1, fontWeight: 400, color: '#E0A83E'
+          };
+        });
+        o.footTab = mob ? 0 : -1;
+        o.footBtnStyle = mob
+          ? {
+              display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 14,
+              width: '100%', minHeight: 52, padding: '14px 0', background: 'none', border: 'none',
+              cursor: 'pointer', textAlign: 'left', fontFamily: "'Manrope',sans-serif",
+              fontSize: 12.5, fontWeight: 700, letterSpacing: '.2em',
+              textTransform: 'uppercase', color: '#6D9DBD'
+            }
+          : {
+              display: 'block', width: '100%', padding: 0, background: 'none', border: 'none',
+              textAlign: 'left', cursor: 'default', pointerEvents: 'none',
+              fontFamily: "'Manrope',sans-serif", fontSize: 11.5, fontWeight: 700,
+              letterSpacing: '.2em', textTransform: 'uppercase', color: '#6D9DBD'
+            };
+
+        // link cards collapse to a compact divided list on phones
+        const rows = st.vpw < 700;
+        o.cardRowStyle = rows
+          ? {
+              display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 14,
+              background: 'transparent', border: 'none', borderBottom: '1px solid #D8E2EB',
+              borderRadius: 0, padding: '14px 0', overflow: 'hidden'
+            }
+          : {
+              display: 'flex', flexDirection: 'column', background: '#F6F8FA',
+              border: '1px solid #D8E2EB', borderRadius: 22, overflow: 'hidden',
+              boxShadow: '0 0 0 0 rgba(56,142,205,0)', transition: 'box-shadow .45s ease'
+            };
+        o.cardImgStyle = rows
+          ? {
+              position: 'relative', display: 'block', width: 92, flex: '0 0 auto',
+              aspectRatio: '1/1', borderRadius: 12, overflow: 'hidden', background: '#0D4066'
+            }
+          : { position: 'relative', display: 'block', aspectRatio: '16/10', overflow: 'hidden', background: '#0D4066' };
+        o.cardTxtStyle = rows
+          ? { display: 'flex', flexDirection: 'column', gap: 5, padding: 0, minWidth: 0 }
+          : { display: 'flex', flexDirection: 'column', gap: 10, padding: 'clamp(20px,2vw,28px)' };
+        o.cardTitleStyle = {
+          fontFamily: "'Sora',sans-serif", fontSize: rows ? 15.5 : 17.5, fontWeight: 600,
+          color: '#0F2E45', letterSpacing: '-.015em', lineHeight: 1.3
+        };
+        o.cardDescStyle = rows
+          ? {
+              fontSize: 13.5, lineHeight: 1.5, color: '#4A5A63', textWrap: 'pretty',
+              display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden'
+            }
+          : { fontSize: 15, lineHeight: 1.6, color: '#3C5468', textWrap: 'pretty' };
+        return o;
+      })(),
       footGridStyle: {
-        display: 'grid', gap: st.narrow ? '40px 32px' : 48, maxWidth: 1560, margin: '0 auto',
+        display: 'grid', gap: st.narrow ? '40px 32px' : 48, maxWidth: SHELL, margin: '0 auto',
         gridTemplateColumns: st.narrow
           ? 'repeat(auto-fit,minmax(min(100%,240px),1fr))'
           : 'minmax(0,1fr) minmax(0,1.05fr) minmax(0,1.5fr) minmax(0,.8fr) minmax(0,.8fr)'
