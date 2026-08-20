@@ -1,8 +1,7 @@
 # Eagle Surveying — static site
 
 Deploy `site/` as the project root on Vercel. No build step, no framework.
-Largest file is ~153 KB, so this pushes to GitHub through the web UI without
-hitting the file-size limit.
+Every file is well under GitHub's web-upload limit.
 
 ## Structure — deliberately flat
 
@@ -10,13 +9,14 @@ Every file sits in this one folder, no subdirectories, so a folder upload cannot
 silently drop nested files:
 
 - `*.html` — 30 pages, links written as clean slugs
-- `support.js` — the runtime every page loads (68 KB, shared)
-- `*.jpg` / `*.png` / `*.svg` — 56 images, referenced by bare filename
+- `support.js` — the runtime every page loads, shared
+- `*.webp` / `*.jpg` / `*.png` / `*.svg` — 60 images, referenced by bare filename
+- `pointcloud.json` — point data for the homepage capture animation
 - `vercel.json` — `cleanUrls` so `/about` serves `about.html`
 
-88 files total, largest 153 KB. Because links are already slugs, no redirect table
-is needed. If images are ever re-grouped into folders, the `src` attributes must be
-updated to match.
+95 files total. Because links are already slugs, no redirect table is needed. If
+images are ever re-grouped into folders, the `src` attributes must be updated to
+match — including the paths built in JS inside the page logic.
 
 | Source design file | Deployed file | URL |
 |---|---|---|
@@ -59,7 +59,7 @@ than letterbox. No video files are committed.
 
 | Section | Vimeo id |
 |---|---|
-| Homepage — hero flythrough | 1214538057 |
+| Homepage — hero reel | 1219224941 |
 | Projects — featured Buc-ee's panel | 1217621681 |
 | Homepage — Blue UAS | 1217318028 |
 | Aerial LiDAR Mapping — hero | 1217314191 |
@@ -76,6 +76,25 @@ player shows its controls.
 
 ## Regenerating
 
-Pages are the `.dc.html` design files with three mechanical rewrites: sibling
-`href="<Name>.dc.html"` → `/slug`, `./support.js` → `support.js`, and nothing else.
-Edit the design file, then re-export.
+Pages are the `.dc.html` design files with three mechanical rewrites, applied in
+this order:
+
+1. Page links → clean slugs. Four forms exist and all must be handled:
+   `href="<Name>.dc.html"`, `href="<Name>.dc.html#frag"`, and both again in
+   single quotes, because the nav and card arrays build hrefs inside the logic
+   class. `Homepage.dc.html` maps to `/`, so `Homepage.dc.html#contact` → `/#contact`.
+2. `"./support.js"` → `"support.js"`.
+3. Asset paths flatten to bare filenames: `assets/opt/p01.webp` → `p01.webp`.
+   Replace longest paths first, or a shorter prefix corrupts the longer ones.
+   Verify no basename collisions before flattening.
+
+After exporting, check that no `.dc.html` or `assets/` string survives in any page,
+that every referenced local file exists, and that every `/slug` link resolves to a
+real page. Edit the design file, then re-export — never hand-edit a page here.
+
+### Last export
+
+19 August 2026, from the post-client-revision design files: top utility ribbon
+removed sitewide, footer rebuilt (city wireframe band, navy gradient, smaller type,
+single vertical link lists), photography converted to WebP, and the homepage content
+replaced from Dan's approved copy.

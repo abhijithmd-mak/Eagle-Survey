@@ -8,6 +8,26 @@
 <body>
 <x-dc>
 <helmet>
+<meta name="ext-resource-dependency" content="p-worldsprings.webp">
+<meta name="ext-resource-dependency" content="p-bucees.webp">
+<meta name="ext-resource-dependency" content="p-cedarhill.webp">
+<meta name="ext-resource-dependency" content="p-heb.webp">
+<meta name="ext-resource-dependency" content="p-benchmark.webp">
+<meta name="ext-resource-dependency" content="p-amazon.webp">
+<meta name="ext-resource-dependency" content="p-dollargeneral.webp">
+<meta name="ext-resource-dependency" content="p-randallnoe.webp">
+<meta name="ext-resource-dependency" content="p-highrise.webp">
+<meta name="ext-resource-dependency" content="p-datacenter.webp">
+<meta name="ext-resource-dependency" content="p-prestwick.webp">
+<meta name="ext-resource-dependency" content="p-dutchbros.webp">
+<meta name="ext-resource-dependency" content="p-burgerking.jpg">
+<meta name="ext-resource-dependency" content="p-popeyes.jpg">
+<meta name="ext-resource-dependency" content="p-viridian.jpg">
+<meta name="ext-resource-dependency" content="bucees-approach.jpg">
+<meta name="ext-resource-dependency" content="bucees-3d.png">
+<meta name="ext-resource-dependency" content="bucees-ortho.png">
+<meta name="ext-resource-dependency" content="bucees-topo.png">
+<meta name="ext-resource-dependency" content="bucees-walkthrough.png">
 <template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#052A44"></rect><g fill="none" stroke="#E0A83E" stroke-width="3.4" stroke-linecap="round"><path d="M24 34h22v22H24z"></path><path d="M54 34h22v22H54z"></path><path d="M24 64h52"></path></g></svg></template>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Survey Projects Across Texas | Eagle Surveying</title>
@@ -30,27 +50,9 @@
 
 <div style="width:100%;background:#F6F8FA;color:#0F2E45;overflow-x:clip">
 
-  <div data-screen-label="Utility bar" style="position:relative;z-index:70;background:#052A44;padding:0 clamp(18px,3.2vw,96px)">
-    <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto;padding:10px 0;display:flex;align-items:center;justify-content:space-between;gap:12px 36px;flex-wrap:wrap">
-      <button type="button" onClick="{{ togglePhones }}" aria-expanded="{{ phonesOpen }}" tabIndex="{{ utilTab }}" style="{{ utilTogStyle }}">Our contact<span aria-hidden="true" style="{{ utilCaretStyle }}">⌄</span></button>
-      <div style="{{ utilPhonesStyle }}">
-        <a href="tel:9402223009" style="{{ utilLinkStyle }}" style-hover="opacity:.75">
-          <span style="font-size:9.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#A6C3D5">Denton HQ</span>
-          <span style="font-family:'Sora',sans-serif;font-size:15px;font-weight:600;color:#fff;letter-spacing:-.01em">940-222-3009</span>
-        </a>
-        <span style="{{ utilDivStyle }}"></span>
-        <a href="tel:2544810306" style="{{ utilLinkStyle }}" style-hover="opacity:.75">
-          <span style="font-size:9.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#A6C3D5">Waco</span>
-          <span style="font-family:'Sora',sans-serif;font-size:15px;font-weight:600;color:#fff;letter-spacing:-.01em">254-481-0306</span>
-        </a>
-      </div>
-      <span style="{{ utilNoteStyle }}">Texas Registered Surveying Firm · TBPELS #10194177</span>
-    </div>
-  </div>
-
   <header data-screen-label="Header" style="position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);backdrop-filter:blur(16px) saturate(140%);border-bottom:1px solid #DCE4EC;padding:0 clamp(18px,3.2vw,96px)">
     <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto;padding:0;display:flex;align-items:center;gap:16px;height:clamp(64px,8vw,86px)">
-      <a href="/" style="flex-shrink:0"><img src="eagle-logo-h.png" alt="Eagle Surveying" style="height:clamp(30px,6.4vw,40px);width:auto"></a>
+      <a href="/" style="flex-shrink:0"><img src="eagle-logo-h.webp" alt="Eagle Surveying" style="height:clamp(30px,6.4vw,40px);width:auto"></a>
 
       <nav style="{{ navStyle }}">
         <span data-nav="" onMouseEnter="{{ openRC }}" onMouseLeave="{{ closeNav }}" style="display:inline-flex;position:relative">
@@ -141,7 +143,7 @@
 
   <div style="{{ drawerStyle }}">
     <div style="display:flex;align-items:center;justify-content:space-between;padding:16px clamp(18px,3.2vw,96px);border-bottom:1px solid #DCE4EC">
-      <img src="eagle-logo-h.png" alt="Eagle Surveying" style="height:clamp(28px,6vw,34px);width:auto">
+      <img src="eagle-logo-h.webp" alt="Eagle Surveying" style="height:clamp(28px,6vw,34px);width:auto">
       <button type="button" onClick="{{ closeDrawer }}" aria-label="Close menu" style="width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:1px solid #DCE4EC;border-radius:999px;background:#fff;color:#0F2E45;font-size:20px;line-height:1;cursor:pointer">✕</button>
     </div>
     <div style="flex:1;overflow-y:auto;padding:8px clamp(18px,3.2vw,96px) 32px">
@@ -201,7 +203,7 @@
 
   <section id="top" data-screen-label="Projects hero" style="position:relative;background:#052A44;overflow:hidden">
     <div data-hero="0" style="{{ heroMediaStyle }}">
-      <img src="p-worldsprings.jpg" alt="Aerial view of a Texas development site under construction" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+      <img src="p-worldsprings.webp" alt="Aerial view of a Texas development site under construction" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
     </div>
     <div style="{{ heroScrimStyle }}"></div>
     <div style="{{ heroInnerStyle }}">
@@ -249,7 +251,7 @@
   <div data-overlap="" data-reveal="" data-rc-card="" style="position:relative;z-index:2;padding:0 clamp(18px,3.2vw,96px);margin-bottom:calc(-1 * clamp(48px,6vw,96px))">
     <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto">
       <span data-rc-frame="" style="position:relative;display:block;width:100%;aspect-ratio:21/9;min-height:200px;border-radius:26px;overflow:hidden;background:#0D4066;box-shadow:0 40px 90px rgba(4,26,44,.32)">
-        <img src="p-bucees.jpg" alt="Orthomosaic of the Buc-ee's travel center in Pass Christian, Mississippi" style="{{ featImgStyle }}">
+        <img src="p-bucees.webp" alt="Aerial view of the completed Buc-ee's travel center in Pass Christian, Mississippi" style="{{ featImgStyle }}">
         <span style="{{ featVideoWrapStyle }}">
           <iframe ref="{{ vimeoRef }}" src="{{ featVideoSrc }}" title="Buc-ee's — Pass Christian, Mississippi" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border:0;pointer-events:none"></iframe>
         </span>
@@ -336,7 +338,7 @@
   </section>
 
   <section id="estimate" data-screen-label="CTA" style="scroll-margin-top:96px;position:relative;background:#052A44;overflow:hidden;padding:clamp(48px,8vw,110px) clamp(18px,3.2vw,96px)">
-    <img src="p-cedarhill.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22">
+    <img src="p-cedarhill.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22">
     <div style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(5,42,68,.96) 0%,rgba(5,42,68,.78) 60%,rgba(5,42,68,.6) 100%)"></div>
     <div style="{{ ctaGridStyle }}">
       <div>
@@ -354,8 +356,8 @@
     <div onClick="{{ closeModal }}" style="position:absolute;inset:0;background:rgba(4,26,44,.82);backdrop-filter:blur(6px)"></div>
     <div style="{{ modalPanelStyle }}">
       <div style="{{ modalGridStyle }}">
-        <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
-          <div style="position:relative;aspect-ratio:16/10;border-radius:18px;overflow:hidden;background:#0D4066">
+        <div style="display:flex;flex-direction:column;gap:14px;min-width:0;min-height:0">
+          <div style="{{ shotFrameStyle }}">
             <img src="{{ shotSrc }}" alt="{{ shotAlt }}" style="{{ shotImgStyle }}">
             <div style="{{ shotEmptyStyle }}">
               <span style="font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#8FB0C7">Photo to supply</span>
@@ -365,7 +367,7 @@
             <button type="button" onClick="{{ nextShot }}" aria-label="Next photo" style="{{ arrowRightStyle }}">›</button>
             <span style="position:absolute;bottom:14px;left:14px;padding:7px 14px;border-radius:999px;background:rgba(5,42,68,.78);backdrop-filter:blur(6px);font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#DCE8F0">{{ shotCounter }}</span>
           </div>
-          <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <div style="display:flex;gap:10px;overflow-x:auto;padding-bottom:2px">
             <sc-for list="{{ thumbs }}" as="t" hint-placeholder-count="5">
               <button type="button" onClick="{{ t.onClick }}" aria-label="{{ t.label }}" style="{{ t.style }}">
                 <img src="{{ t.src }}" alt="" style="{{ t.imgStyle }}">
@@ -404,11 +406,13 @@
     </div>
   </div>
 
-  <footer data-screen-label="Footer" style="background:#052A44;padding:clamp(44px,6.5vw,80px) clamp(18px,3.2vw,96px) 36px;border-top:1px solid rgba(255,255,255,.12)">
+  <footer data-screen-label="Footer" style="position:relative;overflow:hidden;background:#052A44;padding:clamp(38px,5.5vw,68px) clamp(18px,3.2vw,96px) 30px">
+    <img loading="lazy" decoding="async" src="city-wire.webp" alt="" aria-hidden="true" style="{{ footWireStyle }}">
+    <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(5,42,68,.34) 0%,rgba(5,42,68,.34) 52%,rgba(4,34,55,.46) 72%,rgba(1,21,31,.76) 100%)"></div>
     <div style="{{ footGridStyle }}">
-      <div style="display:flex;flex-direction:column;gap:22px">
-        <img src="eagle-logo-h-white.png" alt="Eagle Surveying" style="height:34px;width:auto;align-self:flex-start">
-        <div style="display:flex;flex-direction:column;gap:6px;font-size:12.5px;color:#7E8F9A;line-height:1.7">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <img src="eagle-logo-h-white.webp" alt="Eagle Surveying" style="height:clamp(26px,1.9vw,32px);width:auto;align-self:flex-start">
+        <div style="display:flex;flex-direction:column;gap:4px;font-size:clamp(11.5px,0.78vw,15px);color:#8FA8BC;line-height:1.65">
           <span>Texas Registered Surveying Firm</span>
           <span>TBPELS #10194177</span>
           <span>FAA Part 107 certified pilots</span>
@@ -417,83 +421,80 @@
       <div style="{{ footColRCStyle }}">
         <button type="button" onClick="{{ footTogRC }}" aria-expanded="{{ footOpenRC }}" tabIndex="{{ footTab }}" style="{{ footBtnStyle }}">Reality Capture<span aria-hidden="true" style="{{ footSignRCStyle }}">{{ footSignRC }}</span></button>
         <div style="{{ footListRCStyle }}">
-        <a href="/aerial-lidar-mapping" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Aerial LiDAR Mapping</a>
-        <a href="/aerial-photogrammetry" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Aerial Photogrammetry</a>
-        <a href="/terrestrial-laser-scanning" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Terrestrial Laser Scanning (TLS)</a>
-        <a href="/360-site-documentation" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">360° Site Documentation &amp; Virtual Walkthroughs</a>
-        <a href="/aerial-thermal-imagery" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Aerial Thermal Imagery</a>
-        <a href="/construction-progress-monitoring" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Construction Progress Monitoring and Documentation</a>
-        <a href="/volumetric-stockpile-analysis" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Volumetric &amp; Stockpile Analysis</a>
+        <a href="/aerial-lidar-mapping" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Aerial LiDAR Mapping</a>
+        <a href="/aerial-photogrammetry" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Aerial Photogrammetry</a>
+        <a href="/terrestrial-laser-scanning" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Terrestrial Laser Scanning (TLS)</a>
+        <a href="/360-site-documentation" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">360° Site Documentation &amp; Virtual Walkthroughs</a>
+        <a href="/aerial-thermal-imagery" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Aerial Thermal Imagery</a>
+        <a href="/construction-progress-monitoring" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Construction Progress Monitoring and Documentation</a>
+        <a href="/volumetric-stockpile-analysis" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Volumetric &amp; Stockpile Analysis</a>
         </div>
       </div>
       <div style="{{ footColSVStyle }}">
         <button type="button" onClick="{{ footTogSV }}" aria-expanded="{{ footOpenSV }}" tabIndex="{{ footTab }}" style="{{ footBtnStyle }}">Surveying Services<span aria-hidden="true" style="{{ footSignSVStyle }}">{{ footSignSV }}</span></button>
         <div style="{{ footListSVStyle }}">
-          <a href="/alta-nsps-land-title-survey" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">ALTA/NSPS Land Title Survey</a>
-          <a href="/construction-staking" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Construction Staking</a>
-          <a href="/category-1a-land-title-survey" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Category 1A Land Title Survey</a>
-          <a href="/form-board-survey" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Form Board Survey</a>
-          <a href="/boundary-survey-category-1b" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Category 1B Standard Land Survey</a>
-          <a href="/as-built-survey" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">As-Built Survey</a>
-          <a href="/topographic-survey" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Topographic Survey</a>
-          <a href="/easement-exhibits-legal-descriptions" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Easement Exhibits &amp; Legal Descriptions</a>
-          <a href="/tree-survey" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Tree Survey</a>
-          <a href="/elevation-certificate" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Elevation Certificate</a>
-          <a href="/platting-services" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Platting Services</a>
+          <a href="/alta-nsps-land-title-survey" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">ALTA/NSPS Land Title Survey</a>
+          <a href="/construction-staking" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Construction Staking</a>
+          <a href="/category-1a-land-title-survey" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Category 1A Land Title Survey</a>
+          <a href="/form-board-survey" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Form Board Survey</a>
+          <a href="/boundary-survey-category-1b" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Category 1B Standard Land Survey</a>
+          <a href="/as-built-survey" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">As-Built Survey</a>
+          <a href="/topographic-survey" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Topographic Survey</a>
+          <a href="/easement-exhibits-legal-descriptions" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Easement Exhibits &amp; Legal Descriptions</a>
+          <a href="/tree-survey" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Tree Survey</a>
+          <a href="/elevation-certificate" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Elevation Certificate</a>
+          <a href="/platting-services" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Platting Services</a>
         </div>
       </div>
       <div style="{{ footColCOStyle }}">
         <button type="button" onClick="{{ footTogCO }}" aria-expanded="{{ footOpenCO }}" tabIndex="{{ footTab }}" style="{{ footBtnStyle }}">Company<span aria-hidden="true" style="{{ footSignCOStyle }}">{{ footSignCO }}</span></button>
         <div style="{{ footListCOStyle }}">
-        <a href="/about" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">About Us</a>
-        <a href="/#cares" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Eagle Cares</a>
-        <a href="/aerial-lidar-mapping#platforms" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Technology &amp; Equipment</a>
-        <a href="#top" style="color:#fff;font-size:14px;font-weight:600">Projects</a>
-        <a href="/#insights" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Blog</a>
-        <a href="/#contact" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Careers</a>
-        <a href="/faqs" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">FAQs</a>
-        <a href="#estimate" style="color:#C3D8E6;font-size:14px" style-hover="color:#fff">Contact</a>
+        <a href="/about" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">About Us</a>
+        <a href="#cares" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Eagle Cares</a>
+        <a href="#reality-capture" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Technology &amp; Equipment</a>
+        <a href="/projects" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Projects</a>
+          <a href="#industries" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Industries</a>
+        <a href="#insights" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Blog</a>
+        <a href="#contact" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Careers</a>
+        <a href="/faqs" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">FAQs</a>
+        <a href="#contact" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Contact</a>
         </div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:24px">
-        <div style="display:flex;flex-direction:column;gap:5px">
-          <span style="font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#6D9DBD">Denton HQ</span>
-          <a href="tel:9402223009" style="font-family:'Sora',sans-serif;font-size:19px;font-weight:600;color:#fff;letter-spacing:-.015em">940-222-3009</a>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:5px">
-          <span style="font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#6D9DBD">Waco Office</span>
-          <a href="tel:2544810306" style="font-family:'Sora',sans-serif;font-size:19px;font-weight:600;color:#fff;letter-spacing:-.015em">254-481-0306</a>
-        </div>
-        <a href="#estimate" style="align-self:flex-start;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:#C3D8E6;border-bottom:1px solid rgba(191,214,234,.4);padding-bottom:5px" style-hover="color:#fff;border-color:#fff">Request an estimate →</a>
-      </div>
     </div>
-    <div style="max-width:min(2880px,max(1720px,86vw));margin:52px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;color:#7E8F9A;font-size:12.5px">
-      <span>© 2026 Eagle Surveying. All rights reserved.</span>
-      <span>Project descriptions supplied by Eagle Surveying — verbatim.</span>
-    </div>
+    <div style="position:relative;max-width:min(2880px,max(1720px,86vw));margin:clamp(120px,9.5vw,190px) auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;color:#8FA8BC;font-size:clamp(11px,0.75vw,14px)">
+      <span>© 2026 Eagle Surveying, LLC · TBPELS Firm #10194177</span>
+          </div>
   </footer>
 </div>
 
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;featuredVimeoId&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;1217621681&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Featured media&quot;},&quot;revealOnScroll&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
 const PROJECTS = [
-  { name: "Buc-ee's", loc: 'Pass Christian, Mississippi', hl: 'Reality Capture', img: 'p-bucees.jpg',
-    alt: "Orthomosaic of the Buc-ee's travel center site",
+  { name: "Buc-ee's", loc: 'Pass Christian, Mississippi', hl: 'Reality Capture', img: 'p-bucees.webp',
+    alt: "Aerial view of the completed Buc-ee's travel center in Pass Christian, Mississippi",
     services: ['Reality Capture (Orthomosaic)', '2D Site Model', '3D Site Model'],
+    shots: [
+      { src: 'p-bucees.webp', label: 'Site overview', alt: "Aerial view of the completed Buc-ee's travel center and fuel canopies" },
+      { src: 'bucees-approach.jpg', label: 'Highway approach', alt: "Aerial view of the Buc-ee's site from the highway and roundabout approach" },
+      { src: 'bucees-3d.png', label: '3D site model', alt: "Textured 3D site model of the Buc-ee's property viewed from the east" },
+      { src: 'bucees-ortho.png', label: '2D orthomosaic', alt: "Top-down orthomosaic of the Buc-ee's site tied to state plane coordinates" },
+      { src: 'bucees-topo.png', label: 'Elevation and contours', alt: 'Colorized elevation model with generated contour lines across the site' },
+      { src: 'bucees-walkthrough.png', label: '360° site inspection', alt: 'DroneDeploy 360° walkthrough beneath the fuel canopy' }
+    ],
     blurb: "Eagle Surveying's Reality Capture team provided high-accuracy orthomosaics and detailed 2D and 3D site models for a Buc-ee's location in Pass Christian, Mississippi. All data was tied to state plane coordinates and supported by DroneDeploy-generated 360° site inspections for documentation and review." },
-  { name: 'H-E-B Melissa', loc: 'Melissa, Texas', hl: 'Construction Staking', img: 'p-heb.jpg',
+  { name: 'H-E-B Melissa', loc: 'Melissa, Texas', hl: 'Construction Staking', img: 'p-heb.webp',
     alt: 'Survey instrument set up on the H-E-B Melissa site during earthwork',
     services: ['Construction Staking'],
     blurb: 'Construction staking services were provided for the H-E-B Market and Fuel Station in Melissa, including layout of canopy and kiosk footings, paving, tank holes, car wash features, light poles, and fuel station equipment.' },
-  { name: 'Benchmark Metal Services', loc: 'Ponder, Texas', hl: '3D Laser Scanning', img: 'p-benchmark.jpg',
+  { name: 'Benchmark Metal Services', loc: 'Ponder, Texas', hl: '3D Laser Scanning', img: 'p-benchmark.webp',
     alt: 'Eagle Surveying technician operating a laser scanner inside a metal building',
     services: ['3D Laser Scanning'],
     blurb: 'Eagle Surveying completed 3D laser scanning of the interior and exterior of an existing building for Benchmark Metal Services / WEB Custom Metals, capturing precise as-built conditions to support planned office buildouts and a future building expansion.' },
-  { name: 'Amazon Distribution Center', loc: 'Robinson (Waco), Texas', hl: 'Topographic Survey', img: 'p-amazon.jpg',
+  { name: 'Amazon Distribution Center', loc: 'Robinson (Waco), Texas', hl: 'Topographic Survey', img: 'p-amazon.webp',
     alt: 'Aerial view of an Amazon distribution facility site',
     services: ['Topographic Survey'],
     blurb: 'A topographic survey was completed across 43+ acres of undeveloped land for a new Amazon distribution facility site. Our team documented existing terrain, drainage features, and site conditions to provide the baseline data needed for site design and construction planning.' },
-  { name: 'Cedar Hill Commercial Development', loc: 'Cedar Hill, Texas', hl: 'Reality Capture', img: 'p-cedarhill.jpg',
+  { name: 'Cedar Hill Commercial Development', loc: 'Cedar Hill, Texas', hl: 'Reality Capture', img: 'p-cedarhill.webp',
     alt: 'Fixed-wing VTOL drone in flight over the Cedar Hill site',
     services: ['Reality Capture (Orthomosaic)', 'Topographic Survey', 'Construction Staking', 'Boundary Verification'],
     blurb: 'Eagle Surveying provided drone-based reality capture and orthomosaic mapping for a 410-acre commercial development in Cedar Hill, Texas, delivering high-resolution aerial imagery and topographic data to support site planning and construction. Additional services included construction staking and boundary verification.' },
@@ -501,23 +502,23 @@ const PROJECTS = [
     alt: 'Aluminum boundary monument set in concrete',
     services: ['Platting'],
     blurb: 'Eagle Surveying provided platting services for a planned Burger King site, supporting the project through preliminary plat approval, City of Dallas review comments, design revisions, and final plat recordation. Our team set permanent boundary monuments to complete the platting process and support future site development.' },
-  { name: 'WorldSprings', loc: 'Plano, Texas', hl: 'Construction Staking', img: 'p-worldsprings.jpg',
+  { name: 'WorldSprings', loc: 'Plano, Texas', hl: 'Construction Staking', img: 'p-worldsprings.webp',
     alt: 'Aerial view of the WorldSprings development under construction',
     services: ['Construction Staking'],
     blurb: 'We provided construction staking for the World Springs development site. Our field crews delivered precise layout and vertical control for site improvements, ensuring accurate placement of structures, utilities, and grading throughout construction.' },
-  { name: 'Dollar General Market', loc: 'China Spring (Waco), Texas', hl: 'ALTA Survey', img: 'p-dollargeneral.jpg',
+  { name: 'Dollar General Market', loc: 'China Spring (Waco), Texas', hl: 'ALTA Survey', img: 'p-dollargeneral.webp',
     alt: 'Dollar General Market storefront and site',
     services: ['ALTA Survey', 'Topographic Survey', 'Tree Survey', 'Easement Exhibit', 'Platting'],
     blurb: 'Eagle Surveying provided comprehensive land surveying for a new Dollar General Market site in China Spring, near Waco, supporting the project from initial due diligence and municipal permitting through final platting for development.' },
-  { name: 'Randall Noe Auto Group', loc: 'Heath, Texas', hl: 'Reality Capture', img: 'p-randallnoe.jpg',
+  { name: 'Randall Noe Auto Group', loc: 'Heath, Texas', hl: 'Reality Capture', img: 'p-randallnoe.webp',
     alt: 'Colorized surface model of site stockpiles from volumetric analysis',
     services: ['Stockpile Analysis', 'Volumetric Analysis'],
     blurb: 'Our team used drone-based reality capture to generate a detailed surface model of site stockpiles and perform volumetric analysis. The results provided accurate material volume calculations to assist the client with inventory management and operational planning.' },
-  { name: 'Dallas High Rise', loc: 'Dallas, Texas', hl: 'Construction Staking', img: 'p-highrise.jpg',
+  { name: 'Dallas High Rise', loc: 'Dallas, Texas', hl: 'Construction Staking', img: 'p-highrise.webp',
     alt: 'Surveyor working at the base of a Dallas high-rise under construction',
     services: ['Construction Staking'],
     blurb: 'We transferred building grid lines from lower levels up to the 15th floor of a Dallas high-rise, ensuring vertical accuracy throughout the structure.' },
-  { name: 'Data Center', loc: 'Dallas, Texas', hl: '3D Laser Scanning', img: 'p-datacenter.jpg',
+  { name: 'Data Center', loc: 'Dallas, Texas', hl: '3D Laser Scanning', img: 'p-datacenter.webp',
     alt: 'Aerial view of a Dallas data center facility',
     services: ['3D Laser Scanning'],
     blurb: "Eagle Surveying deployed the Trimble X9 3D Laser Scanner to capture detailed existing conditions of a data center facility. Collecting up to one million points per second with millimeter accuracy, our team efficiently documented the site's interior and exterior to support planned modifications and future expansion." },
@@ -529,11 +530,11 @@ const PROJECTS = [
     alt: 'Survey truck and instrument at the Viridian master-planned development',
     services: ['Topographic Survey'],
     blurb: 'Our team completed a topographic survey for a future commercial building complex within the Viridian master-planned development. The survey captured existing site conditions across the property to support civil engineering design for this growing mixed-use community in Arlington.' },
-  { name: 'Shops at Prestwick', loc: 'McKinney, Texas', hl: 'ALTA Survey', img: 'p-prestwick.jpg',
+  { name: 'Shops at Prestwick', loc: 'McKinney, Texas', hl: 'ALTA Survey', img: 'p-prestwick.webp',
     alt: 'Completed retail building at the Shops at Prestwick',
     services: ['ALTA Survey', 'Topographic Survey', 'Construction Staking', 'Platting', 'Easement Exhibit'],
     blurb: 'Eagle Surveying provided full-scope land surveying for a commercial retail development known as the Shops at Prestwick. Our team supported the project from initial due diligence through construction, delivering the survey data needed at each phase to keep development on track.' },
-  { name: 'Dutch Bros Roasting Facility', loc: 'Melissa, Texas', hl: 'Platting', img: 'p-dutchbros.jpg',
+  { name: 'Dutch Bros Roasting Facility', loc: 'Melissa, Texas', hl: 'Platting', img: 'p-dutchbros.webp',
     alt: 'Dutch Bros roasting facility exterior',
     services: ['Platting', 'ALTA Survey', 'Topographic Survey', 'Easement Exhibit', 'Construction Staking', 'As-Built Survey'],
     blurb: "Eagle Surveying supported development of the Dutch Bros Roasting Facility from initial site planning through final as-built documentation. Our team was involved at every phase providing the survey data needed for design, permitting, site layout, and construction verification on one of Dutch Bros' key operational facilities in Texas." }
@@ -544,7 +545,7 @@ const FILTERS = ['All projects', 'Reality Capture', 'Construction Staking', '3D 
 const BLANK = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 const SHOT_LABELS = ['Highlight photo', 'Field capture', 'Site context', 'Crew and equipment', 'Deliverable or data view'];
 
-const shotsFor = (p) => SHOT_LABELS.map((label, i) => i === 0
+const shotsFor = (p) => p.shots ? p.shots : SHOT_LABELS.map((label, i) => i === 0
   ? { src: p.img, alt: p.alt, label }
   : { src: null, alt: label + ' — ' + p.name, label });
 
@@ -600,7 +601,8 @@ class Component extends DCLogic {
   openModal(i) { this.lockScroll(true); this.setState({ modal: i, shot: 0 }); }
   closeModal() { this.lockScroll(false); this.setState({ modal: null, shot: 0 }); }
   stepShot(d) {
-    this.setState((s) => ({ shot: (s.shot + d + SHOT_LABELS.length) % SHOT_LABELS.length }));
+    const n = this._shotLen || SHOT_LABELS.length;
+    this.setState((s) => ({ shot: (s.shot + d + n) % n }));
   }
 
   componentDidUpdate() { setTimeout(() => this.bindCardHover(), 30); this.sizeFeatFrame(); }
@@ -709,6 +711,7 @@ class Component extends DCLogic {
 
     const openP = st.modal === null ? null : items[st.modal];
     const shots = openP ? shotsFor(openP) : [];
+    this._shotLen = shots.length || SHOT_LABELS.length;
     const shot = shots[st.shot] || null;
     const arrow = (side) => ({
       position: 'absolute', top: '50%', transform: 'translateY(-50%)',
@@ -742,25 +745,31 @@ class Component extends DCLogic {
     const mv = {
       modalWrapStyle: {
         display: openP ? 'flex' : 'none', position: 'fixed', inset: 0, zIndex: 120,
-        alignItems: 'center', justifyContent: 'center', padding: st.vpw < 700 ? 0 : 'clamp(16px,3vw,44px)'
+        alignItems: 'stretch', justifyContent: 'stretch', padding: 0
       },
       modalPanelStyle: {
-        position: 'relative', width: '100%', maxWidth: 1200,
-        maxHeight: st.vpw < 700 ? '100%' : '92vh', overflowY: 'auto',
-        background: '#F6F8FA', border: '1px solid #D8E2EB',
-        borderRadius: st.vpw < 700 ? 0 : 26,
-        boxShadow: '0 50px 110px rgba(4,26,44,.5)',
-        padding: st.vpw < 700 ? '20px' : 'clamp(22px,2.4vw,34px)'
+        position: 'relative', width: '100%', maxWidth: '100%',
+        height: '100%', maxHeight: '100%', overflowY: 'auto',
+        background: '#F6F8FA', border: 0, borderRadius: 0, boxShadow: 'none',
+        padding: st.vpw < 700 ? '20px' : 'clamp(24px,2.4vw,48px) clamp(20px,3.2vw,96px)'
       },
       modalGridStyle: {
-        display: 'grid', gap: st.vpw < 900 ? 24 : 34, alignItems: 'stretch',
-        gridTemplateColumns: st.vpw < 900 ? 'minmax(0,1fr)' : 'minmax(0,1.28fr) minmax(0,.72fr)'
+        display: 'grid', gap: st.vpw < 900 ? 24 : 'clamp(30px,3vw,56px)', alignItems: 'stretch',
+        width: '100%', maxWidth: 'min(2400px,max(1500px,84vw))', margin: '0 auto',
+        minHeight: st.vpw < 900 ? 0 : '100%',
+        gridTemplateColumns: st.vpw < 900 ? 'minmax(0,1fr)' : 'minmax(0,1.34fr) minmax(0,.66fr)'
+      },
+      shotFrameStyle: {
+        position: 'relative', borderRadius: 18, overflow: 'hidden', background: '#0D4066',
+        aspectRatio: st.vpw < 900 ? '16 / 10' : 'auto',
+        flex: st.vpw < 900 ? 'none' : '1 1 auto', minHeight: st.vpw < 900 ? 0 : 320
       },
       shotSrc: shot && shot.src ? shot.src : BLANK,
       shotAlt: shot ? shot.alt : '',
       shotImgStyle: {
         position: 'absolute', inset: 0, width: '100%', height: '100%',
-        objectFit: 'cover', display: shot && shot.src ? 'block' : 'none'
+        objectFit: st.vpw < 900 ? 'cover' : 'contain',
+        display: shot && shot.src ? 'block' : 'none'
       },
       shotEmptyStyle: {
         position: 'absolute', inset: 0, display: shot && shot.src ? 'none' : 'flex',
@@ -768,7 +777,7 @@ class Component extends DCLogic {
         padding: 24, background: '#0D3F63',
         backgroundImage: 'repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 12px,rgba(255,255,255,0) 12px 24px)'
       },
-      shotCounter: (st.shot + 1) + ' / ' + SHOT_LABELS.length + ' · ' + (shot ? shot.label : ''),
+      shotCounter: (st.shot + 1) + ' / ' + (shots.length || SHOT_LABELS.length) + ' · ' + (shot ? shot.label : ''),
       arrowLeftStyle: arrow('left'),
       arrowRightStyle: arrow('right'),
       thumbs: shots.map((s, i) => ({
@@ -844,7 +853,7 @@ class Component extends DCLogic {
       items: items.map((p, i) => ({
         ...p,
         short: clip(p.blurb, 132),
-        photoCount: SHOT_LABELS.length,
+        photoCount: shotsFor(p).length,
         serviceLine: p.services.length === 1 ? p.services[0] : p.services.length + ' services rendered',
         open: () => this.openModal(i)
       })),
@@ -967,9 +976,9 @@ class Component extends DCLogic {
             ? { display: 'flex', flexDirection: 'column', gap: 0, borderBottom: '1px solid rgba(255,255,255,.14)' }
             : { display: 'flex', flexDirection: 'column', gap: 12 };
           o['footList' + K + 'Style'] = {
-            display: open ? (K === 'SV' ? 'grid' : 'flex') : 'none',
-            flexDirection: 'column', gap: 12, paddingBottom: mob ? 18 : 0,
-            gridTemplateColumns: K === 'SV' && !mob && !st.narrow ? 'minmax(0,1fr) minmax(0,1fr)' : 'minmax(0,1fr)'
+            display: open ? 'flex' : 'none',
+            flexDirection: 'column', gap: mob ? 10 : 9,
+            paddingBottom: mob ? 16 : 0
           };
           o['footOpen' + K] = mob ? (open ? 'true' : 'false') : undefined;
           o['footTog' + K] = () => this.setState((s) => ({ footAcc: s.footAcc === k ? null : k }));
@@ -992,7 +1001,7 @@ class Component extends DCLogic {
               display: 'block', width: '100%', padding: 0, background: 'none', border: 'none',
               textAlign: 'left', cursor: 'default', pointerEvents: 'none',
               fontFamily: "'Manrope',sans-serif", fontSize: 11.5, fontWeight: 700,
-              letterSpacing: '.2em', textTransform: 'uppercase', color: '#6D9DBD'
+              letterSpacing: '.2em', textTransform: 'uppercase', color: '#A9C3D6'
             };
 
         // link cards collapse to a compact divided list on phones
@@ -1029,11 +1038,25 @@ class Component extends DCLogic {
           : { fontSize: 15, lineHeight: 1.6, color: '#3C5468', textWrap: 'pretty' };
         return o;
       })(),
+      // the wireframe band lives under the column lists, so the footer reserves
+      // room for it and the grid keeps clear space above it
+      footWireStyle: {
+        position: 'absolute', left: 0, right: 0, width: '100%',
+        bottom: st.narrow ? 96 : 'clamp(105px,7.5vw,155px)',
+        height: st.narrow ? 320 : 'clamp(300px,22vw,460px)',
+        objectFit: 'cover', objectPosition: '50% 6%',
+        // the asset is already edge-detected line art on transparency, so it needs
+        // no filter chain or blend — the flat faces simply are not in the file
+        opacity: .2, pointerEvents: 'none',
+        maskImage: 'linear-gradient(180deg,transparent 0%,#000 10%,#000 62%,rgba(0,0,0,.4) 88%,transparent 100%)',
+        WebkitMaskImage: 'linear-gradient(180deg,transparent 0%,#000 10%,#000 62%,rgba(0,0,0,.4) 88%,transparent 100%)'
+      },
       footGridStyle: {
-        display: 'grid', gap: st.narrow ? '40px 32px' : 48, maxWidth: SHELL, margin: '0 auto',
+        position: 'relative',
+        display: 'grid', gap: st.narrow ? '30px 26px' : 'clamp(30px,2.4vw,52px)', maxWidth: SHELL, margin: '0 auto',
         gridTemplateColumns: st.narrow
           ? 'repeat(auto-fit,minmax(min(100%,240px),1fr))'
-          : 'minmax(0,1fr) minmax(0,1.05fr) minmax(0,1.5fr) minmax(0,.8fr) minmax(0,.8fr)'
+          : 'minmax(0,1fr) minmax(0,1.4fr) minmax(0,1.4fr) minmax(0,.8fr)'
       },
       footSvcGridStyle: {
         display: 'grid', gap: '12px 28px',
