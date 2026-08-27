@@ -8,14 +8,18 @@
 <body>
 <x-dc>
 <helmet>
-<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#052A44"></rect><g fill="none" stroke="#E0A83E" stroke-width="3.4" stroke-linecap="round"><path d="M20 68l16-22 12 14 10-12 22 20z"></path><path d="M18 76h64"></path></g></svg></template>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#052A44"></rect><g fill="none" stroke="#E0A83E" stroke-width="3.4" stroke-linecap="round"><path d="M34 66l16-32 16 32"></path><path d="M41 58h18"></path></g></svg></template>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Volumetric &amp; Stockpile Analysis in Texas | Eagle Surveying</title>
+<meta name="description" content="Texas volumetric survey and stockpile measurement for cut-and-fill analysis, earthwork quantities, material inventory, orthomosaics, and digital surface models.">
+<!-- CANONICAL URL PENDING MAK PRODUCTION ROUTE -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap&family=IBM+Plex+Mono:wght@400;500;700" rel="stylesheet">
 <style>
   *{box-sizing:border-box}
+  @keyframes eagle-wing-drift{0%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-1.4%,-3.6%,0) scale(1.022)}100%{transform:translate3d(0,0,0) scale(1)}}
+  @media (prefers-reduced-motion: reduce){[data-wing]{animation:none!important}}
   @keyframes eagle-marquee-strip{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 15px))}}
   body{margin:0;background:#F6F8FA;font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
   h1,h2,h3,h4,p{margin:0}
@@ -46,7 +50,7 @@
               <a href="/360-site-documentation" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">360° Site Documentation &amp; Virtual Walkthroughs</a>
               <a href="/aerial-thermal-imagery" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Aerial Thermal Imagery</a>
               <a href="/construction-progress-monitoring" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Construction Progress Monitoring and Documentation</a>
-              <a href="#top" style="font-size:14.5px;color:#0A4B77;font-weight:700;line-height:1.35">Volumetric &amp; Stockpile Analysis</a>
+              <a href="/volumetric-stockpile-analysis" style="font-size:14.5px;color:#0A4B77;font-weight:700;line-height:1.35">Volumetric &amp; Stockpile Analysis</a>
             </div>
           </div>
         </span>
@@ -94,20 +98,20 @@
             <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:11px">
               <a href="/about" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">About Us</a>
               <a href="/#cares" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Eagle Cares</a>
-              <a href="#deliverables" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Technology &amp; Equipment</a>
+              <a href="/#platforms" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Technology &amp; Equipment</a>
               <a href="/faqs" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">FAQs</a>
             </div>
           </div>
         </span>
         <a href="/#contact" style="font-size:14.5px;color:#0F2E45;font-weight:500;padding:11px 15px;border-radius:999px;white-space:nowrap" style-hover="background:#E7EDF4;color:#0A4B77">Careers</a>
         <span data-nav="" onMouseEnter="{{ openCT }}" onMouseLeave="{{ closeNav }}" style="display:inline-flex;position:relative">
-          <a href="#estimate" style="display:inline-flex;align-items:center;gap:6px;font-size:14.5px;color:#0F2E45;font-weight:500;padding:11px 15px;border-radius:999px;white-space:nowrap" style-hover="background:#E7EDF4;color:#0A4B77">Contact<span style="font-size:11px;opacity:.55">⌄</span></a>
+          <a href="/#estimate" style="display:inline-flex;align-items:center;gap:6px;font-size:14.5px;color:#0F2E45;font-weight:500;padding:11px 15px;border-radius:999px;white-space:nowrap" style-hover="background:#E7EDF4;color:#0A4B77">Contact<span style="font-size:11px;opacity:.55">⌄</span></a>
           <div style="{{ ddCT }}">
             <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Contact</span>
             <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:11px">
-              <a href="#estimate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Have a Question</a>
-              <a href="#estimate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Request an Estimate</a>
-              <a href="#estimate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Schedule a Meeting</a>
+              <a href="/#estimate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Have a Question</a>
+              <a href="/#estimate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Request an Estimate</a>
+              <a href="/#estimate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Schedule a Meeting</a>
             </div>
           </div>
         </span>
@@ -129,13 +133,13 @@
     <div style="flex:1;overflow-y:auto;padding:8px clamp(18px,3.2vw,96px) 32px">
       <button type="button" onClick="{{ toggleAccRC }}" style="{{ accBtnStyle }}">Reality Capture<span style="opacity:.5;font-size:13px">⌄</span></button>
       <div style="{{ accRC }}">
-        <a href="/aerial-lidar-mapping" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Aerial LiDAR Mapping</a>
+        <a href="/aerial-lidar-mapping" onClick="{{ closeDrawer }}" style="{{ accLinkActiveStyle }}">Aerial LiDAR Mapping</a>
         <a href="/aerial-photogrammetry" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Aerial Photogrammetry</a>
         <a href="/terrestrial-laser-scanning" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Terrestrial Laser Scanning (TLS)</a>
         <a href="/360-site-documentation" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">360° Site Documentation</a>
         <a href="/aerial-thermal-imagery" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Aerial Thermal Imagery</a>
         <a href="/construction-progress-monitoring" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Construction Progress Monitoring</a>
-        <a href="#top" onClick="{{ closeDrawer }}" style="{{ accLinkActiveStyle }}">Volumetric &amp; Stockpile Analysis</a>
+        <a href="/volumetric-stockpile-analysis" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Volumetric &amp; Stockpile Analysis</a>
       </div>
       <button type="button" onClick="{{ toggleAccSV }}" style="{{ accBtnStyle }}">Surveying Services<span style="opacity:.5;font-size:13px">⌄</span></button>
       <div style="{{ accSV }}">
@@ -165,186 +169,219 @@
       <a href="/#insights" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">Blog</a>
       <a href="/about" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">About Us</a>
       <a href="/#cares" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">Eagle Cares</a>
-      <a href="/aerial-lidar-mapping#platforms" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">Technology &amp; Equipment</a>
       <a href="/faqs" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">FAQs</a>
+      <a href="/aerial-lidar-mapping#platforms" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">Technology &amp; Equipment</a>
       <a href="/#contact" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">Careers</a>
       <button type="button" onClick="{{ toggleAccCT }}" style="{{ accBtnStyle }}">Contact<span style="opacity:.5;font-size:13px">⌄</span></button>
       <div style="{{ accCT }}">
-        <a href="#estimate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Have a Question</a>
-        <a href="#estimate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Request an Estimate</a>
-        <a href="#estimate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Schedule a Meeting</a>
+        <a href="/#estimate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Have a Question</a>
+        <a href="/#estimate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Request an Estimate</a>
+        <a href="/#estimate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Schedule a Meeting</a>
       </div>
       <div style="display:flex;flex-direction:column;gap:10px;margin-top:26px">
-        <a href="#estimate" onClick="{{ closeDrawer }}" style="display:flex;align-items:center;justify-content:center;min-height:52px;background:#E0A83E;color:#052A44;font-weight:700;font-size:16px;border-radius:999px">Request an Estimate</a>
+        <a href="/#estimate" onClick="{{ closeDrawer }}" style="display:flex;align-items:center;justify-content:center;min-height:52px;background:#E0A83E;color:#052A44;font-weight:700;font-size:16px;border-radius:999px">Request an Estimate</a>
         <a href="tel:9402223009" style="display:flex;align-items:center;justify-content:center;min-height:52px;border:1px solid #C9D6E2;color:#0F2E45;font-weight:600;font-size:16px;border-radius:999px">Call (940) 222-3009</a>
       </div>
     </div>
   </div>
 
-  <section id="top" data-screen-label="Service hero" style="position:relative;min-height:min(34vh,336px);display:flex;align-items:flex-end;background:#052A44;overflow:hidden">
-    <img data-hero="0" src="p08.webp" alt="Earthwork and stockpiles across a large grading site" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
-    <div style="position:absolute;inset:0;background:linear-gradient(102deg,rgba(5,42,68,.95) 0%,rgba(5,42,68,.74) 50%,rgba(5,42,68,.34) 90%)"></div>
-    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,42,68,.82) 0%,rgba(5,42,68,0) 48%)"></div>
-    <div style="position:relative;width:100%;max-width:calc(min(2880px,max(1720px,86vw)) + 2 * clamp(18px,3.2vw,96px));margin:0 auto;padding:clamp(38px,5.4vw,62px) clamp(18px,3.2vw,96px) clamp(100px,12vw,110px)">
-      <div style="max-width:940px">
-        <span data-hero="1" style="display:block;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#E0A83E;margin-bottom:18px">Survey-grade quantities for earthwork and inventory</span>
-        <h1 data-hero="2" style="font-family:'Sora',sans-serif;color:#fff;font-size:clamp(32px,4.8vw,68px);line-height:1.05;letter-spacing:-.03em;font-weight:600;text-wrap:balance">Volumetric &amp; Stockpile Analysis</h1>
-        <p data-hero="3" style="color:#DCE8F0;font-size:clamp(16px,1.35vw,20px);line-height:1.65;max-width:680px;margin-top:26px;text-wrap:pretty">Aerial surface models computed into cut, fill, and material quantities with consistent, repeatable, full-coverage measurement. Built for earthwork tracking, stockpile inventory, and pay-application support, with data hosted in DroneDeploy for direct client access.</p>
-        <div data-hero="4" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:36px">
-          <a href="#estimate" style="display:inline-flex;align-items:center;min-height:52px;padding:0 30px;background:#E0A83E;color:#052A44;font-weight:700;font-size:16px;border-radius:999px" style-hover="background:#F0BC57">Request an Estimate</a>
-          <a href="#method" style="display:inline-flex;align-items:center;min-height:52px;padding:0 30px;border:1px solid rgba(255,255,255,.4);color:#fff;font-weight:600;font-size:16px;border-radius:999px" style-hover="background:rgba(255,255,255,.12)">How the volume is computed</a>
+
+
+  <section data-screen-label="Service hero" style="{{ vheroStyle }}">
+    <svg data-wing="" viewBox="0 0 420 149" fill="#9FC0DA" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" style="{{ vheroBgStyle }}"><path d="M1.6 0Q21.3 10.6 32 14.9Q42.8 19.3 63.6 25.1Q84.4 30.8 115.2 35.3Q145.9 39.8 187.9 43.8Q230 47.8 256.1 53Q282.1 58.1 295.4 62.6Q308.6 67.1 318.1 72.3Q327.6 77.4 331.5 80.6Q335.3 83.8 338.1 87.2Q340.8 90.6 342.9 96Q345 101.5 345 106.3Q345 111.1 344 114.3Q343 117.5 342.2 112.8Q341.4 108.2 339.9 105.2Q338.5 102.1 333.2 96.5Q327.9 90.9 318.9 86.4Q309.8 81.9 300.6 79.3Q291.5 76.7 269.6 73.5Q247.7 70.3 200 67Q152.3 63.6 135.1 61.7Q117.9 59.7 102.8 57.2Q87.6 54.6 75 51.4Q62.5 48.2 51.2 43.7Q39.9 39.2 31.7 34.2Q23.5 29.2 15.6 21.2Q7.7 13.2 4.7 6.8Q1.6 0.3 1.6 0.1Z"></path><path d="M51.9 57.2Q74.1 65.5 97.4 70Q120.8 74.5 142.1 76.5Q163.3 78.4 202.3 79.2Q241.2 80 254.3 81.3Q267.3 82.5 276.6 84.5Q286 86.4 296.4 89.6Q306.9 92.8 312.3 95.3Q317.6 97.9 324.1 103.1Q330.5 108.2 333.1 113.3Q335.6 118.5 335.5 122.2Q335.3 125.9 331.3 121.1Q327.2 116.2 321.8 113.2Q316.3 110.1 307.8 107.5Q299.2 105 286.9 103.1Q274.7 101.2 251.3 99.9Q228 98.6 195 97.8Q162 97 140.3 94.4Q118.5 91.8 110.2 89.9Q101.8 88 88.9 82.8Q76 77.7 69.3 73.2Q62.5 68.7 57.2 63.1Q51.9 57.5 51.9 57.4Z"></path><path d="M73.8 87.3Q86.3 95.1 92.3 97.7Q98.2 100.2 106.9 102.8Q115.6 105.3 126.4 107.3Q137.2 109.2 155.3 110.3Q173.3 111.4 216.2 111Q259 110.5 276.1 112Q293.1 113.4 301.3 115.3Q309.5 117.2 313.7 119.3Q317.9 121.4 320.9 124.3Q324 127.2 325 129.8Q326 132.3 325.6 135.4Q325.3 138.4 323.4 141.9Q321.4 145.5 320.3 146.3Q319.2 147.1 319 142.6Q318.9 138.1 316 134.4Q313.1 130.7 309.4 128.8Q305.7 126.8 299.7 125.5Q293.7 124.3 275.9 124.2Q258 124 232.4 126.5Q206.8 129.1 194.1 129.8Q181.3 130.4 170.1 130.3Q158.8 130.1 148.2 128.9Q137.5 127.8 127.8 125.3Q118.2 122.7 108.8 118.2Q99.5 113.7 91.2 106.8Q82.8 99.9 78.3 93.8Q73.8 87.7 73.8 87.5Z"></path><path d="M298.6 52.7Q329.8 53 357.2 56.9Q384.6 60.7 386.4 61.4Q388.1 62 390.4 64.4Q392.6 66.8 397.8 67.6Q402.9 68.4 408.9 70.3Q414.8 72.3 417.3 77.5Q419.7 82.8 415.8 81.5Q411.9 80.3 407.4 80.4Q402.9 80.6 397.8 81.3Q392.6 81.9 383.1 84.5Q373.6 87 370.3 89.3Q366.9 91.5 364.9 94.5Q363 97.6 360.9 103Q358.8 108.5 355.4 111.3Q352 114 352.9 109.7Q353.7 105.3 353.5 98.9Q353.3 92.5 351.2 87.2Q349.1 81.9 347.2 79.3Q345.3 76.7 338.1 71.1Q330.8 65.5 321 61.5Q311.1 57.5 303.9 55.9Q296.6 54.3 295.6 53.8Q294.7 53.3 296.5 53.1Q298.3 53 298.5 52.9Z"></path></svg>
+    <div style="{{ vheroInStyle }}">
+      <div style="min-width:0">
+        <span style="{{ eyebrowDarkStyle }}">Reality Capture / Volumetrics</span>
+        <h1 style="{{ h1Style }}">Volumetric &amp; Stockpile Analysis</h1>
+        <p style="{{ vheroTagStyle }}">Survey-Grade Quantities for Earthwork and Inventory.</p>
+        <p style="{{ vheroLeadStyle }}">Volumetric and stockpile analysis compares measured surfaces to calculate cut, fill, net volume, material quantities, and changes across a site. Eagle uses aerial photogrammetry, LiDAR, conventional surveying, or a combination of methods based on the site and required deliverable.</p>
+        <div style="{{ vheroActsStyle }}">
+          <a href="#contact-vol" style="{{ btnLightStyle }}" style-hover="background:#fff">Discuss Your Project</a>
+          <a href="#deliverables" style="{{ vheroLinkStyle }}" style-hover="color:#DCEAF5">View Typical Deliverables &darr;</a>
         </div>
       </div>
+      <figure data-reveal="" style="{{ vfigStyle }}">
+        <img src="volumetric-stockpile-measured-surface-boundary.webp" alt="Stockpile shown with its measurement boundary and the triangulated measured surface generated above it" width="760" height="475" fetchpriority="high" decoding="async" style="{{ vfigImgStyle }}">
+        <figcaption style="{{ vlegendStyle }}">
+          <span style="{{ vlegSpanStyle }}"><i style="{{ k1Style }}"></i>Measured surface</span>
+          <span style="{{ vlegSpanStyle }}"><i style="{{ k2Style }}"></i>Measurement boundary</span>
+          <span style="{{ vlegSpanStyle }}"><i style="{{ k3Style }}"></i>Base surface</span>
+        </figcaption>
+      </figure>
     </div>
-    <div data-hero="5" style="position:absolute;left:0;right:0;bottom:0;background:rgba(5,42,68,.78);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,.18)">
-      <div style="{{ stripStyle }}">
-        <div style="{{ stripViewportStyle }}">
-          <div style="{{ stripTrackStyle }}">
-              <span style="font-size:13px;color:#C3D8E6;font-weight:500">Full-coverage measurement</span>
-              <span style="font-size:13px;color:#C3D8E6;font-weight:500">Tied to survey-grade control</span>
-              <span style="font-size:13px;color:#C3D8E6;font-weight:500">Repeatable on a schedule</span>
-              <span style="font-size:13px;color:#C3D8E6;font-weight:500">Hosted in DroneDeploy</span>
-              <span aria-hidden="true" style="{{ stripDupStyle }}">Full-coverage measurement</span>
-              <span aria-hidden="true" style="{{ stripDupStyle }}">Tied to survey-grade control</span>
-              <span aria-hidden="true" style="{{ stripDupStyle }}">Repeatable on a schedule</span>
-              <span aria-hidden="true" style="{{ stripDupStyle }}">Hosted in DroneDeploy</span>
-          </div>
+  </section>
+
+  <nav aria-label="Page sections" style="{{ snavStyle }}">
+    <div style="{{ snavInStyle }}">
+      <a href="#overview" style="{{ snavLinkStyle }}" style-hover="color:#00548B">What It Is</a>
+      <a href="#basis" style="{{ snavLinkStyle }}" style-hover="color:#00548B">Measurement Basis</a>
+      <a href="#uses" style="{{ snavLinkStyle }}" style-hover="color:#00548B">Common Uses</a>
+      <a href="#deliverables" style="{{ snavLinkStyle }}" style-hover="color:#00548B">Deliverables</a>
+      <a href="#project-data" style="{{ snavLinkStyle }}" style-hover="color:#00548B">Project Data</a>
+      <a href="#faqs" style="{{ snavLinkStyle }}" style-hover="color:#00548B">FAQs</a>
+    </div>
+  </nav>
+
+  <section id="overview" data-screen-label="What it is" style="{{ secFogStyle }}">
+    <div style="{{ wrapStyle }}">
+      <div style="{{ wiaTopStyle }}">
+        <span style="{{ eyebrowStyle }}">What It Is</span>
+        <h2 style="{{ wiaH2Style }}">Measured Surfaces Turned Into Usable Quantities.</h2>
+        <p style="{{ wiaPStyle }}">Volumetric and stockpile analysis compares surface models captured from the air to compute cut, fill, net volume, and material quantities across a site. By flying a site on a defined schedule and comparing each surface to a prior survey or design surface, we produce the data your estimators and project engineers use to verify quantities, track inventory, and compare existing conditions to design surfaces. On sites where material volume drives contract value, full-coverage aerial measurement provides a consistent basis for quantity calculations across the entire site.</p>
+      </div>
+      <div data-reveal="" style="{{ scmpStyle }}">
+        <div style="{{ stileStyle }}">
+          <b style="{{ stileBStyle }}">Current Measured Surface</b>
+          <em style="{{ stileEmStyle }}">The surface captured on this visit, referenced to project survey control.</em>
+          <svg viewBox="0 0 320 108" role="img" aria-label="Diagram of an irregular measured ground surface profile" style="{{ stileSvgStyle }}"><defs><pattern id="hA" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="7" stroke="#B8CBD8" stroke-width="1.4"/></pattern></defs><path d="M8 92 L8 60 C 42 34, 70 70, 104 44 C 138 18, 168 52, 200 36 C 236 18, 268 56, 312 40 L312 92 Z" fill="url(#hA)" opacity=".75"/><path d="M8 60 C 42 34, 70 70, 104 44 C 138 18, 168 52, 200 36 C 236 18, 268 56, 312 40" fill="none" stroke="#00548B" stroke-width="2.6"/><line x1="8" y1="92" x2="312" y2="92" stroke="#9FB4C2" stroke-width="1.2" stroke-dasharray="4 4"/></svg>
+        </div>
+        <div style="{{ sopStyle }}"><u style="{{ sopUStyle }}">&minus;</u>compared to</div>
+        <div style="{{ stileStyle }}">
+          <b style="{{ stileBStyle }}">Base or Design Surface</b>
+          <em style="{{ stileEmStyle }}">A prior measured surface or the design surface the project agrees to compare against.</em>
+          <svg viewBox="0 0 320 108" role="img" aria-label="Diagram of a base or design surface profile" style="{{ stileSvgStyle }}"><defs><pattern id="hA2" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="7" stroke="#B8CBD8" stroke-width="1.4"/></pattern></defs><path d="M8 92 L8 72 L104 72 L200 62 L312 62 L312 92 Z" fill="url(#hA2)" opacity=".4"/><path d="M8 72 L104 72 L200 62 L312 62" fill="none" stroke="#A96B38" stroke-width="2.6"/><line x1="8" y1="92" x2="312" y2="92" stroke="#9FB4C2" stroke-width="1.2" stroke-dasharray="4 4"/></svg>
+        </div>
+      </div>
+      <div data-reveal="" style="{{ sresStyle }}">
+        <div style="min-width:0"><b style="{{ sresBStyle }}">Cut</b><span style="{{ sresSpanStyle }}">Material measured above the comparison surface within the agreed limits.</span></div>
+        <div style="min-width:0"><b style="{{ sresBStyle }}">Fill</b><span style="{{ sresSpanStyle }}">Material measured below the comparison surface within the agreed limits.</span></div>
+        <div style="min-width:0"><b style="{{ sresBStyle }}">Net Volume</b><span style="{{ sresSpanStyle }}">The geometric difference between the two surfaces across the measured area.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="basis" data-screen-label="Measurement basis" style="{{ secWhiteStyle }}">
+    <div style="{{ wrapStyle }}">
+      <div style="{{ mbHeadStyle }}">
+        <span style="{{ eyebrowStyle }}">Measurement Basis</span>
+        <h2 style="{{ h2Style }}">The Number Depends on the Surfaces Being Compared.</h2>
+      </div>
+      <div data-reveal="" style="{{ mbgStyle }}">
+        <div style="{{ mbsStyle }}">
+          <span style="{{ mbnStyle }}">01</span>
+          <h3 style="{{ mbsH3Style }}">Capture the Surface</h3>
+          <p style="{{ mbsPStyle }}">Use <a href="/aerial-photogrammetry" style="{{ mbsLinkStyle }}" style-hover="color:#052A44">aerial photogrammetry</a>, <a href="/aerial-lidar-mapping" style="{{ mbsLinkStyle }}" style-hover="color:#052A44">LiDAR</a>, conventional surveying, or a combination appropriate to the project.</p>
+          <svg viewBox="0 0 300 120" role="img" aria-label="Diagram of flight lines collecting a ground surface over survey control points" style="{{ mbdStyle }}"><g stroke="#9FB4C2" stroke-width="1.2" stroke-dasharray="5 5" fill="none"><path d="M18 26 H282"/><path d="M18 40 H282"/></g><g stroke="#B8CBD8" stroke-width="1"><line x1="60" y1="42" x2="60" y2="74"/><line x1="120" y1="42" x2="120" y2="66"/><line x1="180" y1="42" x2="180" y2="70"/><line x1="240" y1="42" x2="240" y2="62"/></g><path d="M18 96 L18 78 C 60 62, 96 84, 140 68 C 186 52, 232 76, 282 60 L282 96 Z" fill="#DCE5EB"/><path d="M18 78 C 60 62, 96 84, 140 68 C 186 52, 232 76, 282 60" fill="none" stroke="#00548B" stroke-width="2.4"/><g fill="#A96B38"><circle cx="60" cy="100" r="3.4"/><circle cx="150" cy="100" r="3.4"/><circle cx="240" cy="100" r="3.4"/></g></svg>
+        </div>
+        <div style="{{ mbsStyle }}">
+          <span style="{{ mbnStyle }}">02</span>
+          <h3 style="{{ mbsH3Style }}">Define the Comparison</h3>
+          <p style="{{ mbsPStyle }}">Establish the agreed measurement limits, base surface, comparison surface, design surface when applicable, and project assumptions.</p>
+          <svg viewBox="0 0 300 120" role="img" aria-label="Diagram of measurement limits set between a measured surface and a base surface" style="{{ mbdStyle }}"><g stroke="#A96B38" stroke-width="1.6" stroke-dasharray="6 4"><line x1="70" y1="16" x2="70" y2="104"/><line x1="230" y1="16" x2="230" y2="104"/></g><path d="M18 84 C 60 62, 96 88, 140 70 C 186 52, 232 78, 282 62" fill="none" stroke="#00548B" stroke-width="2.4"/><path d="M18 92 L120 92 L200 84 L282 84" fill="none" stroke="#A96B38" stroke-width="2.4"/><g fill="#052A44" font-family="'IBM Plex Mono',monospace" font-size="9" letter-spacing="1"><text x="74" y="112">LIMIT</text><text x="192" y="112">LIMIT</text></g></svg>
+        </div>
+        <div style="{{ mbsStyle }}">
+          <span style="{{ mbnStyle }}">03</span>
+          <h3 style="{{ mbsH3Style }}">Calculate the Volume</h3>
+          <p style="{{ mbsPStyle }}">Compute geometric quantities such as cut, fill, net volume, stockpile quantity, or change between measured surfaces.</p>
+          <svg viewBox="0 0 300 120" role="img" aria-label="Diagram of the volume difference between two compared surfaces" style="{{ mbdStyle }}"><defs><pattern id="hB" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="7" stroke="#00548B" stroke-width="1.6"/></pattern></defs><path d="M18 84 C 60 62, 96 88, 140 70 C 186 52, 232 78, 282 62 L282 84 L200 84 L120 92 L18 92 Z" fill="url(#hB)" opacity=".55"/><path d="M18 84 C 60 62, 96 88, 140 70 C 186 52, 232 78, 282 62" fill="none" stroke="#00548B" stroke-width="2.4"/><path d="M18 92 L120 92 L200 84 L282 84" fill="none" stroke="#A96B38" stroke-width="2.4"/><g fill="#052A44" font-family="'IBM Plex Mono',monospace" font-size="9" letter-spacing="1"><text x="112" y="112">VOLUME DIFFERENCE</text></g></svg>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="method" data-screen-label="Surface comparison" style="scroll-margin-top:96px;background:#F6F8FA;padding:clamp(42px,6.5vw,96px) clamp(18px,3.2vw,96px)">
-    <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto">
-      <div style="{{ overviewGridStyle }}">
+  <section id="uses" data-screen-label="Common uses" style="{{ secFitStyle }}">
+    <div style="{{ fitInStyle }}">
+      <div style="min-width:0">
+        <span style="{{ eyebrowDarkStyle }}">Common Uses</span>
+        <h2 style="{{ h2DarkStyle }}">Where Measured Quantities Drive the Work.</h2>
+        <p style="{{ fitLeadStyle }}">A volumetric survey gets ordered when the number matters more than the picture.</p>
+        <figure data-reveal="" style="{{ fitFigStyle }}"><img src="volumetric-stockpile-earthwork-mass-grading.webp" alt="Aerial view of an active earthwork site with mass grading in progress" width="808" height="505" loading="lazy" decoding="async" style="{{ fitFigImgStyle }}"></figure>
+        <p style="{{ fitTxStyle }}">Eagle Surveying provides aerial volumetric and stockpile analysis throughout Texas.</p>
+      </div>
+      <div data-reveal="" style="{{ fitgStyle }}">
+        <div style="{{ fituStyle }}"><b style="{{ fituBStyle }}"><i style="{{ fituIStyle }}">01</i>Earthwork Cut / Fill Tracking</b><p style="{{ fituPStyle }}">Earthwork cut/fill tracking and progress billing on large grading sites, including multi-hundred-acre earthwork projects.</p></div>
+        <div style="{{ fituStyle }}"><b style="{{ fituBStyle }}"><i style="{{ fituIStyle }}">02</i>Stockpile Inventory</b><p style="{{ fituPStyle }}">Aggregate, sand, and material stockpile inventory for contractors and producers.</p></div>
+        <div style="{{ fituStyle }}"><b style="{{ fituBStyle }}"><i style="{{ fituIStyle }}">03</i>Subcontractor Quantity Review</b><p style="{{ fituPStyle }}">Subcontractor quantity verification and support for pay applications.</p></div>
+        <div style="{{ fituStyle }}"><b style="{{ fituBStyle }}"><i style="{{ fituIStyle }}">04</i>Existing vs. Design</b><p style="{{ fituPStyle }}">Existing conditions versus design surface comparisons.</p></div>
+        <div style="{{ fituStyle }}"><b style="{{ fituBStyle }}"><i style="{{ fituIStyle }}">05</i>Recurring Inventory</b><p style="{{ fituPStyle }}">Recurring inventory audits for financial and operational reporting.</p></div>
+        <div style="{{ fituStyle }}"><b style="{{ fituBStyle }}"><i style="{{ fituIStyle }}">06</i>Estimating Base Data</b><p style="{{ fituPStyle }}">Earthwork estimation base data for civil engineers and estimators.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="deliverables" data-screen-label="Deliverables" style="{{ secWhiteStyle }}">
+    <div style="{{ wrapStyle }}">
+      <div style="{{ dlvHeadStyle }}">
+        <span style="{{ eyebrowStyle }}">Typical Deliverables</span>
+        <h2 style="{{ h2Style }}">What the Client Receives.</h2>
+        <p style="{{ dlvHeadPStyle }}">Four standard products accompany every stockpile measurement or earthwork volume assignment. Select one to see it in the project workspace.</p>
+      </div>
+      <div style="{{ dlvInStyle }}">
+        <div data-reveal="" id="dlvpanel" role="tabpanel" aria-live="polite" style="{{ dlvFrameStyle }}">
+          <div style="{{ dlvBarStyle }}"><i style="{{ dlvDotStyle }}"></i><i style="{{ dlvDotStyle }}"></i><i style="{{ dlvDotStyle }}"></i><span style="{{ dlvBarLblStyle }}">Project Workspace</span></div>
+          <div style="{{ dv0Style }}"><div style="{{ dlvPhStyle }}">Approved sanitized Eagle volume calculation report needed</div></div>
+          <div style="{{ dv1Style }}"><img src="volumetric-stockpile-cut-fill-analysis-map.webp" alt="Cut and fill analysis shown as a colored surface-difference map over the site orthomosaic" width="1017" height="635" loading="lazy" decoding="async" style="{{ dlvImgStyle }}"></div>
+          <div style="{{ dv2Style }}"><img src="volumetric-stockpile-orthomosaic-with-stockpiles.webp" alt="Georeferenced orthomosaic of an earthwork site with material stockpiles" width="1400" height="875" loading="lazy" decoding="async" style="{{ dlvImgStyle }}"></div>
+          <div style="{{ dv3Style }}"><img src="volumetric-stockpile-digital-surface-model.jpg" alt="Digital surface model of captured terrain generated from aerial collection" width="900" height="600" loading="lazy" decoding="async" style="{{ dlvImgStyle }}"></div>
+        </div>
+        <div role="tablist" aria-label="Typical deliverables" style="{{ dlvListStyle }}">
+          <button type="button" role="tab" aria-controls="dlvpanel" aria-selected="{{ dsel0 }}" onClick="{{ setDv0 }}" style="{{ di0Style }}"><h3 style="{{ diH3Style0 }}"><b style="{{ diNumStyle }}">01</b>Volume Calculation Report</h3><p style="{{ diPStyle0 }}">A report of the agreed geometric volume measurements for the defined stockpile, area, or surface comparison.</p></button>
+          <button type="button" role="tab" aria-controls="dlvpanel" aria-selected="{{ dsel1 }}" onClick="{{ setDv1 }}" style="{{ di1Style }}"><h3 style="{{ diH3Style1 }}"><b style="{{ diNumStyle }}">02</b>Cut &amp; Fill Analysis</h3><p style="{{ diPStyle1 }}">Quantity information showing calculated cut, fill, and net change between the agreed surfaces and measurement limits.</p></button>
+          <button type="button" role="tab" aria-controls="dlvpanel" aria-selected="{{ dsel2 }}" onClick="{{ setDv2 }}" style="{{ di2Style }}"><h3 style="{{ diH3Style2 }}"><b style="{{ diNumStyle }}">03</b>Orthomosaic Map</h3><p style="{{ diPStyle2 }}">A georeferenced aerial image providing an overhead visual reference for the measured site and surrounding conditions.</p></button>
+          <button type="button" role="tab" aria-controls="dlvpanel" aria-selected="{{ dsel3 }}" onClick="{{ setDv3 }}" style="{{ di3Style }}"><h3 style="{{ diH3Style3 }}"><b style="{{ diNumStyle }}">04</b>Digital Surface Model (DSM)</h3><p style="{{ diPStyle3 }}">A three-dimensional digital representation of the captured surface used as part of the volumetric workflow.</p></button>
+        </div>
+      </div>
+      <p style="{{ dlvNoteStyle }}">Point clouds, per-stockpile or per-area reports, and change-over-time comparisons may also be available depending on the scope of the assignment.</p>
+    </div>
+  </section>
+
+  <section id="project-data" data-screen-label="Project data" style="{{ secFogStyle }}">
+    <div style="{{ wrapStyle }}">
+      <div style="{{ pdHeadStyle }}">
+        <span style="{{ eyebrowStyle }}">Project Data</span>
+        <h2 style="{{ h2Style }}">Review the Surface. Understand the Basis.</h2>
+      </div>
+      <div style="{{ pdgStyle }}">
+        <div data-reveal="" style="{{ pdColStyle }}">
+          <b style="{{ pdBStyle }}">Direct Project Access</b>
+          <p style="{{ pdPStyle }}">Eagle can host volumetric data in DroneDeploy for direct client access, allowing project teams to perform volume, distance, and area measurements and compare available surfaces over time. This platform access is available when it is included in the project scope.</p>
+          <figure style="{{ pdShotStyle }}"><div style="{{ pdShotPhStyle }}">Approved DroneDeploy volume measurement screenshot needed</div></figure>
+        </div>
+        <div data-reveal="" style="{{ pdBasisStyle }}">
+          <b style="{{ pdBStyle }}">Quantity Basis</b>
+          <p style="{{ pdPStyle }}">Reported quantities are based on the agreed measurement limits, base surface, comparison surface, and other project assumptions. Eagle Surveying does not determine shrink, swell, compaction, or other material-conversion factors.</p>
+        </div>
+      </div>
+      <p style="{{ pdRelStyle }}"><b style="{{ pdRelBStyle }}">Often Scoped Together</b><a href="/aerial-photogrammetry" style="{{ pdRelLinkStyle }}" style-hover="color:#052A44">Aerial Photogrammetry</a><em aria-hidden="true" style="{{ pdRelSepStyle }}">&middot;</em><a href="/aerial-lidar-mapping" style="{{ pdRelLinkStyle }}" style-hover="color:#052A44">Aerial LiDAR Mapping</a><em aria-hidden="true" style="{{ pdRelSepStyle }}">&middot;</em><a href="/construction-progress-monitoring" style="{{ pdRelLinkStyle }}" style-hover="color:#052A44">Construction Progress Monitoring and Documentation</a><em aria-hidden="true" style="{{ pdRelSepStyle }}">&middot;</em><a href="/topographic-survey" style="{{ pdRelLinkStyle }}" style-hover="color:#052A44">Topographic Survey</a></p>
+    </div>
+  </section>
+
+  <section id="faqs" data-screen-label="Volumetric FAQs" style="{{ secWhiteStyle }}">
+    <div style="{{ wrapStyle }}">
+      <div style="{{ faqHeadStyle }}">
+        <span style="{{ eyebrowStyle }}">Frequently Asked Questions</span>
+        <h2 style="{{ h2Style }}">Volumetric &amp; Stockpile Analysis FAQs</h2>
+      </div>
+      <div style="{{ faqListStyle }}">
         <div>
-          <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:18px">The method</span>
-          <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.16;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:22ch;text-wrap:pretty">Two surfaces, one number your estimators can stand behind.</h2>
+          <button type="button" id="fq0" aria-expanded="{{ qsel0 }}" aria-controls="fa0" onClick="{{ setQ0 }}" style="{{ faqQ0Style }}"><u style="{{ faqUStyle }}">01</u><span style="{{ faqTxtStyle }}">What are Volumetric and Stockpile Surveys?</span><i aria-hidden="true" style="{{ faqIco0 }}">&#9662;</i></button>
+          <div id="fa0" role="region" aria-labelledby="fq0" style="{{ fa0Style }}"><p style="{{ faqAPStyle }}">Volumetric and stockpile surveys use measured surface data to calculate cut, fill, net volume, stockpile quantities, or changes between surfaces. Eagle Surveying can collect the surface with aerial photogrammetry, LiDAR, conventional surveying, or a combination of methods. The resulting volumetric data supports earthwork tracking, material inventory, existing-versus-design comparisons, progress review, and quantity analysis.</p></div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:22px">
-          <p style="font-size:clamp(16px,1.15vw,18px);line-height:1.72;color:#3C5468;text-wrap:pretty">Volumetric and stockpile analysis compares surface models captured from the air to compute cut, fill, net volume, and material quantities across a site. By flying a site on a defined schedule and comparing each surface to a prior survey or design surface, we produce the data your estimators and project engineers use to verify quantities, track inventory, and compare existing conditions to design surfaces.</p>
-          <p style="font-size:clamp(16px,1.15vw,18px);line-height:1.72;color:#3C5468;text-wrap:pretty">On sites where material volume drives contract value, full-coverage aerial measurement provides a consistent basis for quantity calculations across the entire site.</p>
+        <div>
+          <button type="button" id="fq1" aria-expanded="{{ qsel1 }}" aria-controls="fa1" onClick="{{ setQ1 }}" style="{{ faqQ1Style }}"><u style="{{ faqUStyle }}">02</u><span style="{{ faqTxtStyle }}">What can aerial volumetric analysis measure?</span><i aria-hidden="true" style="{{ faqIco1 }}">&#9662;</i></button>
+          <div id="fa1" role="region" aria-labelledby="fq1" style="{{ fa1Style }}"><p style="{{ faqAPStyle }}">Aerial volumetric analysis can measure stockpiles, excavation areas, fill areas, cut-and-fill changes, material yards, aggregate inventory, and surface changes over time. Calculations are based on the agreed boundaries, base surface, comparison surface, and project assumptions. Deliverables may include point clouds, digital surface models, per-stockpile or per-area reports, and change-over-time comparisons.</p></div>
         </div>
-      </div>
-      <div style="{{ compareRowStyle }}">
-        <div data-reveal="" data-rc-card="" style="{{ compareFrameStyle }}">
-          <img src="p10.webp" alt="Site surface captured before earthwork" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          <span style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,42,68,.7) 0%,rgba(5,42,68,0) 58%)"></span>
-          <span style="{{ compareTagStyle }}">Base surface</span>
+        <div>
+          <button type="button" id="fq2" aria-expanded="{{ qsel2 }}" aria-controls="fa2" onClick="{{ setQ2 }}" style="{{ faqQ2Style }}"><u style="{{ faqUStyle }}">03</u><span style="{{ faqTxtStyle }}">Does Eagle Surveying determine shrink, swell, compaction, or material-conversion factors?</span><i aria-hidden="true" style="{{ faqIco2 }}">&#9662;</i></button>
+          <div id="fa2" role="region" aria-labelledby="fq2" style="{{ fa2Style }}"><p style="{{ faqAPStyle }}">No. Eagle Surveying reports measured geometric volumes based on the surveyed surfaces, agreed measurement limits, base surface, comparison surface, and project assumptions. Eagle Surveying does not determine shrink, swell, compaction, or other material-conversion factors.</p></div>
         </div>
-        <span style="{{ operatorStyle }}">vs</span>
-        <div data-reveal="" data-rc-card="" style="{{ compareFrameStyle }}">
-          <img src="p08.webp" alt="The same site captured after material was moved" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          <span style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,42,68,.7) 0%,rgba(5,42,68,0) 58%)"></span>
-          <span style="{{ compareTagStyle }}">Comparison surface</span>
-        </div>
-        <span style="{{ operatorStyle }}">=</span>
-        <div style="{{ resultCardStyle }}">
-          <span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#8FB6CE">Computed</span>
-          <span style="font-family:'Sora',sans-serif;font-size:clamp(19px,1.8vw,25px);font-weight:600;color:#fff;letter-spacing:-.02em;line-height:1.2">Cut, fill, net volume and material quantities</span>
-          <span style="font-size:14.5px;line-height:1.6;color:#C3D8E6">Per stockpile or per area, with change-over-time comparisons.</span>
+        <div>
+          <button type="button" id="fq3" aria-expanded="{{ qsel3 }}" aria-controls="fa3" onClick="{{ setQ3 }}" style="{{ faqQ3Style }}"><u style="{{ faqUStyle }}">04</u><span style="{{ faqTxtStyle }}">Can volumetric surveys support earthwork tracking and pay applications?</span><i aria-hidden="true" style="{{ faqIco3 }}">&#9662;</i></button>
+          <div id="fa3" role="region" aria-labelledby="fq3" style="{{ fa3Style }}"><p style="{{ faqAPStyle }}">Yes. Measured surfaces and volume reports can provide supporting quantity information for earthwork tracking, subcontractor review, progress billing, inventory, and pay-application documentation. The owner, contractor, estimator, engineer, or other authorized party determines how the reported measurements are applied under the contract. Eagle Surveying&rsquo;s role is to provide the agreed measured surfaces and geometric volume information.</p></div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="deliverables" data-screen-label="Deliverables" style="scroll-margin-top:96px;background:#052A44;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px);position:relative;overflow:hidden">
-    <div style="position:absolute;bottom:-240px;right:-180px;width:640px;height:640px;border-radius:999px;background:radial-gradient(circle,rgba(74,159,216,.2),rgba(74,159,216,0) 70%);pointer-events:none"></div>
-    <div style="{{ delivGridStyle }}">
-      <div>
-        <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#6D9DBD;margin-bottom:16px">Deliverables</span>
-        <h2 style="font-family:'Sora',sans-serif;font-size:clamp(26px,2.7vw,40px);line-height:1.14;letter-spacing:-.025em;font-weight:600;color:#fff;max-width:22ch;text-wrap:balance">Measure it yourself, in the browser.</h2>
-        <p style="font-size:16px;line-height:1.7;color:#C3D8E6;max-width:48ch;margin-top:20px;text-wrap:pretty">We can host the data in DroneDeploy for direct client access, allowing your team to perform volume, distance, and area measurements, as well as compare surfaces over time.</p>
-      </div>
-      <div style="display:flex;flex-direction:column">
-        <span style="{{ delivItemStyle }}">Point clouds</span>
-        <span style="{{ delivItemStyle }}">Digital surface models</span>
-        <span style="{{ delivItemStyle }}">Per-stockpile or per-area volume reports</span>
-        <span style="{{ delivItemStyle }}">Change-over-time comparisons</span>
-        <span style="{{ delivItemLastStyle }}">DroneDeploy project access when included</span>
-      </div>
+  <section id="contact-vol" data-screen-label="CTA" style="{{ cta3Style }}">
+    <div style="{{ cta3InStyle }}">
+      <h2 style="{{ cta3H2Style }}">Tell Us What Needs to Be Measured.</h2>
+      <p style="{{ cta3PStyle }}">Send the site, measurement limits, available base or design surfaces, required quantity information, and schedule. Eagle will scope the collection method and deliverables around the measurement required.</p>
+      <div style="{{ cta3ActStyle }}"><a href="/#contact" style="{{ btnLightStyle }}" style-hover="background:#fff">Discuss Your Project</a></div>
     </div>
   </section>
 
-  <section id="assumptions" data-screen-label="Measurement assumptions" style="scroll-margin-top:96px;background:#F7EEDD;padding:clamp(56px,8vw,88px) clamp(18px,3.2vw,96px)">
-    <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto">
-      <div style="{{ noteCardStyle }}">
-        <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#8A6A2C;margin-bottom:18px">What the number is based on</span>
-        <p style="font-family:'Sora',sans-serif;font-size:clamp(20px,2.1vw,30px);line-height:1.3;letter-spacing:-.022em;font-weight:500;color:#0F2E45;max-width:34ch;text-wrap:pretty">Reported quantities are based on the agreed measurement limits, base surface, comparison surface, and other project assumptions.</p>
-        <p style="font-size:16.5px;line-height:1.7;color:#4A5A63;max-width:56ch;margin-top:22px;text-wrap:pretty">Eagle Surveying does not determine shrink, swell, compaction, or other material-conversion factors. Our accurate survey-grade surface data provides engineers, estimators, and project teams with a reliable foundation for quantity calculations, inventory tracking, and earthwork analysis.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="uses" data-screen-label="Commonly used for" style="scroll-margin-top:96px;background:#E7EDF4;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px)">
-    <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto">
-      <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Commonly used for</span>
-      <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:24ch;text-wrap:pretty">Where the quantities end up.</h2>
-      <div style="{{ usesGridStyle }}">
-        <div style="{{ useCardStyle }}"><span style="{{ useCardNum }}">01</span><span style="{{ useCardText }}">Earthwork cut/fill tracking and progress billing on large grading sites, including multi-hundred-acre earthwork projects</span></div>
-        <div style="{{ useCardStyle }}"><span style="{{ useCardNum }}">02</span><span style="{{ useCardText }}">Aggregate, sand, and material stockpile inventory for contractors and producers</span></div>
-        <div style="{{ useCardStyle }}"><span style="{{ useCardNum }}">03</span><span style="{{ useCardText }}">Subcontractor quantity verification and support for pay applications</span></div>
-        <div style="{{ useCardStyle }}"><span style="{{ useCardNum }}">04</span><span style="{{ useCardText }}">Existing conditions versus design surface comparisons</span></div>
-        <div style="{{ useCardStyle }}"><span style="{{ useCardNum }}">05</span><span style="{{ useCardText }}">Recurring inventory audits for financial and operational reporting</span></div>
-        <div style="{{ useCardStyle }}"><span style="{{ useCardNum }}">06</span><span style="{{ useCardText }}">Earthwork estimation base data for civil engineers and estimators</span></div>
-      </div>
-      <div data-reveal="" data-rc-card="" style="{{ bandImageStyle }}">
-        <img src="s04.webp" alt="Large earthwork site with material stockpiles" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-        <span style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,42,68,.74) 0%,rgba(5,42,68,0) 55%)"></span>
-        <span style="position:absolute;left:clamp(20px,3vw,40px);right:clamp(20px,3vw,40px);bottom:clamp(20px,3vw,34px);font-size:clamp(14px,1.1vw,16px);font-weight:600;color:#fff;text-wrap:pretty">Aerial volumetric and stockpile analysis across Texas — large grading, construction, aggregate and material-storage sites.</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="related" data-screen-label="Related services" style="scroll-margin-top:96px;background:#F6F8FA;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px)">
-    <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto">
-      <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Often scoped together</span>
-      <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:24ch;text-wrap:pretty">What the same flight can also produce.</h2>
-      <div style="{{ relGridStyle }}">
-        <a href="/aerial-photogrammetry" data-reveal="" data-rc-card="" style="{{ relCardStyle }}">
-          <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
-            <img src="p09.webp" alt="Aerial photogrammetry" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          </span>
-          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Aerial Photogrammetry</span>
-        </a>
-        <a href="/aerial-lidar-mapping" data-reveal="" data-rc-card="" style="{{ relCardStyle }}">
-          <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
-            <img src="p01.webp" alt="Aerial LiDAR mapping" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          </span>
-          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Aerial LiDAR Mapping</span>
-        </a>
-        <a href="/construction-progress-monitoring" data-reveal="" data-rc-card="" style="{{ relCardStyle }}">
-          <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
-            <img src="p03.webp" alt="Construction progress monitoring" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          </span>
-          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Construction Progress Monitoring</span>
-        </a>
-        <a href="/#surveying" data-reveal="" data-rc-card="" style="{{ relCardStyle }}">
-          <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
-            <img src="s03.webp" alt="Topographic survey" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          </span>
-          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Topographic Survey</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section id="estimate" data-screen-label="CTA" style="scroll-margin-top:96px;position:relative;background:#052A44;overflow:hidden;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px)">
-    <img src="p08.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22">
-    <div style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(5,42,68,.96) 0%,rgba(5,42,68,.78) 60%,rgba(5,42,68,.6) 100%)"></div>
-    <div style="{{ ctaGridStyle }}">
-      <div>
-        <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,3vw,44px);line-height:1.12;letter-spacing:-.028em;font-weight:600;color:#fff;max-width:24ch;text-wrap:balance">Tell us the site and the base surface. We'll fly the rest.</h2>
-        <p style="font-size:clamp(15.5px,1.2vw,18px);line-height:1.7;color:#C3D8E6;max-width:52ch;margin-top:22px;text-wrap:pretty">Aerial volumetric and stockpile analysis across Texas, including large grading, construction, aggregate, and material-storage sites throughout the Dallas-Fort Worth metroplex and Central Texas.</p>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
-        <a href="#estimate" style="display:inline-flex;align-items:center;min-height:54px;padding:0 32px;background:#E0A83E;color:#052A44;font-weight:700;font-size:16.5px;border-radius:999px" style-hover="background:#F0BC57">Request an Estimate</a>
-        <a href="tel:9402223009" style="display:inline-flex;align-items:center;min-height:54px;padding:0 32px;border:1px solid rgba(255,255,255,.4);color:#fff;font-weight:600;font-size:16.5px;border-radius:999px" style-hover="background:rgba(255,255,255,.12)">Call 940-222-3009</a>
-      </div>
-    </div>
-  </section>
-
-  <footer data-screen-label="Footer" style="position:relative;overflow:hidden;background:#052A44;padding:clamp(38px,5.5vw,68px) clamp(18px,3.2vw,96px) 30px">
+<footer data-screen-label="Footer" style="position:relative;overflow:hidden;background:#052A44;padding:clamp(38px,5.5vw,68px) clamp(18px,3.2vw,96px) 30px">
     <img loading="lazy" decoding="async" src="city-wire.webp" alt="" aria-hidden="true" style="{{ footWireStyle }}">
     <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(5,42,68,.34) 0%,rgba(5,42,68,.34) 52%,rgba(4,34,55,.46) 72%,rgba(1,21,31,.76) 100%)"></div>
     <div style="{{ footGridStyle }}">
@@ -388,14 +425,14 @@
         <button type="button" onClick="{{ footTogCO }}" aria-expanded="{{ footOpenCO }}" tabIndex="{{ footTab }}" style="{{ footBtnStyle }}">Company<span aria-hidden="true" style="{{ footSignCOStyle }}">{{ footSignCO }}</span></button>
         <div style="{{ footListCOStyle }}">
         <a href="/about" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">About Us</a>
-        <a href="#cares" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Eagle Cares</a>
-        <a href="#reality-capture" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Technology &amp; Equipment</a>
+        <a href="/#cares" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Eagle Cares</a>
+        <a href="/#reality-capture" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Technology &amp; Equipment</a>
         <a href="/projects" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Projects</a>
-          <a href="#industries" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Industries</a>
-        <a href="#insights" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Blog</a>
-        <a href="#contact" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Careers</a>
+          <a href="/#industries" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Industries</a>
+        <a href="/#insights" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Blog</a>
+        <a href="/#contact" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Careers</a>
         <a href="/faqs" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">FAQs</a>
-        <a href="#contact" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Contact</a>
+        <a href="/#contact" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Contact</a>
         </div>
       </div>
     </div>
@@ -406,33 +443,59 @@
 </div>
 
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;revealOnScroll&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;revealOnScroll&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;faqFirstOpen&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;FAQs&quot;}}">
 const SHELL = 'min(2880px,max(1720px,86vw))';
 const WIDE = 'calc(' + SHELL + ' + 2 * clamp(18px,3.2vw,96px))';
 
 class Component extends DCLogic {
-  state = { open: null, drawer: false, acc: null, narrow: false, vpw: 1440 , phones: false, footAcc: null};
+  // point cloud + contour mapping must not be cropped
+  DLVFIT = [0, 3];
+
+  state = { open: null, drawer: false, acc: null, narrow: false, vpw: 1440, phones: false, footAcc: null, hdrH: 88, dv: 1, q: 0 };
+
+  measureHdr = () => {
+    const h = document.querySelector('header');
+    if (h) { const v = Math.round(h.getBoundingClientRect().height); if (v && v !== this.state.hdrH) this.setState({ hdrH: v }); }
+  };
 
   componentDidMount() {
+    this.measureHdr();
+    addEventListener('resize', this.measureHdr);
+    requestAnimationFrame(this.measureHdr);
     this.reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
     this.mq = matchMedia('(max-width: 1240px)');
     this.onMq = () => this.setState({ narrow: this.mq.matches });
     this.mq.addEventListener('change', this.onMq);
-    this.onRz = () => this.setState({ vpw: innerWidth });
+    this.onRz = () => { this.setState({ vpw: innerWidth }); this.sizeHeroFrame(); };
     addEventListener('resize', this.onRz);
     this.onMq();
     this.setState({ vpw: innerWidth });
     setTimeout(() => this.bindCardHover(), 60);
     this.initReveal();
+    this.sizeHeroFrame();
+    setTimeout(() => this.sizeHeroFrame(), 120);
   }
-
-  componentDidUpdate() { this.bindCardHover(); }
 
   componentWillUnmount() {
     this.lockScroll(false);
     if (this.mq) this.mq.removeEventListener('change', this.onMq);
     removeEventListener('resize', this.onRz);
   }
+
+  // the Vimeo player letterboxes, so size the iframe to cover its panel
+  sizeHeroFrame() {
+    const el = this.heroFrame;
+    if (!el || !el.parentElement) return;
+    const r = el.parentElement.getBoundingClientRect();
+    if (!r.width || !r.height) return;
+    const cover = r.width / r.height > 16 / 9;
+    const w = cover ? r.width : (r.height * 16) / 9;
+    const h = cover ? (r.width * 9) / 16 : r.height;
+    el.style.width = Math.ceil(w) + 'px';
+    el.style.height = Math.ceil(h) + 'px';
+  }
+
+  componentDidUpdate() { this.sizeHeroFrame(); }
 
   lockScroll(on) {
     try {
@@ -469,9 +532,9 @@ class Component extends DCLogic {
     els.forEach((el) => {
       const isMedia = el.dataset.hero === '0';
       el.style.opacity = '0';
-      el.style.transform = isMedia ? 'scale(.98)' : 'translateY(24px)';
-      el.style.transition = 'opacity ' + (isMedia ? 1.2 : 0.9) + 's ease, transform '
-        + (isMedia ? 1.6 : 1) + 's cubic-bezier(.16,.84,.3,1)';
+      el.style.transform = isMedia ? 'scale(1.07)' : 'translateY(24px)';
+      el.style.transition = 'opacity ' + (isMedia ? 1.4 : 0.9) + 's ease, transform '
+        + (isMedia ? 2.2 : 1) + 's cubic-bezier(.16,.84,.3,1)';
     });
     requestAnimationFrame(() => els.forEach((el, i) => setTimeout(() => show(el), 60 + i * 150)));
     setTimeout(() => els.forEach(show), 2600);
@@ -517,6 +580,7 @@ class Component extends DCLogic {
 
   renderVals() {
     const st = this.state;
+    const PAD = 'clamp(64px,7vw,110px) 0';
     const card = (open, side) => ({
       position: 'absolute', top: '100%',
       left: side === 'right' ? 'auto' : 0, right: side === 'right' ? 0 : 'auto',
@@ -527,12 +591,6 @@ class Component extends DCLogic {
     const mob = st.vpw < 1100;
     const acc = (k) => ({ display: st.acc === k ? 'grid' : 'none', gap: 2, padding: '4px 0 10px 2px' });
     const accLink = { display: 'flex', alignItems: 'center', minHeight: 46, fontSize: 15, color: '#616E77' };
-    const stack = st.vpw < 1000;
-    const delivItem = (last) => ({
-      fontSize: 16.5, lineHeight: 1.6, fontWeight: 600, color: '#DCE8F0',
-      padding: '20px 0', borderTop: '1px solid rgba(255,255,255,.2)',
-      borderBottom: last ? '1px solid rgba(255,255,255,.2)' : 'none'
-    });
 
     return {
       navStyle: { display: mob ? 'none' : 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'flex-end', gap: 2, marginLeft: 'auto' },
@@ -579,146 +637,164 @@ class Component extends DCLogic {
       toggleAccIN: () => this.setState((s) => ({ acc: s.acc === 'in' ? null : 'in' })),
       toggleAccCT: () => this.setState((s) => ({ acc: s.acc === 'ct' ? null : 'ct' })),
 
-      stripStyle: {
-        maxWidth: WIDE, margin: '0 auto', padding: st.vpw < 900 ? '12px clamp(18px,3.2vw,96px)' : '16px clamp(18px,3.2vw,96px)',
-        display: 'flex', flexWrap: st.vpw < 900 ? 'nowrap' : 'wrap',
-        gap: st.vpw < 900 ? 0 : '12px 42px', alignItems: 'center'
+      faq1Open: this.props.faqFirstOpen === false ? undefined : true,
+
+      vimeoRef: (el) => {
+        if (!el) return;
+        this.heroFrame = el;
+        this.sizeHeroFrame();
+        requestAnimationFrame(() => this.sizeHeroFrame());
       },
-      stripDupStyle: {
-        display: st.vpw < 900 ? 'inline' : 'none',
-        fontSize: 13, color: '#C3D8E6', fontWeight: 500
+      // ---- shared layout (ported from the reference CSS) ----
+      wrapStyle: { position: 'relative', width: '100%', maxWidth: 1680, margin: '0 auto', padding: '0 clamp(20px,4vw,72px)' },
+      eyebrowStyle: { display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18, fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 12, fontWeight: 500, letterSpacing: '.18em', textTransform: 'uppercase', color: '#996133' },
+      eyebrowDarkStyle: { display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18, fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 12, fontWeight: 500, letterSpacing: '.18em', textTransform: 'uppercase', color: '#E3904C' },
+      h1Style: { fontFamily: "'Sora',sans-serif", color: '#fff', fontSize: 'clamp(32px,3.3vw,50px)', letterSpacing: '-.5px', lineHeight: 1.12, fontWeight: 800, margin: 0 },
+      h2Style: { fontFamily: "'Sora',sans-serif", color: '#A96B38', fontSize: 'clamp(29px,3.2vw,42px)', lineHeight: 1.12, letterSpacing: '-.02em', fontWeight: 800, margin: 0 },
+      h2DarkStyle: { fontFamily: "'Sora',sans-serif", color: '#C4793E', fontSize: 'clamp(29px,3.2vw,42px)', lineHeight: 1.12, letterSpacing: '-.02em', fontWeight: 800, margin: 0 },
+      btnLightStyle: { display: 'inline-block', background: '#DFE7EC', color: '#052A44', fontWeight: 700, borderRadius: 6, padding: '14px 30px', fontSize: 15, whiteSpace: 'nowrap' },
+      secFogStyle: { scrollMarginTop: 96, background: '#EEF2F4', padding: 'clamp(60px,6.4vw,98px) 0' },
+      secWhiteStyle: { scrollMarginTop: 96, background: '#fff', padding: 'clamp(60px,6.4vw,98px) 0' },
+
+      vheroStyle: { position: 'relative', overflow: 'hidden', background: 'linear-gradient(122deg,#03202F 0%,#052A44 48%,#0A3D61 100%)', padding: 'clamp(50px,5.2vw,80px) 0 clamp(54px,5.4vw,84px)' },
+      vheroBgStyle: {
+        position: 'absolute', top: '-6%', right: '-4%',
+        width: 'min(760px,58vw)', height: 'auto', aspectRatio: '420 / 149',
+        transformOrigin: '80% 40%',
+        animation: 'eagle-wing-drift 13s ease-in-out infinite',
+        opacity: 0.08, pointerEvents: 'none', userSelect: 'none'
       },
-      stripViewportStyle: st.vpw < 900
-        ? {
-            flex: '1 1 auto', minWidth: 0, overflow: 'hidden',
-            maskImage: 'linear-gradient(90deg,#000 0,#000 calc(100% - 34px),transparent 100%)',
-            WebkitMaskImage: 'linear-gradient(90deg,#000 0,#000 calc(100% - 34px),transparent 100%)'
-          }
-        : { flex: '1 1 auto', minWidth: 0 },
-      stripTrackStyle: st.vpw < 900
-        ? {
-            display: 'flex', alignItems: 'center', gap: 30, width: 'max-content',
-            animation: this.reduced ? 'none' : 'eagle-marquee-strip 34s linear infinite'
-          }
-        : { display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '12px 42px' },
-      overviewGridStyle: {
-        display: 'grid', gap: st.narrow ? 26 : 72, alignItems: 'start',
-        gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,.8fr) minmax(0,1.2fr)'
-      },
-      compareRowStyle: {
-        display: 'grid', gap: stack ? 16 : 20, marginTop: stack ? 36 : 56, alignItems: 'stretch',
-        gridTemplateColumns: stack
-          ? 'minmax(0,1fr)'
-          : 'minmax(0,1fr) 34px minmax(0,1fr) 34px minmax(0,1.1fr)'
-      },
-      compareFrameStyle: {
-        position: 'relative', borderRadius: 26, overflow: 'hidden', background: '#0D4066',
-        minHeight: stack ? 220 : 300, boxShadow: '0 0 0 0 rgba(56,142,205,0)', transition: 'box-shadow .45s ease'
-      },
-      compareTagStyle: {
-        position: 'absolute', left: 20, bottom: 20, fontSize: 12, fontWeight: 700,
-        letterSpacing: '.14em', textTransform: 'uppercase', color: '#fff',
-        background: 'rgba(5,42,68,.72)', border: '1px solid rgba(255,255,255,.28)',
-        borderRadius: 999, padding: '8px 14px'
-      },
-      operatorStyle: {
-        display: stack ? 'none' : 'flex', alignItems: 'center', justifyContent: 'center',
-        fontFamily: "'Sora',sans-serif", fontSize: 17, fontWeight: 600, color: '#7E9AB0'
-      },
-      resultCardStyle: {
-        display: 'flex', flexDirection: 'column', gap: 12, justifyContent: 'center',
-        padding: 'clamp(24px,2.4vw,32px)', borderRadius: 26, background: '#052A44'
-      },
-      delivGridStyle: {
-        position: 'relative', maxWidth: SHELL, margin: '0 auto', display: 'grid',
-        gap: st.narrow ? 30 : 72, alignItems: 'start',
-        gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,.85fr) minmax(0,1.15fr)'
-      },
-      delivItemStyle: delivItem(false),
-      delivItemLastStyle: delivItem(true),
-      noteCardStyle: {
-        background: '#FDF8EF', border: '1px solid #E4D3AF', borderRadius: 32,
-        padding: st.narrow ? '32px 26px' : 'clamp(40px,4vw,60px)'
-      },
-      usesGridStyle: {
-        display: 'grid', gap: st.vpw < 700 ? 16 : 22, marginTop: 44, alignItems: 'stretch',
-        gridTemplateColumns: st.vpw < 640 ? 'minmax(0,1fr)' : st.vpw < 1080 ? 'repeat(2,minmax(0,1fr))' : 'repeat(3,minmax(0,1fr))'
-      },
-      useCardStyle: {
-        display: 'flex', flexDirection: 'column', gap: 14,
-        padding: 'clamp(24px,2.3vw,30px)', background: '#F6F8FA',
-        border: '1px solid #C9D6E2', borderRadius: 24
-      },
-      useCardNum: {
-        fontFamily: "'Sora',sans-serif", fontSize: 13, fontWeight: 700,
-        color: '#0A4B77', letterSpacing: '.1em'
-      },
-      useCardText: {
-        fontSize: 16.5, lineHeight: 1.55, fontWeight: 600, color: '#0F2E45',
-        letterSpacing: '-.01em', textWrap: 'pretty'
-      },
-      bandImageStyle: {
-        position: 'relative', marginTop: st.narrow ? 26 : 34, borderRadius: 28, overflow: 'hidden',
-        background: '#0D4066', aspectRatio: st.vpw < 900 ? '4 / 3' : '21 / 9',
-        boxShadow: '0 0 0 0 rgba(56,142,205,0)', transition: 'box-shadow .45s ease'
-      },
-      relGridStyle: st.vpw < 700
-        ? {
-            display: 'grid', gap: 14, marginTop: 30, alignItems: 'start',
-            gridAutoFlow: 'column', gridAutoColumns: '72%',
-            overflowX: 'auto', overflowY: 'hidden',
-            scrollSnapType: 'x mandatory', WebkitOverflowScrolling: 'touch',
-            scrollbarWidth: 'none', paddingBottom: 4,
-            marginRight: 'calc(-1 * max(clamp(18px,3.2vw,96px), (100vw - min(2880px,max(1720px,86vw))) / 2))'
-          }
-        : {
-            display: 'grid', gap: 28, marginTop: 44, alignItems: 'start',
-            gridTemplateColumns: 'repeat(4,minmax(0,1fr))'
-          },
-      relCardStyle: {
-        display: 'flex', flexDirection: 'column', gap: 14,
-        scrollSnapAlign: st.vpw < 700 ? 'start' : 'none'
-      },
-      ctaGridStyle: {
-        position: 'relative', maxWidth: SHELL, margin: '0 auto', display: 'grid',
-        gap: st.narrow ? 30 : 64, alignItems: 'center',
-        gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,1.3fr) minmax(0,.7fr)'
-      },
+      vheroInStyle: { position: 'relative', zIndex: 2, display: 'grid', alignItems: 'center', width: '100%', maxWidth: 1680, margin: '0 auto', padding: '0 clamp(20px,4vw,72px)', gap: st.vpw <= 1180 ? 'clamp(30px,4vw,44px)' : '4%', gridTemplateColumns: st.vpw <= 1180 ? '1fr' : 'minmax(0,49fr) minmax(0,47fr)' },
+      vheroTagStyle: { color: '#E3904C', marginTop: 20, paddingTop: 18, borderTop: '1px solid rgba(227,144,76,.42)', display: 'inline-block', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 12, letterSpacing: '.2em', textTransform: 'uppercase', fontWeight: 500 },
+      vheroLeadStyle: { color: '#C7D6E4', fontSize: 16.5, lineHeight: 1.74, marginTop: 20, maxWidth: '58ch', textWrap: 'pretty' },
+      vheroActsStyle: { display: 'flex', alignItems: 'center', gap: 26, flexWrap: 'wrap', marginTop: 32 },
+      vheroLinkStyle: { color: '#fff', fontWeight: 700, fontSize: 14.5, borderBottom: '2px solid #E3904C', paddingBottom: 4, whiteSpace: 'nowrap' },
+      vfigStyle: { margin: 0, background: '#02131C', border: '1px solid rgba(159,192,218,.24)', borderRadius: 14, padding: 'clamp(10px,1vw,16px)', boxShadow: '0 30px 70px rgba(0,0,0,.44)', opacity: 0, transform: 'translateY(20px)', transition: 'opacity .8s ease, transform .8s ease' },
+      vfigImgStyle: { width: '100%', height: 'auto', borderRadius: 8, display: 'block' },
+      vlegendStyle: { display: 'flex', flexWrap: 'wrap', gap: '6px 22px', padding: '14px 4px 2px' },
+      vlegSpanStyle: { display: 'flex', alignItems: 'center', gap: 8, color: '#A9C7DC', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 10, letterSpacing: '.14em', textTransform: 'uppercase' },
+      k1Style: { width: 14, height: 3, borderRadius: 2, flex: '0 0 auto', background: '#E23A2E' },
+      k2Style: { width: 14, height: 3, borderRadius: 2, flex: '0 0 auto', background: '#3FC8B4' },
+      k3Style: { width: 14, height: 3, borderRadius: 2, flex: '0 0 auto', background: '#C7D6E4' },
+
+      wiaTopStyle: { maxWidth: 1120 },
+      wiaH2Style: { fontFamily: "'Sora',sans-serif", color: '#996133', fontSize: 'clamp(28px,3.1vw,41px)', lineHeight: 1.12, letterSpacing: '-.02em', fontWeight: 800, margin: 0 },
+      wiaPStyle: { color: '#5C6B74', fontSize: 16, lineHeight: 1.8, marginTop: 16, maxWidth: '88ch', textWrap: 'pretty' },
+      scmpStyle: { display: 'grid', alignItems: 'stretch', marginTop: 'clamp(38px,4vw,58px)', gap: st.vpw <= 760 ? 20 : 'clamp(16px,2vw,34px)', gridTemplateColumns: st.vpw <= 760 ? '1fr' : 'minmax(0,1fr) auto minmax(0,1fr)', opacity: 0, transform: 'translateY(18px)', transition: 'opacity .7s ease, transform .7s ease' },
+      stileStyle: { background: '#fff', border: '1px solid #DBE3E9', borderRadius: 14, padding: 'clamp(16px,1.6vw,24px)', minWidth: 0 },
+      stileBStyle: { display: 'block', color: '#052A44', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 11, letterSpacing: '.16em', textTransform: 'uppercase', fontWeight: 500 },
+      stileEmStyle: { display: 'block', fontStyle: 'normal', color: '#5C6B74', fontSize: 13.5, lineHeight: 1.6, marginTop: 6 },
+      stileSvgStyle: { display: 'block', width: '100%', height: 'auto', marginTop: 16 },
+      sopStyle: { alignSelf: 'center', color: '#8E5527', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 12, letterSpacing: '.14em', textAlign: 'center', lineHeight: 1.9 },
+      sopUStyle: { display: 'inline-block', textDecoration: 'none', fontSize: 26, lineHeight: 1, transform: st.vpw <= 760 ? 'rotate(90deg)' : 'none' },
+      sresStyle: { display: 'grid', marginTop: 'clamp(16px,1.8vw,26px)', gap: st.vpw <= 760 ? 18 : 'clamp(14px,1.6vw,26px)', gridTemplateColumns: st.vpw <= 760 ? '1fr' : 'repeat(3,minmax(0,1fr))', opacity: 0, transform: 'translateY(16px)', transition: 'opacity .7s ease, transform .7s ease' },
+      sresBStyle: { display: 'block', color: '#052A44', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 12, letterSpacing: '.16em', textTransform: 'uppercase', fontWeight: 500 },
+      sresSpanStyle: { display: 'block', color: '#5C6B74', fontSize: 13.5, lineHeight: 1.6, marginTop: 6 },
+
+      mbHeadStyle: { maxWidth: 900 },
+      mbgStyle: { display: 'grid', marginTop: 'clamp(36px,3.8vw,54px)', gap: st.vpw <= 900 ? 'clamp(26px,3vw,36px)' : 'clamp(20px,2.6vw,46px)', gridTemplateColumns: st.vpw <= 900 ? '1fr' : 'repeat(3,minmax(0,1fr))', opacity: 0, transform: 'translateY(18px)', transition: 'opacity .7s ease, transform .7s ease' },
+      mbsStyle: { minWidth: 0, paddingTop: 22, borderTop: '2px solid #A96B38' },
+      mbnStyle: { color: '#8E5527', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 12, letterSpacing: '.2em', display: 'block', marginBottom: 10 },
+      mbsH3Style: { fontFamily: "'Sora',sans-serif", color: '#052A44', fontSize: 18, fontWeight: 800, margin: '0 0 10px', lineHeight: 1.3 },
+      mbsPStyle: { color: '#5C6B74', fontSize: 14.5, lineHeight: 1.72, margin: 0, textWrap: 'pretty' },
+      mbsLinkStyle: { color: '#00548B', fontWeight: 700, borderBottom: '1px solid rgba(0,84,139,.3)' },
+      mbdStyle: { display: 'block', width: '100%', height: 'auto', marginTop: 18, background: '#EEF2F4', borderRadius: 10 },
+
+      secFitStyle: { scrollMarginTop: 96, background: 'linear-gradient(160deg,#052A44 0%,#0A3D61 100%)', padding: 'clamp(60px,6.4vw,98px) 0' },
+      fitInStyle: { display: 'grid', alignItems: 'start', width: '100%', maxWidth: 1680, margin: '0 auto', padding: '0 clamp(20px,4vw,72px)', gap: st.vpw <= 1180 ? 'clamp(30px,4vw,44px)' : '4%', gridTemplateColumns: st.vpw <= 1180 ? '1fr' : 'minmax(0,40fr) minmax(0,56fr)' },
+      fitLeadStyle: { color: '#C7D6E4', fontSize: 15.5, lineHeight: 1.74, marginTop: 18, maxWidth: '44ch', textWrap: 'pretty' },
+      fitFigStyle: { margin: '22px 0 0', borderRadius: 12, overflow: 'hidden', opacity: 0, transform: 'translateY(18px)', transition: 'opacity .7s ease, transform .7s ease' },
+      fitFigImgStyle: { display: 'block', width: '100%', height: 'auto', borderRadius: 12 },
+      fitTxStyle: { color: '#B8CBD8', marginTop: 20, fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 11, letterSpacing: '.14em', textTransform: 'uppercase', lineHeight: 1.9 },
+      fitgStyle: { display: 'grid', gap: st.vpw <= 760 ? 0 : '0 clamp(24px,3vw,52px)', gridTemplateColumns: st.vpw <= 760 ? '1fr' : 'repeat(2,minmax(0,1fr))', opacity: 0, transform: 'translateY(18px)', transition: 'opacity .7s ease, transform .7s ease' },
+      fituStyle: { padding: '20px 0', borderTop: '1px solid rgba(159,192,218,.22)' },
+      fituBStyle: { display: 'flex', alignItems: 'baseline', gap: 12, color: '#fff', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 11.5, letterSpacing: '.15em', textTransform: 'uppercase', fontWeight: 500, marginBottom: 8 },
+      fituIStyle: { fontStyle: 'normal', color: '#E3904C', flex: '0 0 auto' },
+      fituPStyle: { color: '#C7D6E4', fontSize: 14.5, lineHeight: 1.68, margin: 0, textWrap: 'pretty' },
+
+      dlvNoteStyle: { color: '#5C6B74', fontSize: 13.5, lineHeight: 1.72, marginTop: 22, paddingTop: 16, borderTop: '1px solid #DCE4EA', maxWidth: '96ch' },
+      pdHeadStyle: { maxWidth: 840 },
+      pdgStyle: { display: 'grid', alignItems: 'start', marginTop: 'clamp(32px,3.4vw,48px)', gap: st.vpw <= 1180 ? 'clamp(30px,4vw,44px)' : '4%', gridTemplateColumns: st.vpw <= 1180 ? '1fr' : 'minmax(0,54fr) minmax(0,42fr)' },
+      pdColStyle: { minWidth: 0, opacity: 0, transform: 'translateY(18px)', transition: 'opacity .7s ease, transform .7s ease' },
+      pdBasisStyle: { minWidth: 0, background: '#fff', border: '1px solid #DBE3E9', borderRadius: 14, padding: 'clamp(20px,2vw,30px)', opacity: 0, transform: 'translateY(18px)', transition: 'opacity .7s ease, transform .7s ease' },
+      pdBStyle: { display: 'block', color: '#052A44', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 11, letterSpacing: '.16em', textTransform: 'uppercase', fontWeight: 500, marginBottom: 10 },
+      pdPStyle: { color: '#5C6B74', fontSize: 15.5, lineHeight: 1.78, margin: 0, textWrap: 'pretty' },
+      pdShotStyle: { margin: '22px 0 0', maxWidth: 470, background: '#02131C', borderRadius: 12, padding: 9, border: '1px solid rgba(5,42,68,.16)' },
+      pdShotPhStyle: { position: 'relative', aspectRatio: '16 / 10', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '12%', background: 'repeating-linear-gradient(135deg,#0A2637 0 12px,#08202F 12px 24px)', color: '#A9C7DC', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 11, letterSpacing: '.14em', textTransform: 'uppercase', lineHeight: 1.9 },
+      pdRelStyle: { marginTop: 'clamp(30px,3vw,44px)', paddingTop: 18, borderTop: '1px solid #DCE4EA', color: '#5C6B74', fontSize: 14, lineHeight: 2 },
+      pdRelBStyle: { display: 'block', color: '#052A44', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 11, letterSpacing: '.16em', textTransform: 'uppercase', fontWeight: 500, marginBottom: 6 },
+      pdRelLinkStyle: { color: '#00548B', fontWeight: 700, borderBottom: '1px solid rgba(0,84,139,.3)' },
+      pdRelSepStyle: { fontStyle: 'normal', color: '#5C6B74', margin: '0 8px' },
+      faqUStyle: { textDecoration: 'none', color: '#8E5527', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 12, fontWeight: 500, letterSpacing: '.14em' },
+      faqTxtStyle: { minWidth: 0 },
+      faqListStyle: { borderTop: '1px solid #DCE4EA' },
+      faqAPStyle: { color: '#5C6B74', fontSize: 15.5, lineHeight: 1.82, maxWidth: '92ch', margin: 0, marginLeft: st.vpw <= 760 ? 0 : 58, textWrap: 'pretty' },
+      snavStyle: { background: '#fff', borderBottom: '1px solid #E1E8EE', position: st.vpw <= 900 ? 'static' : 'sticky', top: (st.hdrH || 75), zIndex: 80 },
+      snavInStyle: { display: 'flex', flexWrap: 'wrap', justifyContent: st.vpw <= 900 ? 'flex-start' : 'center', width: '100%', maxWidth: 1680, margin: '0 auto', padding: '0 clamp(20px,4vw,72px)' },
+      snavLinkStyle: { padding: st.vpw <= 900 ? '12px 14px' : '16px 20px', fontSize: st.vpw <= 900 ? 13 : 13.5, fontWeight: 700, color: '#052A44', borderBottom: '2px solid transparent', whiteSpace: 'nowrap' },
+
+
+      dlvHeadStyle: { maxWidth: 900 },
+      dlvHeadPStyle: { color: '#5C6B74', fontSize: 16, lineHeight: 1.76, maxWidth: '62ch', marginTop: 14 },
+      dlvInStyle: { display: 'grid', alignItems: 'start', marginTop: 'clamp(34px,3.4vw,50px)', gap: st.vpw <= 1180 ? 'clamp(30px,4vw,44px)' : '4%', gridTemplateColumns: st.vpw <= 1180 ? '1fr' : 'minmax(0,58fr) minmax(0,38fr)' },
+      dlvFrameStyle: { background: '#02131C', border: '1px solid rgba(5,42,68,.16)', borderRadius: 14, padding: 'clamp(12px,1.2vw,18px)', boxShadow: '0 20px 48px rgba(5,42,68,.16)', minWidth: 0, opacity: 0, transform: 'translateY(18px)', transition: 'opacity .7s ease, transform .7s ease' },
+      dlvBarStyle: { display: 'flex', alignItems: 'center', gap: 8, padding: '2px 4px 12px' },
+      dlvDotStyle: { display: 'block', width: 9, height: 9, borderRadius: '50%', background: 'rgba(159,192,218,.34)', flex: '0 0 auto' },
+      dlvBarLblStyle: { marginLeft: 6, fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 10.5, letterSpacing: '.16em', textTransform: 'uppercase', color: '#A9C7DC' },
+      dlvPhStyle: { position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '12%', background: 'repeating-linear-gradient(135deg,#0A2637 0 12px,#08202F 12px 24px)', color: '#A9C7DC', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 11, letterSpacing: '.14em', textTransform: 'uppercase', lineHeight: 1.9 },
+      dlvImgStyle: { position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' },
+      dlvListStyle: { borderTop: '1px solid #DCE4EA', minWidth: 0 },
+      diNumStyle: { color: '#8E5527', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 11, fontWeight: 500, flex: '0 0 auto' },
+
+
+      faqHeadStyle: { maxWidth: 760, marginBottom: 'clamp(30px,3vw,44px)' },
+
+      cta3Style: { scrollMarginTop: 96, background: 'linear-gradient(100deg,#00548B 0%,#0A3D61 100%)', padding: 'clamp(28px,2.8vw,38px) 0' },
+      cta3InStyle: { display: 'grid', alignItems: 'center', minHeight: 134, width: '100%', maxWidth: 1680, margin: '0 auto', padding: '0 clamp(20px,4vw,72px)', gap: st.vpw <= 1180 ? '22px 26px' : '4%', gridTemplateColumns: st.vpw <= 700 ? '1fr' : st.vpw <= 1180 ? '1fr 1fr' : 'minmax(0,33fr) minmax(0,43fr) minmax(0,20fr)' },
+      cta3H2Style: { fontFamily: "'Sora',sans-serif", color: '#fff', fontSize: 'clamp(21px,2vw,28px)', lineHeight: 1.2, fontWeight: 800, margin: 0 },
+      cta3PStyle: { color: '#DCEAF5', fontSize: 15, lineHeight: 1.7, margin: 0, textWrap: 'pretty' },
+      cta3ActStyle: { justifySelf: st.vpw <= 1180 ? 'start' : 'end', gridColumn: st.vpw <= 1180 && st.vpw > 700 ? '1 / -1' : 'auto' },
+
+      ...(() => {
+        const out = {};
+        const dv = st.dv;
+        for (let i = 0; i < 4; i++) {
+          const on = dv === i;
+          out['dv' + i + 'Style'] = { position: 'relative', aspectRatio: '16 / 10', borderRadius: 9, overflow: 'hidden', background: '#052A44', display: on ? 'block' : 'none' };
+          out['dsel' + i] = on ? 'true' : 'false';
+          out['setDv' + i] = () => this.setState({ dv: i });
+          out['di' + i + 'Style'] = {
+            display: 'block', width: '100%', textAlign: 'left', background: on ? '#EEF2F4' : 'none',
+            border: 0, borderBottom: '1px solid #DCE4EA', padding: '18px 16px', cursor: 'pointer',
+            fontFamily: 'inherit', transition: 'background .2s',
+            boxShadow: on ? 'inset 3px 0 0 #00548B' : 'none'
+          };
+          out['diH3Style' + i] = { fontFamily: "'Sora',sans-serif", fontSize: 16, fontWeight: 800, color: '#052A44', display: 'flex', alignItems: 'baseline', gap: 10, margin: 0, lineHeight: 1.3 };
+          out['diPStyle' + i] = { color: '#5C6B74', fontSize: 14, lineHeight: 1.66, marginTop: 7, marginBottom: 0, textWrap: 'pretty' };
+        }
+        const q = st.q;
+        for (let i = 0; i < 4; i++) {
+          const on = q === i;
+          out['qsel' + i] = on ? 'true' : 'false';
+          out['setQ' + i] = () => this.setState({ q: on ? -1 : i });
+          out['fa' + i + 'Style'] = { display: on ? 'block' : 'none', borderBottom: '1px solid #DCE4EA', padding: '0 4px 26px' };
+          out['faqQ' + i + 'Style'] = {
+            width: '100%', display: 'grid', alignItems: 'baseline', textAlign: 'left',
+            gap: st.vpw <= 760 ? 10 : 14,
+            gridTemplateColumns: st.vpw <= 760 ? '34px minmax(0,1fr) 24px' : '44px minmax(0,1fr) 30px',
+            background: 'none', border: 0,
+            borderBottom: '1px solid ' + (on ? 'transparent' : '#DCE4EA'),
+            padding: '24px 4px', cursor: 'pointer', fontFamily: "'Sora',sans-serif",
+            fontSize: 'clamp(16px,1.5vw,18px)', fontWeight: 800,
+            color: on ? '#00548B' : '#052A44', lineHeight: 1.35
+          };
+          out['faqIco' + i] = { justifySelf: 'end', fontStyle: 'normal', color: '#00548B', fontSize: 15, transform: on ? 'rotate(180deg)' : 'none', transition: 'transform .25s' };
+        }
+        return out;
+      })(),
       ...(() => {
         const mob = st.vpw < 900;
         const o = {};
-        o.phonesOpen = st.phones ? 'true' : 'false';
-        o.togglePhones = () => this.setState((s) => ({ phones: !s.phones }));
-        o.utilTab = mob ? 0 : -1;
-        o.utilTogStyle = {
-          display: mob ? 'inline-flex' : 'none', alignItems: 'center', gap: 8, minHeight: 44,
-          padding: '0 4px 0 0', background: 'none', border: 'none', cursor: 'pointer',
-          fontFamily: "'Manrope',sans-serif", fontSize: 12, fontWeight: 700,
-          letterSpacing: '.18em', textTransform: 'uppercase', color: '#A6C3D5'
-        };
-        o.utilCaretStyle = {
-          fontSize: 13, lineHeight: 1, color: '#E0A83E',
-          transform: st.phones ? 'rotate(180deg)' : 'none', transition: 'transform .25s ease'
-        };
-        o.utilPhonesStyle = mob
-          ? {
-              display: st.phones ? 'flex' : 'none', flexDirection: 'column', gap: 10,
-              position: 'absolute', top: '100%', left: 0, right: 0, zIndex: 71,
-              background: '#052A44', borderTop: '1px solid rgba(255,255,255,.16)',
-              boxShadow: '0 18px 34px rgba(4,26,44,.4)', padding: '10px clamp(18px,3.2vw,96px) 16px'
-            }
-          : { display: 'flex', alignItems: 'center', gap: 26, flexWrap: 'wrap' };
-        o.utilLinkStyle = mob
-          ? { display: 'flex', alignItems: 'center', gap: 10, whiteSpace: 'nowrap', minHeight: 44, padding: '4px 0', width: '100%' }
-          : { display: 'flex', alignItems: 'center', gap: 10, whiteSpace: 'nowrap' };
-        o.utilDivStyle = mob
-          ? { display: 'block', height: 1, background: 'rgba(255,255,255,.14)', margin: '6px 0' }
-          : { width: 1, height: 20, background: 'rgba(255,255,255,.16)' };
-        o.utilNoteStyle = {
-          display: mob ? 'none' : 'block', fontSize: 11, fontWeight: 700,
-          letterSpacing: '.2em', textTransform: 'uppercase', color: '#A6C3D5'
-        };
-
         [['RC', 'rc'], ['SV', 'sv'], ['CO', 'co']].forEach(([K, k]) => {
           const open = !mob || st.footAcc === k;
           o['footCol' + K + 'Style'] = mob
@@ -787,8 +863,6 @@ class Component extends DCLogic {
           : { fontSize: 15, lineHeight: 1.6, color: '#3C5468', textWrap: 'pretty' };
         return o;
       })(),
-      // the wireframe band lives under the column lists, so the footer reserves
-      // room for it and the grid keeps clear space above it
       footWireStyle: {
         position: 'absolute', left: 0, right: 0, width: '100%',
         bottom: st.narrow ? 96 : 'clamp(105px,7.5vw,155px)',
@@ -814,7 +888,6 @@ class Component extends DCLogic {
     };
   }
 }
-
 </script>
 </body>
 </html>

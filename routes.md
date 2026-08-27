@@ -10,11 +10,11 @@ silently drop nested files:
 
 - `*.html` — 30 pages, links written as clean slugs
 - `support.js` — the runtime every page loads, shared
-- `*.webp` / `*.jpg` / `*.png` / `*.svg` — 60 images, referenced by bare filename
+- `*.webp` / `*.jpg` / `*.png` / `*.gif` / `*.svg` — 160 images, referenced by bare filename
 - `pointcloud.json` — point data for the homepage capture animation
 - `vercel.json` — `cleanUrls` so `/about` serves `about.html`
 
-95 files total. Because links are already slugs, no redirect table is needed. If
+195 files total. Because links are already slugs, no redirect table is needed. If
 images are ever re-grouped into folders, the `src` attributes must be updated to
 match — including the paths built in JS inside the page logic.
 
@@ -92,7 +92,15 @@ After exporting, check that no `.dc.html` or `assets/` string survives in any pa
 that every referenced local file exists, and that every `/slug` link resolves to a
 real page. Edit the design file, then re-export — never hand-edit a page here.
 
-### Last export
+### Last export — 27 August 2026
+
+All seven Reality Capture service pages rebuilt from the approved reference designs
+and re-exported, plus the homepage. 85 new `assets/rc/` images extracted from the
+references' base64 data URIs to WebP/JPG/GIF with SEO filenames. Six superseded
+assets removed. Validated: 0 unresolved template holes, 0 broken image refs,
+0 dead slug links, 0 stale files.
+
+### Previous export
 
 19 August 2026, from the post-client-revision design files: top utility ribbon
 removed sitewide, footer rebuilt (city wireframe band, navy gradient, smaller type,

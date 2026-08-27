@@ -8,14 +8,18 @@
 <body>
 <x-dc>
 <helmet>
-<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#052A44"></rect><g fill="none" stroke="#E0A83E" stroke-width="3.4" stroke-linecap="round"><path d="M50 24v46"></path><path d="M34 74h32"></path><circle cx="50" cy="36" r="8"></circle></g></svg></template>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#052A44"></rect><g fill="none" stroke="#E0A83E" stroke-width="3.4" stroke-linecap="round"><path d="M34 66l16-32 16 32"></path><path d="M41 58h18"></path></g></svg></template>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Terrestrial Laser Scanning (TLS) in Texas | Eagle Surveying</title>
+<title>Terrestrial Laser Scanning &amp; 3D Laser Scanning in Texas | Eagle Surveying</title>
+<meta name="description" content="Texas terrestrial laser scanning for registered point clouds, existing-condition documentation, industrial facilities, data centers, as-built review, and CAD/BIM-compatible file delivery.">
+<!-- CANONICAL URL PENDING MAK PRODUCTION ROUTE -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap&family=IBM+Plex+Mono:wght@400;500;700" rel="stylesheet">
 <style>
   *{box-sizing:border-box}
+  @keyframes eagle-wing-drift{0%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-1.4%,-3.6%,0) scale(1.022)}100%{transform:translate3d(0,0,0) scale(1)}}
+  @media (prefers-reduced-motion: reduce){[data-wing]{animation:none!important}}
   @keyframes eagle-marquee-strip{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 15px))}}
   body{margin:0;background:#F6F8FA;font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
   h1,h2,h3,h4,p{margin:0}
@@ -42,7 +46,7 @@
             <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:11px">
               <a href="/aerial-lidar-mapping" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Aerial LiDAR Mapping</a>
               <a href="/aerial-photogrammetry" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Aerial Photogrammetry</a>
-              <a href="#top" style="font-size:14.5px;color:#0A4B77;font-weight:700;line-height:1.35">Terrestrial Laser Scanning (TLS)</a>
+              <a href="/terrestrial-laser-scanning" style="font-size:14.5px;color:#0A4B77;font-weight:700;line-height:1.35">Terrestrial Laser Scanning (TLS)</a>
               <a href="/360-site-documentation" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">360° Site Documentation &amp; Virtual Walkthroughs</a>
               <a href="/aerial-thermal-imagery" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Aerial Thermal Imagery</a>
               <a href="/construction-progress-monitoring" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Construction Progress Monitoring and Documentation</a>
@@ -94,20 +98,20 @@
             <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:11px">
               <a href="/about" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">About Us</a>
               <a href="/#cares" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Eagle Cares</a>
-              <a href="#workflows" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Technology &amp; Equipment</a>
+              <a href="/#platforms" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Technology &amp; Equipment</a>
               <a href="/faqs" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">FAQs</a>
             </div>
           </div>
         </span>
         <a href="/#contact" style="font-size:14.5px;color:#0F2E45;font-weight:500;padding:11px 15px;border-radius:999px;white-space:nowrap" style-hover="background:#E7EDF4;color:#0A4B77">Careers</a>
         <span data-nav="" onMouseEnter="{{ openCT }}" onMouseLeave="{{ closeNav }}" style="display:inline-flex;position:relative">
-          <a href="#estimate" style="display:inline-flex;align-items:center;gap:6px;font-size:14.5px;color:#0F2E45;font-weight:500;padding:11px 15px;border-radius:999px;white-space:nowrap" style-hover="background:#E7EDF4;color:#0A4B77">Contact<span style="font-size:11px;opacity:.55">⌄</span></a>
+          <a href="/#estimate" style="display:inline-flex;align-items:center;gap:6px;font-size:14.5px;color:#0F2E45;font-weight:500;padding:11px 15px;border-radius:999px;white-space:nowrap" style-hover="background:#E7EDF4;color:#0A4B77">Contact<span style="font-size:11px;opacity:.55">⌄</span></a>
           <div style="{{ ddCT }}">
             <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Contact</span>
             <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:11px">
-              <a href="#estimate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Have a Question</a>
-              <a href="#estimate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Request an Estimate</a>
-              <a href="#estimate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Schedule a Meeting</a>
+              <a href="/#estimate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Have a Question</a>
+              <a href="/#estimate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Request an Estimate</a>
+              <a href="/#estimate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Schedule a Meeting</a>
             </div>
           </div>
         </span>
@@ -129,9 +133,9 @@
     <div style="flex:1;overflow-y:auto;padding:8px clamp(18px,3.2vw,96px) 32px">
       <button type="button" onClick="{{ toggleAccRC }}" style="{{ accBtnStyle }}">Reality Capture<span style="opacity:.5;font-size:13px">⌄</span></button>
       <div style="{{ accRC }}">
-        <a href="/aerial-lidar-mapping" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Aerial LiDAR Mapping</a>
+        <a href="/terrestrial-laser-scanning" onClick="{{ closeDrawer }}" style="{{ accLinkActiveStyle }}">Aerial LiDAR Mapping</a>
         <a href="/aerial-photogrammetry" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Aerial Photogrammetry</a>
-        <a href="#top" onClick="{{ closeDrawer }}" style="{{ accLinkActiveStyle }}">Terrestrial Laser Scanning (TLS)</a>
+        <a href="/terrestrial-laser-scanning" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Terrestrial Laser Scanning (TLS)</a>
         <a href="/360-site-documentation" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">360° Site Documentation</a>
         <a href="/aerial-thermal-imagery" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Aerial Thermal Imagery</a>
         <a href="/construction-progress-monitoring" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Construction Progress Monitoring</a>
@@ -170,306 +174,390 @@
       <a href="/#contact" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">Careers</a>
       <button type="button" onClick="{{ toggleAccCT }}" style="{{ accBtnStyle }}">Contact<span style="opacity:.5;font-size:13px">⌄</span></button>
       <div style="{{ accCT }}">
-        <a href="#estimate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Have a Question</a>
-        <a href="#estimate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Request an Estimate</a>
-        <a href="#estimate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Schedule a Meeting</a>
+        <a href="/#estimate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Have a Question</a>
+        <a href="/#estimate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Request an Estimate</a>
+        <a href="/#estimate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Schedule a Meeting</a>
       </div>
       <div style="display:flex;flex-direction:column;gap:10px;margin-top:26px">
-        <a href="#estimate" onClick="{{ closeDrawer }}" style="display:flex;align-items:center;justify-content:center;min-height:52px;background:#E0A83E;color:#052A44;font-weight:700;font-size:16px;border-radius:999px">Request an Estimate</a>
+        <a href="/#estimate" onClick="{{ closeDrawer }}" style="display:flex;align-items:center;justify-content:center;min-height:52px;background:#E0A83E;color:#052A44;font-weight:700;font-size:16px;border-radius:999px">Request an Estimate</a>
         <a href="tel:9402223009" style="display:flex;align-items:center;justify-content:center;min-height:52px;border:1px solid #C9D6E2;color:#0F2E45;font-weight:600;font-size:16px;border-radius:999px">Call (940) 222-3009</a>
       </div>
     </div>
   </div>
 
-  <section id="top" data-screen-label="Service hero" style="position:relative;background:#052A44;overflow:hidden">
-    <div data-hero="0" style="{{ heroVideoStyle }}">
-      <iframe ref="{{ vimeoRef }}" src="https://player.vimeo.com/video/1217314193?background=1&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerPolicy="strict-origin-when-cross-origin" title="Topographic scan data rendered as a live map" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border:0;pointer-events:none"></iframe>
+  <section id="overview-top" data-screen-label="Service hero" style="{{ heroSecStyle }}">
+    <svg data-wing="" viewBox="0 0 420 149" fill="#9FC0DA" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" style="{{ wingMarkStyle }}"><path d="M1.6 0Q21.3 10.6 32 14.9Q42.8 19.3 63.6 25.1Q84.4 30.8 115.2 35.3Q145.9 39.8 187.9 43.8Q230 47.8 256.1 53Q282.1 58.1 295.4 62.6Q308.6 67.1 318.1 72.3Q327.6 77.4 331.5 80.6Q335.3 83.8 338.1 87.2Q340.8 90.6 342.9 96Q345 101.5 345 106.3Q345 111.1 344 114.3Q343 117.5 342.2 112.8Q341.4 108.2 339.9 105.2Q338.5 102.1 333.2 96.5Q327.9 90.9 318.9 86.4Q309.8 81.9 300.6 79.3Q291.5 76.7 269.6 73.5Q247.7 70.3 200 67Q152.3 63.6 135.1 61.7Q117.9 59.7 102.8 57.2Q87.6 54.6 75 51.4Q62.5 48.2 51.2 43.7Q39.9 39.2 31.7 34.2Q23.5 29.2 15.6 21.2Q7.7 13.2 4.7 6.8Q1.6 0.3 1.6 0.1Z"></path><path d="M51.9 57.2Q74.1 65.5 97.4 70Q120.8 74.5 142.1 76.5Q163.3 78.4 202.3 79.2Q241.2 80 254.3 81.3Q267.3 82.5 276.6 84.5Q286 86.4 296.4 89.6Q306.9 92.8 312.3 95.3Q317.6 97.9 324.1 103.1Q330.5 108.2 333.1 113.3Q335.6 118.5 335.5 122.2Q335.3 125.9 331.3 121.1Q327.2 116.2 321.8 113.2Q316.3 110.1 307.8 107.5Q299.2 105 286.9 103.1Q274.7 101.2 251.3 99.9Q228 98.6 195 97.8Q162 97 140.3 94.4Q118.5 91.8 110.2 89.9Q101.8 88 88.9 82.8Q76 77.7 69.3 73.2Q62.5 68.7 57.2 63.1Q51.9 57.5 51.9 57.4Z"></path><path d="M73.8 87.3Q86.3 95.1 92.3 97.7Q98.2 100.2 106.9 102.8Q115.6 105.3 126.4 107.3Q137.2 109.2 155.3 110.3Q173.3 111.4 216.2 111Q259 110.5 276.1 112Q293.1 113.4 301.3 115.3Q309.5 117.2 313.7 119.3Q317.9 121.4 320.9 124.3Q324 127.2 325 129.8Q326 132.3 325.6 135.4Q325.3 138.4 323.4 141.9Q321.4 145.5 320.3 146.3Q319.2 147.1 319 142.6Q318.9 138.1 316 134.4Q313.1 130.7 309.4 128.8Q305.7 126.8 299.7 125.5Q293.7 124.3 275.9 124.2Q258 124 232.4 126.5Q206.8 129.1 194.1 129.8Q181.3 130.4 170.1 130.3Q158.8 130.1 148.2 128.9Q137.5 127.8 127.8 125.3Q118.2 122.7 108.8 118.2Q99.5 113.7 91.2 106.8Q82.8 99.9 78.3 93.8Q73.8 87.7 73.8 87.5Z"></path><path d="M298.6 52.7Q329.8 53 357.2 56.9Q384.6 60.7 386.4 61.4Q388.1 62 390.4 64.4Q392.6 66.8 397.8 67.6Q402.9 68.4 408.9 70.3Q414.8 72.3 417.3 77.5Q419.7 82.8 415.8 81.5Q411.9 80.3 407.4 80.4Q402.9 80.6 397.8 81.3Q392.6 81.9 383.1 84.5Q373.6 87 370.3 89.3Q366.9 91.5 364.9 94.5Q363 97.6 360.9 103Q358.8 108.5 355.4 111.3Q352 114 352.9 109.7Q353.7 105.3 353.5 98.9Q353.3 92.5 351.2 87.2Q349.1 81.9 347.2 79.3Q345.3 76.7 338.1 71.1Q330.8 65.5 321 61.5Q311.1 57.5 303.9 55.9Q296.6 54.3 295.6 53.8Q294.7 53.3 296.5 53.1Q298.3 53 298.5 52.9Z"></path></svg>
+    <div style="{{ heroGridStyle }}">
+      <div style="min-width:0">
+        <span style="font-size:clamp(11px,0.78vw,15px);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#9FC0DA">Reality Capture / Terrestrial Laser Scanning</span>
+        <h1 style="font-family:'Sora',sans-serif;font-size:clamp(44px,4.6vw,66px);line-height:1.05;letter-spacing:-.03em;font-weight:600;color:#fff;margin:16px 0 20px">Terrestrial Laser Scanning (TLS)</h1>
+        <p style="color:#C7D6E4;font-size:17px;line-height:1.72;margin-top:18px;max-width:56ch;text-wrap:pretty">Ground-based laser scanning captures dense, three-dimensional point clouds of buildings, structures, equipment, and other accessible features. Eagle combines data from multiple scan positions into a single, coordinated spatial record to support renovation planning, industrial coordination, as-built documentation, and integration into the client&rsquo;s CAD or BIM environment.</p>
+        <div style="display:flex;align-items:center;flex-wrap:wrap;gap:26px;margin-top:30px">
+          <a href="#contact-tls" style="display:inline-block;background:#DFE7EC;color:#052A44;font-weight:700;font-size:15px;padding:14px 30px;border-radius:6px" style-hover="background:#fff">Discuss Your Laser Scanning Project</a>
+          <a href="#deliverables" style="font-size:14.5px;font-weight:700;color:#9FC0DA;border-bottom:2px solid #A96B38;padding-bottom:3px" style-hover="color:#fff;border-color:#E6914C">View Typical Deliverables &darr;</a>
+        </div>
+      </div>
+      <div style="{{ heroImgStyle }}">
+        <img src="terrestrial-laser-scanning-intensity-point-cloud-commercial-roof.webp" alt="Intensity-colorized registered point cloud, commercial roof structure" width="900" height="431" fetchpriority="high" decoding="async" style="{{ heroPhotoStyle }}">
+        <span style="{{ heroChipStyle }}">
+          <img src="terrestrial-laser-scanning-trimble-scanner-survey-target.webp" alt="Trimble terrestrial laser scanner with survey target during field collection" width="900" height="900" loading="lazy" decoding="async" style="{{ heroChipImgStyle }}">
+        </span>
+      </div>
     </div>
-    <div style="{{ heroScrimStyle }}"></div>
-    <div style="{{ heroInnerStyle }}">
-      <div style="max-width:660px">
-        <span data-hero="1" style="display:block;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#E0A83E;margin-bottom:12px">Millimeter-level detail on the built environment</span>
-        <h1 data-hero="2" style="font-family:'Sora',sans-serif;color:#fff;font-size:clamp(30px,3.9vw,56px);line-height:1.05;letter-spacing:-.03em;font-weight:600;text-wrap:balance">Terrestrial Laser Scanning</h1>
-        <p data-hero="3" style="color:#DCE8F0;font-size:clamp(15.5px,1.15vw,17px);line-height:1.6;max-width:620px;margin-top:16px;text-wrap:pretty">Ground-based 3D laser scanning captures the exact geometry of buildings, facilities, and structures to millimeter-level detail at close range. Delivered as georeferenced point clouds and scan-to-CAD/BIM data tied to project control, ready for design, coordination, and verification.</p>
-        <div data-hero="4" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:26px">
-          <a href="#estimate" style="display:inline-flex;align-items:center;min-height:52px;padding:0 30px;background:#E0A83E;color:#052A44;font-weight:700;font-size:16px;border-radius:999px" style-hover="background:#F0BC57">Request an Estimate</a>
-          <a href="#workflows" style="display:inline-flex;align-items:center;min-height:52px;padding:0 30px;border:1px solid rgba(255,255,255,.4);color:#fff;font-weight:600;font-size:16px;border-radius:999px" style-hover="background:rgba(255,255,255,.12)">See scan-to-CAD &amp; BIM</a>
+  </section>
+
+  <nav data-screen-label="Section nav" aria-label="Page sections" style="{{ snavStyle }}">
+    <div style="{{ snavInnerStyle }}">
+      <a href="#overview" style="{{ snavLinkStyle }}" style-hover="color:#052A44">Overview</a>
+      <a href="#best-fit" style="{{ snavLinkStyle }}" style-hover="color:#052A44">Best-Fit Conditions</a>
+      <a href="#deliverables" style="{{ snavLinkStyle }}" style-hover="color:#052A44">Deliverables</a>
+      <a href="#process" style="{{ snavLinkStyle }}" style-hover="color:#052A44">Our Process</a>
+      <a href="#applications" style="{{ snavLinkStyle }}" style-hover="color:#052A44">Applications</a>
+      <a href="#related" style="{{ snavLinkStyle }}" style-hover="color:#052A44">Related Services</a>
+      <a href="#faqs" style="{{ snavLinkStyle }}" style-hover="color:#052A44">FAQs</a>
+    </div>
+  </nav>
+
+  <section id="overview" data-screen-label="Overview" style="{{ secWiiStyle }}">
+    <div style="{{ overviewGridStyle }}">
+      <figure data-reveal="" style="{{ wiiFigStyle }}">
+        <img src="terrestrial-laser-scanning-intensity-point-cloud-detail.webp" alt="Intensity-colorized registered point cloud, commercial roof structure" width="900" height="431" loading="lazy" decoding="async" style="{{ ovFigImgStyle }}">
+        <svg class="wiiov" viewBox="0 0 900 431" aria-hidden="true" style="{{ wiiOvStyle }}"><g fill="none" stroke="#9FC0DA" stroke-width="1.6"><circle cx="200" cy="330" r="16"/><circle cx="200" cy="330" r="42" stroke-dasharray="3 8"/><circle cx="470" cy="120" r="14"/><circle cx="470" cy="120" r="36" stroke-dasharray="3 8"/><circle cx="730" cy="300" r="14"/><circle cx="730" cy="300" r="36" stroke-dasharray="3 8"/><path d="M200 330 L 470 120 M470 120 L 730 300 M200 330 L 730 300" stroke-dasharray="7 7"/><path d="M60 60 v-26 h26 M60 60 h26 M60 60 v26" stroke-width="2"/></g><g fill="#9FC0DA"><circle cx="200" cy="330" r="4.5"/><circle cx="470" cy="120" r="4.5"/><circle cx="730" cy="300" r="4.5"/></g></svg>
+        <figcaption style="{{ ovCapStyle }}">MULTIPLE SCAN POSITIONS REGISTERED INTO ONE COORDINATED POINT CLOUD</figcaption>
+      </figure>
+      <div data-reveal="" style="min-width:0">
+        <span style="{{ eyebrowSkyStyle }}">What It Is</span>
+        <h2 style="{{ h2DarkStyle }}">Existing Conditions, Captured in Three Dimensions.</h2>
+        <p style="{{ ed3p2Style }}">From each planned position, the scanner records dense three-dimensional measurements of accessible surfaces throughout the space. Architectural, structural, equipment, piping, and MEP features are captured from multiple viewpoints.</p>
+        <p style="{{ ed3p2Style }}">The individual scans are aligned into one coordinated reference that architects, engineers, contractors, owners, and VDC teams can use for renovation planning, coordination, as-built documentation, and facility management.</p>
+        <div style="{{ proof3hStyle }}">
+          <div style="{{ proofItemDarkStyle }}">
+            <h3 style="{{ proofH3DarkStyle }}">Ground-Based Collection</h3>
+            <p style="{{ proofPDarkStyle }}">Instrument locations are selected around line of sight, physical access, and the areas identified in the scope.</p>
+          </div>
+          <div style="{{ proofItemDarkStyle }}">
+            <h3 style="{{ proofH3DarkStyle }}">Coordinated Registration</h3>
+            <p style="{{ proofPDarkStyle }}">Individual scans are aligned into one consistent three-dimensional reference.</p>
+          </div>
+          <div style="{{ proofItemDarkStyle }}">
+            <h3 style="{{ proofH3DarkStyle }}">Client-Ready Formats</h3>
+            <p style="{{ proofPDarkStyle }}">Registered files are delivered in the agreed formats for the client&rsquo;s downstream workflow.</p>
+          </div>
         </div>
       </div>
     </div>
-    <div data-hero="5" style="position:absolute;left:0;right:0;bottom:0;background:rgba(5,42,68,.78);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,.18)">
-      <div style="{{ stripStyle }}">
-        <div style="{{ stripViewportStyle }}">
-          <div style="{{ stripTrackStyle }}">
-              <span style="font-size:13px;color:#C3D8E6;font-weight:500">Registered &amp; georeferenced</span>
-              <span style="font-size:13px;color:#C3D8E6;font-weight:500">Tied to project control</span>
-              <span style="font-size:13px;color:#C3D8E6;font-weight:500">E57 · RCP/RCS · LAS · PTS</span>
-              <span style="font-size:13px;color:#C3D8E6;font-weight:500">RPLS oversight</span>
-              <span aria-hidden="true" style="{{ stripDupStyle }}">Registered &amp; georeferenced</span>
-              <span aria-hidden="true" style="{{ stripDupStyle }}">Tied to project control</span>
-              <span aria-hidden="true" style="{{ stripDupStyle }}">E57 · RCP/RCS · LAS · PTS</span>
-              <span aria-hidden="true" style="{{ stripDupStyle }}">RPLS oversight</span>
+    <div aria-hidden="true" style="{{ secSepStyle }}">
+      <svg viewBox="0 0 1400 22" preserveAspectRatio="none" style="width:100%;height:100%;display:block"><g fill="none" stroke="#00548B" stroke-width="1" opacity=".5"><path d="M0 11 H 1400" stroke-dasharray="2 12"/></g><g fill="#00548B" opacity=".55"><circle cx="340" cy="11" r="3"/><circle cx="700" cy="11" r="3"/><circle cx="1060" cy="11" r="3"/></g></svg>
+    </div>
+  </section>
+
+  <section id="best-fit" data-screen-label="Best-fit conditions" style="{{ secSteelStyle }}">
+    <svg aria-hidden="true" viewBox="0 0 1400 600" preserveAspectRatio="xMidYMid slice" style="{{ bfLinesStyle }}"><g fill="none" stroke="#052A44" stroke-width="1.1"><path d="M60 480 C 260 400, 300 330, 520 320 C 740 310, 800 380, 1020 360 C 1180 345, 1260 300, 1360 290"/><path d="M40 520 C 260 450, 320 380, 540 370 C 760 360, 820 420, 1040 400 C 1200 385, 1280 345, 1380 335"/><path d="M900 120 h48 M924 96 v48 M220 140 h40 M240 120 v40"/><path d="M100 220 L 340 170 L 560 210 L 820 150" stroke-dasharray="6 7"/></g></svg>
+    <div style="{{ wrapStyle }}">
+      <span style="{{ bfEyebrowStyle }}">Best-Fit Conditions</span>
+      <h2 style="{{ bfH2Style }}">When Existing Geometry Matters.</h2>
+      <div style="{{ bfGridStyle }}">
+        <div data-reveal="" style="{{ bfItemStyle }}">
+          <h3 style="{{ bfH3Style }}">Renovation, Retrofit &amp; Tie-In Design</h3>
+          <p style="{{ bfPStyle }}">Accurately measured existing conditions to support modifications, connections, additions, and new construction within or adjacent to existing structures.</p>
+        </div>
+        <div data-reveal="" style="{{ bfItemStyle }}">
+          <h3 style="{{ bfH3Style }}">Data Centers &amp; Congested MEP Spaces</h3>
+          <p style="{{ bfPStyle }}">High-density capture of equipment rooms, MEP systems, structural steel, and tie-in locations.</p>
+        </div>
+        <div data-reveal="" style="{{ bfItemStyle }}">
+          <h3 style="{{ bfH3Style }}">Industrial Facilities &amp; Structural Systems</h3>
+          <p style="{{ bfPStyle }}">Measured conditions around tanks, piping, equipment, and structural systems.</p>
+        </div>
+        <div data-reveal="" style="{{ bfItemStyle }}">
+          <h3 style="{{ bfH3Style }}">As-Built Documentation &amp; Closeout</h3>
+          <p style="{{ bfPStyle }}">Completed construction recorded for closeout, maintenance, coordination, and comparison with design information.</p>
+        </div>
+        <div data-reveal="" style="{{ bfItemStyle }}">
+          <h3 style="{{ bfH3Style }}">Parking Structures, Stairs &amp; Dimensional Review</h3>
+          <p style="{{ bfPStyle }}">Dimensional information for handrails, stairwells, parking structures, clearances, and other accessible features.</p>
+        </div>
+        <div data-reveal="" style="{{ bfItemStyle }}">
+          <h3 style="{{ bfH3Style }}">Bridges, Culverts &amp; Civil Structures</h3>
+          <p style="{{ bfPStyle }}">High-density documentation of accessible bridge components, culverts, structural elements, and clearance conditions for existing-condition review, coordination, and rehabilitation planning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="deliverables" data-screen-label="Deliverables" style="{{ secFogStyle }}">
+    <div style="{{ wrapStyle }}">
+      <span style="{{ eyebrowStyle }}">Typical Deliverables</span>
+      <h2 style="{{ h2Style }}">Registered Point Clouds in the Formats Your Team Uses.</h2>
+      <p style="color:#42586A;font-size:16px;line-height:1.7;max-width:70ch;margin-top:16px;text-wrap:pretty">The scope establishes scan density, coverage, reference system, file formats, registration reporting, and final documentation.</p>
+      <div style="{{ delivGridStyle }}">
+        <div style="{{ delivViewStyle }}">
+          <div style="{{ dv0Style }}">
+            <img src="terrestrial-laser-scanning-registered-point-cloud-commercial-interior.webp" alt="Registered terrestrial laser scanning point cloud of a commercial rooftop and rooftop features." width="1500" height="938" loading="lazy" decoding="async" style="{{ dvImgStyle }}">
+            <p style="{{ dlvCapStyle }}"><span style="{{ dlvCapLabelStyle }}">Registered Point Cloud</span>Combined scan data organized into one coordinated 3D dataset.</p>
+          </div>
+          <div style="{{ dv1Style }}">
+            <span style="{{ lphStyle }}">APPROVED SCAN REGISTRATION REPORT IMAGE NEEDED</span>
+          </div>
+          <div style="{{ dv2Style }}">
+            <span style="{{ lphStyle }}">APPROVED CAD / BIM WORKFLOW IMAGE NEEDED</span>
+          </div>
+          <div style="{{ dv3Style }}">
+            <img src="terrestrial-laser-scanning-dense-overlapping-scan-coverage.webp" alt="Terrestrial laser scanning point cloud showing dense overhead ductwork, piping, structural elements, and interior building geometry." width="1261" height="788" loading="lazy" decoding="async" style="{{ dvImgStyle }}">
+            <p style="{{ dlvCapStyle }}"><span style="{{ dlvCapLabelStyle }}">Existing Conditions Documentation</span>High-density point-cloud documentation of visible MEP systems, structural elements, and interior geometry.</p>
+          </div>
+        </div>
+        <div role="tablist" aria-label="Deliverables" style="{{ delivListStyle }}">
+          <button type="button" role="tab" aria-controls="dlvpanel" aria-selected="{{ dsel0 }}" onClick="{{ setDv0 }}" onMouseEnter="{{ setDv0 }}" style="{{ di0Style }}">
+            <h3 style="{{ diH3Style0 }}">Registered Point Cloud <span style="{{ fmtStyle }}">E57 / RCP / LAS / PTS</span></h3>
+            <p style="{{ diPStyle0 }}">Individual scans combined into one coordinated three-dimensional reference and delivered in the agreed format. The files may be tied to project control when required by the scope.</p>
+          </button>
+          <button type="button" role="tab" aria-controls="dlvpanel" aria-selected="{{ dsel1 }}" onClick="{{ setDv1 }}" onMouseEnter="{{ setDv1 }}" style="{{ di1Style }}">
+            <h3 style="{{ diH3Style1 }}">Scan Registration Report <span style="{{ fmtStyle }}">QA/QC</span></h3>
+            <p style="{{ diPStyle1 }}">Documentation supporting how the individual scanner positions were aligned and combined during registration.</p>
+          </button>
+          <button type="button" role="tab" aria-controls="dlvpanel" aria-selected="{{ dsel2 }}" onClick="{{ setDv2 }}" onMouseEnter="{{ setDv2 }}" style="{{ di2Style }}">
+            <h3 style="{{ diH3Style2 }}">CAD/BIM-Compatible Files <span style="{{ fmtStyle }}">SCOPED FORMAT</span></h3>
+            <p style="{{ diPStyle2 }}">Registered scan files prepared in the agreed formats for import into the client&rsquo;s CAD or BIM environment.</p>
+          </button>
+          <button type="button" role="tab" aria-controls="dlvpanel" aria-selected="{{ dsel3 }}" onClick="{{ setDv3 }}" onMouseEnter="{{ setDv3 }}" style="{{ di3Style }}">
+            <h3 style="{{ diH3Style3 }}">Existing Conditions Documentation <span style="{{ fmtStyle }}">SCOPED VIEWS</span></h3>
+            <p style="{{ diPStyle3 }}">Agreed views and records of accessible conditions for renovation, coordination, closeout, maintenance, facility planning, or dimensional review.</p>
+          </button>
+        </div>
+      </div>
+      <div style="{{ scopePanelStyle }}">
+        <div style="min-width:0">
+          <span style="{{ eyebrowStyle }}">When Included in the Scope</span>
+          <h3 style="font-family:'Sora',sans-serif;font-size:19px;font-weight:600;letter-spacing:-.018em;color:#052A44;margin:0;line-height:1.3">Additional Outputs Defined by the Assignment.</h3>
+        </div>
+        <div style="{{ spItemsStyle }}">
+          <div>
+            <h4 style="{{ spH4Style }}">Scan-to-CAD</h4>
+            <p style="{{ spPStyle }}">Measured point-cloud information may be converted into agreed CAD content such as floor plans, elevations, sections, structural geometry, site features, or existing-condition linework. Required views, features, tolerance, coordinate system, and file format are established before work begins.</p>
+          </div>
+          <div>
+            <h4 style="{{ spH4Style }}">Scan-to-BIM</h4>
+            <p style="{{ spPStyle }}">A registered point cloud may serve as the spatial basis for Building Information Modeling. The modeled elements, software format, required attributes, and level of development are defined in the agreed scope.</p>
+          </div>
+          <div>
+            <h4 style="{{ spH4Style }}">Coordination &amp; Clash-Detection Support</h4>
+            <p style="{{ spPStyle }}">Registered point clouds and derived outputs can support downstream MEP coordination, clash-detection workflows, renovation planning, tie-in design, and dimensional review.</p>
+          </div>
+          <div>
+            <h4 style="{{ spH4Style }}">Digital-Twin Support</h4>
+            <p style="{{ spPStyle }}">Reality Capture information can provide the measured spatial foundation for a digital-twin workflow. Model attributes, integrations, operational systems, maintenance, and ongoing management require a separately defined scope.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="method" data-screen-label="How TLS works" style="scroll-margin-top:96px;background:#F6F8FA;padding:clamp(42px,6.5vw,96px) clamp(18px,3.2vw,96px)">
-    <div style="{{ methodGridStyle }}">
-      <div style="{{ methodStickyStyle }}">
-      <div data-reveal="" data-rc-card="" style="{{ methodImageStyle }}">
-        <img src="p03.webp" alt="Close-range documentation of structural elements on an active build" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-        <span style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,42,68,.66) 0%,rgba(5,42,68,0) 52%)"></span>
-        <span style="position:absolute;left:24px;right:24px;bottom:24px;font-size:14.5px;font-weight:600;color:#fff;line-height:1.45;text-wrap:pretty">Millions of laser pulses per second, every one recorded with X, Y, Z and intensity.</span>
-      </div>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:26px">
-        <div>
-          <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:18px">The method</span>
-          <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.16;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:20ch;text-wrap:pretty">Where photography stops being accurate enough.</h2>
+  <section id="process" data-screen-label="Our process" style="{{ secProcStyle }}">
+    <svg data-wing="" viewBox="0 0 420 149" fill="#9FC0DA" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" style="{{ wingMarkStyle }}"><path d="M1.6 0Q21.3 10.6 32 14.9Q42.8 19.3 63.6 25.1Q84.4 30.8 115.2 35.3Q145.9 39.8 187.9 43.8Q230 47.8 256.1 53Q282.1 58.1 295.4 62.6Q308.6 67.1 318.1 72.3Q327.6 77.4 331.5 80.6Q335.3 83.8 338.1 87.2Q340.8 90.6 342.9 96Q345 101.5 345 106.3Q345 111.1 344 114.3Q343 117.5 342.2 112.8Q341.4 108.2 339.9 105.2Q338.5 102.1 333.2 96.5Q327.9 90.9 318.9 86.4Q309.8 81.9 300.6 79.3Q291.5 76.7 269.6 73.5Q247.7 70.3 200 67Q152.3 63.6 135.1 61.7Q117.9 59.7 102.8 57.2Q87.6 54.6 75 51.4Q62.5 48.2 51.2 43.7Q39.9 39.2 31.7 34.2Q23.5 29.2 15.6 21.2Q7.7 13.2 4.7 6.8Q1.6 0.3 1.6 0.1Z"></path><path d="M51.9 57.2Q74.1 65.5 97.4 70Q120.8 74.5 142.1 76.5Q163.3 78.4 202.3 79.2Q241.2 80 254.3 81.3Q267.3 82.5 276.6 84.5Q286 86.4 296.4 89.6Q306.9 92.8 312.3 95.3Q317.6 97.9 324.1 103.1Q330.5 108.2 333.1 113.3Q335.6 118.5 335.5 122.2Q335.3 125.9 331.3 121.1Q327.2 116.2 321.8 113.2Q316.3 110.1 307.8 107.5Q299.2 105 286.9 103.1Q274.7 101.2 251.3 99.9Q228 98.6 195 97.8Q162 97 140.3 94.4Q118.5 91.8 110.2 89.9Q101.8 88 88.9 82.8Q76 77.7 69.3 73.2Q62.5 68.7 57.2 63.1Q51.9 57.5 51.9 57.4Z"></path><path d="M73.8 87.3Q86.3 95.1 92.3 97.7Q98.2 100.2 106.9 102.8Q115.6 105.3 126.4 107.3Q137.2 109.2 155.3 110.3Q173.3 111.4 216.2 111Q259 110.5 276.1 112Q293.1 113.4 301.3 115.3Q309.5 117.2 313.7 119.3Q317.9 121.4 320.9 124.3Q324 127.2 325 129.8Q326 132.3 325.6 135.4Q325.3 138.4 323.4 141.9Q321.4 145.5 320.3 146.3Q319.2 147.1 319 142.6Q318.9 138.1 316 134.4Q313.1 130.7 309.4 128.8Q305.7 126.8 299.7 125.5Q293.7 124.3 275.9 124.2Q258 124 232.4 126.5Q206.8 129.1 194.1 129.8Q181.3 130.4 170.1 130.3Q158.8 130.1 148.2 128.9Q137.5 127.8 127.8 125.3Q118.2 122.7 108.8 118.2Q99.5 113.7 91.2 106.8Q82.8 99.9 78.3 93.8Q73.8 87.7 73.8 87.5Z"></path><path d="M298.6 52.7Q329.8 53 357.2 56.9Q384.6 60.7 386.4 61.4Q388.1 62 390.4 64.4Q392.6 66.8 397.8 67.6Q402.9 68.4 408.9 70.3Q414.8 72.3 417.3 77.5Q419.7 82.8 415.8 81.5Q411.9 80.3 407.4 80.4Q402.9 80.6 397.8 81.3Q392.6 81.9 383.1 84.5Q373.6 87 370.3 89.3Q366.9 91.5 364.9 94.5Q363 97.6 360.9 103Q358.8 108.5 355.4 111.3Q352 114 352.9 109.7Q353.7 105.3 353.5 98.9Q353.3 92.5 351.2 87.2Q349.1 81.9 347.2 79.3Q345.3 76.7 338.1 71.1Q330.8 65.5 321 61.5Q311.1 57.5 303.9 55.9Q296.6 54.3 295.6 53.8Q294.7 53.3 296.5 53.1Q298.3 53 298.5 52.9Z"></path></svg>
+    <div style="{{ wrapStyle }}">
+      <span style="{{ eyebrowSkyStyle }}">Our Process</span>
+      <h2 style="{{ h2DarkStyle }}">Every Viewpoint Aligned Into One 3D Reference.</h2>
+      <div style="{{ procGridStyle }}">
+        <span aria-hidden="true" style="{{ procLineStyle }}"></span>
+        <div data-reveal="" style="{{ pStepStyle }}">
+          <span style="{{ pNumStyle }}">01</span>
+          <h3 style="{{ pStepH3Style }}">Define the Use &amp; Outputs</h3>
+          <p style="{{ pStepPStyle }}">Establish the area to be captured, intended use, accuracy requirements, density, coverage, reference system, file formats, and deliverables.</p>
         </div>
-        <p style="font-size:clamp(16px,1.15vw,18px);line-height:1.72;color:#3C5468;text-wrap:pretty">Terrestrial laser scanning uses a tripod-mounted scanner that rotates and fires millions of laser pulses per second, measuring the precise distance to every visible surface and recording each as a point with X, Y, Z coordinates and intensity, with color imagery for visualization. The result is a high-density 3D point cloud that captures the exact geometry of a structure or site to millimeter-level detail at close range. TLS is the reality capture method of choice when you need dimensional precision on the built environment: existing buildings, industrial facilities, data centers, bridges, tanks, structural steel, and congested MEP spaces.</p>
-        <p style="font-size:clamp(16px,1.15vw,18px);line-height:1.72;color:#3C5468;text-wrap:pretty">Eagle Surveying registers each scan and ties the dataset to survey-grade control, then delivers registered point clouds in the formats your team needs (E57, RCP/RCS, LAS, PTS) along with scan-to-CAD and existing-conditions deliverables. Because we are a surveying firm, the point cloud is georeferenced and tied to project control, making it suitable for design, coordination, clash detection workflows, and as-built verification rather than just visualization. Eagle Surveying provides terrestrial laser scanning throughout Texas, including the Dallas-Fort Worth metroplex and Central Texas.</p>
-        <div style="{{ stepsStyle }}">
-          <span style="display:flex;flex-direction:column;gap:8px;padding:20px 22px;background:#E7EDF4;border-radius:20px">
-            <span style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:#0A4B77;letter-spacing:.08em">01</span>
-            <span style="font-size:15px;font-weight:600;color:#0F2E45;line-height:1.45">Scan positions planned for full coverage</span>
-          </span>
-          <span style="display:flex;flex-direction:column;gap:8px;padding:20px 22px;background:#E7EDF4;border-radius:20px">
-            <span style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:#0A4B77;letter-spacing:.08em">02</span>
-            <span style="font-size:15px;font-weight:600;color:#0F2E45;line-height:1.45">Registered together and tied to project control</span>
-          </span>
-          <span style="display:flex;flex-direction:column;gap:8px;padding:20px 22px;background:#E7EDF4;border-radius:20px">
-            <span style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:#0A4B77;letter-spacing:.08em">03</span>
-            <span style="font-size:15px;font-weight:600;color:#0F2E45;line-height:1.45">Delivered in the formats your design team works in</span>
-          </span>
+        <div data-reveal="" style="{{ pStepStyle }}">
+          <span style="{{ pNumStyle }}">02</span>
+          <h3 style="{{ pStepH3Style }}">Plan Positions &amp; Access</h3>
+          <p style="{{ pStepPStyle }}">Coordinate line of sight, instrument locations, physical access, safety requirements, occupied areas, and operating constraints.</p>
+        </div>
+        <div data-reveal="" style="{{ pStepStyle }}">
+          <span style="{{ pNumStyle }}">03</span>
+          <h3 style="{{ pStepH3Style }}">Capture Required Features</h3>
+          <p style="{{ pStepPStyle }}">Record the architectural, structural, equipment, piping, and MEP features identified in the scope.</p>
+        </div>
+        <div data-reveal="" style="{{ pStepStyle }}">
+          <span style="{{ pNumStyle }}">04</span>
+          <h3 style="{{ pStepH3Style }}">Register, Review &amp; Deliver</h3>
+          <p style="{{ pStepPStyle }}">Align the scans, complete QA/QC, and deliver the agreed files.</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section id="workflows" data-screen-label="Downstream workflows" style="scroll-margin-top:96px;background:#052A44;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px);position:relative;overflow:hidden">
-    <div style="position:absolute;top:-220px;left:-160px;width:640px;height:640px;border-radius:999px;background:radial-gradient(circle,rgba(74,159,216,.22),rgba(74,159,216,0) 70%);pointer-events:none"></div>
-    <div style="position:relative;max-width:min(2880px,max(1720px,86vw));margin:0 auto">
-      <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#6D9DBD;margin-bottom:16px">What the point cloud becomes</span>
-      <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:600;color:#fff;max-width:24ch;text-wrap:balance">The cloud is the start. The deliverable is what your team models from.</h2>
-      <div style="{{ tabRowStyle }}">
-        <button type="button" onClick="{{ tab0 }}" style="{{ tabStyle0 }}">Scan-to-CAD</button>
-        <button type="button" onClick="{{ tab1 }}" style="{{ tabStyle1 }}">Scan-to-BIM</button>
-        <button type="button" onClick="{{ tab2 }}" style="{{ tabStyle2 }}">As-built laser scan</button>
-        <button type="button" onClick="{{ tab3 }}" style="{{ tabStyle3 }}">Digital twin support</button>
-      </div>
-      <div style="{{ panel0Style }}">
-        <div data-rc-card="" style="{{ panelImgStyle }}">
-          <img src="p05.webp" alt="Commercial facility documented for existing-conditions drawings" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
+      <p style="color:#C7D6E4;font-size:15px;line-height:1.7;max-width:80ch;margin:44px 0 0;text-wrap:pretty">Reliable results begin with clear output requirements, planned instrument positions, stable setup, project control when required, and disciplined registration and review. Eagle defines the QA/QC approach before field collection begins.</p>
+      <div style="{{ capGridStyle }}">
+        <div style="min-width:0">
+          <span style="font-size:clamp(11px,0.78vw,15px);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#E6914C">Ground-Based Collection Capability</span>
+          <h3 style="font-family:'Sora',sans-serif;font-size:clamp(20px,1.6vw,30px);line-height:1.2;letter-spacing:-.02em;font-weight:600;color:#fff;margin:12px 0 0">High-Density Capture for Complex Built Environments.</h3>
+          <p style="color:#C7D6E4;font-size:15px;line-height:1.68;margin-top:12px;max-width:56ch;text-wrap:pretty">Eagle&rsquo;s Trimble scanning platform captures accessible conditions across interiors, exteriors, industrial areas, data centers, structures, and congested spaces. Multiple positions create a coordinated three-dimensional reference without relying on a single viewpoint.</p>
+          <div style="{{ cap3Style }}">
+            <div>
+              <h4 style="{{ vtH4Style }}">Complex Interiors &amp; Structures</h4>
+              <p style="{{ vtPStyle }}">Multiple scanner positions document accessible equipment, structural systems, piping, and congested areas without relying on a single viewpoint.</p>
+            </div>
+            <div>
+              <h4 style="{{ vtH4Style }}">Flexible Positioning</h4>
+              <p style="{{ vtPStyle }}">Multiple setups extend coverage around corners, obstructions, equipment, and changes in elevation.</p>
+            </div>
+            <div>
+              <h4 style="{{ vtH4Style }}">Colorized Review</h4>
+              <p style="{{ vtPStyle }}">Color imagery may be included to support orientation and visual review within the registered point cloud.</p>
+            </div>
+          </div>
+          <p style="{{ capNoteStyle }}">From its Denton and Waco offices, Eagle supports Terrestrial Laser Scanning assignments across the Dallas-Fort Worth metroplex, Central Texas, and statewide, with select Reality Capture work supported nationwide.</p>
+          <a href="/about" style="display:inline-block;margin-top:24px;font-size:14.5px;font-weight:700;color:#fff;border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:4px" style-hover="border-color:#E6914C;color:#E6914C">Explore Technology &amp; Equipment &rarr;</a>
         </div>
-        <div style="display:flex;flex-direction:column;gap:18px;justify-content:center">
-          <h3 style="font-family:'Sora',sans-serif;font-size:clamp(21px,2vw,28px);font-weight:600;color:#fff;letter-spacing:-.02em">Scan-to-CAD</h3>
-          <p style="font-size:16.5px;line-height:1.7;color:#C3D8E6;max-width:56ch;text-wrap:pretty">Scan-to-CAD converts measured point-cloud data into two-dimensional or three-dimensional CAD information such as floor plans, elevations, sections, structural geometry, site features, or existing-condition linework. The required views, features, tolerance, coordinate system, and file format are established in the project scope.</p>
-          <p style="font-size:16.5px;line-height:1.7;color:#C3D8E6;max-width:56ch;text-wrap:pretty">Scan-to-CAD is commonly used for renovation design, industrial tie-ins, facility documentation, and as-built records.</p>
-        </div>
-      </div>
-      <div style="{{ panel1Style }}">
-        <div data-rc-card="" style="{{ panelImgStyle }}">
-          <img src="p02.webp" alt="Large facility captured for coordination and modeling" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-        </div>
-        <div style="display:flex;flex-direction:column;gap:18px;justify-content:center">
-          <h3 style="font-family:'Sora',sans-serif;font-size:clamp(21px,2vw,28px);font-weight:600;color:#fff;letter-spacing:-.02em">Scan-to-BIM</h3>
-          <p style="font-size:16.5px;line-height:1.7;color:#C3D8E6;max-width:56ch;text-wrap:pretty">Scan-to-BIM is a workflow in which a registered point cloud is used as the spatial basis for Building Information Modeling. The point cloud documents existing conditions, and the agreed BIM scope determines what elements are modeled and to what level of detail.</p>
-          <p style="font-size:16.5px;line-height:1.7;color:#C3D8E6;max-width:56ch;text-wrap:pretty">Eagle Surveying can provide georeferenced point clouds and agreed scan-to-BIM support or data products; the required model content, software format, and level of development should be defined before work begins.</p>
-        </div>
-      </div>
-      <div style="{{ panel2Style }}">
-        <div data-rc-card="" style="{{ panelImgStyle }}">
-          <img src="s08.webp" alt="Interior facility documentation with survey instrumentation" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-        </div>
-        <div style="display:flex;flex-direction:column;gap:18px;justify-content:center">
-          <h3 style="font-family:'Sora',sans-serif;font-size:clamp(21px,2vw,28px);font-weight:600;color:#fff;letter-spacing:-.02em">As-built laser scan</h3>
-          <p style="font-size:16.5px;line-height:1.7;color:#C3D8E6;max-width:56ch;text-wrap:pretty">An as-built laser scan uses terrestrial laser scanning to document the actual visible geometry of completed or existing construction. It can capture walls, floors, ceilings, structural elements, equipment, piping, MEP systems, and other accessible features at high density.</p>
-          <p style="font-size:16.5px;line-height:1.7;color:#C3D8E6;max-width:56ch;text-wrap:pretty">The resulting point cloud or derived CAD information provides a record of existing conditions for closeout, renovation, coordination, maintenance, or comparison with design information.</p>
-        </div>
-      </div>
-      <div style="{{ panel3Style }}">
-        <div data-rc-card="" style="{{ panelImgStyle }}">
-          <img src="s10.webp" alt="Modern facility exterior documented for owner records" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-        </div>
-        <div style="display:flex;flex-direction:column;gap:18px;justify-content:center">
-          <h3 style="font-family:'Sora',sans-serif;font-size:clamp(21px,2vw,28px);font-weight:600;color:#fff;letter-spacing:-.02em">Digital twin support</h3>
-          <p style="font-size:16.5px;line-height:1.7;color:#C3D8E6;max-width:56ch;text-wrap:pretty">Reality Capture data can provide the measured spatial foundation for digital twin workflows. Depending on the project, Eagle Surveying may provide point clouds, CAD-ready information, 3D models, repeat captures, or other existing-condition data that an owner, design team, VDC group, or facility platform uses within a digital twin.</p>
-          <p style="font-size:16.5px;line-height:1.7;color:#C3D8E6;max-width:56ch;text-wrap:pretty">The creation, maintenance, attributes, integrations, and operational management of a full digital twin must be specifically defined in the agreed scope.</p>
+        <div style="{{ capShotsStyle }}">
+          <img src="terrestrial-laser-scanning-scanner-on-commercial-roof.webp" alt="Terrestrial laser scanner positioned on a commercial rooftop during existing-condition collection." width="1400" height="875" loading="lazy" decoding="async" style="{{ capShotStyle }}">
+          <img src="terrestrial-laser-scanning-technician-operating-scanner.webp" alt="Eagle Surveying technician operating a terrestrial laser scanner on a commercial rooftop." width="760" height="1013" loading="lazy" decoding="async" style="{{ capShotStyle }}">
         </div>
       </div>
     </div>
   </section>
 
-  <section id="uses" data-screen-label="Commonly used for" style="scroll-margin-top:96px;background:#E7EDF4;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px)">
-    <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto">
-      <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Commonly used for</span>
-      <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:24ch;text-wrap:pretty">Nine jobs a scan crew gets called out for.</h2>
-      <div style="{{ usesGridStyle }}">
-        <div style="{{ usesStickyStyle }}">
-          <div style="{{ useFrameStyle }}">
-            <img src="p04.webp" alt="Existing conditions and as-built documentation of buildings and industrial facilities" style="{{ useImg0 }}">
-            <img src="p05.webp" alt="Scan-to-CAD and scan-to-BIM base data for architects and engineers" style="{{ useImg1 }}">
-            <img src="p03.webp" alt="Structural steel, tank, and MEP coordination and clash detection" style="{{ useImg2 }}">
-            <img src="s08.webp" alt="Renovation, retrofit, and tie-in design where accurate existing geometry matters" style="{{ useImg3 }}">
-            <img src="p09.webp" alt="Data center facility documentation" style="{{ useImg4 }}">
-            <img src="p02.webp" alt="Bridge, culvert, and infrastructure documentation" style="{{ useImg5 }}">
-            <img src="s10.webp" alt="Rail and transit infrastructure documentation" style="{{ useImg6 }}">
-            <img src="p07.webp" alt="Parking garages, stairwells, and complex facility documentation" style="{{ useImg7 }}">
-            <img src="p06.webp" alt="Tight-tolerance measurement where photography alone will not provide the required level of accuracy" style="{{ useImg8 }}">
-            <span style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,42,68,.72) 0%,rgba(5,42,68,0) 55%)"></span>
-            <span style="position:absolute;left:24px;right:24px;bottom:24px;font-size:15px;font-weight:600;color:#fff;line-height:1.45;text-wrap:pretty">{{ useAlt }}</span>
+  <section id="applications" data-screen-label="Applications" style="{{ secSlateStyle }}">
+    <div style="{{ wrapStyle }}">
+      <span style="{{ eyebrowStyle }}">Where It Applies</span>
+      <h2 style="{{ h2Style }}">Built Environments That Demand More Detail.</h2>
+      <div style="{{ mkt4Style }}">
+        <a href="/data-centers" data-reveal="" style="{{ mktCardStyle }}">
+          <img src="terrestrial-laser-scanning-dallas-data-center.webp" alt="Dallas data center" width="1000" height="749" loading="lazy" style="{{ mktImgStyle }}">
+          <span style="{{ mktOvStyle }}">
+            <span style="{{ mktH3Style }}">Data Centers &amp; Mission-Critical Facilities</span>
+            <span style="{{ mktPStyle }}">Detailed capture of equipment rooms, MEP systems, structural steel, and tie-in locations for renovation, coordination, and facility planning.</span>
+          </span>
+        </a>
+        <a href="/industrial-manufacturing-logistics" data-reveal="" style="{{ mktCardStyle }}">
+          <img src="terrestrial-laser-scanning-amazon-distribution-center-robinson.webp" alt="Amazon distribution center, Robinson Texas" width="950" height="711" loading="lazy" style="{{ mktImgStyle }}">
+          <span style="{{ mktOvStyle }}">
+            <span style="{{ mktH3Style }}">Industrial, Manufacturing &amp; Logistics</span>
+            <span style="{{ mktPStyle }}">Measured conditions around tanks, piping, equipment, and structural systems for modifications, tie-ins, and dimensional review.</span>
+          </span>
+        </a>
+        <a href="/specialized-venues" data-reveal="" style="{{ mktCardStyle }}">
+          <img src="terrestrial-laser-scanning-total-station-att-stadium.webp" alt="Robotic total station on the floor of AT&amp;T Stadium" width="950" height="712" loading="lazy" style="{{ mktImgStyle }}">
+          <span style="{{ mktOvStyle }}">
+            <span style="{{ mktH3Style }}">Specialized High-Visibility Venues</span>
+            <span style="{{ mktPStyle }}">Stadiums, arenas, aviation facilities, and other complex venues documented for renovation, facility planning, dimensional review, and coordination.</span>
+          </span>
+        </a>
+        <a href="/commercial-retail-development" data-reveal="" style="{{ mktCardStyle }}">
+          <img src="terrestrial-laser-scanning-field-instrument-retail-mckinney.webp" alt="Eagle field instrument at a commercial retail site, McKinney" width="900" height="900" loading="lazy" style="{{ mktImgStyle }}">
+          <span style="{{ mktOvStyle }}">
+            <span style="{{ mktH3Style }}">Commercial &amp; Retail Development</span>
+            <span style="{{ mktPStyle }}">Existing buildings, renovation areas, fa&ccedil;ades, parking structures, and stairwells documented for adaptive reuse, design coordination, and facility updates.</span>
+          </span>
+        </a>
+      </div>
+      <a href="/projects" style="{{ mktLinkStyle }}" style-hover="color:#A96B38;border-color:#A96B38">View Selected Reality Capture Projects &rarr;</a>
+    </div>
+  </section>
+
+  <section id="related" data-screen-label="Related services" style="{{ secFogStyle }}">
+    <div style="{{ wrapStyle }}">
+      <span style="{{ eyebrowStyle }}">Related Services</span>
+      <h2 style="{{ h2Style }}">Additional Reality Capture Capabilities.</h2>
+      <div style="{{ rel4Style }}">
+        <a href="/360-site-documentation" data-reveal="" style="{{ relCardStyle }}">
+          <img src="terrestrial-laser-scanning-360-documentation-interior.webp" alt="Eagle team member capturing 360° documentation inside an active project" width="900" height="900" loading="lazy" style="{{ relImgStyle }}">
+          <span style="{{ relBodyStyle }}">
+            <span style="{{ relH3Style }}">360&deg; Site Documentation &amp; Virtual Walkthroughs</span>
+            <span style="{{ relPStyle }}">Adds navigable, time-stamped visual context for remote review and coordination.</span>
+            <span style="{{ relLinkStyle }}">View Service &rarr;</span>
+          </span>
+        </a>
+        <a href="/aerial-lidar-mapping" data-reveal="" style="{{ relCardStyle }}">
+          <img src="terrestrial-laser-scanning-lidar-elevation-surface-contours.webp" alt="Colorized aerial LiDAR elevation surface with contours, Corsicana ISD" width="900" height="754" loading="lazy" style="{{ relImgStyle }}">
+          <span style="{{ relBodyStyle }}">
+            <span style="{{ relH3Style }}">Aerial LiDAR Mapping</span>
+            <span style="{{ relPStyle }}">Extends three-dimensional measurement across larger exterior areas, terrain, wooded sites, and long corridors.</span>
+            <span style="{{ relLinkStyle }}">View Service &rarr;</span>
+          </span>
+        </a>
+        <a href="/aerial-photogrammetry" data-reveal="" style="{{ relCardStyle }}">
+          <img src="terrestrial-laser-scanning-orthomosaic-design-linework-denton.webp" alt="Georeferenced orthomosaic with design linework, Denton" width="1600" height="991" loading="lazy" style="{{ relImgStyle }}">
+          <span style="{{ relBodyStyle }}">
+            <span style="{{ relH3Style }}">Aerial Photogrammetry</span>
+            <span style="{{ relPStyle }}">Adds high-resolution aerial imagery and broader visual context around buildings, facilities, and development sites.</span>
+            <span style="{{ relLinkStyle }}">View Service &rarr;</span>
+          </span>
+        </a>
+      </div>
+      <div data-reveal="" style="{{ topoBridgeStyle }}">
+        <div style="min-width:0">
+          <span style="font-size:clamp(11px,0.78vw,15px);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#DCEAF5">Surveying Integration</span>
+          <h3 style="font-family:'Sora',sans-serif;font-size:clamp(19px,1.5vw,28px);line-height:1.2;letter-spacing:-.02em;font-weight:600;color:#fff;margin:10px 0 0">As-Built Survey</h3>
+        </div>
+        <p style="color:#EAF2F8;font-size:14.5px;line-height:1.68;margin:0;text-wrap:pretty">TLS may be incorporated into a professional As-Built Survey when the assignment requires measured conditions tied to project control and supported by supplemental field collection, calculations, drafting, and RPLS review.</p>
+        <a href="/as-built-survey" style="align-self:flex-start;font-size:14.5px;font-weight:700;color:#fff;border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:4px;white-space:nowrap" style-hover="border-color:#E6914C;color:#E6914C">Explore As-Built Surveys &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="faqs" data-screen-label="TLS FAQs" style="{{ secWhiteStyle }}">
+    <div style="{{ wrapStyle }}">
+      <span style="{{ eyebrowStyle }}">Frequently Asked Questions</span>
+      <h2 style="{{ h2Style }}">What Project Teams Ask About 3D Laser Scanning.</h2>
+      <div style="{{ faqGridStyle }}">
+        <div role="tablist" aria-label="Questions" style="{{ faqListStyle }}">
+          <button type="button" role="tab" aria-controls="faqpanel" aria-selected="{{ qsel0 }}" onClick="{{ setQ0 }}" style="{{ q0Style }}">What is 3D Laser Scanning?</button>
+          <button type="button" role="tab" aria-controls="faqpanel" aria-selected="{{ qsel1 }}" onClick="{{ setQ1 }}" style="{{ q1Style }}">How does Terrestrial Laser Scanning work?</button>
+          <button type="button" role="tab" aria-controls="faqpanel" aria-selected="{{ qsel2 }}" onClick="{{ setQ2 }}" style="{{ q2Style }}">What is scan-to-BIM?</button>
+          <button type="button" role="tab" aria-controls="faqpanel" aria-selected="{{ qsel3 }}" onClick="{{ setQ3 }}" style="{{ q3Style }}">What is scan-to-CAD?</button>
+          <button type="button" role="tab" aria-controls="faqpanel" aria-selected="{{ qsel4 }}" onClick="{{ setQ4 }}" style="{{ q4Style }}">What is an as-built laser scan?</button>
+          <button type="button" role="tab" aria-controls="faqpanel" aria-selected="{{ qsel5 }}" onClick="{{ setQ5 }}" style="{{ q5Style }}">How is 3D laser scanning used on data centers and industrial facilities?</button>
+          <button type="button" role="tab" aria-controls="faqpanel" aria-selected="{{ qsel6 }}" onClick="{{ setQ6 }}" style="{{ q6Style }}">Can Terrestrial Laser Scanning document rail and transit infrastructure?</button>
+          <button type="button" role="tab" aria-controls="faqpanel" aria-selected="{{ qsel7 }}" onClick="{{ setQ7 }}" style="{{ q7Style }}">Can Reality Capture data support digital twin services?</button>
+        </div>
+        <div role="tabpanel" id="dlvpanel" style="{{ faqPanelStyle }}">
+          <div style="{{ fa0Style }}">
+            <h3 style="{{ faqH3Style }}">What is 3D Laser Scanning?</h3>
+            <p style="{{ faqPStyle }}">3D laser scanning is a Reality Capture method that measures millions of points on visible surfaces to create a dense three-dimensional point cloud. It is used to document buildings, structures, industrial facilities, data centers, bridges, tanks, structural steel, MEP spaces, and other built environments. The resulting data can support existing-condition drawings, scan-to-CAD or scan-to-BIM workflows, coordination, renovations, as-built documentation, and comparison with design information.</p>
+          </div>
+          <div style="{{ fa1Style }}">
+            <h3 style="{{ faqH3Style }}">How does Terrestrial Laser Scanning work?</h3>
+            <p style="{{ faqPStyle }}">Terrestrial Laser Scanning uses a ground-based scanner that rotates and measures the distance to visible surfaces around the instrument. Multiple scan positions are registered together and tied to project control when required. The combined point cloud creates a detailed three-dimensional record of the site or structure. Project accuracy, scan density, coverage, control, file formats, and downstream deliverables are established from the intended design or documentation use.</p>
+          </div>
+          <div style="{{ fa2Style }}">
+            <h3 style="{{ faqH3Style }}">What is scan-to-BIM?</h3>
+            <p style="{{ faqPStyle }}">Scan-to-BIM is a workflow in which a registered point cloud is used as the spatial basis for Building Information Modeling. The point cloud documents existing conditions, and the agreed BIM scope determines what elements are modeled and to what level of detail. Eagle Surveying can provide georeferenced point clouds and agreed scan-to-BIM support or data products; the required model content, software format, and level of development should be defined before work begins.</p>
+          </div>
+          <div style="{{ fa3Style }}">
+            <h3 style="{{ faqH3Style }}">What is scan-to-CAD?</h3>
+            <p style="{{ faqPStyle }}">Scan-to-CAD converts measured point-cloud data into two-dimensional or three-dimensional CAD information such as floor plans, elevations, sections, structural geometry, site features, or existing-condition linework. The required views, features, tolerance, coordinate system, and file format are established in the project scope. Scan-to-CAD is commonly used for renovation design, industrial tie-ins, facility documentation, and as-built records.</p>
+          </div>
+          <div style="{{ fa4Style }}">
+            <h3 style="{{ faqH3Style }}">What is an as-built laser scan?</h3>
+            <p style="{{ faqPStyle }}">An as-built laser scan uses terrestrial laser scanning to document the actual visible geometry of completed or existing construction. It can capture walls, floors, ceilings, structural elements, equipment, piping, MEP systems, and other accessible features at high density. The resulting point cloud or derived CAD information provides a record of existing conditions for closeout, renovation, coordination, maintenance, or comparison with design information.</p>
+          </div>
+          <div style="{{ fa5Style }}">
+            <h3 style="{{ faqH3Style }}">How is 3D laser scanning used on data centers and industrial facilities?</h3>
+            <p style="{{ faqPStyle }}">Data center laser scanning and industrial laser scanning can document congested MEP spaces, structural steel, equipment areas, tanks, piping, floors, walls, ceilings, and tie-in locations. The point cloud supports design coordination, renovation planning, clash-detection workflows, facility documentation, and dimensional review. On large sites, terrestrial scanning may be combined with aerial LiDAR, photogrammetry, conventional surveying, or 360&deg; documentation.</p>
+          </div>
+          <div style="{{ fa6Style }}">
+            <h3 style="{{ faqH3Style }}">Can Terrestrial Laser Scanning document rail and transit infrastructure?</h3>
+            <p style="{{ faqPStyle }}">Yes. Terrestrial laser scanning can document platforms, stations, tunnels, structural elements, track-adjacent features, bridge components, clearance conditions, and other visible rail or transit infrastructure. Eagle Surveying&rsquo;s Reality Capture team includes professionals with prior railroad and transit surveying experience. The collection plan, access, safety requirements, control, and deliverables are established for the specific rail or transit assignment.</p>
+          </div>
+          <div style="{{ fa7Style }}">
+            <h3 style="{{ faqH3Style }}">Can Reality Capture data support digital twin services?</h3>
+            <p style="{{ faqPStyle }}">Reality Capture data can provide the measured spatial foundation for digital twin workflows. Depending on the project, Eagle Surveying may provide point clouds, CAD-ready information, 3D models, repeat captures, or other existing-condition data that an owner, design team, VDC group, or facility platform uses within a digital twin. The creation, maintenance, attributes, integrations, and operational management of a full digital twin must be specifically defined in the agreed scope.</p>
+          </div>
+          <div style="{{ faqCtlStyle }}">
+            <span style="{{ faqPosStyle }}">{{ faqPos }}</span>
+            <button type="button" aria-label="Previous question" onClick="{{ prevQ }}" style="{{ faqNavBtnStyle }}" style-hover="border-color:#A96B38;color:#A96B38">&larr;</button>
+            <button type="button" aria-label="Next question" onClick="{{ nextQ }}" style="{{ faqNavBtnStyle }}" style-hover="border-color:#A96B38;color:#A96B38">&rarr;</button>
           </div>
         </div>
-        <div style="display:flex;flex-direction:column">
-          <span onMouseEnter="{{ use0 }}" style="{{ useRow0 }}"><span style="{{ useNum }}">01</span>Existing conditions and as-built documentation of buildings and industrial facilities</span>
-          <span onMouseEnter="{{ use1 }}" style="{{ useRow1 }}"><span style="{{ useNum }}">02</span>Scan-to-CAD and scan-to-BIM base data for architects and engineers</span>
-          <span onMouseEnter="{{ use2 }}" style="{{ useRow2 }}"><span style="{{ useNum }}">03</span>Structural steel, tank, and MEP coordination and clash detection</span>
-          <span onMouseEnter="{{ use3 }}" style="{{ useRow3 }}"><span style="{{ useNum }}">04</span>Renovation, retrofit, and tie-in design where accurate existing geometry matters</span>
-          <span onMouseEnter="{{ use4 }}" style="{{ useRow4 }}"><span style="{{ useNum }}">05</span>Data center facility documentation</span>
-          <span onMouseEnter="{{ use5 }}" style="{{ useRow5 }}"><span style="{{ useNum }}">06</span>Bridge, culvert, and infrastructure documentation</span>
-          <span onMouseEnter="{{ use6 }}" style="{{ useRow6 }}"><span style="{{ useNum }}">07</span>Rail and transit infrastructure documentation</span>
-          <span onMouseEnter="{{ use7 }}" style="{{ useRow7 }}"><span style="{{ useNum }}">08</span>Parking garages, stairwells, and complex facility documentation</span>
-          <span onMouseEnter="{{ use8 }}" style="{{ useRow8 }}"><span style="{{ useNum }}">09</span>Tight-tolerance measurement where photography alone will not provide the required level of accuracy</span>
-        </div>
       </div>
     </div>
   </section>
 
-  <section id="sectors" data-screen-label="Data centers, industrial and rail" style="scroll-margin-top:96px;background:#F7EEDD;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px)">
-    <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto">
-      <div style="{{ sectorHeadStyle }}">
-        <div>
-          <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#8A6A2C;margin-bottom:16px">Where TLS earns its keep</span>
-          <h2 style="font-family:'Sora',sans-serif;font-size:clamp(26px,2.7vw,40px);line-height:1.16;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:22ch;text-wrap:pretty">Congested spaces, live facilities, tight tolerances.</h2>
-        </div>
-        <p style="font-size:16.5px;line-height:1.7;color:#4A5A63;max-width:56ch;text-wrap:pretty">On large sites, terrestrial scanning may be combined with aerial LiDAR, photogrammetry, conventional surveying, or 360° documentation — the collection plan, access, safety requirements, control, and deliverables are established for the specific assignment.</p>
-      </div>
-      <div style="{{ sectorGridStyle }}">
-        <div data-reveal="" data-rc-card="" style="display:flex;flex-direction:column;background:#FDF8EF;border-radius:26px;overflow:hidden;border:1px solid #E4D3AF">
-          <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:16/10;overflow:hidden;background:#0D4066">
-            <img src="p09.webp" alt="Data center and industrial facility documented from above" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          </span>
-          <span style="display:flex;flex-direction:column;gap:14px;padding:clamp(24px,2.4vw,34px)">
-            <span style="font-family:'Sora',sans-serif;font-size:21px;font-weight:600;color:#0F2E45;letter-spacing:-.02em">Data centers &amp; industrial facilities</span>
-            <span style="font-size:15.5px;line-height:1.65;color:#4A5A63">Data center laser scanning and industrial laser scanning can document congested MEP spaces, structural steel, equipment areas, tanks, piping, floors, walls, ceilings, and tie-in locations. The point cloud supports design coordination, renovation planning, clash-detection workflows, facility documentation, and dimensional review.</span>
-          </span>
-        </div>
-        <div data-reveal="" data-rc-card="" style="display:flex;flex-direction:column;background:#FDF8EF;border-radius:26px;overflow:hidden;border:1px solid #E4D3AF">
-          <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:16/10;overflow:hidden;background:#0D4066">
-            <img src="p05.webp" alt="Structure and clearance conditions documented at close range" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          </span>
-          <span style="display:flex;flex-direction:column;gap:14px;padding:clamp(24px,2.4vw,34px)">
-            <span style="font-family:'Sora',sans-serif;font-size:21px;font-weight:600;color:#0F2E45;letter-spacing:-.02em">Rail &amp; transit infrastructure</span>
-            <span style="font-size:15.5px;line-height:1.65;color:#4A5A63">Terrestrial laser scanning can document platforms, stations, tunnels, structural elements, track-adjacent features, bridge components, clearance conditions, and other visible rail or transit infrastructure. Eagle Surveying's Reality Capture team includes professionals with prior railroad and transit surveying experience.</span>
-          </span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="deliverables" data-screen-label="Deliverables" style="scroll-margin-top:96px;background:#F6F8FA;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px)">
-    <div style="{{ delivGridStyle }}">
-      <div>
-        <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Deliverables</span>
-        <h2 style="font-family:'Sora',sans-serif;font-size:clamp(26px,2.7vw,40px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:20ch;text-wrap:pretty">Handed over in the format your software already opens.</h2>
-        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:26px">
-          <span style="font-family:'Sora',sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;color:#0A4B77;background:#E7EDF4;border-radius:999px;padding:10px 18px">E57</span>
-          <span style="font-family:'Sora',sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;color:#0A4B77;background:#E7EDF4;border-radius:999px;padding:10px 18px">RCP / RCS</span>
-          <span style="font-family:'Sora',sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;color:#0A4B77;background:#E7EDF4;border-radius:999px;padding:10px 18px">LAS</span>
-          <span style="font-family:'Sora',sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;color:#0A4B77;background:#E7EDF4;border-radius:999px;padding:10px 18px">PTS</span>
-        </div>
-      </div>
-      <div style="display:flex;flex-direction:column">
-        <span style="font-size:16.5px;line-height:1.6;color:#0F2E45;font-weight:600;padding:20px 0;border-top:1px solid #D8E2EB">Registered, georeferenced, colorized point cloud</span>
-        <span style="font-size:16.5px;line-height:1.6;color:#0F2E45;font-weight:600;padding:20px 0;border-top:1px solid #D8E2EB">E57, RCP/RCS, LAS, or PTS files as required</span>
-        <span style="font-size:16.5px;line-height:1.6;color:#0F2E45;font-weight:600;padding:20px 0;border-top:1px solid #D8E2EB">Scan registration report</span>
-        <span style="font-size:16.5px;line-height:1.6;color:#0F2E45;font-weight:600;padding:20px 0;border-top:1px solid #D8E2EB">HDR imagery</span>
-        <span style="font-size:16.5px;line-height:1.6;color:#0F2E45;font-weight:600;padding:20px 0;border-top:1px solid #D8E2EB">CAD/BIM-compatible existing-conditions data</span>
-        <span style="font-size:16.5px;line-height:1.6;color:#0F2E45;font-weight:600;padding:20px 0;border-top:1px solid #D8E2EB;border-bottom:1px solid #D8E2EB">Plans, elevations, sections, or dimensional extracts when included</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="faq" data-screen-label="TLS FAQs" style="scroll-margin-top:96px;background:#E7EDF4;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px)">
-    <div style="{{ faqGridStyle }}">
-      <div>
-        <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Laser scanning FAQs</span>
-        <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:20ch;text-wrap:pretty">Point clouds, control, and what a scan can carry.</h2>
-        <a href="/#reality-capture" style="display:inline-flex;margin-top:22px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#0A4B77;border-bottom:1px solid rgba(10,75,119,.35);padding-bottom:5px" style-hover="color:#063553;border-color:#063553">All Reality Capture services →</a>
-      </div>
-      <div style="display:flex;flex-direction:column">
-        <details open="{{ faq1Open }}" style="border-top:1px solid #C9D6E2;padding:6px 0">
-          <summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:60px;cursor:pointer;font-family:'Sora',sans-serif;font-size:clamp(16.5px,1.3vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em">What is 3D laser scanning?<span style="color:#0A4B77;font-size:20px;line-height:1">+</span></summary>
-          <p style="font-size:16px;line-height:1.72;color:#3C5468;padding:4px 0 22px;max-width:74ch;text-wrap:pretty">3D laser scanning is a Reality Capture method that measures millions of points on visible surfaces to create a dense three-dimensional point cloud. It is used to document buildings, structures, industrial facilities, data centers, bridges, tanks, structural steel, MEP spaces, and other built environments. The resulting data can support existing-condition drawings, scan-to-CAD or scan-to-BIM workflows, coordination, renovations, and as-built documentation and comparison with design information.</p>
-        </details>
-        <details style="border-top:1px solid #C9D6E2;padding:6px 0">
-          <summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:60px;cursor:pointer;font-family:'Sora',sans-serif;font-size:clamp(16.5px,1.3vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em">How does Terrestrial Laser Scanning work?<span style="color:#0A4B77;font-size:20px;line-height:1">+</span></summary>
-          <p style="font-size:16px;line-height:1.72;color:#3C5468;padding:4px 0 22px;max-width:74ch;text-wrap:pretty">Terrestrial Laser Scanning uses a ground-based scanner that rotates and measures the distance to visible surfaces around the instrument. Multiple scan positions are registered together and tied to project control when required. The combined point cloud creates a detailed three-dimensional record of the site or structure. Project accuracy, scan density, coverage, control, file formats, and downstream deliverables are established from the intended design or documentation use.</p>
-        </details>
-        <details style="border-top:1px solid #C9D6E2;padding:6px 0">
-          <summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:60px;cursor:pointer;font-family:'Sora',sans-serif;font-size:clamp(16.5px,1.3vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em">Can Terrestrial Laser Scanning document rail and transit infrastructure?<span style="color:#0A4B77;font-size:20px;line-height:1">+</span></summary>
-          <p style="font-size:16px;line-height:1.72;color:#3C5468;padding:4px 0 22px;max-width:74ch;text-wrap:pretty">Yes. Terrestrial laser scanning can document platforms, stations, tunnels, structural elements, track-adjacent features, bridge components, clearance conditions, and other visible rail or transit infrastructure. Eagle Surveying's Reality Capture team includes professionals with prior railroad and transit surveying experience. The collection plan, access, safety requirements, control, and deliverables are established for the specific rail or transit assignment.</p>
-        </details>
-        <details style="border-top:1px solid #C9D6E2;padding:6px 0">
-          <summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:60px;cursor:pointer;font-family:'Sora',sans-serif;font-size:clamp(16.5px,1.3vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em">How is 360° documentation different from 3D laser scanning?<span style="color:#0A4B77;font-size:20px;line-height:1">+</span></summary>
-          <p style="font-size:16px;line-height:1.72;color:#3C5468;padding:4px 0 22px;max-width:74ch;text-wrap:pretty">360° documentation is primarily a visual record. It allows users to navigate a site remotely and compare conditions over time, but it is not intended to replace survey-grade measurement. Terrestrial laser scanning creates a dense measured point cloud for dimensional work, CAD, BIM, and as-built documentation and comparison with design information. Eagle Surveying recommends 360° capture for visual documentation and laser scanning when dimensional accuracy is required.</p>
-        </details>
-        <details style="border-top:1px solid #C9D6E2;border-bottom:1px solid #C9D6E2;padding:6px 0">
-          <summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:60px;cursor:pointer;font-family:'Sora',sans-serif;font-size:clamp(16.5px,1.3vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em">What is a point cloud?<span style="color:#0A4B77;font-size:20px;line-height:1">+</span></summary>
-          <p style="font-size:16px;line-height:1.72;color:#3C5468;padding:4px 0 22px;max-width:74ch;text-wrap:pretty">A point cloud is a dense set of measured three-dimensional points representing visible surfaces and features within a site, building, structure, or object. Point clouds may also include intensity values and color imagery. They are commonly created with LiDAR, photogrammetry, or terrestrial laser scanning and are used for existing-condition documentation, surface modeling, CAD production, BIM workflows, dimensional review, as-built documentation, and engineering design.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <section id="related" data-screen-label="Related services" style="scroll-margin-top:96px;background:#F6F8FA;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px)">
-    <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto">
-      <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Often scoped together</span>
-      <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:24ch;text-wrap:pretty">What a scan assignment usually sits beside.</h2>
-      <div style="{{ relGridStyle }}">
-        <a href="/aerial-lidar-mapping" data-reveal="" data-rc-card="" style="{{ relCardStyle }}">
-          <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
-            <img src="p01.webp" alt="Aerial LiDAR mapping" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          </span>
-          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Aerial LiDAR Mapping</span>
-        </a>
-        <a href="/aerial-photogrammetry" data-reveal="" data-rc-card="" style="{{ relCardStyle }}">
-          <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
-            <img src="p09.webp" alt="Aerial photogrammetry" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          </span>
-          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Aerial Photogrammetry</span>
-        </a>
-        <a href="/#surveying" data-reveal="" data-rc-card="" style="{{ relCardStyle }}">
-          <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
-            <img src="p04.webp" alt="As-built survey" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          </span>
-          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">As-Built Survey</span>
-        </a>
-        <a href="/#reality-capture" data-reveal="" data-rc-card="" style="{{ relCardStyle }}">
-          <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
-            <img src="p02.webp" alt="Construction progress monitoring" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          </span>
-          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Construction Progress Monitoring</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section id="estimate" data-screen-label="CTA" style="scroll-margin-top:96px;position:relative;background:#052A44;overflow:hidden;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px)">
-    <img src="s08.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22">
-    <div style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(5,42,68,.96) 0%,rgba(5,42,68,.78) 60%,rgba(5,42,68,.6) 100%)"></div>
+  <section id="contact-tls" data-screen-label="CTA" style="{{ ctaSecStyle }}">
+    <div aria-hidden="true" style="{{ ctaBgStyle }}"></div>
     <div style="{{ ctaGridStyle }}">
-      <div>
-        <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,3vw,44px);line-height:1.12;letter-spacing:-.028em;font-weight:600;color:#fff;max-width:24ch;text-wrap:balance">Send us the building. We'll tell you what the scan can carry.</h2>
-        <p style="font-size:clamp(15.5px,1.2vw,18px);line-height:1.7;color:#C3D8E6;max-width:52ch;margin-top:22px;text-wrap:pretty">Terrestrial laser scanning throughout Texas, including the Dallas-Fort Worth metroplex and Central Texas.</p>
+      <div style="min-width:0">
+        <span style="{{ eyebrowSkyStyle }}">Project Inquiry</span>
+        <h2 style="{{ ctaH2Style }}">Define the Scope. We&rsquo;ll Plan the Collection.</h2>
       </div>
-      <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
-        <a href="#estimate" style="display:inline-flex;align-items:center;min-height:54px;padding:0 32px;background:#E0A83E;color:#052A44;font-weight:700;font-size:16.5px;border-radius:999px" style-hover="background:#F0BC57">Request an Estimate</a>
-        <a href="tel:9402223009" style="display:inline-flex;align-items:center;min-height:54px;padding:0 32px;border:1px solid rgba(255,255,255,.4);color:#fff;font-weight:600;font-size:16.5px;border-radius:999px" style-hover="background:rgba(255,255,255,.12)">Call 940-222-3009</a>
-      </div>
+      <p style="color:#C7D6E4;font-size:15px;line-height:1.65;margin:0;max-width:56ch;text-wrap:pretty">Share the area to be captured, intended use, access requirements, schedule, and preferred file formats. We&rsquo;ll develop the field collection, registration, and delivery around the assignment.</p>
+      <a href="#contact-tls" style="{{ ctaBtnJustify }}white-space:nowrap;width:auto;display:inline-block;background:#DFE7EC;color:#052A44;font-weight:700;font-size:15px;padding:14px 30px;border-radius:6px;white-space:nowrap" style-hover="background:#fff">Discuss Your Laser Scanning Project</a>
     </div>
   </section>
 
@@ -517,14 +605,14 @@
         <button type="button" onClick="{{ footTogCO }}" aria-expanded="{{ footOpenCO }}" tabIndex="{{ footTab }}" style="{{ footBtnStyle }}">Company<span aria-hidden="true" style="{{ footSignCOStyle }}">{{ footSignCO }}</span></button>
         <div style="{{ footListCOStyle }}">
         <a href="/about" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">About Us</a>
-        <a href="#cares" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Eagle Cares</a>
-        <a href="#reality-capture" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Technology &amp; Equipment</a>
+        <a href="/#cares" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Eagle Cares</a>
+        <a href="/#reality-capture" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Technology &amp; Equipment</a>
         <a href="/projects" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Projects</a>
-          <a href="#industries" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Industries</a>
-        <a href="#insights" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Blog</a>
-        <a href="#contact" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Careers</a>
+          <a href="/#industries" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Industries</a>
+        <a href="/#insights" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Blog</a>
+        <a href="/#contact" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Careers</a>
         <a href="/faqs" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">FAQs</a>
-        <a href="#contact" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Contact</a>
+        <a href="/#contact" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Contact</a>
         </div>
       </div>
     </div>
@@ -540,9 +628,21 @@ const SHELL = 'min(2880px,max(1720px,86vw))';
 const WIDE = 'calc(' + SHELL + ' + 2 * clamp(18px,3.2vw,96px))';
 
 class Component extends DCLogic {
-  state = { open: null, drawer: false, acc: null, narrow: false, vpw: 1440, tab: 0, use: 0 , phones: false, footAcc: null};
+  // DroneDeploy UI screenshots must not be cropped
+  UISHOT = [];
+  LPH = [1, 2];
+
+  state = { open: null, drawer: false, acc: null, narrow: false, vpw: 1440, phones: false, footAcc: null, hdrH: 88, dv: 0, q: 0 };
+
+  measureHdr = () => {
+    const h = document.querySelector('header');
+    if (h) { const v = Math.round(h.getBoundingClientRect().height); if (v && v !== this.state.hdrH) this.setState({ hdrH: v }); }
+  };
 
   componentDidMount() {
+    this.measureHdr();
+    addEventListener('resize', this.measureHdr);
+    requestAnimationFrame(this.measureHdr);
     this.reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
     this.mq = matchMedia('(max-width: 1240px)');
     this.onMq = () => this.setState({ narrow: this.mq.matches });
@@ -555,6 +655,12 @@ class Component extends DCLogic {
     this.initReveal();
     this.sizeHeroFrame();
     setTimeout(() => this.sizeHeroFrame(), 120);
+  }
+
+  componentWillUnmount() {
+    this.lockScroll(false);
+    if (this.mq) this.mq.removeEventListener('change', this.onMq);
+    removeEventListener('resize', this.onRz);
   }
 
   // the Vimeo player letterboxes, so size the iframe to cover its panel
@@ -570,13 +676,7 @@ class Component extends DCLogic {
     el.style.height = Math.ceil(h) + 'px';
   }
 
-  componentDidUpdate() { this.bindCardHover(); this.sizeHeroFrame(); }
-
-  componentWillUnmount() {
-    this.lockScroll(false);
-    if (this.mq) this.mq.removeEventListener('change', this.onMq);
-    removeEventListener('resize', this.onRz);
-  }
+  componentDidUpdate() { this.sizeHeroFrame(); }
 
   lockScroll(on) {
     try {
@@ -613,9 +713,9 @@ class Component extends DCLogic {
     els.forEach((el) => {
       const isMedia = el.dataset.hero === '0';
       el.style.opacity = '0';
-      el.style.transform = isMedia ? 'scale(.98)' : 'translateY(24px)';
-      el.style.transition = 'opacity ' + (isMedia ? 1.2 : 0.9) + 's ease, transform '
-        + (isMedia ? 1.6 : 1) + 's cubic-bezier(.16,.84,.3,1)';
+      el.style.transform = isMedia ? 'scale(1.07)' : 'translateY(24px)';
+      el.style.transition = 'opacity ' + (isMedia ? 1.4 : 0.9) + 's ease, transform '
+        + (isMedia ? 2.2 : 1) + 's cubic-bezier(.16,.84,.3,1)';
     });
     requestAnimationFrame(() => els.forEach((el, i) => setTimeout(() => show(el), 60 + i * 150)));
     setTimeout(() => els.forEach(show), 2600);
@@ -661,6 +761,7 @@ class Component extends DCLogic {
 
   renderVals() {
     const st = this.state;
+    const PAD = 'clamp(64px,7vw,110px) 0';
     const card = (open, side) => ({
       position: 'absolute', top: '100%',
       left: side === 'right' ? 'auto' : 0, right: side === 'right' ? 0 : 'auto',
@@ -671,46 +772,6 @@ class Component extends DCLogic {
     const mob = st.vpw < 1100;
     const acc = (k) => ({ display: st.acc === k ? 'grid' : 'none', gap: 2, padding: '4px 0 10px 2px' });
     const accLink = { display: 'flex', alignItems: 'center', minHeight: 46, fontSize: 15, color: '#616E77' };
-
-    const uses = [
-      ['p04.webp', 'Existing conditions and as-built documentation of buildings and industrial facilities'],
-      ['p05.webp', 'Scan-to-CAD and scan-to-BIM base data for architects and engineers'],
-      ['p03.webp', 'Structural steel, tank, and MEP coordination and clash detection'],
-      ['s08.webp', 'Renovation, retrofit, and tie-in design where accurate existing geometry matters'],
-      ['p09.webp', 'Data center facility documentation'],
-      ['p02.webp', 'Bridge, culvert, and infrastructure documentation'],
-      ['s10.webp', 'Rail and transit infrastructure documentation'],
-      ['p07.webp', 'Parking garages, stairwells, and complex facility documentation'],
-      ['p06.webp', 'Tight-tolerance measurement where photography alone will not provide the required level of accuracy']
-    ];
-    const stack = st.vpw < 900;
-    const useLayer = (i) => ({
-      position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover',
-      opacity: st.use === i ? 1 : 0, transition: 'opacity .45s ease'
-    });
-    const useRow = (i) => ({
-      display: 'flex', gap: 18, alignItems: 'baseline', cursor: 'default',
-      padding: stack ? '18px 0' : '22px 4px', borderTop: '1px solid #C9D6E2',
-      borderBottom: i === 8 ? '1px solid #C9D6E2' : 'none',
-      fontSize: stack ? 16 : 17.5, lineHeight: 1.5, fontWeight: 600,
-      color: st.use === i ? '#0A4B77' : '#0F2E45',
-      background: st.use === i && !stack ? 'rgba(255,255,255,.5)' : 'transparent',
-      transition: 'color .25s ease, background .25s ease'
-    });
-
-    const tabBtn = (i) => ({
-      appearance: 'none', border: '1px solid ' + (st.tab === i ? '#E0A83E' : 'rgba(255,255,255,.28)'),
-      background: st.tab === i ? '#E0A83E' : 'transparent',
-      color: st.tab === i ? '#052A44' : '#C3D8E6',
-      fontFamily: "'Manrope',sans-serif", fontSize: 14.5, fontWeight: 700,
-      padding: '13px 22px', borderRadius: 999, cursor: 'pointer', whiteSpace: 'nowrap',
-      transition: 'background .25s ease, color .25s ease, border-color .25s ease'
-    });
-    const panel = (i) => ({
-      display: st.tab === i ? 'grid' : 'none',
-      gap: st.narrow ? 26 : 56, alignItems: 'stretch', marginTop: 34,
-      gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,1.05fr) minmax(0,1fr)'
-    });
 
     return {
       navStyle: { display: mob ? 'none' : 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'flex-end', gap: 2, marginLeft: 'auto' },
@@ -759,182 +820,221 @@ class Component extends DCLogic {
 
       faq1Open: this.props.faqFirstOpen === false ? undefined : true,
 
-      tab0: () => this.setState({ tab: 0 }),
-      tab1: () => this.setState({ tab: 1 }),
-      tab2: () => this.setState({ tab: 2 }),
-      tab3: () => this.setState({ tab: 3 }),
-      tabStyle0: tabBtn(0), tabStyle1: tabBtn(1), tabStyle2: tabBtn(2), tabStyle3: tabBtn(3),
-      panel0Style: panel(0), panel1Style: panel(1), panel2Style: panel(2), panel3Style: panel(3),
-      tabRowStyle: { display: 'flex', flexWrap: 'wrap', gap: 10, marginTop: 34 },
-      panelImgStyle: {
-        position: 'relative', borderRadius: 28, overflow: 'hidden', background: '#0D4066',
-        minHeight: st.narrow ? 240 : 380, boxShadow: '0 0 0 0 rgba(56,142,205,0)', transition: 'box-shadow .45s ease'
-      },
-
-      useAlt: uses[st.use][1],
-      useImg0: useLayer(0), useImg1: useLayer(1), useImg2: useLayer(2),
-      useImg3: useLayer(3), useImg4: useLayer(4), useImg5: useLayer(5),
-      useImg6: useLayer(6), useImg7: useLayer(7), useImg8: useLayer(8),
-      useNum: {
-        fontFamily: "'Sora',sans-serif", fontSize: 12.5, fontWeight: 700,
-        color: '#7E9AB0', letterSpacing: '.1em', flexShrink: 0
-      },
-      use0: () => this.setState({ use: 0 }), use1: () => this.setState({ use: 1 }),
-      use2: () => this.setState({ use: 2 }), use3: () => this.setState({ use: 3 }),
-      use4: () => this.setState({ use: 4 }), use5: () => this.setState({ use: 5 }),
-      use6: () => this.setState({ use: 6 }), use7: () => this.setState({ use: 7 }),
-      use8: () => this.setState({ use: 8 }),
-      useRow0: useRow(0), useRow1: useRow(1), useRow2: useRow(2), useRow3: useRow(3),
-      useRow4: useRow(4), useRow5: useRow(5), useRow6: useRow(6), useRow7: useRow(7),
-      useRow8: useRow(8),
-      usesGridStyle: {
-        display: 'grid', gap: stack ? 28 : 64, marginTop: 44, alignItems: 'stretch',
-        gridTemplateColumns: stack ? 'minmax(0,1fr)' : 'minmax(0,.72fr) minmax(0,1.28fr)'
-      },
-      usesStickyStyle: { position: 'relative', height: '100%' },
-      useFrameStyle: {
-        position: stack ? 'relative' : 'sticky', top: stack ? 'auto' : 116,
-        width: '100%', aspectRatio: '4 / 5', borderRadius: 26, overflow: 'hidden', background: '#0D4066'
-      },
-
       vimeoRef: (el) => {
         if (!el) return;
         this.heroFrame = el;
         this.sizeHeroFrame();
         requestAnimationFrame(() => this.sizeHeroFrame());
       },
-      heroVideoStyle: {
-        position: 'absolute', top: 0, bottom: 0,
-        right: 0, left: st.vpw < 900 ? 0 : '38%',
-        width: st.vpw < 900 ? '100%' : '62%', height: '100%',
-        overflow: 'hidden', pointerEvents: 'none'
+      // ---- shared layout (ported from the reference CSS) ----
+      wrapStyle: { position: 'relative', width: '100%', margin: 0, padding: '0 clamp(20px,4vw,72px)' },
+      eyebrowStyle: { display: 'flex', alignItems: 'center', gap: 10, marginBottom: 20, fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 11, fontWeight: 500, letterSpacing: '.14em', textTransform: 'uppercase', color: '#8E5527' },
+      h2Style: { fontFamily: "'Sora',sans-serif", fontSize: 'clamp(34px,3.6vw,50px)', lineHeight: 1.08, letterSpacing: '-.026em', fontWeight: 600, color: '#A96B38', margin: 0, textWrap: 'balance' },
+      eyebrowSkyStyle: { display: 'flex', alignItems: 'center', gap: 10, marginBottom: 20, fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 11, fontWeight: 500, letterSpacing: '.14em', textTransform: 'uppercase', color: '#9FC0DA' },
+      h2DarkStyle: { fontFamily: "'Sora',sans-serif", fontSize: 'clamp(34px,3.6vw,50px)', lineHeight: 1.08, letterSpacing: '-.026em', fontWeight: 600, color: '#C4793E', margin: 0, textWrap: 'balance' },
+      bodyPStyle: { color: '#42586A', fontSize: 16, lineHeight: 1.7, margin: '16px 0 0', maxWidth: '56ch', textWrap: 'pretty' },
+      secWhiteStyle: { scrollMarginTop: 96, position: 'relative', overflowX: 'clip', background: '#fff', padding: PAD },
+      secFogStyle: { scrollMarginTop: 96, position: 'relative', overflowX: 'clip', background: '#EEF2F4', padding: PAD },
+      secSteelStyle: { scrollMarginTop: 96, position: 'relative', overflow: 'hidden', background: 'linear-gradient(135deg,#D6E2E8 0%,#B8CBD8 100%)', padding: PAD },
+      secSlateStyle: { scrollMarginTop: 96, position: 'relative', overflowX: 'clip', background: '#D9E3E8', padding: PAD },
+      secProcStyle: { scrollMarginTop: 96, position: 'relative', overflow: 'hidden', background: 'linear-gradient(135deg,#052A44,#0A3D61)', padding: PAD },
+      wingMarkStyle: {
+        position: 'absolute', top: -40, right: 0,
+        width: 'min(820px,65vw)', height: 'auto', aspectRatio: '420 / 149',
+        transform: 'translateX(10%)', transformOrigin: '80% 40%',
+        animation: 'eagle-wing-drift 13s ease-in-out infinite',
+        opacity: .085, pointerEvents: 'none', userSelect: 'none'
       },
-      heroScrimStyle: {
-        position: 'absolute', inset: 0,
-        background: st.vpw < 900
-          ? 'linear-gradient(180deg,rgba(5,42,68,.94) 0%,rgba(5,42,68,.86) 46%,rgba(5,42,68,.72) 100%)'
-          : 'linear-gradient(100deg,#052A44 0%,#052A44 34%,rgba(5,42,68,.92) 48%,rgba(5,42,68,.55) 66%,rgba(5,42,68,.28) 82%,rgba(5,42,68,.2) 100%)'
+
+      heroChipStyle: { position: 'relative', display: 'block', width: '100%', height: st.vpw <= 1050 ? 'auto' : '100%', overflow: 'hidden', borderRadius: 12, border: '3px solid rgba(255,255,255,.14)', boxShadow: '0 16px 40px rgba(0,0,0,.45)' },
+      scopePanelStyle: { display: 'grid', alignItems: 'start', gap: st.vpw < 980 ? 16 : 'clamp(20px,2.4vw,36px)', marginTop: 'clamp(30px,3.4vw,44px)', padding: 'clamp(22px,2.2vw,28px) clamp(26px,2.8vw,34px)', background: 'rgba(255,255,255,.6)', border: '1px solid #C9D7E0', borderRadius: 12, gridTemplateColumns: st.vpw < 980 ? '1fr' : 'minmax(0,24fr) minmax(0,72fr)' },
+      spListStyle: { listStyle: 'none', display: 'grid', gap: 8, margin: 0, padding: '0 0 0 2px' },
+      spItemStyle: { display: 'flex', alignItems: 'baseline', gap: 10, fontSize: 14, fontWeight: 700, color: '#052A44', borderLeft: '2px solid #A96B38', paddingLeft: 12 },
+      // ---- hero: reference gives the IMAGE the wider column ----
+      heroSecStyle: { scrollMarginTop: 96, position: 'relative', overflow: 'hidden', background: 'linear-gradient(120deg,#052A44 0%,#0A3D61 100%)' },
+      heroGridStyle: { position: 'relative', display: 'grid', alignItems: 'center', gap: 'clamp(40px,4vw,72px)', padding: '64px clamp(20px,4vw,72px)', minHeight: st.vpw <= 1050 ? 0 : 'clamp(640px,68vh,760px)', gridTemplateColumns: st.vpw <= 1050 ? '1fr' : 'minmax(0,0.88fr) minmax(0,1.12fr)' },
+      heroImgStyle: st.vpw <= 640
+        ? { position: 'relative', display: 'grid', gap: 18, width: '100%', minWidth: 0, gridTemplateColumns: '1fr' }
+        : st.vpw <= 1050
+          ? { position: 'relative', display: 'grid', gap: 18, alignItems: 'start', width: '100%', minWidth: 0, height: 'auto', gridTemplateColumns: 'minmax(0,1.15fr) minmax(0,.85fr)' }
+          : { position: 'relative', display: 'grid', gap: 18, alignItems: 'stretch', width: '100%', minWidth: 0, height: 'clamp(380px,44vh,470px)', gridTemplateColumns: 'minmax(0,62fr) minmax(0,38fr)' },
+      heroPhotoStyle: st.vpw <= 1050
+        ? { display: 'block', width: '100%', height: 'auto', aspectRatio: '16 / 10', objectFit: 'cover', objectPosition: 'center', borderRadius: 14, boxShadow: '0 26px 64px rgba(0,0,0,.4)' }
+        : { display: 'block', width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: 14, boxShadow: '0 26px 64px rgba(0,0,0,.4)' },
+      heroChipImgStyle: st.vpw <= 1050
+        ? { display: 'block', width: '100%', height: 'auto', aspectRatio: '16 / 10', objectFit: 'cover', objectPosition: '76% center' }
+        : { display: 'block', width: '100%', height: '100%', objectFit: 'cover', objectPosition: '76% center' },
+
+      // ---- section nav ----
+      snavStyle: { position: 'sticky', top: st.hdrH || 75, zIndex: 40, background: '#EEF2F4', borderBottom: '1px solid #D3DEE6' },
+      snavInnerStyle: { position: 'relative', display: 'flex', flexWrap: 'wrap', gap: 0, justifyContent: st.vpw <= 820 ? 'flex-start' : 'center', maxWidth: st.vpw <= 820 ? 'none' : 1150, margin: st.vpw <= 820 ? 0 : '0 auto', padding: '0 clamp(20px,4vw,72px)', overflowX: st.vpw <= 820 ? 'auto' : 'visible', scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch' },
+      snavLinkStyle: { flex: '0 0 auto', padding: '14px 22px', fontSize: 13.5, fontWeight: 700, color: '#3D5261', borderRight: '1px solid #D3DEE6', whiteSpace: 'nowrap', transition: 'color .2s ease' },
+
+      // ---- overview ----
+      overviewGridStyle: { position: 'relative', zIndex: 2, display: 'grid', alignItems: 'center', gap: st.vpw <= 1100 ? 36 : '4%', padding: '0 clamp(20px,4vw,72px)', gridTemplateColumns: st.vpw <= 1100 ? '1fr' : 'minmax(0,46fr) minmax(0,50fr)' },
+      ovFigStyle: { margin: 0, minWidth: 0, opacity: 0, transform: 'translateY(20px)', transition: 'opacity .8s ease, transform .8s ease' },
+      ovFigImgStyle: { display: 'block', width: '100%', height: 'auto', borderRadius: 14, boxShadow: '0 24px 60px rgba(0,0,0,.4)' },
+      wiiOvStyle: { position: 'absolute', inset: 0, width: '100%', height: 'calc(100% - 26px)', pointerEvents: 'none', opacity: .85 },
+      ovCapStyle: { display: 'block', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 12, letterSpacing: '.08em', color: '#C7D6E4', marginTop: 10 },
+      proof3Style: {
+        display: 'grid', gap: 26, marginTop: 38,
+        gridTemplateColumns: st.vpw <= 980 ? '1fr' : 'repeat(3,minmax(0,1fr))'
       },
-      heroInnerStyle: {
-        position: 'relative', width: '100%', maxWidth: WIDE, margin: '0 auto',
-        display: 'grid', alignItems: 'center',
-        gridTemplateColumns: st.vpw < 900 ? 'minmax(0,1fr)' : 'minmax(0,1.24fr) minmax(0,.76fr)',
-        minHeight: st.vpw < 900 ? 'auto' : 'min(34vh,336px)',
-        padding: st.vpw < 900
-          ? 'clamp(34px,5.4vw,53px) clamp(18px,3.2vw,96px) clamp(120px,15vw,130px)'
-          : 'clamp(43px,5.4vw,67px) clamp(18px,3.2vw,96px) clamp(100px,12vw,110px)'
+      proofItemStyle: { display: 'flex', flexDirection: 'column', gap: 7 },
+      proofH3Style: { fontFamily: "'Sora',sans-serif", fontSize: 15, fontWeight: 600, letterSpacing: '.02em', color: '#263640', margin: 0, lineHeight: 1.3 },
+      proofPStyle: { fontSize: 14, color: '#5C6B74', lineHeight: 1.6, margin: 0, textWrap: 'pretty' },
+
+      ed3p2Style: { color: '#C7D6E4', fontSize: 16, lineHeight: 1.72, margin: '16px 0 0', maxWidth: '60ch', textWrap: 'pretty' },
+      proofItemDarkStyle: { display: 'flex', flexDirection: 'column', gap: 7, borderTop: '1px solid rgba(159,192,218,.35)', paddingTop: 14 },
+      proofH3DarkStyle: { fontFamily: "'Sora',sans-serif", color: '#fff', fontSize: 13, fontWeight: 600, letterSpacing: '.12em', textTransform: 'uppercase', margin: '0 0 8px', lineHeight: 1.3 },
+      proofPDarkStyle: { fontSize: 13.5, color: '#C7D6E4', lineHeight: 1.6, margin: 0, textWrap: 'pretty' },
+      secWiiStyle: { scrollMarginTop: 96, position: 'relative', background: 'linear-gradient(135deg,#052A44 0%,#0A3D61 100%)', padding: 'clamp(64px,7vw,110px) 0 calc(clamp(64px,7vw,110px) + 22px)' },
+      wiiFigStyle: { margin: 0, position: 'relative', minWidth: 0, opacity: 0, transform: 'translateY(20px)', transition: 'opacity .8s ease, transform .8s ease' },
+      secSepStyle: { position: 'absolute', left: 0, right: 0, bottom: 0, height: 22, pointerEvents: 'none' },
+      proof3hStyle: { display: 'grid', gap: 26, marginTop: 34, gridTemplateColumns: st.vpw <= 980 ? '1fr' : 'repeat(3,minmax(0,1fr))' },
+      capGridStyle: { display: 'grid', alignItems: 'center', gap: st.vpw <= 900 ? 30 : '4%', marginTop: 64, paddingTop: 56, borderTop: '1px solid rgba(159,192,218,.25)', gridTemplateColumns: st.vpw <= 900 ? '1fr' : 'minmax(0,44%) minmax(0,52%)' },
+      capShotsStyle: { order: 2, display: 'grid', gap: st.vpw <= 620 ? 18 : 16, minWidth: 0, gridTemplateColumns: st.vpw <= 620 ? '1fr' : 'repeat(2,minmax(0,1fr))' },
+      capShotStyle: { display: 'block', width: '100%', height: 'clamp(200px,22vw,300px)', objectFit: 'cover', borderRadius: 14 },
+      cap3Style: { display: 'grid', gap: 16, marginTop: 24, gridTemplateColumns: 'minmax(0,1fr)' },
+      capNoteStyle: { color: '#9FC0DA', fontSize: 13.5, lineHeight: 1.62, marginTop: 24, maxWidth: '62ch', borderTop: '1px solid rgba(159,192,218,.25)', paddingTop: 14, textWrap: 'pretty' },
+      spItemsStyle: { display: 'grid', gap: '16px 24px', gridTemplateColumns: st.vpw <= 980 ? '1fr' : 'repeat(2,minmax(0,1fr))' },
+      spH4Style: { fontFamily: "'Sora',sans-serif", fontSize: 15, fontWeight: 600, letterSpacing: '-.012em', color: '#052A44', margin: '0 0 6px', lineHeight: 1.3 },
+      spPStyle: { fontSize: 13.5, color: '#42586A', lineHeight: 1.62, margin: 0, textWrap: 'pretty' },
+      // ---- best-fit: rules, not cards ----
+      // the bfsteel gradient runs to #B8CBD8, so this section needs darker copper
+      bfEyebrowStyle: { display: 'flex', alignItems: 'center', gap: 10, marginBottom: 20, fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 11, fontWeight: 500, letterSpacing: '.14em', textTransform: 'uppercase', color: '#734826' },
+      bfH2Style: { fontFamily: "'Sora',sans-serif", fontSize: 'clamp(34px,3.6vw,50px)', lineHeight: 1.08, letterSpacing: '-.026em', fontWeight: 600, color: '#996032', margin: 0, textWrap: 'balance' },
+      bfLinesStyle: { position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: .05, pointerEvents: 'none' },
+      bfGridStyle: { display: 'grid', gap: '0 clamp(30px,4vw,72px)', marginTop: 44, gridTemplateColumns: st.vpw <= 980 ? '1fr' : 'repeat(3,minmax(0,1fr))' },
+      bfItemStyle: { padding: '24px 0', borderTop: '2px solid rgba(5,42,68,.28)', opacity: 0, transform: 'translateY(18px)', transition: 'opacity .7s ease, transform .7s ease' },
+      bfH3Style: { fontFamily: "'Sora',sans-serif", fontSize: 16, fontWeight: 600, letterSpacing: '.04em', textTransform: 'uppercase', color: '#052A44', margin: '0 0 8px', lineHeight: 1.3 },
+      bfPStyle: { fontSize: 14.5, color: '#35495A', lineHeight: 1.62, margin: 0, textWrap: 'pretty' },
+      bfNoteStyle: { marginTop: 36, color: '#3F5260', fontSize: 14, lineHeight: 1.7, maxWidth: '88ch', borderLeft: '3px solid #734826', paddingLeft: 18, textWrap: 'pretty' },
+      // ---- deliverables: reference keeps the label navy; active = background only ----
+      delivGridStyle: { display: 'grid', alignItems: 'start', gap: '3%', marginTop: 44, gridTemplateColumns: st.vpw <= 980 ? '1fr' : '58% 39%' },
+      delivViewStyle: { position: 'relative', minWidth: 0 },
+      dvImgStyle: { display: 'block', width: '100%', height: 'clamp(320px,40vw,480px)', objectFit: 'cover', borderRadius: 12, background: '#052A44' },
+      dlvCapStyle: { color: '#5C6B74', fontSize: 13.5, lineHeight: 1.6, margin: '14px 0 0', maxWidth: '62ch', textWrap: 'pretty' },
+      dlvCapLabelStyle: { display: 'block', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 11, fontWeight: 500, letterSpacing: '.14em', textTransform: 'uppercase', color: '#052A44', marginBottom: 4 },
+      lphStyle: { display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', width: '100%', height: 'clamp(320px,40vw,480px)', padding: 'clamp(20px,3vw,44px)', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 12, fontWeight: 700, letterSpacing: '.16em', color: '#8AAFC7', background: '#052A44', border: '1px dashed rgba(255,255,255,.28)', borderRadius: 12 },
+      delivListStyle: { display: 'flex', flexDirection: 'column', gap: 0, minWidth: 0 },
+      fmtStyle: { flex: '0 0 auto', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 11, fontWeight: 700, letterSpacing: '.12em', color: '#8E5527' },
+
+      // ---- process: numbered circles on a connector line ----
+      procGridStyle: { position: 'relative', display: 'grid', gap: 'clamp(20px,2.5vw,44px)', marginTop: 48, gridTemplateColumns: st.vpw <= 980 ? '1fr' : 'repeat(4,minmax(0,1fr))' },
+      procLineStyle: { display: st.vpw <= 980 ? 'none' : 'block', position: 'absolute', top: 21, left: '4%', right: '4%', height: 1, background: 'linear-gradient(90deg,transparent,rgba(159,192,218,.5),rgba(159,192,218,.5),transparent)', pointerEvents: 'none' },
+      pStepStyle: { position: 'relative', opacity: 0, transform: 'translateY(18px)', transition: 'opacity .7s ease, transform .7s ease' },
+      pNumStyle: { position: 'relative', zIndex: 2, display: 'flex', alignItems: 'center', justifyContent: 'center', width: 42, height: 42, borderRadius: '50%', background: '#00548B', border: '3px solid #0A3D61', color: '#fff', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 14, fontWeight: 700, marginBottom: 18 },
+      pStepH3Style: { fontFamily: "'Sora',sans-serif", fontSize: 15, fontWeight: 600, letterSpacing: '.05em', textTransform: 'uppercase', color: '#fff', margin: '0 0 10px', lineHeight: 1.3 },
+      pStepPStyle: { fontSize: 14, color: '#C7D6E4', lineHeight: 1.65, margin: 0, textWrap: 'pretty' },
+      vtolGridStyle: { display: 'grid', alignItems: 'center', gap: '4%', marginTop: 64, paddingTop: 56, borderTop: '1px solid rgba(159,192,218,.25)', gridTemplateColumns: st.vpw < 900 ? 'minmax(0,1fr)' : 'minmax(0,46%) minmax(0,50%)' },
+      vt3Style: { display: 'grid', gap: 16, marginTop: 24, gridTemplateColumns: 'minmax(0,1fr)' },
+      vtH4Style: { fontFamily: "'Sora',sans-serif", fontSize: 15, fontWeight: 600, letterSpacing: '-.012em', color: '#fff', margin: 0, lineHeight: 1.3 },
+      vtPStyle: { fontSize: 13.5, color: '#A9C3D5', lineHeight: 1.6, margin: '5px 0 0', textWrap: 'pretty' },
+      gifcStyle: { margin: 0, background: '#02080D', border: '1px solid rgba(159,192,218,.2)', borderRadius: 14, padding: 'clamp(14px,1.4vw,22px)' },
+
+      // ---- applications ----
+      mkt4Style: { display: 'grid', gap: 'clamp(16px,1.6vw,26px)', marginTop: 44, gridTemplateColumns: st.vpw <= 640 ? '1fr' : st.vpw <= 980 ? 'repeat(2,minmax(0,1fr))' : 'repeat(4,minmax(0,1fr))' },
+      mktCardStyle: { position: 'relative', display: 'block', overflow: 'hidden', borderRadius: 12, background: '#052A44', opacity: 0, transform: 'translateY(18px)', transition: 'opacity .7s ease, transform .7s ease' },
+      mktImgStyle: { width: '100%', height: 'clamp(240px,24vw,320px)', objectFit: 'cover', display: 'block' },
+      mktOvStyle: { position: 'absolute', inset: 0, color: '#fff', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', gap: 6, padding: 20, background: 'linear-gradient(180deg,rgba(5,42,68,.05) 30%,rgba(5,42,68,.88) 100%)' },
+      mktH3Style: { fontFamily: "'Sora',sans-serif", fontSize: 16.5, fontWeight: 600, letterSpacing: '-.015em', color: '#fff', lineHeight: 1.26 },
+      mktPStyle: { fontSize: 12.5, color: '#C7D6E4', lineHeight: 1.5, textWrap: 'pretty' },
+      mktLinkStyle: { display: 'inline-block', marginTop: 30, fontSize: 14.5, fontWeight: 700, color: '#00548B', borderBottom: '1px solid rgba(0,84,139,.34)', paddingBottom: 4, transition: 'color .2s ease, border-color .2s ease' },
+
+      // ---- related ----
+      rel4Style: { display: 'grid', gap: 'clamp(24px,2vw,28px)', marginTop: 44, gridTemplateColumns: st.vpw <= 640 ? '1fr' : st.vpw <= 1100 ? 'repeat(2,minmax(0,1fr))' : 'repeat(3,minmax(0,1fr))' },
+      relCardStyle: { display: 'flex', flexDirection: 'column', overflow: 'hidden', borderRadius: 12, background: '#fff', border: '1px solid #C9D7E0', opacity: 0, transform: 'translateY(18px)', transition: 'opacity .7s ease, transform .7s ease, border-color .22s ease, box-shadow .22s ease' },
+      relImgStyle: { width: '100%', aspectRatio: '16 / 10', height: 'auto', minHeight: st.vpw <= 640 ? 200 : 240, maxHeight: 310, objectFit: 'cover', display: 'block' },
+      relBodyStyle: { display: 'flex', flexDirection: 'column', gap: 8, padding: 'clamp(22px,1.9vw,26px)', flex: 1 },
+      relH3Style: { fontFamily: "'Sora',sans-serif", fontSize: 18, fontWeight: 600, letterSpacing: '-.015em', color: '#052A44', lineHeight: 1.28 },
+      relPStyle: { fontSize: 14, color: '#5C6B74', lineHeight: 1.6, textWrap: 'pretty' },
+      relLinkStyle: { marginTop: 'auto', paddingTop: 12, fontSize: 14, fontWeight: 700, color: '#00548B' },
+      topoBridgeStyle: { display: 'grid', alignItems: 'center', gap: 'clamp(20px,2.2vw,32px)', marginTop: 'clamp(28px,3vw,36px)', padding: 'clamp(24px,2.4vw,30px) clamp(28px,3vw,36px)', background: 'linear-gradient(120deg,#00548B,#0A6597)', border: '1px solid rgba(255,255,255,.18)', borderRadius: 10, gridTemplateColumns: st.vpw <= 980 ? '1fr' : '24fr 56fr 20fr', opacity: 0, transform: 'translateY(18px)', transition: 'opacity .7s ease, transform .7s ease' },
+      // ---- FAQ: reference uses eblue for the active question ----
+      faqGridStyle: { display: 'grid', alignItems: 'start', gap: '3%', marginTop: 44, gridTemplateColumns: st.vpw <= 980 ? '1fr' : '40% 57%' },
+      faqListStyle: { display: 'flex', flexDirection: 'column', gap: 0, minWidth: 0 },
+      faqPanelStyle: { position: 'relative', display: 'flex', flexDirection: 'column', minWidth: 0, background: '#fff', border: '1px solid #D3DEE6', borderRadius: 12, padding: st.vpw < 700 ? '24px 22px' : '34px 36px', minHeight: st.vpw < 900 ? 0 : 300 },
+      faqH3Style: { fontFamily: "'Sora',sans-serif", fontSize: 19, fontWeight: 600, letterSpacing: '-.018em', color: '#052A44', margin: '0 0 14px', lineHeight: 1.3 },
+      faqPStyle: { fontSize: 15.5, color: '#42586A', lineHeight: 1.72, margin: 0, textWrap: 'pretty' },
+      faqCtlStyle: { display: 'flex', alignItems: 'center', gap: 20, marginTop: 'auto', paddingTop: 26 },
+      faqPosStyle: { flex: '1 1 auto', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 13, fontWeight: 700, letterSpacing: '.18em', color: '#052A44' },
+      faqNavBtnStyle: { flex: '0 0 auto', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: 40, height: 40, borderRadius: 999, background: '#fff', border: '1px solid #C9D7E0', color: '#052A44', fontSize: 16, cursor: 'pointer', transition: 'border-color .2s ease, color .2s ease' },
+
+      // ---- CTA ----
+      // .ctal h2 is deliberately smaller than .ssec h2
+      ctaH2Style: {
+        fontFamily: "'Sora',sans-serif", color: '#fff',
+        fontSize: 'clamp(24px,2.2vw,31px)', lineHeight: 1.15,
+        letterSpacing: '-.02em', fontWeight: 600, margin: '10px 0 0'
       },
-      stripStyle: {
-        maxWidth: WIDE, margin: '0 auto', padding: st.vpw < 900 ? '12px clamp(18px,3.2vw,96px)' : '16px clamp(18px,3.2vw,96px)',
-        display: 'flex', flexWrap: st.vpw < 900 ? 'nowrap' : 'wrap',
-        gap: st.vpw < 900 ? 0 : '12px 42px', alignItems: 'center'
-      },
-      stripDupStyle: {
-        display: st.vpw < 900 ? 'inline' : 'none',
-        fontSize: 13, color: '#C3D8E6', fontWeight: 500
-      },
-      stripViewportStyle: st.vpw < 900
-        ? {
-            flex: '1 1 auto', minWidth: 0, overflow: 'hidden',
-            maskImage: 'linear-gradient(90deg,#000 0,#000 calc(100% - 34px),transparent 100%)',
-            WebkitMaskImage: 'linear-gradient(90deg,#000 0,#000 calc(100% - 34px),transparent 100%)'
-          }
-        : { flex: '1 1 auto', minWidth: 0 },
-      stripTrackStyle: st.vpw < 900
-        ? {
-            display: 'flex', alignItems: 'center', gap: 30, width: 'max-content',
-            animation: this.reduced ? 'none' : 'eagle-marquee-strip 34s linear infinite'
-          }
-        : { display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '12px 42px' },
-      methodGridStyle: {
-        maxWidth: SHELL, margin: '0 auto', display: 'grid', gap: st.narrow ? 30 : 64, alignItems: 'stretch',
-        gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,.78fr) minmax(0,1.22fr)'
-      },
-      methodStickyStyle: { position: 'relative', height: '100%' },
-      methodImageStyle: {
-        position: st.narrow ? 'relative' : 'sticky', top: st.narrow ? 'auto' : 116,
-        borderRadius: 28, overflow: 'hidden', background: '#0D4066',
-        aspectRatio: st.narrow ? '16 / 10' : '3 / 4',
-        boxShadow: '0 0 0 0 rgba(56,142,205,0)', transition: 'box-shadow .45s ease'
-      },
-      stepsStyle: {
-        display: 'grid', gap: 12, marginTop: 6,
-        gridTemplateColumns: st.vpw < 760 ? 'minmax(0,1fr)' : 'repeat(3,minmax(0,1fr))'
-      },
-      sectorHeadStyle: {
-        display: 'grid', gap: st.narrow ? 22 : 64, alignItems: 'end',
-        gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,1fr) minmax(0,1fr)'
-      },
-      sectorGridStyle: {
-        display: 'grid', gap: st.vpw < 700 ? 18 : 26, marginTop: 44, alignItems: 'stretch',
-        gridTemplateColumns: st.vpw < 800 ? 'minmax(0,1fr)' : 'repeat(2,minmax(0,1fr))'
-      },
-      delivGridStyle: {
-        maxWidth: SHELL, margin: '0 auto', display: 'grid',
-        gap: st.narrow ? 30 : 72, alignItems: 'start',
-        gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,.8fr) minmax(0,1.2fr)'
-      },
-      faqGridStyle: {
-        maxWidth: SHELL, margin: '0 auto', display: 'grid', gap: st.narrow ? 30 : 72, alignItems: 'start',
-        gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,.7fr) minmax(0,1.3fr)'
-      },
-      relGridStyle: st.vpw < 700
-        ? {
-            display: 'grid', gap: 14, marginTop: 30, alignItems: 'start',
-            gridAutoFlow: 'column', gridAutoColumns: '72%',
-            overflowX: 'auto', overflowY: 'hidden',
-            scrollSnapType: 'x mandatory', WebkitOverflowScrolling: 'touch',
-            scrollbarWidth: 'none', paddingBottom: 4,
-            marginRight: 'calc(-1 * max(clamp(18px,3.2vw,96px), (100vw - min(2880px,max(1720px,86vw))) / 2))'
-          }
-        : {
-            display: 'grid', gap: 28, marginTop: 44, alignItems: 'start',
-            gridTemplateColumns: 'repeat(4,minmax(0,1fr))'
-          },
-      relCardStyle: {
-        display: 'flex', flexDirection: 'column', gap: 14,
-        scrollSnapAlign: st.vpw < 700 ? 'start' : 'none'
-      },
+      ctaBtnJustify: st.vpw <= 980 ? 'justify-self:start;' : 'justify-self:end;',
+      ctaSecStyle: { scrollMarginTop: 96, position: 'relative', overflow: 'hidden', background: '#052A44', padding: 0 },
+      ctaBgStyle: { position: 'absolute', inset: 0, backgroundImage: 'url("terrestrial-laser-scanning-cta-background.webp")', backgroundSize: 'cover', backgroundPosition: 'center', opacity: .12, pointerEvents: 'none' },
       ctaGridStyle: {
-        position: 'relative', maxWidth: SHELL, margin: '0 auto', display: 'grid',
-        gap: st.narrow ? 30 : 64, alignItems: 'center',
-        gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,1.3fr) minmax(0,.7fr)'
+        position: 'relative', zIndex: 2, display: 'grid', alignItems: 'center',
+        textAlign: 'left', maxWidth: 1650, marginInline: 'auto',
+        gap: st.vpw <= 980 ? 'clamp(18px,3vw,22px)' : 'clamp(28px,2.6vw,36px)',
+        padding: 'clamp(36px,3.5vw,44px) clamp(20px,4vw,72px)',
+        gridTemplateColumns: st.vpw <= 980 ? '1fr' : 'minmax(0,38fr) minmax(0,40fr) auto'
       },
+
+      // ---- tab state ----
+      ...(() => {
+        const out = {};
+        const DVN = 4;
+
+        const dv = st.dv || 0;
+        const UISHOT = this.UISHOT || [];
+        const LPH = this.LPH || [];
+        for (let i = 0; i < 4; i++) {
+          const on = dv === i;
+          out['dv' + i + 'Style'] = { display: on ? 'block' : 'none' };
+          out['dsel' + i] = on ? 'true' : 'false';
+          out['diH3Style' + i] = {
+            display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 14,
+            fontFamily: "'Sora',sans-serif", fontSize: 16.5, fontWeight: 600, letterSpacing: '-.012em',
+            color: on ? '#00548B' : '#052A44', margin: 0, lineHeight: 1.3,
+            transition: 'color .2s ease'
+          };
+          out['diPStyle' + i] = {
+            display: on ? 'block' : 'none',
+            fontSize: 14, color: '#42586A', lineHeight: 1.6, margin: '8px 0 0', textWrap: 'pretty'
+          };
+
+          out['di' + i + 'Style'] = {
+            display: 'block', width: '100%', textAlign: 'left', cursor: 'pointer',
+            background: on ? 'rgba(255,255,255,.55)' : 'none',
+            border: 0, borderTop: '1px solid #B9C9D4',
+            borderBottom: i === DVN - 1 ? '1px solid #B9C9D4' : 0,
+            padding: '20px 8px', fontFamily: 'inherit', transition: 'background .2s ease'
+          };
+          out['setDv' + i] = () => this.setState({ dv: i });
+        }
+        const q = st.q || 0;
+        for (let i = 0; i < 8; i++) {
+          const on = q === i;
+          out['fa' + i + 'Style'] = { display: on ? 'block' : 'none' };
+          out['qsel' + i] = on ? 'true' : 'false';
+          out['q' + i + 'Style'] = {
+            display: 'block', width: '100%', textAlign: 'left', cursor: 'pointer',
+            background: on ? 'rgba(0,84,139,.05)' : 'none',
+            border: 0, borderLeft: '3px solid ' + (on ? '#8E5527' : 'transparent'),
+            padding: '18px 20px', fontFamily: 'inherit',
+            fontSize: 16.5, fontWeight: 700, lineHeight: 1.4,
+            color: on ? '#00548B' : '#3D5261',
+            transition: 'background .2s ease, border-color .2s ease, color .2s ease'
+          };
+          out['setQ' + i] = () => this.setState({ q: i });
+        }
+        out.faqPos = String(q + 1).padStart(2, '0') + ' / 08';
+        out.prevQ = () => this.setState((s2) => ({ q: ((s2.q || 0) + 7) % 8 }));
+        out.nextQ = () => this.setState((s2) => ({ q: ((s2.q || 0) + 1) % 8 }));
+        return out;
+      })(),
       ...(() => {
         const mob = st.vpw < 900;
         const o = {};
-        o.phonesOpen = st.phones ? 'true' : 'false';
-        o.togglePhones = () => this.setState((s) => ({ phones: !s.phones }));
-        o.utilTab = mob ? 0 : -1;
-        o.utilTogStyle = {
-          display: mob ? 'inline-flex' : 'none', alignItems: 'center', gap: 8, minHeight: 44,
-          padding: '0 4px 0 0', background: 'none', border: 'none', cursor: 'pointer',
-          fontFamily: "'Manrope',sans-serif", fontSize: 12, fontWeight: 700,
-          letterSpacing: '.18em', textTransform: 'uppercase', color: '#A6C3D5'
-        };
-        o.utilCaretStyle = {
-          fontSize: 13, lineHeight: 1, color: '#E0A83E',
-          transform: st.phones ? 'rotate(180deg)' : 'none', transition: 'transform .25s ease'
-        };
-        o.utilPhonesStyle = mob
-          ? {
-              display: st.phones ? 'flex' : 'none', flexDirection: 'column', gap: 10,
-              position: 'absolute', top: '100%', left: 0, right: 0, zIndex: 71,
-              background: '#052A44', borderTop: '1px solid rgba(255,255,255,.16)',
-              boxShadow: '0 18px 34px rgba(4,26,44,.4)', padding: '10px clamp(18px,3.2vw,96px) 16px'
-            }
-          : { display: 'flex', alignItems: 'center', gap: 26, flexWrap: 'wrap' };
-        o.utilLinkStyle = mob
-          ? { display: 'flex', alignItems: 'center', gap: 10, whiteSpace: 'nowrap', minHeight: 44, padding: '4px 0', width: '100%' }
-          : { display: 'flex', alignItems: 'center', gap: 10, whiteSpace: 'nowrap' };
-        o.utilDivStyle = mob
-          ? { display: 'block', height: 1, background: 'rgba(255,255,255,.14)', margin: '6px 0' }
-          : { width: 1, height: 20, background: 'rgba(255,255,255,.16)' };
-        o.utilNoteStyle = {
-          display: mob ? 'none' : 'block', fontSize: 11, fontWeight: 700,
-          letterSpacing: '.2em', textTransform: 'uppercase', color: '#A6C3D5'
-        };
-
         [['RC', 'rc'], ['SV', 'sv'], ['CO', 'co']].forEach(([K, k]) => {
           const open = !mob || st.footAcc === k;
           o['footCol' + K + 'Style'] = mob
@@ -1003,8 +1103,6 @@ class Component extends DCLogic {
           : { fontSize: 15, lineHeight: 1.6, color: '#3C5468', textWrap: 'pretty' };
         return o;
       })(),
-      // the wireframe band lives under the column lists, so the footer reserves
-      // room for it and the grid keeps clear space above it
       footWireStyle: {
         position: 'absolute', left: 0, right: 0, width: '100%',
         bottom: st.narrow ? 96 : 'clamp(105px,7.5vw,155px)',
@@ -1030,7 +1128,6 @@ class Component extends DCLogic {
     };
   }
 }
-
 </script>
 </body>
 </html>
