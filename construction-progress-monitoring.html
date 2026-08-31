@@ -8,14 +8,18 @@
 <body>
 <x-dc>
 <helmet>
-<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#052A44"></rect><g fill="none" stroke="#E0A83E" stroke-width="3.4" stroke-linecap="round"><path d="M26 70V44M42 70V32M58 70V50M74 70V38"></path><path d="M22 78h56"></path></g></svg></template>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#052A44"></rect><g fill="none" stroke="#E0A83E" stroke-width="3.4" stroke-linecap="round"><path d="M34 66l16-32 16 32"></path><path d="M41 58h18"></path></g></svg></template>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Construction Progress Monitoring and Documentation in Texas | Eagle Surveying</title>
+<title>Construction Progress Monitoring in Texas | Eagle Surveying</title>
+<meta name="description" content="Construction progress monitoring and documentation in Texas using recurring aerial and 360° capture, progress orthophotos, DroneDeploy access, comparisons, and overlays.">
+<!-- CANONICAL URL PENDING MAK PRODUCTION ROUTE -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap&family=IBM+Plex+Mono:wght@400;500;700" rel="stylesheet">
 <style>
   *{box-sizing:border-box}
+  @keyframes eagle-wing-drift{0%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-1.4%,-3.6%,0) scale(1.022)}100%{transform:translate3d(0,0,0) scale(1)}}
+  @media (prefers-reduced-motion: reduce){[data-wing]{animation:none!important}}
   @keyframes eagle-marquee-strip{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 15px))}}
   body{margin:0;background:#F6F8FA;font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
   h1,h2,h3,h4,p{margin:0}
@@ -45,7 +49,7 @@
               <a href="/terrestrial-laser-scanning" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Terrestrial Laser Scanning (TLS)</a>
               <a href="/360-site-documentation" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">360° Site Documentation &amp; Virtual Walkthroughs</a>
               <a href="/aerial-thermal-imagery" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Aerial Thermal Imagery</a>
-              <a href="#top" style="font-size:14.5px;color:#0A4B77;font-weight:700;line-height:1.35">Construction Progress Monitoring and Documentation</a>
+              <a href="/construction-progress-monitoring" style="font-size:14.5px;color:#0A4B77;font-weight:700;line-height:1.35">Construction Progress Monitoring and Documentation</a>
               <a href="/volumetric-stockpile-analysis" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Volumetric &amp; Stockpile Analysis</a>
             </div>
           </div>
@@ -94,20 +98,20 @@
             <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:11px">
               <a href="/about" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">About Us</a>
               <a href="/#cares" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Eagle Cares</a>
-              <a href="#platform" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Technology &amp; Equipment</a>
+              <a href="/#platforms" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Technology &amp; Equipment</a>
               <a href="/faqs" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">FAQs</a>
             </div>
           </div>
         </span>
         <a href="/#contact" style="font-size:14.5px;color:#0F2E45;font-weight:500;padding:11px 15px;border-radius:999px;white-space:nowrap" style-hover="background:#E7EDF4;color:#0A4B77">Careers</a>
         <span data-nav="" onMouseEnter="{{ openCT }}" onMouseLeave="{{ closeNav }}" style="display:inline-flex;position:relative">
-          <a href="#estimate" style="display:inline-flex;align-items:center;gap:6px;font-size:14.5px;color:#0F2E45;font-weight:500;padding:11px 15px;border-radius:999px;white-space:nowrap" style-hover="background:#E7EDF4;color:#0A4B77">Contact<span style="font-size:11px;opacity:.55">⌄</span></a>
+          <a href="/#estimate" style="display:inline-flex;align-items:center;gap:6px;font-size:14.5px;color:#0F2E45;font-weight:500;padding:11px 15px;border-radius:999px;white-space:nowrap" style-hover="background:#E7EDF4;color:#0A4B77">Contact<span style="font-size:11px;opacity:.55">⌄</span></a>
           <div style="{{ ddCT }}">
             <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Contact</span>
             <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:11px">
-              <a href="#estimate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Have a Question</a>
-              <a href="#estimate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Request an Estimate</a>
-              <a href="#estimate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Schedule a Meeting</a>
+              <a href="/#estimate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Have a Question</a>
+              <a href="/#estimate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Request an Estimate</a>
+              <a href="/#estimate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Schedule a Meeting</a>
             </div>
           </div>
         </span>
@@ -129,12 +133,12 @@
     <div style="flex:1;overflow-y:auto;padding:8px clamp(18px,3.2vw,96px) 32px">
       <button type="button" onClick="{{ toggleAccRC }}" style="{{ accBtnStyle }}">Reality Capture<span style="opacity:.5;font-size:13px">⌄</span></button>
       <div style="{{ accRC }}">
-        <a href="/aerial-lidar-mapping" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Aerial LiDAR Mapping</a>
+        <a href="/aerial-lidar-mapping" onClick="{{ closeDrawer }}" style="{{ accLinkActiveStyle }}">Aerial LiDAR Mapping</a>
         <a href="/aerial-photogrammetry" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Aerial Photogrammetry</a>
         <a href="/terrestrial-laser-scanning" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Terrestrial Laser Scanning (TLS)</a>
         <a href="/360-site-documentation" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">360° Site Documentation</a>
         <a href="/aerial-thermal-imagery" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Aerial Thermal Imagery</a>
-        <a href="#top" onClick="{{ closeDrawer }}" style="{{ accLinkActiveStyle }}">Construction Progress Monitoring</a>
+        <a href="/construction-progress-monitoring" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Construction Progress Monitoring</a>
         <a href="/volumetric-stockpile-analysis" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Volumetric &amp; Stockpile Analysis</a>
       </div>
       <button type="button" onClick="{{ toggleAccSV }}" style="{{ accBtnStyle }}">Surveying Services<span style="opacity:.5;font-size:13px">⌄</span></button>
@@ -165,217 +169,228 @@
       <a href="/#insights" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">Blog</a>
       <a href="/about" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">About Us</a>
       <a href="/#cares" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">Eagle Cares</a>
-      <a href="/aerial-lidar-mapping#platforms" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">Technology &amp; Equipment</a>
       <a href="/faqs" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">FAQs</a>
+      <a href="/aerial-lidar-mapping#platforms" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">Technology &amp; Equipment</a>
       <a href="/#contact" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">Careers</a>
       <button type="button" onClick="{{ toggleAccCT }}" style="{{ accBtnStyle }}">Contact<span style="opacity:.5;font-size:13px">⌄</span></button>
       <div style="{{ accCT }}">
-        <a href="#estimate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Have a Question</a>
-        <a href="#estimate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Request an Estimate</a>
-        <a href="#estimate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Schedule a Meeting</a>
+        <a href="/#estimate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Have a Question</a>
+        <a href="/#estimate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Request an Estimate</a>
+        <a href="/#estimate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Schedule a Meeting</a>
       </div>
       <div style="display:flex;flex-direction:column;gap:10px;margin-top:26px">
-        <a href="#estimate" onClick="{{ closeDrawer }}" style="display:flex;align-items:center;justify-content:center;min-height:52px;background:#E0A83E;color:#052A44;font-weight:700;font-size:16px;border-radius:999px">Request an Estimate</a>
+        <a href="/#estimate" onClick="{{ closeDrawer }}" style="display:flex;align-items:center;justify-content:center;min-height:52px;background:#E0A83E;color:#052A44;font-weight:700;font-size:16px;border-radius:999px">Request an Estimate</a>
         <a href="tel:9402223009" style="display:flex;align-items:center;justify-content:center;min-height:52px;border:1px solid #C9D6E2;color:#0F2E45;font-weight:600;font-size:16px;border-radius:999px">Call (940) 222-3009</a>
       </div>
     </div>
   </div>
 
-  <section id="top" data-screen-label="Service hero" style="position:relative;min-height:min(34vh,336px);display:flex;align-items:flex-end;background:#052A44;overflow:hidden">
-    <img data-hero="0" src="p03.webp" alt="Active construction project under recurring documentation" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
-    <div style="position:absolute;inset:0;background:linear-gradient(102deg,rgba(5,42,68,.95) 0%,rgba(5,42,68,.74) 50%,rgba(5,42,68,.34) 90%)"></div>
-    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,42,68,.82) 0%,rgba(5,42,68,0) 48%)"></div>
-    <div style="position:relative;width:100%;max-width:calc(min(2880px,max(1720px,86vw)) + 2 * clamp(18px,3.2vw,96px));margin:0 auto;padding:clamp(38px,5.4vw,62px) clamp(18px,3.2vw,96px) clamp(100px,12vw,110px)">
-      <div style="max-width:940px">
-        <span data-hero="1" style="display:block;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#E0A83E;margin-bottom:18px">A consistent visual record from start to closeout</span>
-        <h1 data-hero="2" style="font-family:'Sora',sans-serif;color:#fff;font-size:clamp(32px,4.8vw,68px);line-height:1.05;letter-spacing:-.03em;font-weight:600;text-wrap:balance">Construction Progress Monitoring and Documentation</h1>
-        <p data-hero="3" style="color:#DCE8F0;font-size:clamp(16px,1.35vw,20px);line-height:1.65;max-width:680px;margin-top:26px;text-wrap:pretty">Recurring aerial and 360° ground capture on a defined schedule builds a consistent, time-stamped visual timeline of your project from preconstruction through closeout. One source of truth, hosted in DroneDeploy with direct client access for every stakeholder.</p>
-        <div data-hero="4" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:36px">
-          <a href="#estimate" style="display:inline-flex;align-items:center;min-height:52px;padding:0 30px;background:#E0A83E;color:#052A44;font-weight:700;font-size:16px;border-radius:999px" style-hover="background:#F0BC57">Request an Estimate</a>
-          <a href="#platform" style="display:inline-flex;align-items:center;min-height:52px;padding:0 30px;border:1px solid rgba(255,255,255,.4);color:#fff;font-weight:600;font-size:16px;border-radius:999px" style-hover="background:rgba(255,255,255,.12)">What a capture includes</a>
+
+  <section data-screen-label="Service hero" style="{{ cheroStyle }}">
+    <svg data-wing="" viewBox="0 0 420 149" fill="#9FC0DA" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" style="{{ cheroBgStyle }}"><path d="M1.6 0Q21.3 10.6 32 14.9Q42.8 19.3 63.6 25.1Q84.4 30.8 115.2 35.3Q145.9 39.8 187.9 43.8Q230 47.8 256.1 53Q282.1 58.1 295.4 62.6Q308.6 67.1 318.1 72.3Q327.6 77.4 331.5 80.6Q335.3 83.8 338.1 87.2Q340.8 90.6 342.9 96Q345 101.5 345 106.3Q345 111.1 344 114.3Q343 117.5 342.2 112.8Q341.4 108.2 339.9 105.2Q338.5 102.1 333.2 96.5Q327.9 90.9 318.9 86.4Q309.8 81.9 300.6 79.3Q291.5 76.7 269.6 73.5Q247.7 70.3 200 67Q152.3 63.6 135.1 61.7Q117.9 59.7 102.8 57.2Q87.6 54.6 75 51.4Q62.5 48.2 51.2 43.7Q39.9 39.2 31.7 34.2Q23.5 29.2 15.6 21.2Q7.7 13.2 4.7 6.8Q1.6 0.3 1.6 0.1Z"></path><path d="M51.9 57.2Q74.1 65.5 97.4 70Q120.8 74.5 142.1 76.5Q163.3 78.4 202.3 79.2Q241.2 80 254.3 81.3Q267.3 82.5 276.6 84.5Q286 86.4 296.4 89.6Q306.9 92.8 312.3 95.3Q317.6 97.9 324.1 103.1Q330.5 108.2 333.1 113.3Q335.6 118.5 335.5 122.2Q335.3 125.9 331.3 121.1Q327.2 116.2 321.8 113.2Q316.3 110.1 307.8 107.5Q299.2 105 286.9 103.1Q274.7 101.2 251.3 99.9Q228 98.6 195 97.8Q162 97 140.3 94.4Q118.5 91.8 110.2 89.9Q101.8 88 88.9 82.8Q76 77.7 69.3 73.2Q62.5 68.7 57.2 63.1Q51.9 57.5 51.9 57.4Z"></path><path d="M73.8 87.3Q86.3 95.1 92.3 97.7Q98.2 100.2 106.9 102.8Q115.6 105.3 126.4 107.3Q137.2 109.2 155.3 110.3Q173.3 111.4 216.2 111Q259 110.5 276.1 112Q293.1 113.4 301.3 115.3Q309.5 117.2 313.7 119.3Q317.9 121.4 320.9 124.3Q324 127.2 325 129.8Q326 132.3 325.6 135.4Q325.3 138.4 323.4 141.9Q321.4 145.5 320.3 146.3Q319.2 147.1 319 142.6Q318.9 138.1 316 134.4Q313.1 130.7 309.4 128.8Q305.7 126.8 299.7 125.5Q293.7 124.3 275.9 124.2Q258 124 232.4 126.5Q206.8 129.1 194.1 129.8Q181.3 130.4 170.1 130.3Q158.8 130.1 148.2 128.9Q137.5 127.8 127.8 125.3Q118.2 122.7 108.8 118.2Q99.5 113.7 91.2 106.8Q82.8 99.9 78.3 93.8Q73.8 87.7 73.8 87.5Z"></path><path d="M298.6 52.7Q329.8 53 357.2 56.9Q384.6 60.7 386.4 61.4Q388.1 62 390.4 64.4Q392.6 66.8 397.8 67.6Q402.9 68.4 408.9 70.3Q414.8 72.3 417.3 77.5Q419.7 82.8 415.8 81.5Q411.9 80.3 407.4 80.4Q402.9 80.6 397.8 81.3Q392.6 81.9 383.1 84.5Q373.6 87 370.3 89.3Q366.9 91.5 364.9 94.5Q363 97.6 360.9 103Q358.8 108.5 355.4 111.3Q352 114 352.9 109.7Q353.7 105.3 353.5 98.9Q353.3 92.5 351.2 87.2Q349.1 81.9 347.2 79.3Q345.3 76.7 338.1 71.1Q330.8 65.5 321 61.5Q311.1 57.5 303.9 55.9Q296.6 54.3 295.6 53.8Q294.7 53.3 296.5 53.1Q298.3 53 298.5 52.9Z"></path></svg>
+    <div style="{{ cheroInStyle }}">
+      <div style="min-width:0">
+        <span style="{{ eyebrowDarkStyle }}">Reality Capture / Construction Progress</span>
+        <h1 style="{{ h1Style }}">Construction Progress <span style="{{ h1SpanStyle }}">Monitoring and Documentation</span></h1>
+        <p style="{{ cheroTagStyle }}">A Consistent Visual Record From Start to Closeout.</p>
+        <p style="{{ cheroLeadStyle }}">Give owners, contractors, VDC teams, and design professionals an organized view of how the jobsite changes over time. Eagle combines scheduled aerial and ground-based capture with direct DroneDeploy access so current and prior conditions stay easy to review, compare, and share.</p>
+        <div style="{{ cheroActsStyle }}">
+          <a href="#contact-cpm" style="{{ btnLightStyle }}" style-hover="background:#fff">Discuss Your Project</a>
+          <a href="#deliverables" style="{{ cheroLinkStyle }}" style-hover="color:#DCEAF5">View Typical Deliverables &darr;</a>
         </div>
       </div>
-    </div>
-    <div data-hero="5" style="position:absolute;left:0;right:0;bottom:0;background:rgba(5,42,68,.78);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,.18)">
-      <div style="{{ stripStyle }}">
-        <div style="{{ stripViewportStyle }}">
-          <div style="{{ stripTrackStyle }}">
-              <span style="font-size:13px;color:#C3D8E6;font-weight:500">Defined capture schedule</span>
-              <span style="font-size:13px;color:#C3D8E6;font-weight:500">Aerial + 360° ground</span>
-              <span style="font-size:13px;color:#C3D8E6;font-weight:500">Hosted in DroneDeploy</span>
-              <span style="font-size:13px;color:#C3D8E6;font-weight:500">Survey-grade when the scope calls for it</span>
-              <span aria-hidden="true" style="{{ stripDupStyle }}">Defined capture schedule</span>
-              <span aria-hidden="true" style="{{ stripDupStyle }}">Aerial + 360° ground</span>
-              <span aria-hidden="true" style="{{ stripDupStyle }}">Hosted in DroneDeploy</span>
-              <span aria-hidden="true" style="{{ stripDupStyle }}">Survey-grade when the scope calls for it</span>
-          </div>
+      <div data-reveal="" style="{{ cmpStyle }}">
+        <span aria-hidden="true" style="{{ cmpSeamStyle }}"></span>
+        <div style="{{ cmpCellStyle }}">
+          <img src="cpm-earlier-capture-aerial.webp" alt="Aerial view of an active construction site with mass earthwork and structural steel in progress" width="808" height="505" fetchpriority="high" decoding="async" style="{{ cmpImgStyle }}">
+          <span style="{{ cmpLblStyle }}">Earlier Capture</span>
+        </div>
+        <div style="{{ cmpCellStyle }}">
+          <div style="{{ cmpPhStyle }}">Approved recurring construction aerial &mdash; later date, same site and viewpoint</div>
+          <span style="{{ cmpLblStyle }}">Latest Capture</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="overview" data-screen-label="Overview" style="scroll-margin-top:96px;background:#F6F8FA;padding:clamp(42px,6.5vw,96px) clamp(18px,3.2vw,96px)">
-    <div style="{{ overviewGridStyle }}">
-      <div style="display:flex;flex-direction:column;gap:24px">
-        <div>
-          <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:18px">The record</span>
-          <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.16;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:22ch;text-wrap:pretty">Instead of scattered cell phone photos, one organized timeline.</h2>
+  <nav aria-label="Page sections" style="{{ snavStyle }}">
+    <div style="{{ snavInStyle }}">
+      <a href="#overview" style="{{ snavLinkStyle }}" style-hover="color:#00548B">What It Is</a>
+      <a href="#uses" style="{{ snavLinkStyle }}" style-hover="color:#00548B">Project Uses</a>
+      <a href="#deliverables" style="{{ snavLinkStyle }}" style-hover="color:#00548B">Deliverables</a>
+      <a href="#process" style="{{ snavLinkStyle }}" style-hover="color:#00548B">How It Works</a>
+      <a href="#scope" style="{{ snavLinkStyle }}" style-hover="color:#00548B">Scope</a>
+      <a href="#faqs" style="{{ snavLinkStyle }}" style-hover="color:#00548B">FAQs</a>
+    </div>
+  </nav>
+
+  <section id="overview" data-screen-label="What it is" style="{{ secFogStyle }}">
+    <div style="{{ wrapStyle }}">
+      <div style="{{ wiaTopStyle }}">
+        <div style="min-width:0">
+          <span style="{{ eyebrowStyle }}">What It Is</span>
+          <h2 style="{{ h2Style }}">One Project Record Built Across Time.</h2>
         </div>
-        <p style="font-size:clamp(16px,1.15vw,18px);line-height:1.72;color:#3C5468;text-wrap:pretty">Construction progress monitoring and documentation combines recurring aerial flights and 360° ground capture into a consistent, time-stamped record of how a project is built, from preconstruction through closeout. Instead of scattered cell phone photos and manual reports, your team gets a single, organized visual timeline of orthomosaics, 3D models, and 360° walkthroughs captured on a defined schedule and mapped to your project.</p>
-        <p style="font-size:clamp(16px,1.15vw,18px);line-height:1.72;color:#3C5468;text-wrap:pretty">This gives project executives, superintendents, VDC managers, and owners a current, verifiable view of work in place without a trip to the jobsite.</p>
+        <div data-reveal="" style="{{ wiaCopyStyle }}">
+          <p style="{{ wiaPStyle }}">Construction progress monitoring and documentation combines recurring aerial flights and 360&deg; ground capture into a time-stamped record of how a project changes from preconstruction through closeout.</p>
+          <p style="{{ wiaPStyle }}">Instead of relying on scattered cell phone photos and disconnected folders, orthomosaics, 3D models, aerial imagery, and 360&deg; walkthroughs can be organized around the project and the date they were captured. The result is a visual history that teams can return to as the work advances.</p>
+        </div>
       </div>
-      <div style="{{ collageStyle }}">
-        <div data-reveal="" data-rc-card="" style="{{ collageTallStyle }}">
-          <img src="p02.webp" alt="Commercial facility documented from the air during construction" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
+      <div data-reveal="" style="{{ tlineStyle }}">
+        <div style="min-width:0">
+          <div style="{{ tsFrameStyle }}"><div style="{{ tsPhStyle }}">Same site &mdash; capture 01</div></div>
+          <div style="{{ tsRailStyle }}"><span aria-hidden="true" style="{{ tsRailLineStyle }}"></span><span aria-hidden="true" style="{{ tsDotStyle }}"></span></div>
+          <div style="{{ tsNameStyle }}">Preconstruction</div>
+          <div style="{{ tsSeqStyle }}">First documented visit</div>
         </div>
-        <div data-reveal="" data-rc-card="" style="{{ collageShortStyle }}">
-          <img src="s08.webp" alt="Interior conditions recorded before they are concealed" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
+        <div style="min-width:0">
+          <div style="{{ tsFrameStyle }}"><div style="{{ tsPhStyle }}">Same site &mdash; capture 02</div></div>
+          <div style="{{ tsRailStyle }}"><span aria-hidden="true" style="{{ tsRailLineStyle }}"></span><span aria-hidden="true" style="{{ tsDotStyle }}"></span></div>
+          <div style="{{ tsNameStyle }}">Sitework</div>
+          <div style="{{ tsSeqStyle }}">Grading and underground</div>
+        </div>
+        <div style="min-width:0">
+          <div style="{{ tsFrameStyle }}"><div style="{{ tsPhStyle }}">Same site &mdash; capture 03</div></div>
+          <div style="{{ tsRailStyle }}"><span aria-hidden="true" style="{{ tsRailLineStyle }}"></span><span aria-hidden="true" style="{{ tsDotStyle }}"></span></div>
+          <div style="{{ tsNameStyle }}">Vertical Construction</div>
+          <div style="{{ tsSeqStyle }}">Structure and enclosure</div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="platform" data-screen-label="One source of truth" style="scroll-margin-top:96px;background:#052A44;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px);position:relative;overflow:hidden">
-    <div style="position:absolute;top:-220px;left:-160px;width:640px;height:640px;border-radius:999px;background:radial-gradient(circle,rgba(74,159,216,.22),rgba(74,159,216,0) 70%);pointer-events:none"></div>
-    <div style="position:relative;max-width:min(2880px,max(1720px,86vw));margin:0 auto">
-      <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#6D9DBD;margin-bottom:16px">One source of truth</span>
-      <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:600;color:#fff;max-width:26ch;text-wrap:balance">Every stakeholder working from the same capture.</h2>
-      <p style="font-size:16.5px;line-height:1.7;color:#C3D8E6;max-width:70ch;margin-top:20px;text-wrap:pretty">Eagle Surveying processes and hosts this data in DroneDeploy, giving clients direct platform access so every stakeholder is working from the same source of truth. Captures can be compared over time, referenced alongside RFIs, and shared with project teams for better communication and decision-making.</p>
-      <div style="{{ captureGridStyle }}">
-        <div style="display:flex;flex-direction:column;gap:12px;padding:clamp(24px,2.4vw,32px);border:1px solid rgba(255,255,255,.2);border-radius:24px">
-          <span style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:#E0A83E;letter-spacing:.08em">FROM THE AIR</span>
-          <span style="font-family:'Sora',sans-serif;font-size:clamp(18px,1.6vw,22px);font-weight:600;color:#fff;letter-spacing:-.02em;line-height:1.28">Orthomosaics</span>
-          <span style="font-size:15.5px;line-height:1.65;color:#C3D8E6">A current overhead view of work in place, captured on the schedule you set.</span>
+  <section id="uses" data-screen-label="Project uses" style="{{ secUsesStyle }}">
+    <div style="{{ wrapStyle }}">
+      <div style="{{ usesInStyle }}">
+        <div style="min-width:0">
+          <span style="{{ eyebrowDarkStyle }}">Project Uses</span>
+          <h2 style="{{ h2DarkStyle }}">Useful When the Project Needs a Date-Specific Answer.</h2>
+          <p style="{{ usesPStyle }}">A drone flight on a known date, paired with ground-level capture, gives the project team something to point at when a question is about conditions rather than recollection.</p>
+          <p style="{{ usesTxStyle }}">Eagle supports construction progress documentation for projects throughout Texas.</p>
         </div>
-        <div style="display:flex;flex-direction:column;gap:12px;padding:clamp(24px,2.4vw,32px);border:1px solid rgba(255,255,255,.2);border-radius:24px">
-          <span style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:#E0A83E;letter-spacing:.08em">FROM THE AIR</span>
-          <span style="font-family:'Sora',sans-serif;font-size:clamp(18px,1.6vw,22px);font-weight:600;color:#fff;letter-spacing:-.02em;line-height:1.28">3D models</span>
-          <span style="font-size:15.5px;line-height:1.65;color:#C3D8E6">Site geometry your team can review and compare against the design.</span>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:12px;padding:clamp(24px,2.4vw,32px);border:1px solid rgba(255,255,255,.2);border-radius:24px">
-          <span style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:#E0A83E;letter-spacing:.08em">FROM THE GROUND</span>
-          <span style="font-family:'Sora',sans-serif;font-size:clamp(18px,1.6vw,22px);font-weight:600;color:#fff;letter-spacing:-.02em;line-height:1.28">360° walkthroughs</span>
-          <span style="font-size:15.5px;line-height:1.65;color:#C3D8E6">Navigable interior and site imagery mapped to your project by date.</span>
-          <a href="/360-site-documentation" style="align-self:flex-start;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#fff;border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:4px;margin-top:4px" style-hover="border-color:#fff">360° Site Documentation →</a>
+        <div data-reveal="" style="min-width:0">
+          <div style="{{ uRowStyle }}"><span style="{{ unStyle }}">01</span><div style="min-width:0"><h3 style="{{ uRowH3Style }}">Preconstruction &amp; Closeout</h3><p style="{{ uRowPStyle }}">Establish a visual baseline before major work begins and preserve a documented record as the project reaches completion.</p></div></div>
+          <div style="{{ uRowStyle }}"><span style="{{ unStyle }}">02</span><div style="min-width:0"><h3 style="{{ uRowH3Style }}">Owner &amp; Executive Reporting</h3><p style="{{ uRowPStyle }}">Give decision-makers a clear view of current site conditions without requiring every stakeholder to visit the jobsite.</p></div></div>
+          <div style="{{ uRowStyle }}"><span style="{{ unStyle }}">03</span><div style="min-width:0"><h3 style="{{ uRowH3Style }}">RFI &amp; Project Review</h3><p style="{{ uRowPStyle }}">Return to imagery captured on a known date when project teams need visual context for an RFI, coordination question, or progress discussion.</p></div></div>
+          <div style="{{ uRowStyle }}"><span style="{{ unStyle }}">04</span><div style="min-width:0"><h3 style="{{ uRowH3Style }}">Design &amp; Condition Comparison</h3><p style="{{ uRowPStyle }}">Review captured conditions alongside plans or other project information when the team needs broader context for what is happening in the field.</p></div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="audience" data-screen-label="Who uses it" style="scroll-margin-top:96px;background:#E7EDF4;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px)">
-    <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto">
-      <div style="{{ audHeadStyle }}">
-        <div>
-          <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Who opens it</span>
-          <h2 style="font-family:'Sora',sans-serif;font-size:clamp(26px,2.7vw,40px);line-height:1.16;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:20ch;text-wrap:pretty">Four seats at the table, one dataset.</h2>
-        </div>
-        <p style="font-size:16.5px;line-height:1.7;color:#3C5468;max-width:52ch;text-wrap:pretty">Coordination among general contractors, subcontractors, architects, engineers, and owners across the DFW metroplex, Central Texas, and all of Texas.</p>
+  <section id="deliverables" data-screen-label="Deliverables" style="{{ secWhiteStyle }}">
+    <div style="{{ wrapStyle }}">
+      <div style="{{ dlvHeadStyle }}">
+        <span style="{{ eyebrowStyle }}">Typical Deliverables</span>
+        <h2 style="{{ h2Style }}">What the Project Team Receives.</h2>
+        <p style="{{ dlvHeadPStyle }}">Each item below is a standard part of the assignment. Select one to see it in the project workspace.</p>
       </div>
-      <div style="{{ audGridStyle }}">
-        <div style="display:flex;flex-direction:column;gap:10px;padding:26px 28px;background:#F6F8FA;border:1px solid #C9D6E2;border-radius:24px">
-          <span style="font-family:'Sora',sans-serif;font-size:19px;font-weight:600;color:#0F2E45;letter-spacing:-.02em">Project executives</span>
-          <span style="font-size:15.5px;line-height:1.6;color:#3C5468">Owner and executive reporting across single sites or project portfolios.</span>
+      <div style="{{ dlvInStyle }}">
+        <div data-reveal="" id="dlvpanel" role="tabpanel" aria-live="polite" style="{{ dlvFrameStyle }}">
+          <div style="{{ dlvBarStyle }}"><i style="{{ dlvDotStyle }}"></i><i style="{{ dlvDotStyle }}"></i><i style="{{ dlvDotStyle }}"></i><span style="{{ dlvBarLblStyle }}">Project Workspace</span></div>
+          <div style="{{ dv0Style }}"><div style="{{ dlvPhStyle }}">Approved construction progress DroneDeploy workspace image needed</div></div>
+          <div style="{{ dv1Style }}"><img src="cpm-progress-orthophoto-earthwork.webp" alt="Georeferenced orthophoto of an active earthwork site" width="1400" height="875" loading="lazy" decoding="async" style="{{ dlvImgStyle }}"></div>
+          <div style="{{ dv2Style }}"><div style="{{ dlvPhStyle }}">Approved construction progress photo or video still needed</div></div>
+          <div style="{{ dv3Style }}"><img src="cpm-side-by-side-comparison.webp" alt="Side-by-side comparison view of a site shown at two capture dates" width="1100" height="619" loading="lazy" decoding="async" style="{{ dlvImgStyle }}"></div>
+          <div style="{{ dv4Style }}"><img src="cpm-imagery-with-linework-overlay.webp" alt="Aerial imagery with project reference linework aligned to the captured site" width="1400" height="875" loading="lazy" decoding="async" style="{{ dlvImgStyle }}"></div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:10px;padding:26px 28px;background:#F6F8FA;border:1px solid #C9D6E2;border-radius:24px">
-          <span style="font-family:'Sora',sans-serif;font-size:19px;font-weight:600;color:#0F2E45;letter-spacing:-.02em">Superintendents</span>
-          <span style="font-size:15.5px;line-height:1.6;color:#3C5468">A current, verifiable view of work in place without a trip to the jobsite.</span>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:10px;padding:26px 28px;background:#F6F8FA;border:1px solid #C9D6E2;border-radius:24px">
-          <span style="font-family:'Sora',sans-serif;font-size:19px;font-weight:600;color:#0F2E45;letter-spacing:-.02em">VDC managers</span>
-          <span style="font-size:15.5px;line-height:1.6;color:#3C5468">Design-versus-existing-conditions comparisons against site plans.</span>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:10px;padding:26px 28px;background:#F6F8FA;border:1px solid #C9D6E2;border-radius:24px">
-          <span style="font-family:'Sora',sans-serif;font-size:19px;font-weight:600;color:#0F2E45;letter-spacing:-.02em">Owners</span>
-          <span style="font-size:15.5px;line-height:1.6;color:#3C5468">RFI support, dispute resolution, and progress verification on the record.</span>
+        <div role="tablist" aria-label="Typical deliverables" style="{{ dlvListStyle }}">
+          <button type="button" role="tab" aria-controls="dlvpanel" aria-selected="{{ dsel0 }}" onClick="{{ setDv0 }}" style="{{ di0Style }}"><h3 style="{{ diH3Style0 }}"><b style="{{ diNumStyle }}">01</b>DroneDeploy Project Access</h3><p style="{{ diPStyle0 }}">An organized project workspace where authorized users can review available current and prior site captures.</p></button>
+          <button type="button" role="tab" aria-controls="dlvpanel" aria-selected="{{ dsel1 }}" onClick="{{ setDv1 }}" style="{{ di1Style }}"><h3 style="{{ diH3Style1 }}"><b style="{{ diNumStyle }}">02</b>Progress Orthophotos</h3><p style="{{ diPStyle1 }}">Georeferenced aerial views that provide a consistent plan-view reference for conditions captured on a specific date.</p></button>
+          <button type="button" role="tab" aria-controls="dlvpanel" aria-selected="{{ dsel2 }}" onClick="{{ setDv2 }}" style="{{ di2Style }}"><h3 style="{{ diH3Style2 }}"><b style="{{ diNumStyle }}">03</b>Progress Photos &amp; Videos</h3><p style="{{ diPStyle2 }}">Visual media captured during documented site visits to provide additional context beyond the mapped aerial view.</p></button>
+          <button type="button" role="tab" aria-controls="dlvpanel" aria-selected="{{ dsel3 }}" onClick="{{ setDv3 }}" style="{{ di3Style }}"><h3 style="{{ diH3Style3 }}"><b style="{{ diNumStyle }}">04</b>Side-by-Side Comparisons</h3><p style="{{ diPStyle3 }}">Paired capture dates that make it easier to review how visible site conditions changed between visits.</p></button>
+          <button type="button" role="tab" aria-controls="dlvpanel" aria-selected="{{ dsel4 }}" onClick="{{ setDv4 }}" style="{{ di4Style }}"><h3 style="{{ diH3Style4 }}"><b style="{{ diNumStyle }}">05</b>Overlays</h3><p style="{{ diPStyle4 }}">Project or reference information aligned with captured imagery when included in the agreed scope.</p></button>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="surveygrade" data-screen-label="Survey-grade option" style="scroll-margin-top:96px;background:#F7EEDD;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px)">
-    <div style="{{ sgGridStyle }}">
-      <div data-reveal="" data-rc-card="" style="{{ sgImageStyle }}">
-        <img src="p10.webp" alt="Eagle crew establishing survey control on an active site" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-      </div>
-      <div style="display:flex;flex-direction:column;gap:24px">
-        <div>
-          <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#8A6A2C;margin-bottom:16px">Because a surveying firm flies it</span>
-          <h2 style="font-family:'Sora',sans-serif;font-size:clamp(26px,2.7vw,40px);line-height:1.16;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:24ch;text-wrap:pretty">When the flight also has to be a measurable deliverable.</h2>
-        </div>
-        <p style="font-size:16.5px;line-height:1.7;color:#4A5A63;max-width:56ch;text-wrap:pretty">As a surveying firm, when a flight also needs to serve as a measurable deliverable, such as a topographic survey, earthwork surface, or as-built verification, the data can be tied to survey control and delivered to survey-grade standards rather than used solely as visual documentation.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:10px">
-          <a href="/#surveying" style="font-size:13.5px;font-weight:600;color:#4A3A17;border:1px solid #D9C79F;background:#FDF8EF;border-radius:999px;padding:11px 18px" style-hover="background:#fff">Topographic Survey →</a>
-          <a href="/volumetric-stockpile-analysis" style="font-size:13.5px;font-weight:600;color:#4A3A17;border:1px solid #D9C79F;background:#FDF8EF;border-radius:999px;padding:11px 18px" style-hover="background:#fff">Earthwork surfaces →</a>
-          <a href="/#surveying" style="font-size:13.5px;font-weight:600;color:#4A3A17;border:1px solid #D9C79F;background:#FDF8EF;border-radius:999px;padding:11px 18px" style-hover="background:#fff">As-Built Survey →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="uses" data-screen-label="Commonly used for" style="scroll-margin-top:96px;background:#F6F8FA;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px)">
-    <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto">
-      <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Commonly used for</span>
-      <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:24ch;text-wrap:pretty">What teams put the timeline to work on.</h2>
-      <div style="{{ usesListStyle }}">
-        <span style="{{ useItem }}"><span style="{{ useNum }}">01</span>Time-stamped progress records on commercial, industrial, and data center projects</span>
-        <span style="{{ useItem }}"><span style="{{ useNum }}">02</span>Design-versus-existing-conditions comparisons against site plans</span>
-        <span style="{{ useItem }}"><span style="{{ useNum }}">03</span>Owner and executive reporting across single sites or project portfolios</span>
-        <span style="{{ useItem }}"><span style="{{ useNum }}">04</span>RFI support, dispute resolution, and progress verification</span>
-        <span style="{{ useItem }}"><span style="{{ useNum }}">05</span>Preconstruction baseline and closeout documentation</span>
-        <span style="{{ useItem }}"><span style="{{ useNum }}">06</span>Coordination among general contractors, subcontractors, architects, engineers, and owners</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="related" data-screen-label="Related services" style="scroll-margin-top:96px;background:#E7EDF4;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px)">
-    <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto">
-      <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Often scoped together</span>
-      <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:24ch;text-wrap:pretty">What the same recurring visit can feed.</h2>
-      <div style="{{ relGridStyle }}">
-        <a href="/360-site-documentation" data-reveal="" data-rc-card="" style="{{ relCardStyle }}">
-          <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
-            <img src="s08.webp" alt="360 site documentation" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          </span>
-          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">360° Site Documentation</span>
-        </a>
-        <a href="/volumetric-stockpile-analysis" data-reveal="" data-rc-card="" style="{{ relCardStyle }}">
-          <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
-            <img src="p08.webp" alt="Volumetric and stockpile analysis" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          </span>
-          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Volumetric &amp; Stockpile Analysis</span>
-        </a>
-        <a href="/aerial-photogrammetry" data-reveal="" data-rc-card="" style="{{ relCardStyle }}">
-          <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
-            <img src="p09.webp" alt="Aerial photogrammetry" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          </span>
-          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Aerial Photogrammetry</span>
-        </a>
-        <a href="/terrestrial-laser-scanning" data-reveal="" data-rc-card="" style="{{ relCardStyle }}">
-          <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
-            <img src="p06.webp" alt="Terrestrial laser scanning" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          </span>
-          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Terrestrial Laser Scanning (TLS)</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section id="estimate" data-screen-label="CTA" style="scroll-margin-top:96px;position:relative;background:#052A44;overflow:hidden;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px)">
-    <img src="p03.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22">
-    <div style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(5,42,68,.96) 0%,rgba(5,42,68,.78) 60%,rgba(5,42,68,.6) 100%)"></div>
-    <div style="{{ ctaGridStyle }}">
+  <section id="process" data-screen-label="How it works" style="{{ secProcStyle }}">
+    <div style="{{ wrapStyle }}">
       <div>
-        <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,3vw,44px);line-height:1.12;letter-spacing:-.028em;font-weight:600;color:#fff;max-width:24ch;text-wrap:balance">Set the cadence once. We'll keep the record current.</h2>
-        <p style="font-size:clamp(15.5px,1.2vw,18px);line-height:1.7;color:#C3D8E6;max-width:52ch;margin-top:22px;text-wrap:pretty">Recurring progress documentation across the DFW metroplex, Central Texas, and all of Texas.</p>
+        <span style="{{ eyebrowDarkStyle }}">How It Works</span>
+        <h2 style="{{ h2DarkStyle }}">Set the Cadence. Keep the Views Comparable.</h2>
       </div>
-      <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
-        <a href="#estimate" style="display:inline-flex;align-items:center;min-height:54px;padding:0 32px;background:#E0A83E;color:#052A44;font-weight:700;font-size:16.5px;border-radius:999px" style-hover="background:#F0BC57">Request an Estimate</a>
-        <a href="tel:9402223009" style="display:inline-flex;align-items:center;min-height:54px;padding:0 32px;border:1px solid rgba(255,255,255,.4);color:#fff;font-weight:600;font-size:16.5px;border-radius:999px" style-hover="background:rgba(255,255,255,.12)">Call 940-222-3009</a>
+      <div data-reveal="" style="{{ procGridStyle }}">
+        <div style="{{ pStepStyle }}"><span aria-hidden="true" style="{{ pRuleStyle }}"></span><span style="{{ pNumStyle }}">01</span><h3 style="{{ pStepH3Style }}">Define the Record</h3><p style="{{ pStepPStyle }}">Identify the site, project phase, stakeholders, and the decisions the documentation needs to support.</p></div>
+        <div style="{{ pStepStyle }}"><span aria-hidden="true" style="{{ pRuleEvenStyle }}"></span><span style="{{ pNumStyle }}">02</span><h3 style="{{ pStepH3Style }}">Establish the Cadence</h3><p style="{{ pStepPStyle }}">Schedule collection around the project. Depending on the assignment, visits may be weekly, biweekly, monthly, milestone-based, or planned before work is concealed.</p></div>
+        <div style="{{ pStepStyle }}"><span aria-hidden="true" style="{{ pRuleStyle }}"></span><span style="{{ pNumStyle }}">03</span><h3 style="{{ pStepH3Style }}">Repeat the Collection</h3><p style="{{ pStepPStyle }}">Use repeat aerial flight paths and, when included, consistent 360&deg; capture routes to create a reliable basis for comparison between visits.</p></div>
+        <div style="{{ pStepStyle }}"><span aria-hidden="true" style="{{ pRuleEvenLastStyle }}"></span><span style="{{ pNumStyle }}">04</span><h3 style="{{ pStepH3Style }}">Process &amp; Publish</h3><p style="{{ pStepPStyle }}">Process the captured information, organize it by date, and make the agreed project products available through DroneDeploy.</p></div>
+      </div>
+      <p style="{{ pNoteStyle }}">Weather, airspace, site access, safety, and active operations may affect individual capture dates.</p>
+    </div>
+  </section>
+
+  <section id="scope" data-screen-label="Scope" style="{{ secWhiteStyle }}">
+    <div style="{{ wrapStyle }}">
+      <div style="{{ scopeTopStyle }}">
+        <div style="min-width:0">
+          <span style="{{ eyebrowStyle }}">Scope Matters</span>
+          <h2 style="{{ h2Style }}">Visual Record or Measured Deliverable. Define It Up Front.</h2>
+        </div>
+        <div data-reveal="" style="display:flex;flex-direction:column;gap:14px;min-width:0">
+          <p style="{{ scopePStyle }}">Not every construction-progress capture is intended for survey-grade measurement. Many assignments are designed primarily to create a consistent visual record for review, reporting, and coordination.</p>
+          <p style="{{ scopePStyle }}">When a visit must also support a measurable surface, topographic survey, earthwork analysis, or other survey-grade deliverable, Eagle can establish the required survey control and scope the collection accordingly.</p>
+          <p style="{{ scopePStyle }}">The project scope identifies which products are intended for viewing and which are intended for measurement.</p>
+        </div>
+      </div>
+      <div data-reveal="" style="{{ scopeSplitStyle }}">
+        <div style="{{ scolFirstStyle }}">
+          <div style="{{ scolHStyle }}"><b style="{{ scolBStyle }}">Visual Documentation</b></div>
+          <div style="{{ schipStyle }}">Progress review</div>
+          <div style="{{ schipStyle }}">Owner reporting</div>
+          <div style="{{ schipStyle }}">Date-specific site record</div>
+          <div style="{{ schipStyle }}">Coordination</div>
+        </div>
+        <div style="min-width:0">
+          <div style="{{ scolHStyle }}"><b style="{{ scolBStyle }}">Measured Deliverable</b></div>
+          <div style="{{ schipStyle }}">Survey-controlled surface</div>
+          <div style="{{ schipStyle }}">LiDAR-derived topographic data</div>
+          <div style="{{ schipStyle }}">Earthwork measurement</div>
+          <div style="{{ schipStyle }}">Scope-specific survey output</div>
+        </div>
+      </div>
+      <p data-reveal="" style="{{ snoteStyle }}"><b style="{{ snoteBStyle }}">Topographic Mapping</b>The surface and contours generated in DroneDeploy are photogrammetric, so trees, tall grass, shrubs, and other vegetation can affect them, and they are not always suitable for topographic mapping unless the site is relatively open and unobstructed. When a project needs topographic data, Eagle flies LiDAR for that purpose and can overlay the LiDAR-derived contours inside the DroneDeploy project.</p>
+      <p style="{{ srelStyle }}"><b style="{{ srelBStyle }}">Related Services</b><a href="/aerial-lidar-mapping" style="{{ srelLinkStyle }}" style-hover="color:#052A44">Aerial LiDAR Mapping</a><em aria-hidden="true" style="{{ srelSepStyle }}">&middot;</em><a href="/360-site-documentation" style="{{ srelLinkStyle }}" style-hover="color:#052A44">360&deg; Site Documentation &amp; Virtual Walkthroughs</a><em aria-hidden="true" style="{{ srelSepStyle }}">&middot;</em><a href="/aerial-photogrammetry" style="{{ srelLinkStyle }}" style-hover="color:#052A44">Aerial Photogrammetry</a><em aria-hidden="true" style="{{ srelSepStyle }}">&middot;</em><a href="/volumetric-stockpile-analysis" style="{{ srelLinkStyle }}" style-hover="color:#052A44">Volumetric &amp; Stockpile Analysis</a><em aria-hidden="true" style="{{ srelSepStyle }}">&middot;</em><a href="/construction-staking" style="{{ srelLinkStyle }}" style-hover="color:#052A44">Construction Staking</a><em aria-hidden="true" style="{{ srelSepStyle }}">&middot;</em><a href="/as-built-survey" style="{{ srelLinkStyle }}" style-hover="color:#052A44">As-Built Survey</a></p>
+    </div>
+  </section>
+
+  <section id="faqs" data-screen-label="CPM FAQs" style="{{ secFogStyle }}">
+    <div style="{{ wrapStyle }}">
+      <div style="{{ faqHeadStyle }}">
+        <span style="{{ eyebrowStyle }}">Frequently Asked Questions</span>
+        <h2 style="{{ h2Style }}">Construction Progress Monitoring FAQs</h2>
+      </div>
+      <div style="{{ faqListStyle }}">
+        <div style="{{ faqi0Style }}">
+          <button type="button" id="fq0" aria-expanded="{{ qsel0 }}" aria-controls="fa0" onClick="{{ setQ0 }}" style="{{ faqQStyle }}">What is Construction Progress Monitoring?<i aria-hidden="true" style="{{ faqIco0 }}">{{ faqSign0 }}</i></button>
+          <div id="fa0" role="region" aria-labelledby="fq0" style="{{ fa0Style }}"><p style="{{ faqAPStyle }}">Construction progress monitoring and documentation uses recurring aerial flights, orthomosaics, 3D models, and 360&deg; ground capture to create a consistent, time-stamped visual record from preconstruction through closeout. The information helps project executives, superintendents, VDC teams, owners, architects, engineers, and contractors review current conditions, compare work over time, and coordinate without relying on scattered photographs.</p></div>
+        </div>
+        <div style="{{ faqi1Style }}">
+          <button type="button" id="fq1" aria-expanded="{{ qsel1 }}" aria-controls="fa1" onClick="{{ setQ1 }}" style="{{ faqQStyle }}">How often can Eagle Surveying document a construction site?<i aria-hidden="true" style="{{ faqIco1 }}">{{ faqSign1 }}</i></button>
+          <div id="fa1" role="region" aria-labelledby="fq1" style="{{ fa1Style }}"><p style="{{ faqAPStyle }}">The capture frequency is established around the project schedule and the decisions the documentation needs to support. Common intervals include weekly, biweekly, monthly, milestone-based, or before work is concealed. Eagle Surveying can establish repeat flight paths and 360&deg; capture routes so each visit provides a consistent basis for comparison. Weather, airspace, site access, safety, and active operations may affect the capture date.</p></div>
+        </div>
+        <div style="{{ faqi2Style }}">
+          <button type="button" id="fq2" aria-expanded="{{ qsel2 }}" aria-controls="fa2" onClick="{{ setQ2 }}" style="{{ faqQStyle }}">What information is included in construction progress documentation?<i aria-hidden="true" style="{{ faqIco2 }}">{{ faqSign2 }}</i></button>
+          <div id="fa2" role="region" aria-labelledby="fq2" style="{{ fa2Style }}"><p style="{{ faqAPStyle }}">Depending on the scope, construction progress documentation may include time-stamped aerial imagery, georeferenced orthomosaics, 3D site models, 360&deg; virtual walkthroughs, comparison views, progress timelines, and measurable surfaces tied to survey control. Visual documentation and survey-grade measurement are different deliverables, so Eagle Surveying identifies which portions of the capture are intended for viewing and which are intended for measurement.</p></div>
+        </div>
+        <div style="{{ faqi3Style }}">
+          <button type="button" id="fq3" aria-expanded="{{ qsel3 }}" aria-controls="fa3" onClick="{{ setQ3 }}" style="{{ faqQStyle }}">Can construction progress documentation support RFIs, pay applications, and dispute resolution?<i aria-hidden="true" style="{{ faqIco3 }}">{{ faqSign3 }}</i></button>
+          <div id="fa3" role="region" aria-labelledby="fq3" style="{{ fa3Style }}"><p style="{{ faqAPStyle }}">Time-stamped imagery and recurring site records can support project communication, RFI review, progress review, pay-application documentation, and dispute evaluation by showing conditions captured on specific dates. The documentation does not independently approve work, certify a pay application, or determine contractual responsibility. Those decisions remain with the owner, contractor, design professional, or other authorized project party.</p></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <footer data-screen-label="Footer" style="position:relative;overflow:hidden;background:#052A44;padding:clamp(38px,5.5vw,68px) clamp(18px,3.2vw,96px) 30px">
+  <section id="contact-cpm" data-screen-label="CTA" style="{{ cta3Style }}">
+    <div style="{{ cta3InStyle }}">
+      <h2 style="{{ cta3H2Style }}">Set the Documentation Plan Before the Next Milestone.</h2>
+      <p style="{{ cta3PStyle }}">Share the site, schedule, access requirements, and the decisions the record needs to support. Eagle will scope the collection frequency, capture methods, and delivery around the project.</p>
+      <div style="{{ cta3ActStyle }}"><a href="/#contact" style="{{ btnLightStyle }}" style-hover="background:#fff">Discuss Your Project</a></div>
+    </div>
+  </section>
+
+<footer data-screen-label="Footer" style="position:relative;overflow:hidden;background:#052A44;padding:clamp(38px,5.5vw,68px) clamp(18px,3.2vw,96px) 30px">
     <img loading="lazy" decoding="async" src="city-wire.webp" alt="" aria-hidden="true" style="{{ footWireStyle }}">
     <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(5,42,68,.34) 0%,rgba(5,42,68,.34) 52%,rgba(4,34,55,.46) 72%,rgba(1,21,31,.76) 100%)"></div>
     <div style="{{ footGridStyle }}">
@@ -419,14 +434,14 @@
         <button type="button" onClick="{{ footTogCO }}" aria-expanded="{{ footOpenCO }}" tabIndex="{{ footTab }}" style="{{ footBtnStyle }}">Company<span aria-hidden="true" style="{{ footSignCOStyle }}">{{ footSignCO }}</span></button>
         <div style="{{ footListCOStyle }}">
         <a href="/about" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">About Us</a>
-        <a href="#cares" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Eagle Cares</a>
-        <a href="#reality-capture" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Technology &amp; Equipment</a>
+        <a href="/#cares" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Eagle Cares</a>
+        <a href="/#reality-capture" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Technology &amp; Equipment</a>
         <a href="/projects" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Projects</a>
-          <a href="#industries" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Industries</a>
-        <a href="#insights" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Blog</a>
-        <a href="#contact" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Careers</a>
+          <a href="/#industries" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Industries</a>
+        <a href="/#insights" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Blog</a>
+        <a href="/#contact" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Careers</a>
         <a href="/faqs" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">FAQs</a>
-        <a href="#contact" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Contact</a>
+        <a href="/#contact" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Contact</a>
         </div>
       </div>
     </div>
@@ -437,33 +452,59 @@
 </div>
 
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;revealOnScroll&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;revealOnScroll&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;faqFirstOpen&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;FAQs&quot;}}">
 const SHELL = 'min(2880px,max(1720px,86vw))';
 const WIDE = 'calc(' + SHELL + ' + 2 * clamp(18px,3.2vw,96px))';
 
 class Component extends DCLogic {
-  state = { open: null, drawer: false, acc: null, narrow: false, vpw: 1440 , phones: false, footAcc: null};
+  // point cloud + contour mapping must not be cropped
+  DLVFIT = [0, 3];
+
+  state = { open: null, drawer: false, acc: null, narrow: false, vpw: 1440, phones: false, footAcc: null, hdrH: 88, dv: 1, q: 0 };
+
+  measureHdr = () => {
+    const h = document.querySelector('header');
+    if (h) { const v = Math.round(h.getBoundingClientRect().height); if (v && v !== this.state.hdrH) this.setState({ hdrH: v }); }
+  };
 
   componentDidMount() {
+    this.measureHdr();
+    addEventListener('resize', this.measureHdr);
+    requestAnimationFrame(this.measureHdr);
     this.reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
     this.mq = matchMedia('(max-width: 1240px)');
     this.onMq = () => this.setState({ narrow: this.mq.matches });
     this.mq.addEventListener('change', this.onMq);
-    this.onRz = () => this.setState({ vpw: innerWidth });
+    this.onRz = () => { this.setState({ vpw: innerWidth }); this.sizeHeroFrame(); };
     addEventListener('resize', this.onRz);
     this.onMq();
     this.setState({ vpw: innerWidth });
     setTimeout(() => this.bindCardHover(), 60);
     this.initReveal();
+    this.sizeHeroFrame();
+    setTimeout(() => this.sizeHeroFrame(), 120);
   }
-
-  componentDidUpdate() { this.bindCardHover(); }
 
   componentWillUnmount() {
     this.lockScroll(false);
     if (this.mq) this.mq.removeEventListener('change', this.onMq);
     removeEventListener('resize', this.onRz);
   }
+
+  // the Vimeo player letterboxes, so size the iframe to cover its panel
+  sizeHeroFrame() {
+    const el = this.heroFrame;
+    if (!el || !el.parentElement) return;
+    const r = el.parentElement.getBoundingClientRect();
+    if (!r.width || !r.height) return;
+    const cover = r.width / r.height > 16 / 9;
+    const w = cover ? r.width : (r.height * 16) / 9;
+    const h = cover ? (r.width * 9) / 16 : r.height;
+    el.style.width = Math.ceil(w) + 'px';
+    el.style.height = Math.ceil(h) + 'px';
+  }
+
+  componentDidUpdate() { this.sizeHeroFrame(); }
 
   lockScroll(on) {
     try {
@@ -500,9 +541,9 @@ class Component extends DCLogic {
     els.forEach((el) => {
       const isMedia = el.dataset.hero === '0';
       el.style.opacity = '0';
-      el.style.transform = isMedia ? 'scale(.98)' : 'translateY(24px)';
-      el.style.transition = 'opacity ' + (isMedia ? 1.2 : 0.9) + 's ease, transform '
-        + (isMedia ? 1.6 : 1) + 's cubic-bezier(.16,.84,.3,1)';
+      el.style.transform = isMedia ? 'scale(1.07)' : 'translateY(24px)';
+      el.style.transition = 'opacity ' + (isMedia ? 1.4 : 0.9) + 's ease, transform '
+        + (isMedia ? 2.2 : 1) + 's cubic-bezier(.16,.84,.3,1)';
     });
     requestAnimationFrame(() => els.forEach((el, i) => setTimeout(() => show(el), 60 + i * 150)));
     setTimeout(() => els.forEach(show), 2600);
@@ -548,6 +589,7 @@ class Component extends DCLogic {
 
   renderVals() {
     const st = this.state;
+    const PAD = 'clamp(64px,7vw,110px) 0';
     const card = (open, side) => ({
       position: 'absolute', top: '100%',
       left: side === 'right' ? 'auto' : 0, right: side === 'right' ? 0 : 'auto',
@@ -558,11 +600,6 @@ class Component extends DCLogic {
     const mob = st.vpw < 1100;
     const acc = (k) => ({ display: st.acc === k ? 'grid' : 'none', gap: 2, padding: '4px 0 10px 2px' });
     const accLink = { display: 'flex', alignItems: 'center', minHeight: 46, fontSize: 15, color: '#616E77' };
-    const stack = st.vpw < 900;
-    const frame = (ratio) => ({
-      position: 'relative', borderRadius: 26, overflow: 'hidden', background: '#0D4066',
-      aspectRatio: ratio, boxShadow: '0 0 0 0 rgba(56,142,205,0)', transition: 'box-shadow .45s ease'
-    });
 
     return {
       navStyle: { display: mob ? 'none' : 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'flex-end', gap: 2, marginLeft: 'auto' },
@@ -609,122 +646,159 @@ class Component extends DCLogic {
       toggleAccIN: () => this.setState((s) => ({ acc: s.acc === 'in' ? null : 'in' })),
       toggleAccCT: () => this.setState((s) => ({ acc: s.acc === 'ct' ? null : 'ct' })),
 
-      stripStyle: {
-        maxWidth: WIDE, margin: '0 auto', padding: st.vpw < 900 ? '12px clamp(18px,3.2vw,96px)' : '16px clamp(18px,3.2vw,96px)',
-        display: 'flex', flexWrap: st.vpw < 900 ? 'nowrap' : 'wrap',
-        gap: st.vpw < 900 ? 0 : '12px 42px', alignItems: 'center'
+      faq1Open: this.props.faqFirstOpen === false ? undefined : true,
+
+      vimeoRef: (el) => {
+        if (!el) return;
+        this.heroFrame = el;
+        this.sizeHeroFrame();
+        requestAnimationFrame(() => this.sizeHeroFrame());
       },
-      stripDupStyle: {
-        display: st.vpw < 900 ? 'inline' : 'none',
-        fontSize: 13, color: '#C3D8E6', fontWeight: 500
+      // ---- shared layout (ported from the reference CSS) ----
+      wrapStyle: { position: 'relative', width: '100%', maxWidth: 1680, margin: '0 auto', padding: '0 clamp(20px,4vw,72px)' },
+      eyebrowStyle: { display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18, fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 12, fontWeight: 500, letterSpacing: '.18em', textTransform: 'uppercase', color: '#996133' },
+      eyebrowDarkStyle: { display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18, fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 12, fontWeight: 500, letterSpacing: '.18em', textTransform: 'uppercase', color: '#E3904C' },
+      h1Style: { fontFamily: "'Sora',sans-serif", color: '#fff', fontSize: 'clamp(28px,2.05vw,39px)', letterSpacing: '-.4px', lineHeight: 1.12, fontWeight: 800, margin: 0 },
+      h1SpanStyle: { display: st.vpw <= 1180 ? 'inline' : 'block' },
+      h2Style: { fontFamily: "'Sora',sans-serif", color: '#A96B38', fontSize: 'clamp(29px,3.2vw,42px)', lineHeight: 1.12, letterSpacing: '-.02em', fontWeight: 800, margin: 0 },
+      h2DarkStyle: { fontFamily: "'Sora',sans-serif", color: '#C4793E', fontSize: 'clamp(29px,3.2vw,42px)', lineHeight: 1.12, letterSpacing: '-.02em', fontWeight: 800, margin: 0 },
+      btnLightStyle: { display: 'inline-block', background: '#DFE7EC', color: '#052A44', fontWeight: 700, borderRadius: 6, padding: '14px 30px', fontSize: 15, whiteSpace: 'nowrap' },
+      secFogStyle: { scrollMarginTop: 96, background: '#EEF2F4', padding: 'clamp(62px,6.6vw,100px) 0' },
+      secWhiteStyle: { scrollMarginTop: 96, background: '#fff', padding: 'clamp(62px,6.6vw,100px) 0' },
+      secUsesStyle: { scrollMarginTop: 96, background: 'linear-gradient(150deg,#052A44 0%,#0A3D61 100%)', padding: 'clamp(62px,6.6vw,100px) 0' },
+      secProcStyle: { scrollMarginTop: 96, background: '#052A44', padding: 'clamp(62px,6.6vw,100px) 0' },
+
+      cheroStyle: { position: 'relative', overflow: 'hidden', background: 'linear-gradient(118deg,#03202F 0%,#052A44 46%,#0A3D61 100%)', padding: 'clamp(52px,5.4vw,84px) 0' },
+      cheroBgStyle: {
+        position: 'absolute', top: '-6%', right: '-4%',
+        width: 'min(760px,58vw)', height: 'auto', aspectRatio: '420 / 149',
+        transformOrigin: '80% 40%',
+        animation: 'eagle-wing-drift 13s ease-in-out infinite',
+        opacity: 0.085, pointerEvents: 'none', userSelect: 'none'
       },
-      stripViewportStyle: st.vpw < 900
-        ? {
-            flex: '1 1 auto', minWidth: 0, overflow: 'hidden',
-            maskImage: 'linear-gradient(90deg,#000 0,#000 calc(100% - 34px),transparent 100%)',
-            WebkitMaskImage: 'linear-gradient(90deg,#000 0,#000 calc(100% - 34px),transparent 100%)'
-          }
-        : { flex: '1 1 auto', minWidth: 0 },
-      stripTrackStyle: st.vpw < 900
-        ? {
-            display: 'flex', alignItems: 'center', gap: 30, width: 'max-content',
-            animation: this.reduced ? 'none' : 'eagle-marquee-strip 34s linear infinite'
-          }
-        : { display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '12px 42px' },
-      overviewGridStyle: {
-        maxWidth: SHELL, margin: '0 auto', display: 'grid', gap: st.narrow ? 30 : 72, alignItems: 'center',
-        gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,1fr) minmax(0,1fr)'
-      },
-      collageStyle: { display: 'grid', gap: 16, gridTemplateColumns: 'minmax(0,1.15fr) minmax(0,.85fr)', alignItems: 'start' },
-      collageTallStyle: frame('3 / 4'),
-      collageShortStyle: { ...frame('3 / 4'), marginTop: stack ? 0 : 52 },
-      captureGridStyle: {
-        display: 'grid', gap: st.vpw < 700 ? 16 : 22, marginTop: 44, alignItems: 'stretch',
-        gridTemplateColumns: st.vpw < 800 ? 'minmax(0,1fr)' : 'repeat(3,minmax(0,1fr))'
-      },
-      audHeadStyle: {
-        display: 'grid', gap: st.narrow ? 22 : 64, alignItems: 'end',
-        gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,1fr) minmax(0,1fr)'
-      },
-      audGridStyle: {
-        display: 'grid', gap: st.vpw < 700 ? 16 : 22, marginTop: 44,
-        gridTemplateColumns: st.vpw < 640 ? 'minmax(0,1fr)' : st.vpw < 1080 ? 'repeat(2,minmax(0,1fr))' : 'repeat(4,minmax(0,1fr))'
-      },
-      sgGridStyle: {
-        maxWidth: SHELL, margin: '0 auto', display: 'grid', gap: st.narrow ? 30 : 64, alignItems: 'center',
-        gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,1fr) minmax(0,1fr)'
-      },
-      sgImageStyle: { ...frame(st.narrow ? '16 / 10' : '4 / 3'), borderRadius: 28 },
-      usesListStyle: {
-        display: 'grid', gap: stack ? 0 : '0 56px', marginTop: 44,
-        gridTemplateColumns: stack ? 'minmax(0,1fr)' : 'repeat(2,minmax(0,1fr))'
-      },
-      useItem: {
-        display: 'flex', gap: 16, alignItems: 'baseline',
-        padding: '20px 0', borderTop: '1px solid #D8E2EB',
-        fontSize: stack ? 15.5 : 16.5, lineHeight: 1.55, fontWeight: 600, color: '#0F2E45'
-      },
-      useNum: {
-        fontFamily: "'Sora',sans-serif", fontSize: 12.5, fontWeight: 700,
-        color: '#7E9AB0', letterSpacing: '.1em', flexShrink: 0
-      },
-      relGridStyle: st.vpw < 700
-        ? {
-            display: 'grid', gap: 14, marginTop: 30, alignItems: 'start',
-            gridAutoFlow: 'column', gridAutoColumns: '72%',
-            overflowX: 'auto', overflowY: 'hidden',
-            scrollSnapType: 'x mandatory', WebkitOverflowScrolling: 'touch',
-            scrollbarWidth: 'none', paddingBottom: 4,
-            marginRight: 'calc(-1 * max(clamp(18px,3.2vw,96px), (100vw - min(2880px,max(1720px,86vw))) / 2))'
-          }
-        : {
-            display: 'grid', gap: 28, marginTop: 44, alignItems: 'start',
-            gridTemplateColumns: 'repeat(4,minmax(0,1fr))'
-          },
-      relCardStyle: {
-        display: 'flex', flexDirection: 'column', gap: 14,
-        scrollSnapAlign: st.vpw < 700 ? 'start' : 'none'
-      },
-      ctaGridStyle: {
-        position: 'relative', maxWidth: SHELL, margin: '0 auto', display: 'grid',
-        gap: st.narrow ? 30 : 64, alignItems: 'center',
-        gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,1.3fr) minmax(0,.7fr)'
-      },
+      cheroInStyle: { position: 'relative', zIndex: 2, display: 'grid', alignItems: 'center', width: '100%', maxWidth: 1680, margin: '0 auto', padding: '0 clamp(20px,4vw,72px)', gap: st.vpw <= 1180 ? 'clamp(30px,4vw,44px)' : '4%', gridTemplateColumns: st.vpw <= 1180 ? '1fr' : 'minmax(0,50fr) minmax(0,46fr)' },
+      cheroTagStyle: { color: '#E3904C', margin: '20px 0 0', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 12, letterSpacing: '.2em', textTransform: 'uppercase', fontWeight: 500, paddingTop: 18, borderTop: '1px solid rgba(227,144,76,.42)', display: 'inline-block' },
+      cheroLeadStyle: { color: '#C7D6E4', fontSize: 16.5, lineHeight: 1.74, marginTop: 20, maxWidth: '56ch', textWrap: 'pretty' },
+      cheroActsStyle: { display: 'flex', alignItems: 'center', gap: 26, flexWrap: 'wrap', marginTop: 32 },
+      cheroLinkStyle: { color: '#fff', fontWeight: 700, fontSize: 14.5, borderBottom: '2px solid #E3904C', paddingBottom: 4, whiteSpace: 'nowrap' },
+      cmpStyle: { position: 'relative', display: 'grid', aspectRatio: st.vpw <= 560 ? 'auto' : '2 / 1', background: '#02131C', border: '1px solid rgba(159,192,218,.24)', borderRadius: 14, overflow: 'hidden', boxShadow: '0 30px 70px rgba(0,0,0,.44)', gridTemplateColumns: st.vpw <= 560 ? '1fr' : 'minmax(0,60fr) minmax(0,40fr)', opacity: 0, transform: 'translateY(20px)', transition: 'opacity .8s ease, transform .8s ease' },
+      cmpSeamStyle: { display: st.vpw <= 560 ? 'none' : 'block', position: 'absolute', top: 0, bottom: 0, left: '60%', width: 2, background: '#A96B38', transform: 'translateX(-1px)', zIndex: 3 },
+      cmpCellStyle: { position: 'relative', minWidth: 0, height: st.vpw <= 560 ? 'auto' : '100%', aspectRatio: st.vpw <= 560 ? '16 / 11' : 'auto', overflow: 'hidden' },
+      cmpImgStyle: { display: 'block', width: '100%', height: '100%', objectFit: 'cover' },
+      cmpLblStyle: { position: 'absolute', top: 0, left: 0, right: 0, zIndex: 2, padding: '12px 14px', background: 'linear-gradient(180deg,rgba(2,19,28,.86),rgba(2,19,28,0))', color: '#fff', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 10, letterSpacing: '.18em', textTransform: 'uppercase', fontWeight: 500 },
+      cmpPhStyle: { position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '20% 12% 12%', background: 'repeating-linear-gradient(135deg,#062A3E 0 12px,#052434 12px 24px)', color: '#A9C7DC', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 10.5, letterSpacing: '.14em', textTransform: 'uppercase', lineHeight: 1.9 },
+
+      snavStyle: { background: '#fff', borderBottom: '1px solid #E1E8EE', position: st.vpw <= 900 ? 'static' : 'sticky', top: (st.hdrH || 75), zIndex: 80 },
+      snavInStyle: { display: 'flex', flexWrap: 'wrap', justifyContent: st.vpw <= 900 ? 'flex-start' : 'center', width: '100%', maxWidth: 1680, margin: '0 auto', padding: '0 clamp(20px,4vw,72px)' },
+      snavLinkStyle: { padding: st.vpw <= 900 ? '12px 14px' : '16px 22px', fontSize: st.vpw <= 900 ? 13 : 13.5, fontWeight: 700, color: '#052A44', borderBottom: '2px solid transparent', whiteSpace: 'nowrap' },
+
+      wiaTopStyle: { display: 'grid', alignItems: 'start', marginBottom: 'clamp(40px,4.2vw,62px)', gap: st.vpw <= 1180 ? 'clamp(30px,4vw,44px)' : '4%', gridTemplateColumns: st.vpw <= 1180 ? '1fr' : 'minmax(0,40fr) minmax(0,56fr)' },
+      wiaCopyStyle: { display: 'flex', flexDirection: 'column', gap: 14, minWidth: 0, opacity: 0, transform: 'translateY(18px)', transition: 'opacity .7s ease, transform .7s ease' },
+      wiaPStyle: { color: '#5C6B74', fontSize: 16, lineHeight: 1.78, maxWidth: '64ch', margin: 0, textWrap: 'pretty' },
+      tlineStyle: { position: 'relative', display: 'grid', gap: st.vpw <= 700 ? 26 : 'clamp(18px,2.4vw,40px)', gridTemplateColumns: st.vpw <= 700 ? '1fr' : 'repeat(3,minmax(0,1fr))', opacity: 0, transform: 'translateY(18px)', transition: 'opacity .7s ease, transform .7s ease' },
+      tsFrameStyle: { position: 'relative', aspectRatio: '16 / 9', borderRadius: 12, overflow: 'hidden', background: '#0A2233', border: '1px solid rgba(5,42,68,.14)' },
+      tsPhStyle: { position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '14%', background: 'repeating-linear-gradient(135deg,#0A2637 0 12px,#08202F 12px 24px)', color: '#A9C7DC', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 10.5, letterSpacing: '.14em', textTransform: 'uppercase', lineHeight: 1.9 },
+      tsRailStyle: { position: 'relative', margin: '22px 0 16px', height: 11 },
+      tsRailLineStyle: { position: 'absolute', top: 5, left: 0, right: 0, height: 1, background: 'rgba(5,42,68,.2)' },
+      tsDotStyle: { position: 'absolute', top: 0, left: '50%', width: 11, height: 11, marginLeft: -5.5, borderRadius: '50%', background: '#A96B38', boxShadow: '0 0 0 4px #EEF2F4' },
+      tsNameStyle: { color: '#052A44', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 11, letterSpacing: '.16em', textTransform: 'uppercase', fontWeight: 500 },
+      tsSeqStyle: { color: '#5C6B74', fontSize: 13, marginTop: 4 },
+
+      usesInStyle: { display: 'grid', alignItems: 'start', gap: st.vpw <= 1180 ? 'clamp(30px,4vw,44px)' : '4%', gridTemplateColumns: st.vpw <= 1180 ? '1fr' : 'minmax(0,38fr) minmax(0,58fr)' },
+      usesPStyle: { color: '#C7D6E4', fontSize: 16, lineHeight: 1.74, marginTop: 16, maxWidth: '60ch', textWrap: 'pretty' },
+      usesTxStyle: { color: '#B8CBD8', marginTop: 24, paddingTop: 18, borderTop: '1px solid rgba(159,192,218,.26)', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 11, letterSpacing: '.14em', textTransform: 'uppercase', lineHeight: 1.9 },
+      uRowStyle: { display: 'grid', alignItems: 'start', padding: '24px 0', borderTop: '1px solid rgba(159,192,218,.22)', gap: st.vpw <= 560 ? 14 : 20, gridTemplateColumns: st.vpw <= 560 ? '40px minmax(0,1fr)' : '56px minmax(0,1fr)' },
+      unStyle: { color: '#E3904C', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 22, fontWeight: 500, lineHeight: 1, paddingTop: 2 },
+      uRowH3Style: { color: '#fff', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 12, letterSpacing: '.16em', textTransform: 'uppercase', fontWeight: 500, margin: '0 0 8px' },
+      uRowPStyle: { color: '#C7D6E4', fontSize: 15, lineHeight: 1.7, maxWidth: '62ch', margin: 0, textWrap: 'pretty' },
+      dlvHeadStyle: { maxWidth: 900 },
+      dlvHeadPStyle: { color: '#5C6B74', fontSize: 16, lineHeight: 1.76, maxWidth: '62ch', marginTop: 14 },
+      dlvInStyle: { display: 'grid', alignItems: 'start', marginTop: 'clamp(34px,3.4vw,50px)', gap: st.vpw <= 1180 ? 'clamp(30px,4vw,44px)' : '4%', gridTemplateColumns: st.vpw <= 1180 ? '1fr' : 'minmax(0,58fr) minmax(0,38fr)' },
+      dlvFrameStyle: { background: '#02131C', border: '1px solid rgba(5,42,68,.16)', borderRadius: 14, padding: 'clamp(12px,1.2vw,18px)', boxShadow: '0 20px 48px rgba(5,42,68,.16)', minWidth: 0, opacity: 0, transform: 'translateY(18px)', transition: 'opacity .7s ease, transform .7s ease' },
+      dlvBarStyle: { display: 'flex', alignItems: 'center', gap: 7, padding: '2px 4px 12px' },
+      dlvDotStyle: { display: 'block', width: 9, height: 9, borderRadius: '50%', background: 'rgba(159,192,218,.34)', flex: '0 0 auto' },
+      dlvBarLblStyle: { marginLeft: 6, fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 10.5, letterSpacing: '.16em', textTransform: 'uppercase', color: '#A9C7DC' },
+      dlvPhStyle: { position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '12%', background: 'repeating-linear-gradient(135deg,#0A2637 0 12px,#08202F 12px 24px)', color: '#A9C7DC', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 11, letterSpacing: '.14em', textTransform: 'uppercase', lineHeight: 1.9 },
+      dlvImgStyle: { position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' },
+      dlvListStyle: { borderTop: '1px solid #DCE4EA', minWidth: 0 },
+      diNumStyle: { color: '#8E5527', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 11, fontWeight: 500, flex: '0 0 auto' },
+
+      pRuleStyle: { display: st.vpw <= 560 ? 'none' : 'block', position: 'absolute', top: 11, left: 0, right: 'calc(-1 * clamp(18px,2.2vw,34px))', height: 1, background: 'rgba(159,192,218,.24)' },
+      pRuleLastStyle: { display: st.vpw <= 560 ? 'none' : 'block', position: 'absolute', top: 11, left: 0, right: 0, height: 1, background: 'rgba(159,192,218,.24)' },
+      // ≤900 is a 2-col grid, so only the even steps lose their connector
+      pRuleEvenStyle: { display: st.vpw <= 900 ? 'none' : 'block', position: 'absolute', top: 11, left: 0, right: 'calc(-1 * clamp(18px,2.2vw,34px))', height: 1, background: 'rgba(159,192,218,.24)' },
+      pRuleEvenLastStyle: { display: st.vpw <= 900 ? 'none' : 'block', position: 'absolute', top: 11, left: 0, right: 0, height: 1, background: 'rgba(159,192,218,.24)' },
+      procGridStyle: { display: 'grid', marginTop: 'clamp(38px,4vw,58px)', gap: st.vpw <= 900 ? 'clamp(26px,3vw,38px)' : 'clamp(18px,2.2vw,34px)', gridTemplateColumns: st.vpw <= 560 ? '1fr' : st.vpw <= 900 ? 'repeat(2,minmax(0,1fr))' : 'repeat(4,minmax(0,1fr))' },
+      pStepStyle: { position: 'relative', minWidth: 0, paddingTop: st.vpw <= 560 ? 0 : 34 },
+      pNumStyle: { color: '#9FC0DA', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 12, letterSpacing: '.2em', display: 'block', marginBottom: 10 },
+      pStepH3Style: { fontFamily: "'Sora',sans-serif", color: '#fff', fontSize: 17, fontWeight: 700, margin: '0 0 10px', lineHeight: 1.3 },
+      pStepPStyle: { color: '#C7D6E4', fontSize: 14.5, lineHeight: 1.7, margin: 0, textWrap: 'pretty' },
+      pNoteStyle: { color: '#9FC0DA', fontSize: 13, lineHeight: 1.7, marginTop: 'clamp(30px,3vw,44px)', paddingTop: 18, borderTop: '1px solid rgba(159,192,218,.18)', maxWidth: '78ch' },
+
+      scopeTopStyle: { display: 'grid', alignItems: 'start', gap: st.vpw <= 1180 ? 'clamp(30px,4vw,44px)' : '4%', gridTemplateColumns: st.vpw <= 1180 ? '1fr' : 'minmax(0,42fr) minmax(0,54fr)' },
+      scopePStyle: { color: '#5C6B74', fontSize: 16, lineHeight: 1.78, margin: 0, maxWidth: '64ch', textWrap: 'pretty' },
+      scopeSplitStyle: { display: 'grid', marginTop: 'clamp(38px,4vw,56px)', paddingTop: 'clamp(30px,3vw,44px)', borderTop: '1px solid #DCE4EA', gap: st.vpw <= 700 ? 30 : 'clamp(26px,3.4vw,58px)', gridTemplateColumns: st.vpw <= 700 ? '1fr' : '1fr 1fr', opacity: 0, transform: 'translateY(18px)', transition: 'opacity .7s ease, transform .7s ease' },
+      scolFirstStyle: st.vpw <= 700
+        ? { minWidth: 0, paddingBottom: 28, borderBottom: '1px solid #DCE4EA' }
+        : { minWidth: 0, paddingRight: 'clamp(20px,2.6vw,44px)', borderRight: '1px solid #DCE4EA' },
+      scolHStyle: { display: 'flex', alignItems: 'baseline', gap: 12, marginBottom: 20 },
+      scolBStyle: { fontFamily: "'Sora',sans-serif", color: '#052A44', fontSize: 17, fontWeight: 800, letterSpacing: '-.015em' },
+      schipStyle: { display: 'flex', alignItems: 'center', gap: 12, padding: '11px 0', borderBottom: '1px dashed #DDE4E9', color: '#263640', fontSize: 15 },
+      snoteStyle: { marginTop: 'clamp(28px,2.8vw,38px)', paddingLeft: 18, borderLeft: '2px solid #A96B38', color: '#5C6B74', fontSize: 14.5, lineHeight: 1.78, maxWidth: '100ch', textWrap: 'pretty', opacity: 0, transform: 'translateY(16px)', transition: 'opacity .7s ease, transform .7s ease' },
+      snoteBStyle: { display: 'block', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", color: '#052A44', fontSize: 11, letterSpacing: '.16em', textTransform: 'uppercase', fontWeight: 500, marginBottom: 8 },
+      srelStyle: { marginTop: 'clamp(34px,3.4vw,48px)', paddingTop: 20, borderTop: '1px solid #DCE4EA', color: '#5C6B74', fontSize: 14, lineHeight: 2 },
+      srelBStyle: { display: 'block', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", color: '#052A44', fontSize: 11, letterSpacing: '.16em', textTransform: 'uppercase', fontWeight: 500, marginBottom: 6 },
+      srelLinkStyle: { color: '#00548B', fontWeight: 700 },
+      srelSepStyle: { color: '#5C6B74', fontStyle: 'normal', margin: '0 10px' },
+
+      faqHeadStyle: { maxWidth: 760, marginBottom: 'clamp(30px,3vw,44px)' },
+      faqListStyle: { background: '#fff', border: '1px solid #DCE4EA', borderRadius: 14, overflow: 'hidden' },
+      faqQStyle: { width: '100%', display: 'flex', alignItems: 'center', gap: 18, textAlign: 'left', background: 'none', border: 0, padding: '22px clamp(18px,2vw,30px)', cursor: 'pointer', fontFamily: "'Sora',sans-serif", fontSize: 'clamp(16px,1.5vw,18px)', fontWeight: 800, color: '#052A44', lineHeight: 1.35 },
+      faqAPStyle: { color: '#5C6B74', fontSize: 15.5, lineHeight: 1.8, maxWidth: '88ch', margin: 0, textWrap: 'pretty' },
+
+      cta3Style: { scrollMarginTop: 96, background: 'linear-gradient(100deg,#00548B 0%,#0A3D61 100%)', padding: 'clamp(30px,3vw,40px) 0' },
+      cta3InStyle: { display: 'grid', alignItems: 'center', minHeight: 132, width: '100%', maxWidth: 1680, margin: '0 auto', padding: '0 clamp(20px,4vw,72px)', gap: st.vpw <= 1180 ? '22px 26px' : '4%', gridTemplateColumns: st.vpw <= 700 ? '1fr' : st.vpw <= 1180 ? '1fr 1fr' : 'minmax(0,34fr) minmax(0,42fr) minmax(0,20fr)' },
+      cta3H2Style: { fontFamily: "'Sora',sans-serif", color: '#fff', fontSize: 'clamp(22px,2.1vw,29px)', lineHeight: 1.2, fontWeight: 800, margin: 0 },
+      cta3PStyle: { color: '#DCEAF5', fontSize: 15, lineHeight: 1.7, margin: 0, textWrap: 'pretty' },
+      cta3ActStyle: { justifySelf: st.vpw <= 1180 ? 'start' : 'end', gridColumn: st.vpw <= 1180 && st.vpw > 700 ? '1 / -1' : 'auto' },
+
+      ...(() => {
+        const out = {};
+        const dv = st.dv;   // state inits to 1: reference opens on tab 02
+        for (let i = 0; i < 5; i++) {
+          const on = dv === i;
+          out['dv' + i + 'Style'] = { position: 'relative', aspectRatio: '16 / 10', borderRadius: 9, overflow: 'hidden', background: '#052A44', display: on ? 'block' : 'none' };
+          out['dsel' + i] = on ? 'true' : 'false';
+          out['setDv' + i] = () => this.setState({ dv: i });
+          out['di' + i + 'Style'] = {
+            display: 'block', width: '100%', textAlign: 'left', background: on ? '#EEF2F4' : 'none',
+            border: 0, borderBottom: '1px solid #DCE4EA', padding: '17px 16px', cursor: 'pointer',
+            fontFamily: 'inherit', transition: 'background .2s',
+            boxShadow: on ? 'inset 3px 0 0 #00548B' : 'none'
+          };
+          out['diH3Style' + i] = { fontFamily: "'Sora',sans-serif", fontSize: 16, fontWeight: 800, color: '#052A44', display: 'flex', alignItems: 'baseline', gap: 10, margin: 0, lineHeight: 1.3 };
+          out['diPStyle' + i] = { color: '#5C6B74', fontSize: 14, lineHeight: 1.66, marginTop: 7, marginBottom: 0, textWrap: 'pretty' };
+        }
+        const q = st.q == null ? 0 : st.q;
+        for (let i = 0; i < 4; i++) {
+          const on = q === i;
+          out['qsel' + i] = on ? 'true' : 'false';
+          out['setQ' + i] = () => this.setState({ q: on ? -1 : i });
+          out['fa' + i + 'Style'] = { display: on ? 'block' : 'none', padding: '0 clamp(18px,2vw,30px) 26px' };
+          out['faqi' + i + 'Style'] = i === 0 ? {} : { borderTop: '1px solid #DCE4EA' };
+          out['faqIco' + i] = {
+            marginLeft: 'auto', flex: '0 0 auto', width: 26, height: 26, borderRadius: '50%',
+            border: '1px solid #CBD6DE', display: 'flex', alignItems: 'center', justifyContent: 'center',
+            fontStyle: 'normal', fontSize: 15, lineHeight: 1, color: on ? '#00548B' : '#052A44',
+            background: on ? 'rgba(0,84,139,.06)' : 'transparent', transition: '.25s'
+          };
+          out['faqSign' + i] = on ? '\u2212' : '+';
+        }
+        return out;
+      })(),
       ...(() => {
         const mob = st.vpw < 900;
         const o = {};
-        o.phonesOpen = st.phones ? 'true' : 'false';
-        o.togglePhones = () => this.setState((s) => ({ phones: !s.phones }));
-        o.utilTab = mob ? 0 : -1;
-        o.utilTogStyle = {
-          display: mob ? 'inline-flex' : 'none', alignItems: 'center', gap: 8, minHeight: 44,
-          padding: '0 4px 0 0', background: 'none', border: 'none', cursor: 'pointer',
-          fontFamily: "'Manrope',sans-serif", fontSize: 12, fontWeight: 700,
-          letterSpacing: '.18em', textTransform: 'uppercase', color: '#A6C3D5'
-        };
-        o.utilCaretStyle = {
-          fontSize: 13, lineHeight: 1, color: '#E0A83E',
-          transform: st.phones ? 'rotate(180deg)' : 'none', transition: 'transform .25s ease'
-        };
-        o.utilPhonesStyle = mob
-          ? {
-              display: st.phones ? 'flex' : 'none', flexDirection: 'column', gap: 10,
-              position: 'absolute', top: '100%', left: 0, right: 0, zIndex: 71,
-              background: '#052A44', borderTop: '1px solid rgba(255,255,255,.16)',
-              boxShadow: '0 18px 34px rgba(4,26,44,.4)', padding: '10px clamp(18px,3.2vw,96px) 16px'
-            }
-          : { display: 'flex', alignItems: 'center', gap: 26, flexWrap: 'wrap' };
-        o.utilLinkStyle = mob
-          ? { display: 'flex', alignItems: 'center', gap: 10, whiteSpace: 'nowrap', minHeight: 44, padding: '4px 0', width: '100%' }
-          : { display: 'flex', alignItems: 'center', gap: 10, whiteSpace: 'nowrap' };
-        o.utilDivStyle = mob
-          ? { display: 'block', height: 1, background: 'rgba(255,255,255,.14)', margin: '6px 0' }
-          : { width: 1, height: 20, background: 'rgba(255,255,255,.16)' };
-        o.utilNoteStyle = {
-          display: mob ? 'none' : 'block', fontSize: 11, fontWeight: 700,
-          letterSpacing: '.2em', textTransform: 'uppercase', color: '#A6C3D5'
-        };
-
         [['RC', 'rc'], ['SV', 'sv'], ['CO', 'co']].forEach(([K, k]) => {
           const open = !mob || st.footAcc === k;
           o['footCol' + K + 'Style'] = mob
@@ -793,8 +867,6 @@ class Component extends DCLogic {
           : { fontSize: 15, lineHeight: 1.6, color: '#3C5468', textWrap: 'pretty' };
         return o;
       })(),
-      // the wireframe band lives under the column lists, so the footer reserves
-      // room for it and the grid keeps clear space above it
       footWireStyle: {
         position: 'absolute', left: 0, right: 0, width: '100%',
         bottom: st.narrow ? 96 : 'clamp(105px,7.5vw,155px)',
@@ -820,7 +892,6 @@ class Component extends DCLogic {
     };
   }
 }
-
 </script>
 </body>
 </html>
