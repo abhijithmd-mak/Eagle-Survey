@@ -8,14 +8,18 @@
 <body>
 <x-dc>
 <helmet>
-<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#052A44"></rect><g fill="none" stroke="#E0A83E" stroke-width="3.4" stroke-linecap="round"><path d="M50 26v34"></path><circle cx="50" cy="68" r="8"></circle><path d="M62 34h10M62 46h10"></path></g></svg></template>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#052A44"></rect><g fill="none" stroke="#E0A83E" stroke-width="3.4" stroke-linecap="round"><path d="M34 66l16-32 16 32"></path><path d="M41 58h18"></path></g></svg></template>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aerial Thermal Imagery in Texas | Eagle Surveying</title>
+<title>Aerial Thermal Imagery | Texas | Eagle Surveying</title>
+<meta name="description" content="Aerial thermal imagery and radiometric data for commercial roofs, solar arrays, and facilities. Texas-based, with select assignments supported nationwide.">
+<!-- CANONICAL URL PENDING MAK PRODUCTION ROUTE -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap&family=IBM+Plex+Mono:wght@400;500;700" rel="stylesheet">
 <style>
   *{box-sizing:border-box}
+  @keyframes eagle-wing-drift{0%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-1.4%,-3.6%,0) scale(1.022)}100%{transform:translate3d(0,0,0) scale(1)}}
+  @media (prefers-reduced-motion: reduce){[data-wing]{animation:none!important}}
   @keyframes eagle-marquee-strip{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 15px))}}
   body{margin:0;background:#F6F8FA;font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
   h1,h2,h3,h4,p{margin:0}
@@ -44,7 +48,7 @@
               <a href="/aerial-photogrammetry" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Aerial Photogrammetry</a>
               <a href="/terrestrial-laser-scanning" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Terrestrial Laser Scanning (TLS)</a>
               <a href="/360-site-documentation" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">360° Site Documentation &amp; Virtual Walkthroughs</a>
-              <a href="#top" style="font-size:14.5px;color:#0A4B77;font-weight:700;line-height:1.35">Aerial Thermal Imagery</a>
+              <a href="/aerial-thermal-imagery" style="font-size:14.5px;color:#0A4B77;font-weight:700;line-height:1.35">Aerial Thermal Imagery</a>
               <a href="/construction-progress-monitoring" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Construction Progress Monitoring and Documentation</a>
               <a href="/volumetric-stockpile-analysis" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Volumetric &amp; Stockpile Analysis</a>
             </div>
@@ -94,20 +98,20 @@
             <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:11px">
               <a href="/about" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">About Us</a>
               <a href="/#cares" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Eagle Cares</a>
-              <a href="#platform" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Technology &amp; Equipment</a>
+              <a href="/#platforms" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Technology &amp; Equipment</a>
               <a href="/faqs" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">FAQs</a>
             </div>
           </div>
         </span>
         <a href="/#contact" style="font-size:14.5px;color:#0F2E45;font-weight:500;padding:11px 15px;border-radius:999px;white-space:nowrap" style-hover="background:#E7EDF4;color:#0A4B77">Careers</a>
         <span data-nav="" onMouseEnter="{{ openCT }}" onMouseLeave="{{ closeNav }}" style="display:inline-flex;position:relative">
-          <a href="#estimate" style="display:inline-flex;align-items:center;gap:6px;font-size:14.5px;color:#0F2E45;font-weight:500;padding:11px 15px;border-radius:999px;white-space:nowrap" style-hover="background:#E7EDF4;color:#0A4B77">Contact<span style="font-size:11px;opacity:.55">⌄</span></a>
+          <a href="/#estimate" style="display:inline-flex;align-items:center;gap:6px;font-size:14.5px;color:#0F2E45;font-weight:500;padding:11px 15px;border-radius:999px;white-space:nowrap" style-hover="background:#E7EDF4;color:#0A4B77">Contact<span style="font-size:11px;opacity:.55">⌄</span></a>
           <div style="{{ ddCT }}">
             <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Contact</span>
             <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:11px">
-              <a href="#estimate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Have a Question</a>
-              <a href="#estimate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Request an Estimate</a>
-              <a href="#estimate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Schedule a Meeting</a>
+              <a href="/#estimate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Have a Question</a>
+              <a href="/#estimate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Request an Estimate</a>
+              <a href="/#estimate" style="font-size:14.5px;color:#0F2E45;font-weight:500;line-height:1.35" style-hover="color:#0A4B77">Schedule a Meeting</a>
             </div>
           </div>
         </span>
@@ -129,11 +133,11 @@
     <div style="flex:1;overflow-y:auto;padding:8px clamp(18px,3.2vw,96px) 32px">
       <button type="button" onClick="{{ toggleAccRC }}" style="{{ accBtnStyle }}">Reality Capture<span style="opacity:.5;font-size:13px">⌄</span></button>
       <div style="{{ accRC }}">
-        <a href="/aerial-lidar-mapping" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Aerial LiDAR Mapping</a>
+        <a href="/aerial-thermal-imagery" onClick="{{ closeDrawer }}" style="{{ accLinkActiveStyle }}">Aerial LiDAR Mapping</a>
         <a href="/aerial-photogrammetry" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Aerial Photogrammetry</a>
         <a href="/terrestrial-laser-scanning" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Terrestrial Laser Scanning (TLS)</a>
         <a href="/360-site-documentation" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">360° Site Documentation</a>
-        <a href="#top" onClick="{{ closeDrawer }}" style="{{ accLinkActiveStyle }}">Aerial Thermal Imagery</a>
+        <a href="/aerial-thermal-imagery" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Aerial Thermal Imagery</a>
         <a href="/construction-progress-monitoring" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Construction Progress Monitoring</a>
         <a href="/volumetric-stockpile-analysis" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Volumetric &amp; Stockpile Analysis</a>
       </div>
@@ -170,211 +174,297 @@
       <a href="/#contact" onClick="{{ closeDrawer }}" style="{{ drawerTopLinkStyle }}">Careers</a>
       <button type="button" onClick="{{ toggleAccCT }}" style="{{ accBtnStyle }}">Contact<span style="opacity:.5;font-size:13px">⌄</span></button>
       <div style="{{ accCT }}">
-        <a href="#estimate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Have a Question</a>
-        <a href="#estimate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Request an Estimate</a>
-        <a href="#estimate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Schedule a Meeting</a>
+        <a href="/#estimate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Have a Question</a>
+        <a href="/#estimate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Request an Estimate</a>
+        <a href="/#estimate" onClick="{{ closeDrawer }}" style="{{ accLinkStyle }}">Schedule a Meeting</a>
       </div>
       <div style="display:flex;flex-direction:column;gap:10px;margin-top:26px">
-        <a href="#estimate" onClick="{{ closeDrawer }}" style="display:flex;align-items:center;justify-content:center;min-height:52px;background:#E0A83E;color:#052A44;font-weight:700;font-size:16px;border-radius:999px">Request an Estimate</a>
+        <a href="/#estimate" onClick="{{ closeDrawer }}" style="display:flex;align-items:center;justify-content:center;min-height:52px;background:#E0A83E;color:#052A44;font-weight:700;font-size:16px;border-radius:999px">Request an Estimate</a>
         <a href="tel:9402223009" style="display:flex;align-items:center;justify-content:center;min-height:52px;border:1px solid #C9D6E2;color:#0F2E45;font-weight:600;font-size:16px;border-radius:999px">Call (940) 222-3009</a>
       </div>
     </div>
   </div>
 
-  <section id="top" data-screen-label="Service hero" style="position:relative;min-height:min(34vh,336px);display:flex;align-items:flex-end;background:#052A44;overflow:hidden">
-    <img data-hero="0" src="p09.webp" alt="Facility roofs and equipment areas captured from the air" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
-    <div style="position:absolute;inset:0;background:linear-gradient(102deg,rgba(5,42,68,.95) 0%,rgba(5,42,68,.74) 50%,rgba(5,42,68,.34) 90%)"></div>
-    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,42,68,.82) 0%,rgba(5,42,68,0) 48%)"></div>
-    <div style="position:relative;width:100%;max-width:calc(min(2880px,max(1720px,86vw)) + 2 * clamp(18px,3.2vw,96px));margin:0 auto;padding:clamp(38px,5.4vw,62px) clamp(18px,3.2vw,96px) clamp(100px,12vw,110px)">
-      <div style="max-width:940px">
-        <span data-hero="1" style="display:block;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#E0A83E;margin-bottom:18px">Thermal data capture, delivered to your experts</span>
-        <h1 data-hero="2" style="font-family:'Sora',sans-serif;color:#fff;font-size:clamp(32px,4.8vw,68px);line-height:1.05;letter-spacing:-.03em;font-weight:600;text-wrap:balance">Aerial Thermal Imagery</h1>
-        <p data-hero="3" style="color:#DCE8F0;font-size:clamp(16px,1.35vw,20px);line-height:1.65;max-width:680px;margin-top:26px;text-wrap:pretty">Drone-based radiometric thermal capture across roofs, facilities, and hard-to-access assets, delivered as georeferenced thermal imagery and orthomosaics on the DroneDeploy platform. Eagle captures, processes, and delivers the data; your engineers and inspectors apply their own expertise to it.</p>
-        <div data-hero="4" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:36px">
-          <a href="#estimate" style="display:inline-flex;align-items:center;min-height:52px;padding:0 30px;background:#E0A83E;color:#052A44;font-weight:700;font-size:16px;border-radius:999px" style-hover="background:#F0BC57">Request an Estimate</a>
-          <a href="#scope" style="display:inline-flex;align-items:center;min-height:52px;padding:0 30px;border:1px solid rgba(255,255,255,.4);color:#fff;font-weight:600;font-size:16px;border-radius:999px" style-hover="background:rgba(255,255,255,.12)">What we do and don't do</a>
+  <section id="overview-top" data-screen-label="Service hero" style="{{ heroSecStyle }}">
+    <svg data-wing="" viewBox="0 0 420 149" fill="#9FC0DA" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" style="{{ wingMarkStyle }}"><path d="M1.6 0Q21.3 10.6 32 14.9Q42.8 19.3 63.6 25.1Q84.4 30.8 115.2 35.3Q145.9 39.8 187.9 43.8Q230 47.8 256.1 53Q282.1 58.1 295.4 62.6Q308.6 67.1 318.1 72.3Q327.6 77.4 331.5 80.6Q335.3 83.8 338.1 87.2Q340.8 90.6 342.9 96Q345 101.5 345 106.3Q345 111.1 344 114.3Q343 117.5 342.2 112.8Q341.4 108.2 339.9 105.2Q338.5 102.1 333.2 96.5Q327.9 90.9 318.9 86.4Q309.8 81.9 300.6 79.3Q291.5 76.7 269.6 73.5Q247.7 70.3 200 67Q152.3 63.6 135.1 61.7Q117.9 59.7 102.8 57.2Q87.6 54.6 75 51.4Q62.5 48.2 51.2 43.7Q39.9 39.2 31.7 34.2Q23.5 29.2 15.6 21.2Q7.7 13.2 4.7 6.8Q1.6 0.3 1.6 0.1Z"></path><path d="M51.9 57.2Q74.1 65.5 97.4 70Q120.8 74.5 142.1 76.5Q163.3 78.4 202.3 79.2Q241.2 80 254.3 81.3Q267.3 82.5 276.6 84.5Q286 86.4 296.4 89.6Q306.9 92.8 312.3 95.3Q317.6 97.9 324.1 103.1Q330.5 108.2 333.1 113.3Q335.6 118.5 335.5 122.2Q335.3 125.9 331.3 121.1Q327.2 116.2 321.8 113.2Q316.3 110.1 307.8 107.5Q299.2 105 286.9 103.1Q274.7 101.2 251.3 99.9Q228 98.6 195 97.8Q162 97 140.3 94.4Q118.5 91.8 110.2 89.9Q101.8 88 88.9 82.8Q76 77.7 69.3 73.2Q62.5 68.7 57.2 63.1Q51.9 57.5 51.9 57.4Z"></path><path d="M73.8 87.3Q86.3 95.1 92.3 97.7Q98.2 100.2 106.9 102.8Q115.6 105.3 126.4 107.3Q137.2 109.2 155.3 110.3Q173.3 111.4 216.2 111Q259 110.5 276.1 112Q293.1 113.4 301.3 115.3Q309.5 117.2 313.7 119.3Q317.9 121.4 320.9 124.3Q324 127.2 325 129.8Q326 132.3 325.6 135.4Q325.3 138.4 323.4 141.9Q321.4 145.5 320.3 146.3Q319.2 147.1 319 142.6Q318.9 138.1 316 134.4Q313.1 130.7 309.4 128.8Q305.7 126.8 299.7 125.5Q293.7 124.3 275.9 124.2Q258 124 232.4 126.5Q206.8 129.1 194.1 129.8Q181.3 130.4 170.1 130.3Q158.8 130.1 148.2 128.9Q137.5 127.8 127.8 125.3Q118.2 122.7 108.8 118.2Q99.5 113.7 91.2 106.8Q82.8 99.9 78.3 93.8Q73.8 87.7 73.8 87.5Z"></path><path d="M298.6 52.7Q329.8 53 357.2 56.9Q384.6 60.7 386.4 61.4Q388.1 62 390.4 64.4Q392.6 66.8 397.8 67.6Q402.9 68.4 408.9 70.3Q414.8 72.3 417.3 77.5Q419.7 82.8 415.8 81.5Q411.9 80.3 407.4 80.4Q402.9 80.6 397.8 81.3Q392.6 81.9 383.1 84.5Q373.6 87 370.3 89.3Q366.9 91.5 364.9 94.5Q363 97.6 360.9 103Q358.8 108.5 355.4 111.3Q352 114 352.9 109.7Q353.7 105.3 353.5 98.9Q353.3 92.5 351.2 87.2Q349.1 81.9 347.2 79.3Q345.3 76.7 338.1 71.1Q330.8 65.5 321 61.5Q311.1 57.5 303.9 55.9Q296.6 54.3 295.6 53.8Q294.7 53.3 296.5 53.1Q298.3 53 298.5 52.9Z"></path></svg>
+    <div style="{{ heroGridStyle }}">
+      <div style="min-width:0">
+        <span style="font-size:clamp(11px,0.78vw,15px);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#9FC0DA">Reality Capture / Aerial Thermal Imagery</span>
+        <h1 style="font-family:'Sora',sans-serif;font-size:clamp(34px,3.5vw,56px);line-height:1.08;letter-spacing:-.03em;font-weight:600;color:#fff;margin:16px 0 0">Aerial Thermal Imagery</h1>
+        <p style="color:#C7D6E4;font-size:17px;line-height:1.72;margin-top:22px;max-width:56ch;text-wrap:pretty">Drone-mounted radiometric sensors capture temperature information across roofs, solar arrays, facilities, and infrastructure. Eagle organizes the resulting data in DroneDeploy so project teams can review mapped thermal patterns across large or difficult-to-access assets.</p>
+        <div style="display:flex;align-items:center;flex-wrap:wrap;gap:26px;margin-top:30px">
+          <a href="#contact-thermal" style="display:inline-block;background:#DFE7EC;color:#052A44;font-weight:700;font-size:15px;padding:14px 30px;border-radius:6px" style-hover="background:#fff">Discuss Your Thermal Project</a>
+          <a href="#deliverables" style="font-size:14.5px;font-weight:700;color:#9FC0DA;border-bottom:2px solid #A96B38;padding-bottom:3px" style-hover="color:#fff;border-color:#E6914C">What Your Team Receives &darr;</a>
         </div>
       </div>
+      <div style="{{ heroImgStyle }}">
+        <img src="aerial-thermal-imagery-commercial-industrial-rooftops.webp" alt="Aerial thermal image showing multiple commercial and industrial buildings across a large developed property." width="1024" height="683" fetchpriority="high" decoding="async" style="{{ heroPhotoStyle }}">
+      </div>
     </div>
-    <div data-hero="5" style="position:absolute;left:0;right:0;bottom:0;background:rgba(5,42,68,.78);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,.18)">
-      <div style="{{ stripStyle }}">
-        <div style="{{ stripViewportStyle }}">
-          <div style="{{ stripTrackStyle }}">
-              <span style="font-size:13px;color:#C3D8E6;font-weight:500">Radiometric thermal sensor</span>
-              <span style="font-size:13px;color:#C3D8E6;font-weight:500">Every pixel carries a temperature</span>
-              <span style="font-size:13px;color:#C3D8E6;font-weight:500">Single mobilization</span>
-              <span style="font-size:13px;color:#C3D8E6;font-weight:500">Delivered through DroneDeploy</span>
-              <span aria-hidden="true" style="{{ stripDupStyle }}">Radiometric thermal sensor</span>
-              <span aria-hidden="true" style="{{ stripDupStyle }}">Every pixel carries a temperature</span>
-              <span aria-hidden="true" style="{{ stripDupStyle }}">Single mobilization</span>
-              <span aria-hidden="true" style="{{ stripDupStyle }}">Delivered through DroneDeploy</span>
+  </section>
+
+  <nav data-screen-label="Section nav" aria-label="On this page" style="{{ snavStyle }}">
+    <div style="{{ snavInnerStyle }}">
+      <a href="#overview" style="{{ snavLinkStyle }}" style-hover="color:#052A44">Overview</a>
+      <a href="#applications" style="{{ snavLinkStyle }}" style-hover="color:#052A44">Applications</a>
+      <a href="#deliverables" style="{{ snavLinkStyle }}" style-hover="color:#052A44">Deliverables</a>
+      <a href="#workflow" style="{{ snavLinkStyle }}" style-hover="color:#052A44">Workflow</a>
+      <a href="#aircraft" style="{{ snavLinkStyle }}" style-hover="color:#052A44">Aircraft</a>
+      <a href="#related" style="{{ snavLinkStyle }}" style-hover="color:#052A44">Related Services</a>
+      <a href="#faqs" style="{{ snavLinkStyle }}" style-hover="color:#052A44">FAQs</a>
+    </div>
+  </nav>
+
+  <section id="overview" data-screen-label="Overview" style="{{ secWiiStyle }}">
+    <svg aria-hidden="true" viewBox="0 0 1400 600" preserveAspectRatio="xMidYMid slice" style="{{ wiiLinesStyle }}"><g fill="none" stroke="#9FC0DA" stroke-width="1.2"><path d="M0 300 h1400 M0 220 h1400 M0 380 h1400" stroke-dasharray="3 14"/><circle cx="320" cy="220" r="18"/><circle cx="760" cy="300" r="24"/><circle cx="1120" cy="380" r="16"/><path d="M120 90 h44 M142 68 v44"/></g></svg>
+    <div style="{{ wrapStyle }}">
+      <div style="{{ wichStyle }}">
+        <div style="min-width:0">
+          <span style="{{ eyebrowSkyStyle }}">What It Captures</span>
+          <h2 style="{{ wichH2Style }}">Radiometric Data: Temperature Information in Every Pixel.</h2>
+        </div>
+        <div style="min-width:0">
+          <p style="{{ wipPStyle }}">A radiometric sensor records temperature information at every pixel. Eagle processes and georeferences overlapping captures in DroneDeploy to produce a thermal orthomosaic, giving your team both the radiometric source imagery and a continuous mapped view of recorded temperature patterns.</p>
+        </div>
+      </div>
+      <div data-reveal="" style="{{ wiPlateStyle }}">
+        <div style="min-width:0">
+          <img src="aerial-thermal-imagery-paved-area-adjacent-structures.webp" alt="Aerial thermal image of a large paved area and adjacent building roofs, with one localized area of higher temperature." width="967" height="604" loading="lazy" decoding="async" style="display:block;width:100%;height:100%;object-fit:cover;object-position:50% 56%">
+        </div>
+        <div style="{{ wiRailStyle }}">
+          <div style="{{ wiRailCellStyle }}">
+            <h3 style="{{ wiRailH3Style }}">Per-Pixel Values</h3>
+            <p style="{{ wiRailPStyle }}">Each radiometric pixel retains temperature information from the captured image.</p>
+          </div>
+          <div style="{{ wiRailCellStyle }}">
+            <h3 style="{{ wiRailH3Style }}">Mapped Context</h3>
+            <p style="{{ wiRailPStyle }}">Processed and georeferenced imagery places the recorded temperature information across the documented asset.</p>
+          </div>
+          <div style="{{ wiRailCellStyle }}">
+            <h3 style="{{ wiRailH3Style }}">Broader Coverage</h3>
+            <p style="{{ wiRailPStyle }}">Aerial collection documents variation across large, elevated, or difficult-to-access areas.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="overview" data-screen-label="Overview" style="scroll-margin-top:96px;background:#F6F8FA;padding:clamp(42px,6.5vw,96px) clamp(18px,3.2vw,96px)">
-    <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto">
-      <div style="{{ overviewGridStyle }}">
-        <div>
-          <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:18px">The data</span>
-          <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.16;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:22ch;text-wrap:pretty">What the eye cannot see, measured across a whole roof.</h2>
+  <section id="applications" data-screen-label="Applications" style="{{ secSteelStyle }}">
+    <svg aria-hidden="true" viewBox="0 0 1400 600" preserveAspectRatio="xMidYMid slice" style="{{ bfLinesStyle }}"><g fill="none" stroke="#052A44" stroke-width="1.1"><path d="M60 480 C 260 400, 300 330, 520 320 C 740 310, 800 380, 1020 360 C 1180 345, 1260 300, 1360 290"/><path d="M40 520 C 260 450, 320 380, 540 370 C 760 360, 820 420, 1040 400 C 1200 385, 1280 345, 1380 335"/><path d="M900 120 h48 M924 96 v48 M220 140 h40 M240 120 v40"/><path d="M100 220 L 340 170 L 560 210 L 820 150" stroke-dasharray="6 7"/></g></svg>
+    <div style="{{ wrapStyle }}">
+      <span style="{{ bfEyebrowStyle }}">Common Applications</span>
+      <h2 style="{{ bfH2Style }}">Aerial Thermal Imaging for Buildings, Energy, and Infrastructure.</h2>
+      <div style="{{ appGridStyle }}">
+        <div data-reveal="" style="{{ appCardStyle }}">
+          <div style="{{ appFigStyle }}">
+            <img src="aerial-thermal-imagery-building-roof-exterior.webp" alt="Aerial thermal view of a large building roof and exterior wall." width="900" height="600" loading="lazy" decoding="async" style="display:block;width:100%;height:clamp(200px,20vw,270px);object-fit:cover;object-position:50% 46%">
+          </div>
+          <h3 style="{{ appH3Style }}">Roofs &amp; Building Envelopes</h3>
+          <p style="{{ appPStyle }}">Document temperature patterns across large roof areas and building envelopes in a single mapped view.</p>
+          <p style="{{ appCapStyle }}">Commercial, multifamily, institutional, and other large-building applications.</p>
         </div>
-        <div style="display:flex;flex-direction:column;gap:22px">
-          <p style="font-size:clamp(16px,1.15vw,18px);line-height:1.72;color:#3C5468;text-wrap:pretty">Aerial thermal imagery uses a radiometric thermal sensor on a UAS to capture temperature data across a site, roof, or asset, delivered as radiometric imagery and thermal orthomosaics where every pixel carries a temperature value. Thermal data reveals patterns that the naked eye and standard cameras cannot, including temperature variations that may indicate moisture intrusion, heat loss, and other anomalies across large or hard-to-access surfaces, captured quickly and without putting anyone on a roof or near live equipment.</p>
-          <p style="font-size:clamp(16px,1.15vw,18px);line-height:1.72;color:#3C5468;text-wrap:pretty">We capture thermal imagery with our quad UAS platforms during a single mobilization, providing datasets from one site visit. Eagle Surveying provides aerial thermal data capture throughout Texas, including the Dallas-Fort Worth metroplex and Central Texas, with select assignments supported outside the state.</p>
+        <div data-reveal="" style="{{ appCardStyle }}">
+          <div style="{{ appFigStyle }}">
+            <img src="aerial-thermal-imagery-solar-installation-array.webp" alt="Aerial thermal image of a large solar installation with rows of photovoltaic panels." width="860" height="573" loading="lazy" decoding="async" style="display:block;width:100%;height:clamp(200px,20vw,270px);object-fit:cover;object-position:46% 58%">
+            <span style="{{ appInsetStyle }}"><img src="aerial-thermal-imagery-photovoltaic-panel-rows.webp" alt="Closer aerial thermal view of photovoltaic panel rows." width="420" height="420" loading="lazy" decoding="async" style="display:block;width:100%;height:auto"></span>
+          </div>
+          <h3 style="{{ appH3Style }}">Solar Arrays</h3>
+          <p style="{{ appPStyle }}">Capture broad temperature variation across extensive panel fields while retaining radiometric detail for closer review.</p>
+          <p style="{{ appCapStyle }}">Utility-scale and large-site solar coverage.</p>
         </div>
-      </div>
-      <div data-reveal="" data-rc-card="" style="{{ bandImageStyle }}">
-        <img src="p02.webp" alt="Large facility roof and equipment areas surveyed from the air" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-        <span style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,42,68,.72) 0%,rgba(5,42,68,0) 55%)"></span>
-        <span style="position:absolute;left:clamp(20px,3vw,40px);right:clamp(20px,3vw,40px);bottom:clamp(20px,3vw,34px);font-size:clamp(14px,1.1vw,16px);font-weight:600;color:#fff;text-wrap:pretty">Nobody walks the roof and nobody stands near live equipment — the sensor flies it instead.</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="scope" data-screen-label="Capture vs interpretation" style="scroll-margin-top:96px;background:#052A44;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px);position:relative;overflow:hidden">
-    <div style="position:absolute;top:-220px;right:-160px;width:640px;height:640px;border-radius:999px;background:radial-gradient(circle,rgba(224,168,62,.14),rgba(224,168,62,0) 70%);pointer-events:none"></div>
-    <div style="position:relative;max-width:min(2880px,max(1720px,86vw));margin:0 auto">
-      <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#6D9DBD;margin-bottom:16px">Where our scope ends</span>
-      <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:600;color:#fff;max-width:24ch;text-wrap:balance">We capture and deliver. Your experts diagnose.</h2>
-      <p style="font-size:16.5px;line-height:1.7;color:#C3D8E6;max-width:70ch;margin-top:20px;text-wrap:pretty">Eagle Surveying captures, processes, and delivers thermal data. We do not interpret or diagnose thermal conditions. The engineers, roofing consultants, building envelope specialists, inspectors, and analysts you work with apply their own expertise to the data we provide.</p>
-      <div style="{{ ledgerGridStyle }}">
-        <div style="display:flex;flex-direction:column;gap:2px">
-          <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#E0A83E;padding-bottom:16px">Eagle Surveying does</span>
-          <span style="{{ ledgerRowLight }}">Plans and flies the radiometric thermal mission</span>
-          <span style="{{ ledgerRowLight }}">Processes and georeferences the thermal data</span>
-          <span style="{{ ledgerRowLight }}">Builds thermal orthomosaics where each pixel carries a temperature</span>
-          <span style="{{ ledgerRowLight }}">Delivers the dataset through the DroneDeploy platform</span>
+        <div data-reveal="" style="{{ appCardStyle }}">
+          <div style="{{ appFigStyle }}">
+            <img src="aerial-thermal-imagery-transmission-infrastructure.webp" alt="Thermal image of electrical transmission infrastructure and overhead conductors." width="640" height="427" loading="lazy" decoding="async" style="display:block;width:100%;height:clamp(200px,20vw,270px);object-fit:cover;object-position:50% 42%">
+          </div>
+          <h3 style="{{ appH3Style }}">Electrical &amp; Utility Infrastructure</h3>
+          <p style="{{ appPStyle }}">Document elevated and difficult-to-access utility assets from an aerial perspective.</p>
+          <p style="{{ appCapStyle }}">Transmission, distribution, and accessible utility infrastructure.</p>
         </div>
-        <div style="display:flex;flex-direction:column;gap:2px">
-          <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#6D9DBD;padding-bottom:16px">Your qualified professional does</span>
-          <span style="{{ ledgerRowMuted }}">Interprets the thermal patterns and anomalies</span>
-          <span style="{{ ledgerRowMuted }}">Diagnoses moisture intrusion, heat loss or equipment condition</span>
-          <span style="{{ ledgerRowMuted }}">Determines whether further investigation is appropriate</span>
-          <span style="{{ ledgerRowMuted }}">Recommends any corrective action</span>
+        <div data-reveal="" style="{{ appCardStyle }}">
+          <div style="{{ appFigStyle }}">
+            <img src="aerial-thermal-imagery-industrial-buildings.webp" alt="Aerial thermal image of large industrial buildings with rooftop equipment and surrounding paved areas." width="540" height="360" loading="lazy" decoding="async" style="display:block;width:100%;height:clamp(200px,20vw,270px);object-fit:cover;object-position:50% 54%">
+          </div>
+          <h3 style="{{ appH3Style }}">Large Facilities &amp; Industrial Assets</h3>
+          <p style="{{ appPStyle }}">Extend thermal coverage across large facilities, rooftop equipment, operating areas, and other expansive assets.</p>
+          <p style="{{ appCapStyle }}">Industrial plants, data centers, campuses, and large facilities.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="uses" data-screen-label="Commonly used for" style="scroll-margin-top:96px;background:#E7EDF4;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px)">
-    <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto">
-      <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Commonly used for</span>
-      <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:24ch;text-wrap:pretty">Five assets clients send us up to read.</h2>
-      <div style="display:flex;flex-direction:column;margin-top:44px">
-        <div data-reveal="" data-rc-card="" style="{{ useRowStyle }}">
-          <span data-rc-frame="" style="{{ useThumbStyle }}"><img src="p04.webp" alt="Commercial roof and building envelope" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)"></span>
-          <span style="{{ useNumStyle }}">01</span>
-          <span style="{{ useTextStyle }}">Roof and building envelope thermal data capture for consultants to analyze</span>
+  <section id="deliverables" data-screen-label="Deliverables" style="{{ secDlvStyle }}">
+    <svg aria-hidden="true" viewBox="0 0 700 520" style="{{ dlvLinesStyle }}"><g fill="none" stroke="#052A44" stroke-width="1.2"><rect x="80" y="60" width="260" height="180" rx="4"/><rect x="200" y="130" width="260" height="180" rx="4"/><rect x="320" y="200" width="260" height="180" rx="4"/><circle cx="120" cy="430" r="12"/><path d="M120 410 v40 M100 430 h40"/></g></svg>
+    <div style="{{ wrapStyle }}">
+      <div style="{{ dlvInStyle }}">
+        <div style="{{ dlvHeadStyle }}">
+          <div style="min-width:0">
+            <span style="{{ eyebrowStyle }}">Typical Deliverables</span>
+            <h2 style="{{ h2Style }}">What Your Team Receives.</h2>
+          </div>
+          <p style="{{ dlvHeadPStyle }}">The standard thermal package combines authorized project access, mapped thermal products, radiometric source imagery, and the available temperature-review controls within DroneDeploy.</p>
         </div>
-        <div data-reveal="" data-rc-card="" style="{{ useRowStyle }}">
-          <span data-rc-frame="" style="{{ useThumbStyle }}"><img src="p09.webp" alt="Solar array installation seen from the air" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)"></span>
-          <span style="{{ useNumStyle }}">02</span>
-          <span style="{{ useTextStyle }}">Solar array thermal data collection</span>
-        </div>
-        <div data-reveal="" data-rc-card="" style="{{ useRowStyle }}">
-          <span data-rc-frame="" style="{{ useThumbStyle }}"><img src="s08.webp" alt="Mechanical and industrial equipment areas" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)"></span>
-          <span style="{{ useNumStyle }}">03</span>
-          <span style="{{ useTextStyle }}">Electrical, mechanical, and industrial equipment thermal data capture</span>
-        </div>
-        <div data-reveal="" data-rc-card="" style="{{ useRowStyle }}">
-          <span data-rc-frame="" style="{{ useThumbStyle }}"><img src="p05.webp" alt="Data center and large facility" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)"></span>
-          <span style="{{ useNumStyle }}">04</span>
-          <span style="{{ useTextStyle }}">Data center and large-facility thermal capture</span>
-        </div>
-        <div data-reveal="" data-rc-card="" style="{{ useRowLastStyle }}">
-          <span data-rc-frame="" style="{{ useThumbStyle }}"><img src="p06.webp" alt="Eagle staff preparing capture data for delivery" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)"></span>
-          <span style="{{ useNumStyle }}">05</span>
-          <span style="{{ useTextStyle }}">Data delivery to engineers and inspectors who bring their own diagnostic expertise</span>
+        <div style="{{ dlvMainStyle }}">
+          <div style="{{ dlvFrameStyle }}">
+            <div style="{{ dlvFLabelStyle }}">
+              <span style="{{ flStyle }}">Selected Deliverable</span>
+              <span aria-live="polite" style="{{ fnStyle }}">{{ dvName }}</span>
+            </div>
+            <div role="tabpanel" id="dlvpanel" style="position:relative;min-width:0">
+          <div style="{{ dv0Style }}">
+            <img src="aerial-thermal-imagery-dronedeploy-radiometric-workspace.webp" alt="DroneDeploy project workspace showing a radiometric thermal layer over a mapped area, with the temperature histogram and layer controls in the side panel." width="1500" height="938" loading="lazy" decoding="async" style="{{ dvImgStyle }}">
+            <p style="{{ imgCapStyle }}">DRONEDEPLOY PROJECT WORKSPACE &mdash; RADIOMETRIC THERMAL LAYER</p>
+          </div>
+          <div style="{{ dv1Style }}">
+            <img src="aerial-thermal-imagery-georeferenced-thermal-orthomosaic.webp" alt="Georeferenced thermal orthomosaic showing recorded temperature patterns across the mapped area." width="1520" height="950" loading="lazy" decoding="async" style="{{ dvImgStyle }}">
+            <p style="{{ imgCapStyle }}">GEOREFERENCED THERMAL ORTHOMOSAIC</p>
+          </div>
+          <div style="{{ dv2Style }}">
+            <img src="aerial-thermal-imagery-radiometric-selected-areas.webp" alt="Radiometric thermal image with selected areas marked for review." width="1100" height="688" loading="lazy" decoding="async" style="{{ dvImgStyle }}">
+            <p style="{{ imgCapStyle }}">RADIOMETRIC THERMAL IMAGE &mdash; MARKED REVIEW POINTS</p>
+          </div>
+          <div style="{{ dv3Style }}">
+            <img src="aerial-thermal-imagery-dronedeploy-temperature-controls.webp" alt="DroneDeploy radiometric controls showing a temperature histogram and adjustable display range." width="1250" height="781" loading="lazy" decoding="async" style="{{ dvImgStyle }}">
+            <p style="{{ imgCapStyle }}">IN-PLATFORM TEMPERATURE REVIEW &mdash; ADJUSTABLE RADIOMETRIC RANGE</p>
+          </div>
+            </div>
+          </div>
+          <div style="{{ dlvPanelStyle }}">
+            <div role="tablist" aria-orientation="vertical" aria-label="Typical deliverables" style="{{ delivListStyle }}">
+            <button type="button" role="tab" aria-controls="dlvpanel" aria-selected="{{ dsel0 }}" onClick="{{ setDv0 }}" onMouseEnter="{{ setDv0 }}" style="{{ di0Style }}">
+              <h3 style="{{ diH3Style0 }}">DroneDeploy Project Access<span style="{{ fmtStyle }}">WORKSPACE</span></h3>
+              <p style="{{ diPStyle0 }}">Authorized access to the project workspace, delivered thermal products, radiometric layers, and available viewing controls.</p>
+            </button>
+            <button type="button" role="tab" aria-controls="dlvpanel" aria-selected="{{ dsel1 }}" onClick="{{ setDv1 }}" onMouseEnter="{{ setDv1 }}" style="{{ di1Style }}">
+              <h3 style="{{ diH3Style1 }}">Thermal Orthomosaic<span style="{{ fmtStyle }}">GEOREFERENCED</span></h3>
+              <p style="{{ diPStyle1 }}">A continuous, georeferenced thermal image produced from overlapping captures across the area included in the scope.</p>
+            </button>
+            <button type="button" role="tab" aria-controls="dlvpanel" aria-selected="{{ dsel2 }}" onClick="{{ setDv2 }}" onMouseEnter="{{ setDv2 }}" style="{{ di2Style }}">
+              <h3 style="{{ diH3Style2 }}">Radiometric Thermal Images<span style="{{ fmtStyle }}">PER-PIXEL</span></h3>
+              <p style="{{ diPStyle2 }}">Individual radiometric images in which each pixel retains temperature information from the capture.</p>
+            </button>
+            <button type="button" role="tab" aria-controls="dlvpanel" aria-selected="{{ dsel3 }}" onClick="{{ setDv3 }}" onMouseEnter="{{ setDv3 }}" style="{{ di3Style }}">
+              <h3 style="{{ diH3Style3 }}">In-Platform Temperature Review Tools<span style="{{ fmtStyle }}">INCLUDED IN DRONEDEPLOY</span></h3>
+              <p style="{{ diPStyle3 }}">Available DroneDeploy controls for inspecting point temperatures, adjusting the displayed radiometric range, and reviewing patterns in the delivered thermal data.</p>
+            </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="platform" data-screen-label="Deliverables" style="scroll-margin-top:96px;background:#F7EEDD;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px)">
-    <div style="{{ delivGridStyle }}">
-      <div>
-        <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#8A6A2C;margin-bottom:16px">Deliverables</span>
-        <h2 style="font-family:'Sora',sans-serif;font-size:clamp(26px,2.7vw,40px);line-height:1.16;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:22ch;text-wrap:pretty">Georeferenced thermal products, ready for review.</h2>
-        <p style="font-size:16.5px;line-height:1.7;color:#4A5A63;max-width:52ch;margin-top:20px;text-wrap:pretty">Our role is to provide high-quality, georeferenced thermal products through the DroneDeploy platform so your engineers, consultants, inspectors, and analysts can evaluate the data using their own professional expertise.</p>
-      </div>
-      <div style="display:flex;flex-direction:column">
-        <span style="font-size:16.5px;line-height:1.6;color:#4A3A17;font-weight:600;padding:20px 0;border-top:1px solid #E4D3AF">DroneDeploy project access when included</span>
-        <span style="font-size:16.5px;line-height:1.6;color:#4A3A17;font-weight:600;padding:20px 0;border-top:1px solid #E4D3AF">Georeferenced thermal orthomosaic</span>
-        <span style="font-size:16.5px;line-height:1.6;color:#4A3A17;font-weight:600;padding:20px 0;border-top:1px solid #E4D3AF">Corresponding RGB imagery</span>
-        <span style="font-size:16.5px;line-height:1.6;color:#4A3A17;font-weight:600;padding:20px 0;border-top:1px solid #E4D3AF">Radiometric thermal images when applicable</span>
-        <span style="font-size:16.5px;line-height:1.6;color:#4A3A17;font-weight:600;padding:20px 0;border-top:1px solid #E4D3AF;border-bottom:1px solid #E4D3AF">Temperature metadata and flight information when applicable</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="faq" data-screen-label="Thermal FAQs" style="scroll-margin-top:96px;background:#F6F8FA;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px)">
-    <div style="{{ faqGridStyle }}">
-      <div>
-        <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Thermal FAQs</span>
-        <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:20ch;text-wrap:pretty">Sensors, pixels and professional scope.</h2>
-        <a href="/#reality-capture" style="display:inline-flex;margin-top:22px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#0A4B77;border-bottom:1px solid rgba(10,75,119,.35);padding-bottom:5px" style-hover="color:#063553;border-color:#063553">All Reality Capture services →</a>
-      </div>
-      <div style="display:flex;flex-direction:column">
-        <details open="{{ faq1Open }}" style="border-top:1px solid #D8E2EB;padding:6px 0">
-          <summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:60px;cursor:pointer;font-family:'Sora',sans-serif;font-size:clamp(16.5px,1.3vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em">What is aerial thermal imaging?<span style="color:#0A4B77;font-size:20px;line-height:1">+</span></summary>
-          <p style="font-size:16px;line-height:1.72;color:#3C5468;padding:4px 0 22px;max-width:74ch;text-wrap:pretty">Aerial thermal imaging uses a radiometric thermal sensor mounted on a UAS to capture temperature data across roofs, facilities, solar arrays, equipment areas, and other accessible assets. Deliverables may include georeferenced radiometric imagery and thermal orthomosaics in which each pixel contains temperature information. The data can help qualified engineers, consultants, inspectors, and analysts identify patterns or anomalies requiring further evaluation.</p>
-        </details>
-        <details style="border-top:1px solid #D8E2EB;border-bottom:1px solid #D8E2EB;padding:6px 0">
-          <summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:60px;cursor:pointer;font-family:'Sora',sans-serif;font-size:clamp(16.5px,1.3vw,19px);font-weight:600;color:#0F2E45;letter-spacing:-.015em">Does Eagle Surveying interpret or diagnose thermal conditions?<span style="color:#0A4B77;font-size:20px;line-height:1">+</span></summary>
-          <p style="font-size:16px;line-height:1.72;color:#3C5468;padding:4px 0 22px;max-width:74ch;text-wrap:pretty">No. Eagle Surveying captures, processes, georeferences, and delivers thermal data, but we do not diagnose moisture intrusion, heat loss, equipment failure, roof condition, or other thermal causes. The client's engineer, roofing consultant, building-envelope specialist, inspector, or other qualified professional interprets the information and determines whether additional investigation or corrective action is appropriate.</p>
-        </details>
+  <section id="review" data-screen-label="Review split" style="{{ rvwStyle }}">
+    <div style="{{ wrapStyle }}">
+      <div style="{{ rvwInStyle }}">
+        <div style="min-width:0">
+          <span style="{{ eyebrowLightStyle }}">From Capture to Technical Review</span>
+          <h2 style="{{ rvwH2Style }}">Radiometric Products Built for Your Team&rsquo;s Workflow.</h2>
+        </div>
+        <div style="{{ rvw2Style }}">
+          <div style="{{ rvwCellStyle }}">
+            <h3 style="{{ rvwH3Style }}">Eagle Surveying</h3>
+            <p style="{{ rvwPStyle }}">Mission planning, radiometric collection, processing, georeferencing, quality review, workspace organization, and authorized delivery through DroneDeploy.</p>
+          </div>
+          <div style="{{ rvwCellStyle }}">
+            <h3 style="{{ rvwH3Style }}">Your Technical Team</h3>
+            <p style="{{ rvwPStyle }}">Professional interpretation, follow-up investigation, diagnosis, and recommendations based on the delivered data and other available project information.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="related" data-screen-label="Related services" style="scroll-margin-top:96px;background:#E7EDF4;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px)">
-    <div style="max-width:min(2880px,max(1720px,86vw));margin:0 auto">
-      <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#616E77;margin-bottom:16px">Often scoped together</span>
-      <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,2.9vw,42px);line-height:1.14;letter-spacing:-.025em;font-weight:500;color:#0F2E45;max-width:24ch;text-wrap:pretty">What else the same mobilization can carry.</h2>
-      <div style="{{ relGridStyle }}">
-        <a href="/aerial-photogrammetry" data-reveal="" data-rc-card="" style="{{ relCardStyle }}">
-          <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
-            <img src="p09.webp" alt="Aerial photogrammetry" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          </span>
-          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Aerial Photogrammetry</span>
+  <section id="workflow" data-screen-label="Our process" style="{{ secProcStyle }}">
+    <svg data-wing="" viewBox="0 0 420 149" fill="#9FC0DA" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" style="{{ wingMarkStyle }}"><path d="M1.6 0Q21.3 10.6 32 14.9Q42.8 19.3 63.6 25.1Q84.4 30.8 115.2 35.3Q145.9 39.8 187.9 43.8Q230 47.8 256.1 53Q282.1 58.1 295.4 62.6Q308.6 67.1 318.1 72.3Q327.6 77.4 331.5 80.6Q335.3 83.8 338.1 87.2Q340.8 90.6 342.9 96Q345 101.5 345 106.3Q345 111.1 344 114.3Q343 117.5 342.2 112.8Q341.4 108.2 339.9 105.2Q338.5 102.1 333.2 96.5Q327.9 90.9 318.9 86.4Q309.8 81.9 300.6 79.3Q291.5 76.7 269.6 73.5Q247.7 70.3 200 67Q152.3 63.6 135.1 61.7Q117.9 59.7 102.8 57.2Q87.6 54.6 75 51.4Q62.5 48.2 51.2 43.7Q39.9 39.2 31.7 34.2Q23.5 29.2 15.6 21.2Q7.7 13.2 4.7 6.8Q1.6 0.3 1.6 0.1Z"></path><path d="M51.9 57.2Q74.1 65.5 97.4 70Q120.8 74.5 142.1 76.5Q163.3 78.4 202.3 79.2Q241.2 80 254.3 81.3Q267.3 82.5 276.6 84.5Q286 86.4 296.4 89.6Q306.9 92.8 312.3 95.3Q317.6 97.9 324.1 103.1Q330.5 108.2 333.1 113.3Q335.6 118.5 335.5 122.2Q335.3 125.9 331.3 121.1Q327.2 116.2 321.8 113.2Q316.3 110.1 307.8 107.5Q299.2 105 286.9 103.1Q274.7 101.2 251.3 99.9Q228 98.6 195 97.8Q162 97 140.3 94.4Q118.5 91.8 110.2 89.9Q101.8 88 88.9 82.8Q76 77.7 69.3 73.2Q62.5 68.7 57.2 63.1Q51.9 57.5 51.9 57.4Z"></path><path d="M73.8 87.3Q86.3 95.1 92.3 97.7Q98.2 100.2 106.9 102.8Q115.6 105.3 126.4 107.3Q137.2 109.2 155.3 110.3Q173.3 111.4 216.2 111Q259 110.5 276.1 112Q293.1 113.4 301.3 115.3Q309.5 117.2 313.7 119.3Q317.9 121.4 320.9 124.3Q324 127.2 325 129.8Q326 132.3 325.6 135.4Q325.3 138.4 323.4 141.9Q321.4 145.5 320.3 146.3Q319.2 147.1 319 142.6Q318.9 138.1 316 134.4Q313.1 130.7 309.4 128.8Q305.7 126.8 299.7 125.5Q293.7 124.3 275.9 124.2Q258 124 232.4 126.5Q206.8 129.1 194.1 129.8Q181.3 130.4 170.1 130.3Q158.8 130.1 148.2 128.9Q137.5 127.8 127.8 125.3Q118.2 122.7 108.8 118.2Q99.5 113.7 91.2 106.8Q82.8 99.9 78.3 93.8Q73.8 87.7 73.8 87.5Z"></path><path d="M298.6 52.7Q329.8 53 357.2 56.9Q384.6 60.7 386.4 61.4Q388.1 62 390.4 64.4Q392.6 66.8 397.8 67.6Q402.9 68.4 408.9 70.3Q414.8 72.3 417.3 77.5Q419.7 82.8 415.8 81.5Q411.9 80.3 407.4 80.4Q402.9 80.6 397.8 81.3Q392.6 81.9 383.1 84.5Q373.6 87 370.3 89.3Q366.9 91.5 364.9 94.5Q363 97.6 360.9 103Q358.8 108.5 355.4 111.3Q352 114 352.9 109.7Q353.7 105.3 353.5 98.9Q353.3 92.5 351.2 87.2Q349.1 81.9 347.2 79.3Q345.3 76.7 338.1 71.1Q330.8 65.5 321 61.5Q311.1 57.5 303.9 55.9Q296.6 54.3 295.6 53.8Q294.7 53.3 296.5 53.1Q298.3 53 298.5 52.9Z"></path></svg>
+    <div style="{{ wrapStyle }}">
+      <span style="{{ eyebrowSkyStyle }}">How Eagle Delivers Thermal Data</span>
+      <h2 style="{{ h2DarkStyle }}">From Project Scope to Delivered Thermal Products.</h2>
+      <div style="{{ procGridStyle }}">
+        <span aria-hidden="true" style="{{ procLineStyle }}"></span>
+        <div data-reveal="" style="{{ pStepStyle }}"><span style="{{ pNumStyle }}">01</span><h3 style="{{ pStepH3Style }}">Define the Asset &amp; Objective</h3><p style="{{ pStepPStyle }}">Confirm the area, intended use, intended users, access requirements, schedule, and required deliverables.</p></div>
+        <div data-reveal="" style="{{ pStepStyle }}"><span style="{{ pNumStyle }}">02</span><h3 style="{{ pStepH3Style }}">Plan the Mission</h3><p style="{{ pStepPStyle }}">Review site access, airspace, operating conditions, required coverage, and the appropriate UAS configuration.</p></div>
+        <div data-reveal="" style="{{ pStepStyle }}"><span style="{{ pNumStyle }}">03</span><h3 style="{{ pStepH3Style }}">Collect the Radiometric Imagery</h3><p style="{{ pStepPStyle }}">Acquire overlapping radiometric imagery across the area included in the agreed scope.</p></div>
+        <div data-reveal="" style="{{ pStepStyle }}"><span style="{{ pNumStyle }}">04</span><h3 style="{{ pStepH3Style }}">Process, Review &amp; Deliver</h3><p style="{{ pStepPStyle }}">Process and georeference the captured imagery in DroneDeploy, complete quality review, organize the thermal products and project workspace, and provide authorized access.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="aircraft" data-screen-label="Aircraft" style="{{ ndaaStyle }}">
+    <svg aria-hidden="true" viewBox="0 0 1400 320" preserveAspectRatio="xMidYMid slice" style="{{ ndaaLinesStyle }}"><g fill="none" stroke="#052A44" stroke-width="1.1"><path d="M0 160 h1400"/><path d="M80 150 v20 M180 146 v28 M280 150 v20 M380 146 v28 M480 150 v20 M580 146 v28 M680 150 v20 M780 146 v28 M880 150 v20 M980 146 v28 M1080 150 v20 M1180 146 v28 M1280 150 v20"/><path d="M170 60 h120 v60 h-120 z M470 200 h120 v60 h-120 z M900 60 h120 v60 h-120 z"/><circle cx="230" cy="160" r="6"/><circle cx="530" cy="160" r="6"/><circle cx="960" cy="160" r="6"/></g></svg>
+    <div style="{{ wrapStyle }}">
+      <div style="{{ acGridStyle }}">
+        <div style="min-width:0">
+          <span style="{{ bfEyebrowStyle }}">Aircraft &amp; Project Requirements</span>
+          <h2 style="{{ ndaaH2Style }}">UAS Options for Large, Complex, and Controlled-Access Assignments.</h2>
+          <p style="{{ acPStyle }}">Eagle uses quad UAS platforms equipped for radiometric thermal collection across roofs, facilities, solar arrays, equipment areas, and other accessible assets. The aircraft and mission are selected around the required coverage, operating environment, procurement conditions, and agreed deliverables.</p>
+        </div>
+        <img src="aerial-thermal-imagery-quad-uas-in-flight.webp" alt="Quad UAS in flight during an aerial collection mission." width="1280" height="800" loading="lazy" decoding="async" style="{{ acImgStyle }}">
+      </div>
+      <div style="{{ ndaa3Style }}">
+        <div style="{{ ndaa3CellStyle }}">
+          <h3 style="{{ ndaa3H3Style }}">FAA Part 107 Pilots</h3>
+          <p style="{{ ndaa3PStyle }}">Missions are planned and flown by pilots holding current FAA Part 107 Remote Pilot Certificates.</p>
+        </div>
+        <div style="{{ ndaa3CellStyle }}">
+          <h3 style="{{ ndaa3H3Style }}">NDAA-Compliant Options</h3>
+          <p style="{{ ndaa3PStyle }}">Eagle operates aircraft that may be selected when a project includes applicable federal procurement or supply-chain requirements.</p>
+        </div>
+        <div style="{{ ndaa3CellStyle }}">
+          <h3 style="{{ ndaa3H3Style }}">Blue UAS Options</h3>
+          <p style="{{ ndaa3PStyle }}">Blue UAS Cleared platforms may be available when specified by the project, client, agency, or site requirements.</p>
+        </div>
+      </div>
+      <p style="{{ acNoteStyle }}">From its Denton and Waco offices, Eagle supports aerial thermal assignments across the Dallas-Fort Worth metroplex, Central Texas, and projects throughout Texas, with select Reality Capture assignments supported outside the state.</p>
+    </div>
+  </section>
+
+  <section id="related" data-screen-label="Related services" style="{{ secFogStyle }}">
+    <div style="{{ wrapStyle }}">
+      <span style="{{ eyebrowStyle }}">Related Services</span>
+      <h2 style="{{ h2Style }}">Add Visual Context, Recurring Records, or Dimensional Detail.</h2>
+      <div style="{{ rel4Style }}">
+        <a href="/aerial-photogrammetry" data-reveal="" style="{{ relCardStyle }}">
+          <img src="aerial-thermal-imagery-georeferenced-orthomosaic-corsicana.webp" alt="Georeferenced orthomosaic, Corsicana" width="900" height="595" loading="lazy" style="{{ relImgStyle }}">
+          <span style="{{ relBodyStyle }}"><span style="{{ relH3Style }}">Aerial Photogrammetry</span><span style="{{ relPStyle }}">Adds high-resolution visual imagery, orthomosaics, and broader mapped context around the captured asset.</span><span style="{{ relLinkStyle }}">View Service &rarr;</span></span>
         </a>
-        <a href="/construction-progress-monitoring" data-reveal="" data-rc-card="" style="{{ relCardStyle }}">
-          <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
-            <img src="p03.webp" alt="Construction progress monitoring" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          </span>
-          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Construction Progress Monitoring</span>
+        <a href="/construction-progress-monitoring" data-reveal="" style="{{ relCardStyle }}">
+          <img src="aerial-thermal-imagery-progress-imagery-comparison-denton.webp" alt="Aerial progress imagery comparison, Denton" width="1600" height="694" loading="lazy" style="{{ relImgStyle }}">
+          <span style="{{ relBodyStyle }}"><span style="{{ relH3Style }}">Construction Progress Monitoring and Documentation</span><span style="{{ relPStyle }}">Adds recurring aerial and 360&deg; records when the assignment requires change-over-time documentation.</span><span style="{{ relLinkStyle }}">View Service &rarr;</span></span>
         </a>
-        <a href="/terrestrial-laser-scanning" data-reveal="" data-rc-card="" style="{{ relCardStyle }}">
-          <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
-            <img src="p06.webp" alt="Terrestrial laser scanning" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          </span>
-          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">Terrestrial Laser Scanning (TLS)</span>
-        </a>
-        <a href="/360-site-documentation" data-reveal="" data-rc-card="" style="{{ relCardStyle }}">
-          <span data-rc-frame="" style="position:relative;display:block;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#0D4066">
-            <img src="p02.webp" alt="360 site documentation" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .7s cubic-bezier(.2,.8,.2,1)">
-          </span>
-          <span style="font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:#0F2E45;letter-spacing:-.015em">360° Site Documentation</span>
+        <a href="/terrestrial-laser-scanning" data-reveal="" style="{{ relCardStyle }}">
+          <img src="aerial-thermal-imagery-intensity-point-cloud-roof.webp" alt="Intensity-colorized registered point cloud, commercial roof structure" width="900" height="431" loading="lazy" style="{{ relImgStyle }}">
+          <span style="{{ relBodyStyle }}"><span style="{{ relH3Style }}">Terrestrial Laser Scanning (TLS)</span><span style="{{ relPStyle }}">Adds dense dimensional information when measured existing conditions or CAD/BIM-compatible deliverables are required.</span><span style="{{ relLinkStyle }}">View Service &rarr;</span></span>
         </a>
       </div>
     </div>
   </section>
 
-  <section id="estimate" data-screen-label="CTA" style="scroll-margin-top:96px;position:relative;background:#052A44;overflow:hidden;padding:clamp(44px,7vw,100px) clamp(18px,3.2vw,96px)">
-    <img src="p02.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22">
-    <div style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(5,42,68,.96) 0%,rgba(5,42,68,.78) 60%,rgba(5,42,68,.6) 100%)"></div>
+  <section id="faqs" data-screen-label="Thermal FAQs" style="{{ secWhiteStyle }}">
+    <div style="{{ wrapStyle }}">
+      <span style="{{ eyebrowStyle }}">Frequently Asked Questions</span>
+      <h2 style="{{ h2Style }}">What Project Teams Ask About Aerial Thermal Imagery.</h2>
+      <div style="{{ faq2Style }}">
+        <div data-reveal="" style="{{ faq2iStyle }}">
+          <h3 style="{{ faq2H3Style }}">What is Aerial Thermal Imaging?</h3>
+          <p style="{{ faq2PStyle }}">Aerial thermal imaging uses a radiometric thermal sensor mounted on a UAS to capture temperature data across roofs, facilities, solar arrays, equipment areas, and other accessible assets. Deliverables may include georeferenced radiometric imagery and thermal orthomosaics in which each pixel contains temperature information. The data can help qualified engineers, consultants, inspectors, and analysts identify patterns or anomalies requiring further evaluation.</p>
+        </div>
+        <div data-reveal="" style="{{ faq2iStyle }}">
+          <h3 style="{{ faq2H3Style }}">Does Eagle Surveying interpret or diagnose thermal conditions?</h3>
+          <p style="{{ faq2PStyle }}">No. Eagle Surveying captures, processes, georeferences, and delivers thermal data, but we do not diagnose moisture intrusion, heat loss, equipment failure, roof condition, or other thermal causes. The client&rsquo;s engineer, roofing consultant, building-envelope specialist, inspector, or other qualified professional interprets the information and determines whether additional investigation or corrective action is appropriate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact-thermal" data-screen-label="CTA" style="{{ ctaSecStyle }}">
+    <div aria-hidden="true" style="{{ ctaBgStyle }}"></div>
     <div style="{{ ctaGridStyle }}">
-      <div>
-        <h2 style="font-family:'Sora',sans-serif;font-size:clamp(27px,3vw,44px);line-height:1.12;letter-spacing:-.028em;font-weight:600;color:#fff;max-width:24ch;text-wrap:balance">Tell us the asset. We'll fly it and hand your expert the data.</h2>
-        <p style="font-size:clamp(15.5px,1.2vw,18px);line-height:1.7;color:#C3D8E6;max-width:52ch;margin-top:22px;text-wrap:pretty">Aerial thermal data capture throughout Texas, including the Dallas-Fort Worth metroplex and Central Texas, with select assignments supported outside the state.</p>
+      <div style="min-width:0">
+        <span style="{{ eyebrowSkyStyle }}">Project Inquiry</span>
+        <h2 style="{{ ctaH2Style }}">Define the Asset. We&rsquo;ll Plan the Thermal Collection.</h2>
       </div>
-      <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
-        <a href="#estimate" style="display:inline-flex;align-items:center;min-height:54px;padding:0 32px;background:#E0A83E;color:#052A44;font-weight:700;font-size:16.5px;border-radius:999px" style-hover="background:#F0BC57">Request an Estimate</a>
-        <a href="tel:9402223009" style="display:inline-flex;align-items:center;min-height:54px;padding:0 32px;border:1px solid rgba(255,255,255,.4);color:#fff;font-weight:600;font-size:16.5px;border-radius:999px" style-hover="background:rgba(255,255,255,.12)">Call 940-222-3009</a>
-      </div>
+      <p style="color:#C7D6E4;font-size:15px;line-height:1.65;margin:0;max-width:56ch;text-wrap:pretty">Tell us what needs to be documented, how the data will be used, who needs access, and which deliverables your team requires. We&rsquo;ll define the collection plan and delivery approach around the assignment.</p>
+      <a href="#contact-thermal" style="{{ ctaBtnJustify }}white-space:nowrap;width:auto;display:inline-block;background:#DFE7EC;color:#052A44;font-weight:700;font-size:15px;padding:14px 30px;border-radius:6px;white-space:nowrap" style-hover="background:#fff">Discuss Your Thermal Project</a>
     </div>
   </section>
 
@@ -422,14 +512,14 @@
         <button type="button" onClick="{{ footTogCO }}" aria-expanded="{{ footOpenCO }}" tabIndex="{{ footTab }}" style="{{ footBtnStyle }}">Company<span aria-hidden="true" style="{{ footSignCOStyle }}">{{ footSignCO }}</span></button>
         <div style="{{ footListCOStyle }}">
         <a href="/about" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">About Us</a>
-        <a href="#cares" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Eagle Cares</a>
-        <a href="#reality-capture" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Technology &amp; Equipment</a>
+        <a href="/#cares" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Eagle Cares</a>
+        <a href="/#reality-capture" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Technology &amp; Equipment</a>
         <a href="/projects" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Projects</a>
-          <a href="#industries" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Industries</a>
-        <a href="#insights" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Blog</a>
-        <a href="#contact" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Careers</a>
+          <a href="/#industries" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Industries</a>
+        <a href="/#insights" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Blog</a>
+        <a href="/#contact" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Careers</a>
         <a href="/faqs" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">FAQs</a>
-        <a href="#contact" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Contact</a>
+        <a href="/#contact" style="color:#C3D8E6;font-size:clamp(13px,0.86vw,16.5px)" style-hover="color:#fff">Contact</a>
         </div>
       </div>
     </div>
@@ -445,28 +535,55 @@ const SHELL = 'min(2880px,max(1720px,86vw))';
 const WIDE = 'calc(' + SHELL + ' + 2 * clamp(18px,3.2vw,96px))';
 
 class Component extends DCLogic {
-  state = { open: null, drawer: false, acc: null, narrow: false, vpw: 1440 , phones: false, footAcc: null};
+  // DroneDeploy UI screenshots must not be cropped
+  UISHOT = [];
+  LPH = [1, 2];
+
+  state = { open: null, drawer: false, acc: null, narrow: false, vpw: 1440, phones: false, footAcc: null, hdrH: 88, dv: 0, q: 0 };
+
+  measureHdr = () => {
+    const h = document.querySelector('header');
+    if (h) { const v = Math.round(h.getBoundingClientRect().height); if (v && v !== this.state.hdrH) this.setState({ hdrH: v }); }
+  };
 
   componentDidMount() {
+    this.measureHdr();
+    addEventListener('resize', this.measureHdr);
+    requestAnimationFrame(this.measureHdr);
     this.reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
     this.mq = matchMedia('(max-width: 1240px)');
     this.onMq = () => this.setState({ narrow: this.mq.matches });
     this.mq.addEventListener('change', this.onMq);
-    this.onRz = () => this.setState({ vpw: innerWidth });
+    this.onRz = () => { this.setState({ vpw: innerWidth }); this.sizeHeroFrame(); };
     addEventListener('resize', this.onRz);
     this.onMq();
     this.setState({ vpw: innerWidth });
     setTimeout(() => this.bindCardHover(), 60);
     this.initReveal();
+    this.sizeHeroFrame();
+    setTimeout(() => this.sizeHeroFrame(), 120);
   }
-
-  componentDidUpdate() { this.bindCardHover(); }
 
   componentWillUnmount() {
     this.lockScroll(false);
     if (this.mq) this.mq.removeEventListener('change', this.onMq);
     removeEventListener('resize', this.onRz);
   }
+
+  // the Vimeo player letterboxes, so size the iframe to cover its panel
+  sizeHeroFrame() {
+    const el = this.heroFrame;
+    if (!el || !el.parentElement) return;
+    const r = el.parentElement.getBoundingClientRect();
+    if (!r.width || !r.height) return;
+    const cover = r.width / r.height > 16 / 9;
+    const w = cover ? r.width : (r.height * 16) / 9;
+    const h = cover ? (r.width * 9) / 16 : r.height;
+    el.style.width = Math.ceil(w) + 'px';
+    el.style.height = Math.ceil(h) + 'px';
+  }
+
+  componentDidUpdate() { this.sizeHeroFrame(); }
 
   lockScroll(on) {
     try {
@@ -503,9 +620,9 @@ class Component extends DCLogic {
     els.forEach((el) => {
       const isMedia = el.dataset.hero === '0';
       el.style.opacity = '0';
-      el.style.transform = isMedia ? 'scale(.98)' : 'translateY(24px)';
-      el.style.transition = 'opacity ' + (isMedia ? 1.2 : 0.9) + 's ease, transform '
-        + (isMedia ? 1.6 : 1) + 's cubic-bezier(.16,.84,.3,1)';
+      el.style.transform = isMedia ? 'scale(1.07)' : 'translateY(24px)';
+      el.style.transition = 'opacity ' + (isMedia ? 1.4 : 0.9) + 's ease, transform '
+        + (isMedia ? 2.2 : 1) + 's cubic-bezier(.16,.84,.3,1)';
     });
     requestAnimationFrame(() => els.forEach((el, i) => setTimeout(() => show(el), 60 + i * 150)));
     setTimeout(() => els.forEach(show), 2600);
@@ -551,6 +668,7 @@ class Component extends DCLogic {
 
   renderVals() {
     const st = this.state;
+    const PAD = 'clamp(64px,7vw,110px) 0';
     const card = (open, side) => ({
       position: 'absolute', top: '100%',
       left: side === 'right' ? 'auto' : 0, right: side === 'right' ? 0 : 'auto',
@@ -561,18 +679,6 @@ class Component extends DCLogic {
     const mob = st.vpw < 1100;
     const acc = (k) => ({ display: st.acc === k ? 'grid' : 'none', gap: 2, padding: '4px 0 10px 2px' });
     const accLink = { display: 'flex', alignItems: 'center', minHeight: 46, fontSize: 15, color: '#616E77' };
-    const stack = st.vpw < 760;
-    const ledgerRow = (light) => ({
-      fontSize: 15.5, lineHeight: 1.55, fontWeight: 600,
-      color: light ? '#fff' : '#C3D8E6',
-      padding: '18px 0', borderTop: '1px solid rgba(255,255,255,' + (light ? '.24' : '.14') + ')'
-    });
-    const useRow = (last) => ({
-      display: 'grid', alignItems: 'center',
-      gridTemplateColumns: stack ? '72px 34px minmax(0,1fr)' : '132px 46px minmax(0,1fr)',
-      gap: stack ? 16 : 26, padding: stack ? '18px 0' : '22px 0',
-      borderTop: '1px solid #C9D6E2', borderBottom: last ? '1px solid #C9D6E2' : 'none'
-    });
 
     return {
       navStyle: { display: mob ? 'none' : 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'flex-end', gap: 2, marginLeft: 'auto' },
@@ -621,122 +727,297 @@ class Component extends DCLogic {
 
       faq1Open: this.props.faqFirstOpen === false ? undefined : true,
 
-      stripStyle: {
-        maxWidth: WIDE, margin: '0 auto', padding: st.vpw < 900 ? '12px clamp(18px,3.2vw,96px)' : '16px clamp(18px,3.2vw,96px)',
-        display: 'flex', flexWrap: st.vpw < 900 ? 'nowrap' : 'wrap',
-        gap: st.vpw < 900 ? 0 : '12px 42px', alignItems: 'center'
+      vimeoRef: (el) => {
+        if (!el) return;
+        this.heroFrame = el;
+        this.sizeHeroFrame();
+        requestAnimationFrame(() => this.sizeHeroFrame());
       },
-      stripDupStyle: {
-        display: st.vpw < 900 ? 'inline' : 'none',
-        fontSize: 13, color: '#C3D8E6', fontWeight: 500
+      // ---- shared layout (ported from the reference CSS) ----
+      wrapStyle: { position: 'relative', width: '100%', margin: 0, padding: '0 clamp(20px,4vw,72px)' },
+      eyebrowStyle: { display: 'flex', alignItems: 'center', gap: 10, marginBottom: 20, fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 11, fontWeight: 500, letterSpacing: '.14em', textTransform: 'uppercase', color: '#8E5527' },
+      h2Style: { fontFamily: "'Sora',sans-serif", fontSize: 'clamp(34px,3.6vw,50px)', lineHeight: 1.08, letterSpacing: '-.026em', fontWeight: 600, color: '#A96B38', margin: 0, textWrap: 'balance' },
+      eyebrowSkyStyle: { display: 'flex', alignItems: 'center', gap: 10, marginBottom: 20, fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 11, fontWeight: 500, letterSpacing: '.14em', textTransform: 'uppercase', color: '#9FC0DA' },
+      h2DarkStyle: { fontFamily: "'Sora',sans-serif", fontSize: 'clamp(34px,3.6vw,50px)', lineHeight: 1.08, letterSpacing: '-.026em', fontWeight: 600, color: '#C4793E', margin: 0, textWrap: 'balance' },
+      bodyPStyle: { color: '#42586A', fontSize: 16, lineHeight: 1.7, margin: '16px 0 0', maxWidth: '56ch', textWrap: 'pretty' },
+      secWhiteStyle: { scrollMarginTop: 96, position: 'relative', overflowX: 'clip', background: '#fff', padding: PAD },
+      secFogStyle: { scrollMarginTop: 96, position: 'relative', overflowX: 'clip', background: '#EEF2F4', padding: PAD },
+      secSteelStyle: { scrollMarginTop: 96, position: 'relative', overflow: 'hidden', background: 'linear-gradient(135deg,#D6E2E8 0%,#B8CBD8 100%)', padding: PAD },
+      secSlateStyle: { scrollMarginTop: 96, position: 'relative', overflowX: 'clip', background: '#D9E3E8', padding: PAD },
+      secProcStyle: { scrollMarginTop: 96, position: 'relative', overflow: 'hidden', background: 'linear-gradient(135deg,#052A44,#0A3D61)', padding: PAD },
+      wingMarkStyle: {
+        position: 'absolute', top: -40, right: 0,
+        width: 'min(820px,65vw)', height: 'auto', aspectRatio: '420 / 149',
+        transform: 'translateX(10%)', transformOrigin: '80% 40%',
+        animation: 'eagle-wing-drift 13s ease-in-out infinite',
+        opacity: .085, pointerEvents: 'none', userSelect: 'none'
       },
-      stripViewportStyle: st.vpw < 900
-        ? {
-            flex: '1 1 auto', minWidth: 0, overflow: 'hidden',
-            maskImage: 'linear-gradient(90deg,#000 0,#000 calc(100% - 34px),transparent 100%)',
-            WebkitMaskImage: 'linear-gradient(90deg,#000 0,#000 calc(100% - 34px),transparent 100%)'
-          }
-        : { flex: '1 1 auto', minWidth: 0 },
-      stripTrackStyle: st.vpw < 900
-        ? {
-            display: 'flex', alignItems: 'center', gap: 30, width: 'max-content',
-            animation: this.reduced ? 'none' : 'eagle-marquee-strip 34s linear infinite'
-          }
-        : { display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '12px 42px' },
-      overviewGridStyle: {
-        display: 'grid', gap: st.narrow ? 26 : 72, alignItems: 'start',
-        gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,.8fr) minmax(0,1.2fr)'
+
+      heroChipStyle: { position: 'relative', display: 'block', width: '100%', height: st.vpw <= 1050 ? 'auto' : '100%', overflow: 'hidden', borderRadius: 12, border: '3px solid rgba(255,255,255,.14)', boxShadow: '0 16px 40px rgba(0,0,0,.45)' },
+      scopePanelStyle: { display: 'grid', alignItems: 'start', gap: st.vpw < 980 ? 16 : 'clamp(20px,2.4vw,36px)', marginTop: 'clamp(30px,3.4vw,44px)', padding: 'clamp(22px,2.2vw,28px) clamp(26px,2.8vw,34px)', background: 'rgba(255,255,255,.6)', border: '1px solid #C9D7E0', borderRadius: 12, gridTemplateColumns: st.vpw < 980 ? '1fr' : 'minmax(0,24fr) minmax(0,72fr)' },
+      spListStyle: { listStyle: 'none', display: 'grid', gap: 8, margin: 0, padding: '0 0 0 2px' },
+      spItemStyle: { display: 'flex', alignItems: 'baseline', gap: 10, fontSize: 14, fontWeight: 700, color: '#052A44', borderLeft: '2px solid #A96B38', paddingLeft: 12 },
+      // ---- hero: reference gives the IMAGE the wider column ----
+      heroSecStyle: { scrollMarginTop: 96, position: 'relative', overflow: 'hidden', background: 'linear-gradient(120deg,#052A44 0%,#0A3D61 100%)' },
+      heroGridStyle: {
+        position: 'relative', display: 'grid', alignItems: 'center',
+        gap: 'clamp(36px,3.4vw,60px)',
+        paddingBlock: 'clamp(40px,3.6vw,52px)',
+        paddingLeft: 'clamp(20px,4vw,72px)', paddingRight: 'clamp(20px,4vw,72px)',
+        minHeight: st.vpw <= 1050 ? 0 : 'clamp(520px,56vh,620px)',
+        gridTemplateColumns: st.vpw <= 1050 ? '1fr' : 'minmax(0,0.72fr) minmax(0,1.28fr)'
       },
-      bandImageStyle: {
-        position: 'relative', marginTop: st.narrow ? 36 : 56, borderRadius: 28, overflow: 'hidden',
-        background: '#0D4066', aspectRatio: st.vpw < 900 ? '4 / 3' : '21 / 9',
-        boxShadow: '0 0 0 0 rgba(56,142,205,0)', transition: 'box-shadow .45s ease'
+      // reference .sherov: a plain wrapper, not a grid — this hero has one image
+      heroImgStyle: { position: 'relative', width: '100%', minWidth: 0, justifySelf: 'stretch' },
+      heroPhotoStyle: st.vpw <= 1050
+        ? { display: 'block', width: '100%', height: 'auto',
+          objectFit: 'cover', objectPosition: '50% 48%',
+          borderRadius: 14, border: '1px solid rgba(159,192,218,.22)',
+          boxShadow: '0 26px 64px rgba(0,0,0,.45)',
+          aspectRatio: '16 / 10', maxHeight: 'none' }
+        : { display: 'block', width: '100%', height: 'auto',
+          objectFit: 'cover', objectPosition: '50% 48%',
+          borderRadius: 14, border: '1px solid rgba(159,192,218,.22)',
+          boxShadow: '0 26px 64px rgba(0,0,0,.45)',
+          aspectRatio: '3 / 2', maxHeight: 'clamp(400px,46vh,520px)' },
+      snavStyle: { position: 'sticky', top: st.hdrH || 75, zIndex: 40, background: '#EEF2F4', borderBottom: '1px solid #D3DEE6' },
+      snavInnerStyle: { position: 'relative', display: 'flex', flexWrap: 'wrap', gap: 0, justifyContent: st.vpw <= 820 ? 'flex-start' : 'center', maxWidth: st.vpw <= 820 ? 'none' : 1150, margin: st.vpw <= 820 ? 0 : '0 auto', padding: '0 clamp(20px,4vw,72px)', overflowX: st.vpw <= 820 ? 'auto' : 'visible', scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch' },
+      snavLinkStyle: { flex: '0 0 auto', padding: '14px 22px', fontSize: 13.5, fontWeight: 700, color: '#3D5261', borderRight: '1px solid #D3DEE6', whiteSpace: 'nowrap', transition: 'color .2s ease' },
+
+      // ---- overview ----
+      overviewGridStyle: { position: 'relative', zIndex: 2, display: 'grid', alignItems: 'center', gap: st.vpw <= 1100 ? 36 : '4%', padding: '0 clamp(20px,4vw,72px)', gridTemplateColumns: st.vpw <= 1100 ? '1fr' : 'minmax(0,40fr) minmax(0,56fr)' },
+      ovFigStyle: { margin: 0, minWidth: 0, opacity: 0, transform: 'translateY(20px)', transition: 'opacity .8s ease, transform .8s ease' },
+      ovFigImgStyle: { display: 'block', width: '100%', height: 'auto', borderRadius: 14, boxShadow: '0 24px 60px rgba(0,0,0,.4)' },
+      wiiOvStyle: { position: 'absolute', inset: 0, width: '100%', height: 'calc(100% - 26px)', pointerEvents: 'none', opacity: .85 },
+      ovCapStyle: { display: 'block', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 12, letterSpacing: '.08em', color: '#C7D6E4', marginTop: 10 },
+      proof3Style: { display: 'grid', gap: 26, marginTop: 38, gridTemplateColumns: st.vpw < 700 ? 'minmax(0,1fr)' : 'repeat(3,minmax(0,1fr))' },
+      proofItemStyle: { display: 'flex', flexDirection: 'column', gap: 7 },
+      proofH3Style: { fontFamily: "'Sora',sans-serif", fontSize: 15, fontWeight: 600, letterSpacing: '.02em', color: '#263640', margin: 0, lineHeight: 1.3 },
+      proofPStyle: { fontSize: 14, color: '#5C6B74', lineHeight: 1.6, margin: 0, textWrap: 'pretty' },
+
+      secWiiStyle: { scrollMarginTop: 96, position: 'relative', overflowX: 'clip', background: 'linear-gradient(135deg,#031F34 0%,#073553 100%)', padding: PAD },
+      ed3p2Style: { color: '#C7D6E4', fontSize: 16, lineHeight: 1.72, margin: '16px 0 0', maxWidth: '60ch', textWrap: 'pretty' },
+      proofH3DarkStyle: { fontFamily: "'Sora',sans-serif", fontSize: 13, fontWeight: 600, letterSpacing: '.12em', textTransform: 'uppercase', color: '#fff', margin: '0 0 8px', lineHeight: 1.3 },
+      proofPDarkStyle: { fontSize: 13.5, color: '#C7D6E4', lineHeight: 1.6, margin: 0, textWrap: 'pretty' },
+      wiiFigStyle: { margin: 0, position: 'relative', minWidth: 0, opacity: 0, transform: 'translateY(20px)', transition: 'opacity .8s ease, transform .8s ease' },
+      secSepStyle: { position: 'absolute', left: 0, right: 0, bottom: 0, height: 22, pointerEvents: 'none' },
+      proof3hStyle: { display: 'grid', gap: 26, marginTop: 34, gridTemplateColumns: st.vpw <= 980 ? '1fr' : 'repeat(3,minmax(0,1fr))' },
+      capGridStyle: { display: 'grid', alignItems: 'center', gap: st.vpw <= 900 ? 30 : '4%', marginTop: 64, paddingTop: 56, borderTop: '1px solid rgba(159,192,218,.25)', gridTemplateColumns: st.vpw <= 900 ? '1fr' : 'minmax(0,44%) minmax(0,52%)' },
+      capShotsStyle: { order: 2, display: 'grid', gap: st.vpw <= 620 ? 18 : 16, minWidth: 0, gridTemplateColumns: st.vpw <= 620 ? '1fr' : 'repeat(2,minmax(0,1fr))' },
+      capShotStyle: { display: 'block', width: '100%', height: 'clamp(200px,22vw,300px)', objectFit: 'cover', borderRadius: 14 },
+      cap3Style: { display: 'grid', gap: 16, marginTop: 24, gridTemplateColumns: 'minmax(0,1fr)' },
+      capNoteStyle: { color: '#9FC0DA', fontSize: 13.5, lineHeight: 1.62, marginTop: 56, maxWidth: '62ch', borderTop: '1px solid rgba(159,192,218,.25)', paddingTop: 14, textWrap: 'pretty' },
+      spItemsStyle: { display: 'grid', gap: '16px 24px', gridTemplateColumns: st.vpw <= 980 ? '1fr' : 'repeat(2,minmax(0,1fr))' },
+      spH4Style: { fontFamily: "'Sora',sans-serif", fontSize: 15, fontWeight: 600, letterSpacing: '-.012em', color: '#052A44', margin: '0 0 6px', lineHeight: 1.3 },
+      spPStyle: { fontSize: 13.5, color: '#42586A', lineHeight: 1.62, margin: 0, textWrap: 'pretty' },
+      heroTagStyle: { color: '#E6914C', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 13, fontWeight: 700, letterSpacing: '.22em', textTransform: 'uppercase', margin: '14px 0 2px' },
+      proofStackStyle: { display: 'grid', gridTemplateColumns: '1fr', marginTop: 30, gap: 18 },
+      browserStyle: { borderRadius: 14, overflow: 'hidden', minWidth: 0, background: '#0B2E4A', border: '1px solid rgba(159,192,218,.25)', boxShadow: '0 26px 64px rgba(0,0,0,.45)', opacity: 0, transform: 'translateY(20px)', transition: 'opacity .8s ease, transform .8s ease' },
+      browBarStyle: { display: 'flex', alignItems: 'center', gap: 7, padding: '12px 16px', background: '#08243A', borderBottom: '1px solid rgba(159,192,218,.18)' },
+      browDotStyle: { width: 10, height: 10, borderRadius: '50%', background: 'rgba(159,192,218,.35)', flex: '0 0 auto' },
+      browLabelStyle: { fontStyle: 'normal', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", color: '#9FC0DA', fontSize: 10.5, letterSpacing: '.16em', marginLeft: 12 },
+      dvFitImgStyle: { display: 'block', width: '100%', maxWidth: 880, aspectRatio: '16 / 10', height: 'auto', objectFit: 'contain', background: '#08243A', padding: 10, borderRadius: 12 },
+      faq2Style: { display: 'grid', gap: st.vpw <= 900 ? 26 : 'clamp(28px,4vw,72px)', marginTop: 44, gridTemplateColumns: st.vpw <= 900 ? '1fr' : 'repeat(2,minmax(0,1fr))' },
+      faq2iStyle: { borderTop: '2px solid #C9D7E0', paddingTop: 22, opacity: 0, transform: 'translateY(18px)', transition: 'opacity .7s ease, transform .7s ease' },
+      faq2H3Style: { fontFamily: "'Sora',sans-serif", fontSize: 'clamp(19px,1.7vw,23px)', fontWeight: 600, letterSpacing: '-.018em', color: '#052A44', margin: '0 0 12px', lineHeight: 1.3 },
+      faq2PStyle: { color: '#42586A', fontSize: 16, lineHeight: 1.75, margin: 0, textWrap: 'pretty' },
+      wiiLinesStyle: { position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: .05, pointerEvents: 'none' },
+      wichStyle: { position: 'relative', zIndex: 2, display: 'grid', alignItems: 'start', gap: st.vpw <= 980 ? 18 : '4%', gridTemplateColumns: st.vpw <= 980 ? '1fr' : 'minmax(0,42fr) minmax(0,54fr)' },
+      wipPStyle: { color: '#C7D6E4', fontSize: 16, lineHeight: 1.72, margin: '0 0 16px', maxWidth: '60ch', textWrap: 'pretty' },
+      wiPlateStyle: { position: 'relative', zIndex: 2, display: 'grid', margin: '52px auto 0', maxWidth: 1600, background: '#03192B', border: '1px solid rgba(159,192,218,.22)', borderRadius: 16, overflow: 'hidden', boxShadow: '0 26px 64px rgba(0,0,0,.4)', gridTemplateColumns: st.vpw <= 1000 ? '1fr' : 'minmax(0,72fr) minmax(0,28fr)', opacity: 0, transform: 'translateY(20px)', transition: 'opacity .8s ease, transform .8s ease' },
+      wiRailStyle: { background: '#04223A', display: 'grid', gridTemplateRows: st.vpw <= 1000 ? 'none' : 'repeat(3,minmax(0,1fr))', borderLeft: st.vpw <= 1000 ? 0 : '1px solid rgba(159,192,218,.18)', borderTop: st.vpw <= 1000 ? '1px solid rgba(159,192,218,.18)' : 0 },
+      wiRailCellStyle: { padding: 'clamp(18px,1.7vw,26px)' },
+      wiRailH3Style: { fontFamily: "'Sora',sans-serif", color: '#fff', fontSize: 12.5, fontWeight: 600, letterSpacing: '.12em', textTransform: 'uppercase', margin: '0 0 8px', lineHeight: 1.3 },
+      wiRailPStyle: { color: '#C7D6E4', fontSize: 13.5, lineHeight: 1.6, margin: 0, textWrap: 'pretty' },
+      appGridStyle: { display: 'grid', margin: '44px auto 0', maxWidth: 1500, gap: st.vpw <= 980 ? 'clamp(24px,3vw,32px)' : 'clamp(28px,2.8vw,48px)', gridTemplateColumns: st.vpw <= 640 ? '1fr' : 'repeat(2,minmax(0,1fr))' },
+      appCardStyle: { minWidth: 0, opacity: 0, transform: 'translateY(18px)', transition: 'opacity .7s ease, transform .7s ease' },
+      appFigStyle: { position: 'relative', borderRadius: 12, overflow: 'hidden', border: '1px solid rgba(5,42,68,.24)', boxShadow: '0 16px 38px rgba(5,42,68,.16)' },
+      appInsetStyle: { display: st.vpw <= 640 ? 'none' : 'block', position: 'absolute', right: 14, bottom: 14, width: '27%', maxWidth: 170, borderRadius: 8, overflow: 'hidden', border: '2px solid rgba(255,255,255,.88)', boxShadow: '0 10px 26px rgba(0,0,0,.45)' },
+      appH3Style: { fontFamily: "'Sora',sans-serif", color: '#052A44', fontSize: 16, fontWeight: 600, letterSpacing: '.04em', textTransform: 'uppercase', margin: '22px 0 9px', lineHeight: 1.3 },
+      appPStyle: { color: '#405567', fontSize: 15, lineHeight: 1.66, margin: 0, maxWidth: '54ch', textWrap: 'pretty' },
+      appCapStyle: { fontFamily: "'IBM Plex Mono',ui-monospace,monospace", color: '#445565', fontSize: 11.5, letterSpacing: '.1em', textTransform: 'uppercase', margin: '12px 0 0', paddingTop: 10, borderTop: '1px solid rgba(5,42,68,.18)' },
+      secDlvStyle: { scrollMarginTop: 96, position: 'relative', overflow: 'hidden', background: 'linear-gradient(135deg,#EEF2F4 0%,#D9E3E8 100%)', padding: PAD },
+      dlvLinesStyle: { position: 'absolute', right: -40, top: 0, height: '100%', width: 'min(680px,46vw)', opacity: .04, pointerEvents: 'none' },
+      dlvInStyle: { position: 'relative', zIndex: 2, width: '100%', maxWidth: 1680, marginInline: 'auto' },
+      dlvHeadStyle: { display: 'grid', alignItems: 'end', gap: st.vpw <= 980 ? 14 : '4%', gridTemplateColumns: st.vpw <= 980 ? '1fr' : 'minmax(0,52fr) minmax(0,44fr)' },
+      dlvHeadPStyle: { color: '#42586A', fontSize: 16, lineHeight: 1.7, maxWidth: '60ch', margin: '0 0 6px', textWrap: 'pretty' },
+      dlvMainStyle: { display: 'grid', alignItems: 'stretch', marginTop: 44, gap: st.vpw <= 980 ? 26 : st.vpw <= 1200 ? 28 : '4%', gridTemplateColumns: st.vpw <= 980 ? '1fr' : 'minmax(0,58fr) minmax(0,38fr)' },
+      dlvFrameStyle: { background: '#052A44', border: '1px solid rgba(159,192,218,.25)', borderRadius: 14, padding: 'clamp(16px,1.6vw,22px)', boxShadow: '0 18px 44px rgba(5,42,68,.18)', minWidth: 0 },
+      dlvFLabelStyle: { display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 14, flexWrap: 'wrap', marginBottom: 14 },
+      flStyle: { fontFamily: "'IBM Plex Mono',ui-monospace,monospace", color: '#A9C7DC', fontSize: 10.5, letterSpacing: '.18em', textTransform: 'uppercase' },
+      fnStyle: { fontFamily: "'IBM Plex Mono',ui-monospace,monospace", color: '#fff', fontSize: 13, letterSpacing: '.06em', fontWeight: 700 },
+      imgCapStyle: { fontFamily: "'IBM Plex Mono',ui-monospace,monospace", color: '#A9C7DC', fontSize: 12, letterSpacing: '.08em', margin: '12px 0 0' },
+      dlvPanelStyle: { background: 'linear-gradient(150deg,#0A3D61,#052A44)', border: '1px solid rgba(159,192,218,.25)', borderRadius: 14, padding: 'clamp(22px,2vw,32px)', boxShadow: '0 18px 44px rgba(5,42,68,.18)', minWidth: 0 },
+      rvwStyle: { position: 'relative', overflow: 'hidden', background: 'linear-gradient(120deg,#00548B,#0A6597)', padding: 'clamp(38px,3.6vw,54px) 0' },
+      rvwInStyle: { display: 'grid', alignItems: 'center', gap: st.vpw <= 900 ? 22 : 'clamp(28px,3vw,48px)', gridTemplateColumns: st.vpw <= 900 ? '1fr' : 'minmax(0,36fr) minmax(0,58fr)' },
+      eyebrowLightStyle: { display: 'flex', alignItems: 'center', gap: 10, marginBottom: 20, fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 11, fontWeight: 500, letterSpacing: '.14em', textTransform: 'uppercase', color: '#DCEAF5' },
+      rvw2Style: { display: 'grid', gap: st.vpw <= 900 ? 18 : 'clamp(22px,2.4vw,38px)', gridTemplateColumns: st.vpw <= 900 ? '1fr' : 'repeat(2,minmax(0,1fr))' },
+      rvwCellStyle: { borderLeft: '2px solid #E6914C', paddingLeft: 16 },
+      rvwH3Style: { fontFamily: "'Sora',sans-serif", color: '#fff', fontSize: 12, fontWeight: 600, letterSpacing: '.13em', textTransform: 'uppercase', margin: '0 0 7px', lineHeight: 1.3 },
+      rvwPStyle: { color: '#EAF2F8', fontSize: 14.5, lineHeight: 1.65, margin: 0, textWrap: 'pretty' },
+      ndaaStyle: { scrollMarginTop: 96, position: 'relative', overflow: 'hidden', background: 'linear-gradient(120deg,#D6E2E8 0%,#B8CBD8 100%)', padding: 'clamp(46px,4.6vw,68px) 0' },
+      ndaaLinesStyle: { position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: .06, pointerEvents: 'none' },
+      acGridStyle: { display: 'grid', alignItems: 'center', gap: st.vpw <= 980 ? 28 : '4%', gridTemplateColumns: st.vpw <= 980 ? '1fr' : 'minmax(0,44fr) minmax(0,52fr)' },
+      acPStyle: { color: '#35495A', fontSize: 16, lineHeight: 1.7, margin: '16px 0 0', maxWidth: '62ch', textWrap: 'pretty' },
+      acImgStyle: { width: '100%', height: 'clamp(340px,30vw,410px)', objectFit: 'cover', borderRadius: 12, display: 'block', boxShadow: '0 22px 54px rgba(5,42,68,.22)' },
+      ndaa3Style: { display: 'grid', gap: st.vpw <= 980 ? 0 : 'clamp(18px,2vw,32px)', marginTop: 'clamp(36px,3.4vw,52px)', gridTemplateColumns: st.vpw <= 980 ? '1fr' : 'repeat(3,minmax(0,1fr))' },
+      ndaa3CellStyle: st.vpw <= 980 ? { borderTop: '1px solid rgba(5,42,68,.22)', padding: '15px 0' } : {},
+      ndaa3H3Style: { fontFamily: "'Sora',sans-serif", color: '#052A44', fontSize: 12.5, fontWeight: 600, letterSpacing: '.12em', textTransform: 'uppercase', margin: '0 0 7px', lineHeight: 1.3 },
+      ndaa3PStyle: { color: '#35495A', fontSize: 14, lineHeight: 1.62, margin: 0, textWrap: 'pretty' },
+      acNoteStyle: { color: '#3F5260', fontSize: 13.5, lineHeight: 1.64, marginTop: 'clamp(30px,3vw,40px)', paddingTop: 15, borderTop: '1px solid rgba(5,42,68,.22)', maxWidth: '74ch', textWrap: 'pretty' },
+      // ---- best-fit: rules, not cards ----
+      // the bfsteel gradient runs to #B8CBD8, so this section needs darker copper
+      bfEyebrowStyle: { display: 'flex', alignItems: 'center', gap: 10, marginBottom: 20, fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 11, fontWeight: 500, letterSpacing: '.14em', textTransform: 'uppercase', color: '#734826' },
+      bfH2Style: { fontFamily: "'Sora',sans-serif", fontSize: 'clamp(34px,3.6vw,50px)', lineHeight: 1.08, letterSpacing: '-.026em', fontWeight: 600, color: '#996032', margin: 0, textWrap: 'balance' },
+      bfLinesStyle: { position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: .05, pointerEvents: 'none' },
+      bfGridStyle: { display: 'grid', gap: '0 clamp(30px,4vw,72px)', marginTop: 44, gridTemplateColumns: st.vpw <= 980 ? '1fr' : 'repeat(3,minmax(0,1fr))' },
+      bfItemStyle: { padding: '24px 0', borderTop: '2px solid rgba(5,42,68,.28)', opacity: 0, transform: 'translateY(18px)', transition: 'opacity .7s ease, transform .7s ease' },
+      bfH3Style: { fontFamily: "'Sora',sans-serif", fontSize: 16, fontWeight: 600, letterSpacing: '.04em', textTransform: 'uppercase', color: '#052A44', margin: '0 0 8px', lineHeight: 1.3 },
+      bfPStyle: { fontSize: 14.5, color: '#35495A', lineHeight: 1.62, margin: 0, textWrap: 'pretty' },
+      bfNoteStyle: { marginTop: 36, color: '#3F5260', fontSize: 14, lineHeight: 1.7, maxWidth: '88ch', borderLeft: '3px solid #734826', paddingLeft: 18, textWrap: 'pretty' },
+      // ---- deliverables: reference keeps the label navy; active = background only ----
+      delivGridStyle: { display: 'grid', alignItems: 'start', marginTop: 44, maxWidth: 1500, gap: st.vpw <= 980 ? 26 : st.vpw <= 1200 ? 28 : '4%', gridTemplateColumns: st.vpw <= 980 ? '1fr' : st.vpw <= 1200 ? 'minmax(0,55fr) minmax(0,45fr)' : 'minmax(0,56fr) minmax(0,40fr)' },
+      delivViewStyle: { position: 'relative', minWidth: 0 },
+      dvImgStyle: { display: 'block', width: '100%', maxWidth: st.vpw <= 980 ? 'none' : 880, aspectRatio: '16 / 10', height: 'auto', objectFit: 'cover', borderRadius: 12, background: '#052A44' },
+      dlvCapStyle: { color: '#5C6B74', fontSize: 13.5, lineHeight: 1.6, margin: '14px 0 0', maxWidth: '62ch', textWrap: 'pretty' },
+      dlvCapLabelStyle: { display: 'block', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 11, fontWeight: 500, letterSpacing: '.14em', textTransform: 'uppercase', color: '#052A44', marginBottom: 4 },
+      lphStyle: { display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', width: '100%', height: 'clamp(320px,40vw,480px)', padding: 'clamp(20px,3vw,44px)', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 12, fontWeight: 700, letterSpacing: '.16em', color: '#8AAFC7', background: '#052A44', border: '1px dashed rgba(255,255,255,.28)', borderRadius: 12 },
+      delivListStyle: { display: 'grid', gridTemplateColumns: '1fr', marginTop: 0, minWidth: 0 },
+      fmtStyle: { flex: '0 0 auto', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 11, fontWeight: 700, letterSpacing: '.12em', color: '#EFB479' },
+
+      // ---- process: numbered circles on a connector line ----
+      procGridStyle: { position: 'relative', display: 'grid', gap: 'clamp(20px,2.5vw,44px)', marginTop: 48, gridTemplateColumns: st.vpw <= 980 ? '1fr' : 'repeat(4,minmax(0,1fr))' },
+      procLineStyle: { display: st.vpw <= 980 ? 'none' : 'block', position: 'absolute', top: 21, left: '4%', right: '4%', height: 1, background: 'linear-gradient(90deg,transparent,rgba(159,192,218,.5),rgba(159,192,218,.5),transparent)', pointerEvents: 'none' },
+      pStepStyle: { position: 'relative', opacity: 0, transform: 'translateY(18px)', transition: 'opacity .7s ease, transform .7s ease' },
+      pNumStyle: { position: 'relative', zIndex: 2, display: 'flex', alignItems: 'center', justifyContent: 'center', width: 42, height: 42, borderRadius: '50%', background: '#00548B', border: '3px solid #0A3D61', color: '#fff', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 14, fontWeight: 700, marginBottom: 18 },
+      pStepH3Style: { fontFamily: "'Sora',sans-serif", fontSize: 15, fontWeight: 600, letterSpacing: '.05em', textTransform: 'uppercase', color: '#fff', margin: '0 0 10px', lineHeight: 1.3 },
+      pStepPStyle: { fontSize: 14, color: '#C7D6E4', lineHeight: 1.65, margin: 0, textWrap: 'pretty' },
+      vtolGridStyle: { display: 'grid', alignItems: 'center', gap: '4%', marginTop: 64, paddingTop: 56, borderTop: '1px solid rgba(159,192,218,.25)', gridTemplateColumns: st.vpw < 900 ? 'minmax(0,1fr)' : 'minmax(0,46%) minmax(0,50%)' },
+      vt3Style: { display: 'grid', gap: 16, marginTop: 24, gridTemplateColumns: 'minmax(0,1fr)' },
+      vtH4Style: { fontFamily: "'Sora',sans-serif", fontSize: 15, fontWeight: 600, letterSpacing: '-.012em', color: '#fff', margin: 0, lineHeight: 1.3 },
+      vtPStyle: { fontSize: 13.5, color: '#A9C3D5', lineHeight: 1.6, margin: '5px 0 0', textWrap: 'pretty' },
+      gifcStyle: { margin: 0, background: '#02080D', border: '1px solid rgba(159,192,218,.2)', borderRadius: 14, padding: 'clamp(14px,1.4vw,22px)' },
+
+      // ---- applications ----
+      mkt4Style: { display: 'grid', gap: 'clamp(16px,1.6vw,26px)', marginTop: 44, gridTemplateColumns: st.vpw <= 640 ? '1fr' : st.vpw <= 980 ? 'repeat(2,minmax(0,1fr))' : 'repeat(4,minmax(0,1fr))' },
+      mktCardStyle: { position: 'relative', display: 'block', overflow: 'hidden', borderRadius: 12, background: '#052A44', opacity: 0, transform: 'translateY(18px)', transition: 'opacity .7s ease, transform .7s ease' },
+      mktImgStyle: { width: '100%', height: 'clamp(240px,24vw,320px)', objectFit: 'cover', display: 'block' },
+      mktOvStyle: { position: 'absolute', inset: 0, color: '#fff', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', gap: 6, padding: 20, background: 'linear-gradient(180deg,rgba(5,42,68,.05) 30%,rgba(5,42,68,.88) 100%)' },
+      mktH3Style: { fontFamily: "'Sora',sans-serif", fontSize: 16.5, fontWeight: 600, letterSpacing: '-.015em', color: '#fff', lineHeight: 1.26 },
+      mktPStyle: { fontSize: 12.5, color: '#C7D6E4', lineHeight: 1.5, textWrap: 'pretty' },
+      mktLinkStyle: { display: 'inline-block', marginTop: 30, fontSize: 14.5, fontWeight: 700, color: '#00548B', borderBottom: '1px solid rgba(0,84,139,.34)', paddingBottom: 4, transition: 'color .2s ease, border-color .2s ease' },
+
+      // ---- related ----
+      rel4Style: { display: 'grid', gap: 'clamp(24px,2vw,28px)', marginTop: 44, gridTemplateColumns: st.vpw <= 640 ? '1fr' : st.vpw <= 1100 ? 'repeat(2,minmax(0,1fr))' : 'repeat(3,minmax(0,1fr))' },
+      relCardStyle: { display: 'flex', flexDirection: 'column', overflow: 'hidden', borderRadius: 12, background: '#fff', border: '1px solid #C9D7E0', opacity: 0, transform: 'translateY(18px)', transition: 'opacity .7s ease, transform .7s ease, border-color .22s ease, box-shadow .22s ease' },
+      relImgStyle: { width: '100%', aspectRatio: '16 / 10', height: 'auto', minHeight: st.vpw <= 640 ? 200 : 240, maxHeight: 310, objectFit: 'cover', display: 'block' },
+      relBodyStyle: { display: 'flex', flexDirection: 'column', gap: 8, padding: 'clamp(22px,1.9vw,26px)', flex: 1 },
+      relH3Style: { fontFamily: "'Sora',sans-serif", fontSize: 18, fontWeight: 600, letterSpacing: '-.015em', color: '#052A44', lineHeight: 1.28 },
+      relPStyle: { fontSize: 14, color: '#5C6B74', lineHeight: 1.6, textWrap: 'pretty' },
+      relLinkStyle: { marginTop: 'auto', paddingTop: 12, fontSize: 14, fontWeight: 700, color: '#00548B' },
+      topoBridgeStyle: { display: 'grid', alignItems: 'center', gap: 'clamp(20px,2.2vw,32px)', marginTop: 'clamp(28px,3vw,36px)', padding: 'clamp(24px,2.4vw,30px) clamp(28px,3vw,36px)', background: 'linear-gradient(120deg,#00548B,#0A6597)', border: '1px solid rgba(255,255,255,.18)', borderRadius: 10, gridTemplateColumns: st.vpw <= 980 ? '1fr' : '24fr 56fr 20fr', opacity: 0, transform: 'translateY(18px)', transition: 'opacity .7s ease, transform .7s ease' },
+      // ---- FAQ: reference uses eblue for the active question ----
+      faqGridStyle: { display: 'grid', alignItems: 'start', gap: '3%', marginTop: 44, gridTemplateColumns: st.vpw <= 980 ? '1fr' : '40% 57%' },
+      faqListStyle: { display: 'flex', flexDirection: 'column', gap: 0, minWidth: 0 },
+      faqPanelStyle: { position: 'relative', display: 'flex', flexDirection: 'column', minWidth: 0, background: '#fff', border: '1px solid #D3DEE6', borderRadius: 12, padding: st.vpw < 700 ? '24px 22px' : '34px 36px', minHeight: st.vpw < 900 ? 0 : 300 },
+      faqH3Style: { fontFamily: "'Sora',sans-serif", fontSize: 19, fontWeight: 600, letterSpacing: '-.018em', color: '#052A44', margin: '0 0 14px', lineHeight: 1.3 },
+      faqPStyle: { fontSize: 15.5, color: '#42586A', lineHeight: 1.72, margin: 0, textWrap: 'pretty' },
+      faqCtlStyle: { display: 'flex', alignItems: 'center', gap: 20, marginTop: 'auto', paddingTop: 26 },
+      faqPosStyle: { flex: '1 1 auto', fontFamily: "'IBM Plex Mono',ui-monospace,monospace", fontSize: 13, fontWeight: 700, letterSpacing: '.18em', color: '#052A44' },
+      faqNavBtnStyle: { flex: '0 0 auto', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: 40, height: 40, borderRadius: 999, background: '#fff', border: '1px solid #C9D7E0', color: '#052A44', fontSize: 16, cursor: 'pointer', transition: 'border-color .2s ease, color .2s ease' },
+
+      // ---- CTA ----
+      // .wich h2 / .rvw h2 / .ndaa h2 each override .ssec h2 in the reference
+      wichH2Style: {
+        fontFamily: "'Sora',sans-serif", color: '#C4793E',
+        fontSize: 'clamp(30px,3vw,44px)', lineHeight: 1.08,
+        letterSpacing: '-.02em', fontWeight: 600, margin: 0
       },
-      ledgerGridStyle: {
-        display: 'grid', gap: st.narrow ? 34 : 64, marginTop: 44, alignItems: 'start',
-        gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'repeat(2,minmax(0,1fr))'
+      rvwH2Style: {
+        fontFamily: "'Sora',sans-serif", color: '#fff',
+        fontSize: 'clamp(22px,2.1vw,30px)', lineHeight: 1.18,
+        letterSpacing: '-.018em', fontWeight: 600, margin: '8px 0 0'
       },
-      ledgerRowLight: ledgerRow(true),
-      ledgerRowMuted: ledgerRow(false),
-      useRowStyle: useRow(false),
-      useRowLastStyle: useRow(true),
-      useThumbStyle: {
-        position: 'relative', display: 'block', borderRadius: 18, overflow: 'hidden',
-        background: '#0D4066', width: '100%', aspectRatio: '4 / 3'
+      ndaaH2Style: {
+        fontFamily: "'Sora',sans-serif", color: '#996032',
+        fontSize: 'clamp(25px,2.3vw,34px)', lineHeight: 1.14,
+        letterSpacing: '-.018em', fontWeight: 600, margin: 0
       },
-      useNumStyle: {
-        fontFamily: "'Sora',sans-serif", fontSize: stack ? 13 : 15, fontWeight: 700,
-        color: '#7E9AB0', letterSpacing: '.1em'
+      // .ctal h2 is deliberately smaller than .ssec h2
+      ctaH2Style: {
+        fontFamily: "'Sora',sans-serif", color: '#fff',
+        fontSize: 'clamp(24px,2.2vw,31px)', lineHeight: 1.15,
+        letterSpacing: '-.02em', fontWeight: 600, margin: '10px 0 0'
       },
-      useTextStyle: {
-        fontSize: stack ? 16 : 19, lineHeight: 1.45, fontWeight: 600, color: '#0F2E45',
-        letterSpacing: '-.01em', textWrap: 'pretty'
-      },
-      delivGridStyle: {
-        maxWidth: SHELL, margin: '0 auto', display: 'grid', gap: st.narrow ? 30 : 72, alignItems: 'start',
-        gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,.9fr) minmax(0,1.1fr)'
-      },
-      faqGridStyle: {
-        maxWidth: SHELL, margin: '0 auto', display: 'grid', gap: st.narrow ? 30 : 72, alignItems: 'start',
-        gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,.7fr) minmax(0,1.3fr)'
-      },
-      relGridStyle: st.vpw < 700
-        ? {
-            display: 'grid', gap: 14, marginTop: 30, alignItems: 'start',
-            gridAutoFlow: 'column', gridAutoColumns: '72%',
-            overflowX: 'auto', overflowY: 'hidden',
-            scrollSnapType: 'x mandatory', WebkitOverflowScrolling: 'touch',
-            scrollbarWidth: 'none', paddingBottom: 4,
-            marginRight: 'calc(-1 * max(clamp(18px,3.2vw,96px), (100vw - min(2880px,max(1720px,86vw))) / 2))'
-          }
-        : {
-            display: 'grid', gap: 28, marginTop: 44, alignItems: 'start',
-            gridTemplateColumns: 'repeat(4,minmax(0,1fr))'
-          },
-      relCardStyle: {
-        display: 'flex', flexDirection: 'column', gap: 14,
-        scrollSnapAlign: st.vpw < 700 ? 'start' : 'none'
-      },
+      ctaBtnJustify: st.vpw <= 980 ? 'justify-self:start;' : 'justify-self:end;',
+      ctaSecStyle: { scrollMarginTop: 96, position: 'relative', overflow: 'hidden', background: '#052A44', padding: 0 },
+      ctaBgStyle: { position: 'absolute', inset: 0, backgroundImage: 'url("aerial-thermal-imagery-cta-background.webp")', backgroundSize: 'cover', backgroundPosition: 'center', opacity: .12, pointerEvents: 'none' },
       ctaGridStyle: {
-        position: 'relative', maxWidth: SHELL, margin: '0 auto', display: 'grid',
-        gap: st.narrow ? 30 : 64, alignItems: 'center',
-        gridTemplateColumns: st.narrow ? 'minmax(0,1fr)' : 'minmax(0,1.3fr) minmax(0,.7fr)'
+        position: 'relative', zIndex: 2, display: 'grid', alignItems: 'center',
+        textAlign: 'left', maxWidth: 1650, marginInline: 'auto',
+        gap: st.vpw <= 980 ? 'clamp(18px,3vw,22px)' : 'clamp(28px,2.6vw,36px)',
+        padding: 'clamp(36px,3.5vw,44px) clamp(20px,4vw,72px)',
+        gridTemplateColumns: st.vpw <= 980 ? '1fr' : 'minmax(0,38fr) minmax(0,40fr) auto'
       },
+
+      // ---- tab state ----
+      ...(() => {
+        const out = {};
+        const DVN = 4;
+
+        const dv = st.dv || 0;
+        const UISHOT = this.UISHOT || [];
+        const LPH = this.LPH || [];
+        for (let i = 0; i < 4; i++) {
+          const on = dv === i;
+          out['dv' + i + 'Style'] = { display: on ? 'block' : 'none' };
+          out['dsel' + i] = on ? 'true' : 'false';
+          out['diH3Style' + i] = {
+            display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 14,
+            fontFamily: "'Sora',sans-serif", fontSize: 16.5, fontWeight: 600, letterSpacing: '-.012em',
+            color: '#DCEBF6', margin: 0, lineHeight: 1.3,
+            transition: 'color .2s ease'
+          };
+          out['diPStyle' + i] = {
+            display: on ? 'block' : 'none',
+            fontSize: 13.5, color: '#C7D6E4', lineHeight: 1.6, margin: '8px 0 0', textWrap: 'pretty'
+          };
+
+          out['di' + i + 'Style'] = {
+            display: 'block', width: '100%', textAlign: 'left', cursor: 'pointer',
+            background: on ? 'rgba(159,192,218,.12)' : 'none',
+            border: 0, borderLeft: '3px solid ' + (on ? '#EFB479' : 'transparent'),
+            borderTop: '1px solid rgba(159,192,218,.22)',
+            borderBottom: i === DVN - 1 ? '1px solid rgba(159,192,218,.22)' : 0,
+            padding: '20px 8px', fontFamily: 'inherit', transition: 'background .2s ease'
+          };
+          out['setDv' + i] = () => this.setState({ dv: i });
+        }
+        const q = st.q || 0;
+        for (let i = 0; i < 8; i++) {
+          const on = q === i;
+          out['fa' + i + 'Style'] = { display: on ? 'block' : 'none' };
+          out['qsel' + i] = on ? 'true' : 'false';
+          out['q' + i + 'Style'] = {
+            display: 'block', width: '100%', textAlign: 'left', cursor: 'pointer',
+            background: on ? 'rgba(0,84,139,.05)' : 'none',
+            border: 0, borderLeft: '3px solid ' + (on ? '#8E5527' : 'transparent'),
+            padding: '18px 20px', fontFamily: 'inherit',
+            fontSize: 16.5, fontWeight: 700, lineHeight: 1.4,
+            color: on ? '#00548B' : '#3D5261',
+            transition: 'background .2s ease, border-color .2s ease, color .2s ease'
+          };
+          out['setQ' + i] = () => this.setState({ q: i });
+        }
+        out.dvName = ['DRONEDEPLOY PROJECT ACCESS','THERMAL ORTHOMOSAIC','RADIOMETRIC THERMAL IMAGES','IN-PLATFORM TEMPERATURE REVIEW TOOLS'][dv] || '';
+        out.faqPos = String(q + 1).padStart(2, '0') + ' / 08';
+        out.prevQ = () => this.setState((s2) => ({ q: ((s2.q || 0) + 7) % 8 }));
+        out.nextQ = () => this.setState((s2) => ({ q: ((s2.q || 0) + 1) % 8 }));
+        return out;
+      })(),
       ...(() => {
         const mob = st.vpw < 900;
         const o = {};
-        o.phonesOpen = st.phones ? 'true' : 'false';
-        o.togglePhones = () => this.setState((s) => ({ phones: !s.phones }));
-        o.utilTab = mob ? 0 : -1;
-        o.utilTogStyle = {
-          display: mob ? 'inline-flex' : 'none', alignItems: 'center', gap: 8, minHeight: 44,
-          padding: '0 4px 0 0', background: 'none', border: 'none', cursor: 'pointer',
-          fontFamily: "'Manrope',sans-serif", fontSize: 12, fontWeight: 700,
-          letterSpacing: '.18em', textTransform: 'uppercase', color: '#A6C3D5'
-        };
-        o.utilCaretStyle = {
-          fontSize: 13, lineHeight: 1, color: '#E0A83E',
-          transform: st.phones ? 'rotate(180deg)' : 'none', transition: 'transform .25s ease'
-        };
-        o.utilPhonesStyle = mob
-          ? {
-              display: st.phones ? 'flex' : 'none', flexDirection: 'column', gap: 10,
-              position: 'absolute', top: '100%', left: 0, right: 0, zIndex: 71,
-              background: '#052A44', borderTop: '1px solid rgba(255,255,255,.16)',
-              boxShadow: '0 18px 34px rgba(4,26,44,.4)', padding: '10px clamp(18px,3.2vw,96px) 16px'
-            }
-          : { display: 'flex', alignItems: 'center', gap: 26, flexWrap: 'wrap' };
-        o.utilLinkStyle = mob
-          ? { display: 'flex', alignItems: 'center', gap: 10, whiteSpace: 'nowrap', minHeight: 44, padding: '4px 0', width: '100%' }
-          : { display: 'flex', alignItems: 'center', gap: 10, whiteSpace: 'nowrap' };
-        o.utilDivStyle = mob
-          ? { display: 'block', height: 1, background: 'rgba(255,255,255,.14)', margin: '6px 0' }
-          : { width: 1, height: 20, background: 'rgba(255,255,255,.16)' };
-        o.utilNoteStyle = {
-          display: mob ? 'none' : 'block', fontSize: 11, fontWeight: 700,
-          letterSpacing: '.2em', textTransform: 'uppercase', color: '#A6C3D5'
-        };
-
         [['RC', 'rc'], ['SV', 'sv'], ['CO', 'co']].forEach(([K, k]) => {
           const open = !mob || st.footAcc === k;
           o['footCol' + K + 'Style'] = mob
@@ -805,8 +1086,6 @@ class Component extends DCLogic {
           : { fontSize: 15, lineHeight: 1.6, color: '#3C5468', textWrap: 'pretty' };
         return o;
       })(),
-      // the wireframe band lives under the column lists, so the footer reserves
-      // room for it and the grid keeps clear space above it
       footWireStyle: {
         position: 'absolute', left: 0, right: 0, width: '100%',
         bottom: st.narrow ? 96 : 'clamp(105px,7.5vw,155px)',
@@ -832,7 +1111,6 @@ class Component extends DCLogic {
     };
   }
 }
-
 </script>
 </body>
 </html>
